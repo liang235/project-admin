@@ -7,9 +7,14 @@ on:
 
 jobs:
     build:
+        # 运行在最新版 ubuntu 系统中
         runs-on: ubuntu-latest
+        # step 的超时时间
+        timeout-minutes: 10
         steps:
+            # 新建一个名为 Sync to Gitee 的步骤
             - name: Sync to Gitee
+              # 使用 wearerequired/git-mirror-action@master 获取源码
               uses: wearerequired/git-mirror-action@master
               env:
                   # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY

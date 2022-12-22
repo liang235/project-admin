@@ -9,7 +9,9 @@ on:
 
 jobs:
     docs-github:
+        # 运行在最新版 ubuntu 系统中
         runs-on: ubuntu-latest
+        # step 的超时时间
         timeout-minutes: 10
         steps:
             - uses: actions/checkout@v2
