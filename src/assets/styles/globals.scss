@@ -1,0 +1,60 @@
+/*
+ * @Description: 全局样式
+ * @Date: 2022-10-17 10:35:54
+ * @LastEditTime: 2022-12-18 01:29:18
+ */
+@use './element-plus/element.scss'; // element-plus
+@use './waves.scss'; // 水波纹
+@use './media/media.scss'; // 响应式
+@use './themes.scss'; // 主题
+
+html,
+body,
+#app {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background-color: var(--g-app-bg);
+	transition: background-color 0.3s;
+	box-sizing: border-box;
+	font-family: Lato, PingFang SC, Microsoft YaHei, sans-serif;
+	-webkit-tap-highlight-color: transparent;
+}
+
+* {
+	box-sizing: inherit;
+}
+
+// 滚动条样式
+::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #0006;
+	background-clip: padding-box;
+	border: 3px solid transparent;
+	border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #00000080;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+// 开启灰色色调
+.grayscale {
+	filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray;
+}

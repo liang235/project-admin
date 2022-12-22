@@ -1,15 +1,26 @@
 /*
  * @Description: 项目配置文件
  * @Date: 2022-12-22 19:32:44
- * @LastEditTime: 2022-12-22 21:07:28
+ * @LastEditTime: 2022-12-22 23:01:00
  */
 import { defineConfig, loadEnv } from 'vite' // 帮手函数，这样不用 jsdoc 注解也可以获取类型提示
 import createVitePlugins from './vite/plugins/index.js' // vite 使用插件集合
 import path from 'node:path' // 主要用于 alias 文件路径别名
+import fs from 'node:fs' // node 文件模块
+import pkg from './package.json' // 依赖项
+import dayjs from 'dayjs' // 日期格式化插件
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
 	const env = loadEnv(mode, __dirname)
+
+	// 全局 scss 资源
+	const scssResources = []
+	fs.readdirSync('src/assets/styles/resources').forEach((dirname) => {
+		if (fs.statSync(`src/assets/styles/resources/${dirname}`).isFile()) {
+			scssResources.push(`@use "src/assets/styles/resources/${dirname}" as *;`)
+		}
+	})
 
 	return {
 		// 开发或生产环境服务的公共基础路径
@@ -27,11 +38,11 @@ export default defineConfig(({ command, mode }) => {
 			https: false, // 协议
 			proxy: {
 				// 反向代理配置，注意 rewrite 写法，开始没看文档在这里踩了坑
-				'/api': {
+				'/proxy': {
 					target: env.VITE_BASE_URL,
 					changeOrigin: true, // 是否跨域
 					ws: true, // proxy websockets
-					rewrite: (path) => path.replace(/^\/api/, ''),
+					rewrite: (path) => path.replace(/^\/proxy/, ''),
 				},
 			},
 			watch: {
@@ -46,26 +57,26 @@ export default defineConfig(({ command, mode }) => {
 			},
 		},
 
-		// css: {
-		// 	preprocessorOptions: {
-		// 		scss: {
-		// 			additionalData: scssResources.join('')
-		// 		}
-		// 	},
-		// },
+		css: {
+			preprocessorOptions: {
+				scss: {
+					additionalData: scssResources.join(''),
+				},
+			},
+		},
 
 		// https://cn.vitejs.dev/config/shared-options.html#define
 		// 定义全局常量替换方式。其中每项在开发环境下会被定义在全局，而在构建时被静态替换
-		// define: {
-		// 	__SYSTEM_INFO__: JSON.stringify({
-		// 		pkg: {
-		// 			version: pkg.version,
-		// 			dependencies: pkg.dependencies,
-		// 			devDependencies: pkg.devDependencies,
-		// 		},
-		// 		lastBuildTime: dayjs().format('YYYY-MM-DD HH:mm:ss'),
-		// 	}),
-		// },
+		define: {
+			__SYSTEM_INFO__: JSON.stringify({
+				pkg: {
+					version: pkg.version,
+					dependencies: pkg.dependencies,
+					devDependencies: pkg.devDependencies,
+				},
+				lastBuildTime: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+			}),
+		},
 
 		// 构建选项 https://cn.vitejs.dev/config/#server-fsserve-root
 		build: {
@@ -84,10 +95,10 @@ export default defineConfig(({ command, mode }) => {
 					entryFileNames: 'assets/js/[name]-[hash].js',
 					assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
 					compact: true,
-					// manualChunks: {
-					// 	vue: ['vue', 'vue-router', 'pinia', '@vueuse/core'],
-					// 	'element-plus': ['element-plus'],
-					// },
+					manualChunks: {
+						vue: ['vue', 'vue-router', 'pinia', '@vueuse/core'],
+						'element-plus': ['element-plus'],
+					},
 				},
 			},
 			brotliSize: false, // 关闭 brotliSize 显示可以稍微减少包装时间

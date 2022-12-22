@@ -1,0 +1,89 @@
+[data-mode='mobile'] {
+	#app-main {
+		width: 100%;
+	}
+
+	// 侧边栏
+	.sidebar-container {
+		transform: translate(calc((var(--g-main-sidebar-width) + var(--g-sub-sidebar-width)) * -1));
+
+		&.show {
+			transform: translate(0);
+		}
+	}
+
+	// 内容主体
+	.main-container {
+		margin-left: 0 !important;
+	}
+
+	// 侧边栏模式（无主导航）
+	&[data-menu-mode='single'] {
+		.sidebar-container {
+			transform: translate(calc(var(--g-sub-sidebar-width) * -1));
+		}
+
+		.sidebar-container.show {
+			transform: translate(0);
+		}
+	}
+
+	// PageHeader 组件
+	.header {
+		flex-direction: column;
+
+		.main {
+			margin-right: auto;
+			margin-bottom: 20px;
+		}
+	}
+
+	// 右侧内容区针对 fixed 元素，有横向铺满的需求
+	[data-fixed-calc-width] {
+		width: 100% !important;
+		transform: translateX(-50%) !important;
+	}
+
+	// 登录部分
+	.login-box {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		top: inherit;
+		left: inherit;
+		transform: translateX(0) translateY(0);
+		flex-direction: column;
+		justify-content: start;
+		border-radius: 0;
+		box-shadow: none;
+
+		.login-banner {
+			width: 100%;
+			padding: 20px 0;
+
+			.banner {
+				position: relative;
+				right: inherit;
+				width: 100%;
+				max-width: 375px;
+				margin: 0 auto;
+				display: inherit;
+				top: inherit;
+				transform: translateY(0);
+			}
+		}
+
+		.login-form {
+			width: 100%;
+			min-height: auto;
+			padding: 30px;
+		}
+	}
+
+	// 底部版权
+	.copyright {
+		position: relative;
+		bottom: 0;
+		padding-bottom: 10px;
+	}
+}
