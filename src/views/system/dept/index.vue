@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-12-02 13:07:35
 -->
 <template>
-    <page-main> 部门管理 </page-main>
+	<page-main> 部门管理 </page-main>
 </template>
 
 <script setup name="SystemDept">

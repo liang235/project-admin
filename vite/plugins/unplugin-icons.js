@@ -6,7 +6,7 @@
 import Icons from 'unplugin-icons/vite'
 
 export default function createUnpluginIcons() {
-    return Icons({
-        autoInstall: true
-    })
+	return Icons({
+		autoInstall: true,
+	})
 }

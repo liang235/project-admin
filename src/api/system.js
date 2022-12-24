@@ -11,11 +11,11 @@ import request from '@/plugins/axios.js' // axios
  * @return {*}
  */
 export const systemRoleList = (data) => {
-    return request({
-        url: '/system/role/list',
-        method: 'post',
-        params: data
-    })
+	return request({
+		url: '/system/role/list',
+		method: 'post',
+		params: data,
+	})
 }
 
 /**
@@ -23,9 +23,9 @@ export const systemRoleList = (data) => {
  * @return {*}
  */
 export const systemUserList = (data) => {
-    return request({
-        url: '/system/user/list',
-        method: 'post',
-        params: data
-    })
+	return request({
+		url: '/system/user/list',
+		method: 'post',
+		params: data,
+	})
 }

@@ -8,7 +8,6 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-portal
 dist
 dist-ssr
 portal-uat
@@ -27,3 +26,4 @@ portal-production
 *.sw?
 
 .eslintcache
+.stylelintcache

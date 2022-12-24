@@ -7,13 +7,13 @@
 import router from '@/router/index.js' // 路由
 
 export default function useMainPage() {
-    function reload() {
-        router.push({
-            name: 'reload'
-        })
-    }
+	function reload() {
+		router.push({
+			name: 'reload',
+		})
+	}
 
-    return {
-        reload
-    }
+	return {
+		reload,
+	}
 }

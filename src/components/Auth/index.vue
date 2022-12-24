@@ -4,16 +4,16 @@
  * @LastEditTime: 2022-12-24 03:48:18
 -->
 <template>
-    <div class="auth">
-        <slot v-if="check()" />
-        <slot v-else name="no-auth" />
-    </div>
+	<div class="auth">
+		<slot v-if="check()" />
+		<slot v-else name="no-auth" />
+	</div>
 </template>
 
 <script setup name="Auth">
 // 定义父组件传过来的值
 const props = defineProps({
-    value: String | Array
+	value: String | Array,
 })
 
 /**
@@ -21,7 +21,7 @@ const props = defineProps({
  * @return {*}
  */
 const check = () => {
-    return useAuth().auth(props.value)
+	return useAuth().auth(props.value)
 }
 </script>
 

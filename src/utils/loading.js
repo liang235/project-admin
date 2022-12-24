@@ -7,12 +7,12 @@ import '@/assets/styles/loading.scss'
  * @method done 移除 loading
  */
 export const NextLoading = {
-    // 创建 loading
-    start: () => {
-        const bodys = document.body
-        const div = document.createElement('div')
-        div.setAttribute('class', 'loading-next')
-        const htmls = `
+	// 创建 loading
+	start: () => {
+		const bodys = document.body
+		const div = document.createElement('div')
+		div.setAttribute('class', 'loading-next')
+		const htmls = `
 			<div class="loading-next-box">
 				<div class="loading-next-box-warp">
 					<div class="loading-next-box-item"></div>
@@ -27,19 +27,19 @@ export const NextLoading = {
 				</div>
 			</div>
 		`
-        div.innerHTML = htmls
-        bodys.insertBefore(div, bodys.childNodes[0])
-        window.nextLoading = true
-    },
+		div.innerHTML = htmls
+		bodys.insertBefore(div, bodys.childNodes[0])
+		window.nextLoading = true
+	},
 
-    // 移除 loading
-    done: (time = 0) => {
-        nextTick(() => {
-            setTimeout(() => {
-                window.nextLoading = false
-                const el = document.querySelector('.loading-next')
-                el?.parentNode?.removeChild(el)
-            }, time)
-        })
-    }
+	// 移除 loading
+	done: (time = 0) => {
+		nextTick(() => {
+			setTimeout(() => {
+				window.nextLoading = false
+				const el = document.querySelector('.loading-next')
+				el?.parentNode?.removeChild(el)
+			}, time)
+		})
+	},
 }

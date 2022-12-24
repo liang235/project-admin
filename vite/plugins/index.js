@@ -15,16 +15,16 @@ import createCompression from './vite-plugin-compression.js' // 打包压缩
 
 // 创建 vite 插件实例化
 export default function createVitePlugins(viteEnv, isBuild = false) {
-    const vitePlugins = []
-    vitePlugins.push(vue())
-    vitePlugins.push(createAutoImport())
-    vitePlugins.push(createComponents())
-    vitePlugins.push(createUnpluginIcons())
-    vitePlugins.push(createSetupExtend())
-    vitePlugins.push(createSvgIcon())
-    vitePlugins.push(createHtml(viteEnv, isBuild))
-    vitePlugins.push(createInspector())
-    vitePlugins.push(createCompression())
+	const vitePlugins = []
+	vitePlugins.push(vue())
+	vitePlugins.push(createAutoImport())
+	vitePlugins.push(createComponents())
+	vitePlugins.push(createUnpluginIcons())
+	vitePlugins.push(createSetupExtend())
+	vitePlugins.push(createSvgIcon())
+	vitePlugins.push(createHtml(viteEnv, isBuild))
+	vitePlugins.push(createInspector())
+	vitePlugins.push(createCompression())
 
-    return vitePlugins
+	return vitePlugins
 }

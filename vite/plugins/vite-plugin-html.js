@@ -6,10 +6,10 @@
 import { createHtmlPlugin } from 'vite-plugin-html'
 
 export default function createHtml(viteEnv, isBuild) {
-    const { VITE_APP_TITLE } = viteEnv
+	const { VITE_APP_TITLE } = viteEnv
 
-    // 页面刷新加载状态
-    const loadingScript = `
+	// 页面刷新加载状态
+	const loadingScript = `
     <script>
     (function () {
         if (!!window.ActiveXObject || 'ActiveXObject' in window) {
@@ -30,16 +30,16 @@ export default function createHtml(viteEnv, isBuild) {
     </script>
     `
 
-    return createHtmlPlugin({
-        // 注入 HTML 的数据
-        inject: {
-            // 注入的数据，data 可以在 html 中使用 ejs 模版语法获取
-            data: {
-                title: VITE_APP_TITLE,
-                loadingScript
-            }
-        },
-        // 是否压缩 html
-        minify: isBuild
-    })
+	return createHtmlPlugin({
+		// 注入 HTML 的数据
+		inject: {
+			// 注入的数据，data 可以在 html 中使用 ejs 模版语法获取
+			data: {
+				title: VITE_APP_TITLE,
+				loadingScript,
+			},
+		},
+		// 是否压缩 html
+		minify: isBuild,
+	})
 }

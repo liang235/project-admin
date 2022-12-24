@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-11-18 14:10:59
 -->
 <template>
-    <div></div>
+	<div></div>
 </template>
 
 <script setup name="Reload">
@@ -12,7 +12,7 @@ const router = useRouter() // 路由实例
 
 // 在组件挂载完并创建 DOM 节点后运行
 onMounted(() => {
-    router.go(-1)
+	router.go(-1)
 })
 </script>
 
