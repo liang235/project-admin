@@ -9,10 +9,14 @@
 -   🌈 重构
 -   ⚠️ 警告
 
+## Version: "1.0.6"，Date: "2022.12.24"
+
+-   🎉 新增 配置 lint-staged
+
 ## Version: "1.0.5"，Date: "2022.12.24"
 
 -   🚧 修改 .prettierrc 中 jsxBracketSameLine 替换为 bracketSameLine
-- https://prettier.io/blog/2021/09/09/2.4.0.html
+-   https://prettier.io/blog/2021/09/09/2.4.0.html
 
 ## Version: "1.0.4"，Date: "2022.12.24"
 
