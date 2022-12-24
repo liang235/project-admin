@@ -70,7 +70,7 @@ const globalSettings = {
          * center 定宽居中
          * center-max-width 定宽居中（有最大宽度）
          */
-        appWidthMode: 'adaption',
+        appWidthMode: 'adaption'
     },
 
     // 导航栏
@@ -126,7 +126,7 @@ const globalSettings = {
          * @可选值 fixed 固定，不跟随页面滚动，始终固定在顶部
          * @可选值 sticky 粘性，页面往下滚动时隐藏，往上滚动时显示
          */
-        mode: 'fixed',
+        mode: 'fixed'
     },
 
     // 工具栏
@@ -153,7 +153,7 @@ const globalSettings = {
         enable: true,
 
         // 是否开启导航搜索快捷键
-        enableHotkeys: true,
+        enableHotkeys: true
     },
 
     // 面包屑导航
@@ -166,7 +166,7 @@ const globalSettings = {
          * @默认值 default 默认风格
          * @可选值 modern 现代风格
          */
-        mode: 'default',
+        mode: 'default'
     },
 
     // 底部版权

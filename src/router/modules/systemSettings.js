@@ -12,7 +12,7 @@ export default [
         name: 'system',
         meta: {
             title: '系统设置',
-            icon: 'system',
+            icon: 'system'
         },
         redirect: '/system/user',
         children: [
@@ -21,7 +21,7 @@ export default [
                 name: 'systemMenu',
                 component: () => import('@/views/system/menu/index.vue'),
                 meta: {
-                    title: '菜单管理',
+                    title: '菜单管理'
                 }
             },
             {
@@ -37,7 +37,7 @@ export default [
                 name: 'systemUser',
                 component: () => import('@/views/system/user/index.vue'),
                 meta: {
-                    title: '用户管理',
+                    title: '用户管理'
                 }
             },
             {
@@ -45,9 +45,9 @@ export default [
                 name: 'systemDept',
                 component: () => import('@/views/system/dept/index.vue'),
                 meta: {
-                    title: '部门管理',
+                    title: '部门管理'
                 }
-            },
+            }
         ]
     }
 ]

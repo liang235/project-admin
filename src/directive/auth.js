@@ -15,7 +15,7 @@ export function authDirective(app) {
             if (!useAuth().auth(binding.value)) {
                 el.remove()
             }
-        },
+        }
     })
 
     /**
@@ -27,6 +27,6 @@ export function authDirective(app) {
             if (!useAuth().authAll(binding.value)) {
                 el.remove()
             }
-        },
+        }
     })
 }

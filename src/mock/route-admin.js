@@ -1,5 +1,5 @@
 export default {
-    error: "",
+    error: '',
     status: 1,
     data: [
         {
@@ -15,7 +15,7 @@ export default {
                     component: 'Layout',
                     meta: {
                         title: 'icons 图标',
-                        icon: 'icons',
+                        icon: 'icons'
                     },
                     children: [
                         {
@@ -26,9 +26,9 @@ export default {
                                 title: 'icons 图标',
                                 breadcrumb: false,
                                 sidebar: false,
-                                activeMenu: '/icons',
+                                activeMenu: '/icons'
                             }
-                        },
+                        }
                     ]
                 },
 
@@ -37,7 +37,7 @@ export default {
                     component: 'Layout',
                     meta: {
                         title: '权限验证',
-                        icon: 'ele-key',
+                        icon: 'ele-key'
                     },
                     children: [
                         {
@@ -48,9 +48,9 @@ export default {
                                 title: '权限验证',
                                 breadcrumb: false,
                                 sidebar: false,
-                                activeMenu: '/permission',
+                                activeMenu: '/permission'
                             }
-                        },
+                        }
                     ]
                 },
 
@@ -60,8 +60,7 @@ export default {
                     component: 'Layout',
                     meta: {
                         title: '扩展组件',
-                        icon: 'component',
-
+                        icon: 'component'
                     },
                     redirect: '/components/svg-icon',
                     children: [
@@ -71,8 +70,8 @@ export default {
                             component: 'example/components/svg-icon-demo.vue',
                             meta: {
                                 title: 'SVG Icon',
-                                icon: 'icons',
-                            },
+                                icon: 'icons'
+                            }
                         },
                         {
                             path: 'page-header',
@@ -81,7 +80,7 @@ export default {
                             meta: {
                                 title: '页头',
                                 icon: 'page-header'
-                            },
+                            }
                         },
                         {
                             path: 'page-main',
@@ -90,7 +89,7 @@ export default {
                             meta: {
                                 title: '内容快',
                                 icon: 'page-main'
-                            },
+                            }
                         },
                         {
                             path: 'fixed-bottom',
@@ -99,7 +98,7 @@ export default {
                             meta: {
                                 title: '固定底部操作栏',
                                 icon: 'fixed-bottom'
-                            },
+                            }
                         },
                         {
                             path: 'search-bar',
@@ -108,7 +107,7 @@ export default {
                             meta: {
                                 title: '搜索面板',
                                 icon: 'ele-search'
-                            },
+                            }
                         },
                         {
                             path: 'wang-editor',
@@ -117,7 +116,7 @@ export default {
                             meta: {
                                 title: '富文本编辑器',
                                 icon: 'wang-editor'
-                            },
+                            }
                         },
                         {
                             path: 'image-preview',
@@ -126,7 +125,7 @@ export default {
                             meta: {
                                 title: '图片预览',
                                 icon: 'ele-view'
-                            },
+                            }
                         },
                         {
                             path: 'upload',
@@ -135,7 +134,7 @@ export default {
                             meta: {
                                 title: '上传文件',
                                 icon: 'ele-upload-filled'
-                            },
+                            }
                         },
                         {
                             path: 'copper',
@@ -144,7 +143,7 @@ export default {
                             meta: {
                                 title: '图片裁剪',
                                 icon: 'ele-crop'
-                            },
+                            }
                         },
                         {
                             path: 'pcas-cascader',
@@ -153,7 +152,7 @@ export default {
                             meta: {
                                 title: '省市区街道联动',
                                 icon: 'city'
-                            },
+                            }
                         },
                         {
                             path: 'colorful-card',
@@ -162,7 +161,7 @@ export default {
                             meta: {
                                 title: '多彩渐变卡片',
                                 icon: 'colorful'
-                            },
+                            }
                         },
                         {
                             path: 'signature-pad',
@@ -171,8 +170,8 @@ export default {
                             meta: {
                                 title: '电子签名',
                                 icon: 'signature'
-                            },
-                        },
+                            }
+                        }
                     ]
                 },
 
@@ -182,7 +181,7 @@ export default {
                     component: 'Layout',
                     meta: {
                         title: '功能展示',
-                        icon: 'feature',
+                        icon: 'feature'
                     },
                     redirect: '/feature/waves',
                     children: [
@@ -194,7 +193,7 @@ export default {
                                 title: '布局容器',
                                 icon: 'layout',
                                 copyright: false
-                            },
+                            }
                         },
                         {
                             path: 'waves',
@@ -203,7 +202,7 @@ export default {
                             meta: {
                                 title: '水波纹',
                                 icon: 'waves'
-                            },
+                            }
                         },
                         {
                             path: 'watermark',
@@ -212,7 +211,7 @@ export default {
                             meta: {
                                 title: '页面水印',
                                 icon: 'watermark'
-                            },
+                            }
                         },
                         {
                             path: 'leavetips',
@@ -220,8 +219,8 @@ export default {
                             component: 'example/feature/leavetips/index.vue',
                             meta: {
                                 title: '页面离开提醒',
-                                icon: 'leave',
-                            },
+                                icon: 'leave'
+                            }
                         },
                         {
                             path: 'maximize',
@@ -229,8 +228,8 @@ export default {
                             component: 'example/feature/maximize/index.vue',
                             meta: {
                                 title: '主页面最大化',
-                                icon: 'maximize',
-                            },
+                                icon: 'maximize'
+                            }
                         },
                         {
                             path: 'menuswitch',
@@ -238,8 +237,8 @@ export default {
                             component: 'example/feature/menuswitch/index.vue',
                             meta: {
                                 title: '主导航切换',
-                                icon: 'nav',
-                            },
+                                icon: 'nav'
+                            }
                         },
                         {
                             path: 'reload',
@@ -249,7 +248,7 @@ export default {
                                 title: '主页面刷新',
                                 icon: 'ele-refresh',
                                 cache: true
-                            },
+                            }
                         },
                         {
                             path: 'scroll',
@@ -259,8 +258,8 @@ export default {
                                 title: '记录滚动位置',
                                 icon: 'scroll',
                                 cache: true
-                            },
-                        },
+                            }
+                        }
                     ]
                 },
 
@@ -270,7 +269,7 @@ export default {
                     component: Layout,
                     meta: {
                         title: '页面展示',
-                        icon: 'page',
+                        icon: 'page'
                     },
                     redirect: '/pages/filtering',
                     children: [
@@ -281,7 +280,7 @@ export default {
                             meta: {
                                 title: '过滤筛选组件',
                                 icon: 'ele-filter'
-                            },
+                            }
                         },
                         {
                             path: 'form',
@@ -308,9 +307,9 @@ export default {
                                         title: '表单表格验证',
                                         icon: 'dot'
                                     }
-                                },
+                                }
                             ]
-                        },
+                        }
                     ]
                 },
 
@@ -320,7 +319,7 @@ export default {
                     component: 'Layout',
                     meta: {
                         title: '插件',
-                        icon: 'plugin',
+                        icon: 'plugin'
                     },
                     redirect: '/plugin/qrcode',
                     children: [
@@ -331,7 +330,7 @@ export default {
                             meta: {
                                 title: '二维码',
                                 icon: 'qrcode'
-                            },
+                            }
                         },
                         {
                             path: 'print',
@@ -340,7 +339,7 @@ export default {
                             meta: {
                                 title: '打印',
                                 icon: 'ele-printer'
-                            },
+                            }
                         },
                         {
                             path: 'notify',
@@ -349,7 +348,7 @@ export default {
                             meta: {
                                 title: '通知',
                                 icon: 'notify'
-                            },
+                            }
                         },
                         {
                             path: 'countup',
@@ -358,7 +357,7 @@ export default {
                             meta: {
                                 title: '数字滚动',
                                 icon: 'ele-odometer'
-                            },
+                            }
                         },
                         {
                             path: 'splitpanes',
@@ -367,7 +366,7 @@ export default {
                             meta: {
                                 title: '窗格拆分器',
                                 icon: 'splitpanes'
-                            },
+                            }
                         },
                         {
                             path: 'cropper',
@@ -376,7 +375,7 @@ export default {
                             meta: {
                                 title: '图片裁剪',
                                 icon: 'ele-crop'
-                            },
+                            }
                         },
                         {
                             path: 'markdown',
@@ -385,8 +384,8 @@ export default {
                             meta: {
                                 title: 'Markdown',
                                 icon: 'markdown'
-                            },
-                        },
+                            }
+                        }
                     ]
                 },
 
@@ -396,8 +395,7 @@ export default {
                     component: 'Layout',
                     meta: {
                         title: '面包屑导航',
-                        icon: 'breadcrumb',
-
+                        icon: 'breadcrumb'
                     },
                     redirect: '/breadcrumb/list1',
                     children: [
@@ -406,8 +404,8 @@ export default {
                             name: 'breadcrumbList1',
                             component: 'example/breadcrumb/list1/index.vue',
                             meta: {
-                                title: '列表1（平级模式）',
-                            },
+                                title: '列表1（平级模式）'
+                            }
                         },
                         {
                             path: 'detail1',
@@ -416,15 +414,15 @@ export default {
                             meta: {
                                 title: '详情1',
                                 sidebar: false,
-                                activeMenu: '/breadcrumb/list1',
-                            },
+                                activeMenu: '/breadcrumb/list1'
+                            }
                         },
                         {
                             path: 'list2',
                             name: 'breadcrumbList2',
                             redirect: '/breadcrumb/list2',
                             meta: {
-                                title: '列表2（层级模式）',
+                                title: '列表2（层级模式）'
                             },
                             children: [
                                 {
@@ -433,8 +431,8 @@ export default {
                                     meta: {
                                         title: '列表2（层级模式）',
                                         sidebar: false,
-                                        breadcrumb: false,
-                                    },
+                                        breadcrumb: false
+                                    }
                                 },
                                 {
                                     path: 'detail2',
@@ -443,11 +441,11 @@ export default {
                                     meta: {
                                         title: '详情2',
                                         sidebar: false,
-                                        activeMenu: '/breadcrumb/list2',
-                                    },
-                                },
-                            ],
-                        },
+                                        activeMenu: '/breadcrumb/list2'
+                                    }
+                                }
+                            ]
+                        }
                     ]
                 },
 
@@ -457,8 +455,7 @@ export default {
                     component: 'Layout',
                     meta: {
                         title: '页面缓存',
-                        icon: 'keep-alive',
-
+                        icon: 'keep-alive'
                     },
                     redirect: '/keep-alive/page',
                     children: [
@@ -468,8 +465,8 @@ export default {
                             component: 'example/keep-alive/page.vue',
                             meta: {
                                 title: '页面缓存',
-                                breadcrumb: false,
-                            },
+                                breadcrumb: false
+                            }
                         },
                         {
                             path: 'detail',
@@ -477,15 +474,15 @@ export default {
                             component: 'example/keep-alive/detail.vue',
                             meta: {
                                 title: '同级路由',
-                                sidebar: false,
-                            },
+                                sidebar: false
+                            }
                         },
                         {
                             path: 'nested',
                             redirect: '/keep-alive/nested/detail',
                             meta: {
                                 title: '嵌套路由',
-                                sidebar: false,
+                                sidebar: false
                             },
                             children: [
                                 {
@@ -494,17 +491,17 @@ export default {
                                     component: 'example/keep-alive/detail.vue',
                                     meta: {
                                         title: '嵌套路由',
-                                        activeMenu: '/keep-alive/page',
-                                    },
-                                },
-                            ],
+                                        activeMenu: '/keep-alive/page'
+                                    }
+                                }
+                            ]
                         },
                         {
                             path: 'nested1',
                             name: 'keepAliveNested1',
                             component: 'example/keep-alive/nested/nested.vue',
                             meta: {
-                                title: '路由多级缓存1',
+                                title: '路由多级缓存1'
                             },
                             children: [
                                 {
@@ -512,7 +509,7 @@ export default {
                                     name: 'keepAliveNested2',
                                     component: 'example/keep-alive/nested/nested/nested.vue',
                                     meta: {
-                                        title: '路由多级缓存1-1',
+                                        title: '路由多级缓存1-1'
                                     },
                                     children: [
                                         {
@@ -521,13 +518,13 @@ export default {
                                             component: 'example/keep-alive/nested/nested/nested/index.vue',
                                             meta: {
                                                 title: '路由多级缓存1-1-1',
-                                                cache: true,
-                                            },
-                                        },
-                                    ],
-                                },
-                            ],
-                        },
+                                                cache: true
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
                     ]
                 },
 
@@ -537,8 +534,7 @@ export default {
                     component: 'Layout',
                     meta: {
                         title: '多级导航',
-                        icon: 'nested',
-
+                        icon: 'nested'
                     },
                     redirect: '/multilevel/menu1',
                     children: [
@@ -546,7 +542,7 @@ export default {
                             path: 'menu1',
                             name: 'multilevelMenu1',
                             meta: {
-                                title: '导航1',
+                                title: '导航1'
                             },
                             children: [
                                 {
@@ -554,16 +550,16 @@ export default {
                                     name: 'multilevelMenu1-1',
                                     component: 'example/multilevel/menu1/menu1-1/index.vue',
                                     meta: {
-                                        title: '导航1-1',
+                                        title: '导航1-1'
                                     }
-                                },
+                                }
                             ]
                         },
                         {
                             path: 'menu2',
                             name: 'multilevelMenu2',
                             meta: {
-                                title: '导航2',
+                                title: '导航2'
                             },
                             children: [
                                 {
@@ -571,11 +567,11 @@ export default {
                                     name: 'multilevelMenu2-1',
                                     component: 'example/multilevel/menu2/menu2-1/index.vue',
                                     meta: {
-                                        title: '导航2-1',
+                                        title: '导航2-1'
                                     }
-                                },
+                                }
                             ]
-                        },
+                        }
                     ]
                 },
 
@@ -586,7 +582,7 @@ export default {
                     name: 'externalLink',
                     meta: {
                         title: '外链',
-                        icon: 'link',
+                        icon: 'link'
                     },
                     children: [
                         {
@@ -595,8 +591,8 @@ export default {
                             name: 'externalLinkGitee',
                             meta: {
                                 title: 'Gitee 仓库',
-                                link: 'https://gitee.com/hooray/fantastic-admin',
-                            },
+                                link: 'https://gitee.com/hooray/fantastic-admin'
+                            }
                         },
                         {
                             path: 'github',
@@ -604,10 +600,10 @@ export default {
                             name: 'externalLinkGithub',
                             meta: {
                                 title: 'Github 仓库',
-                                link: 'https://github.com/hooray/fantastic-admin',
-                            },
-                        },
-                    ],
+                                link: 'https://github.com/hooray/fantastic-admin'
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -625,7 +621,7 @@ export default {
                     name: 'system',
                     meta: {
                         title: '系统设置',
-                        icon: 'system',
+                        icon: 'system'
                     },
                     redirect: '/system/user',
                     children: [
@@ -634,7 +630,7 @@ export default {
                             name: 'systemMenu',
                             component: 'system/menu/index.vue',
                             meta: {
-                                title: '菜单管理',
+                                title: '菜单管理'
                             }
                         },
                         {
@@ -650,7 +646,7 @@ export default {
                             name: 'systemUser',
                             component: 'system/user/index.vue',
                             meta: {
-                                title: '用户管理',
+                                title: '用户管理'
                             }
                         },
                         {
@@ -658,13 +654,12 @@ export default {
                             name: 'systemDept',
                             component: 'system/dept/index.vue',
                             meta: {
-                                title: '部门管理',
+                                title: '部门管理'
                             }
-                        },
+                        }
                     ]
                 }
             ]
-        },
-
+        }
     ]
 }

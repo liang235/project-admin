@@ -1,13 +1,15 @@
 /* 图标 过渡动画
 ------------------------------- */
 @keyframes iconAnimation {
-	0% {
-		transform: scale(0);
-	}
-	80% {
-		transform: scale(1.2);
-	}
-	100% {
-		transform: scale(1);
-	}
+    0% {
+        transform: scale(0);
+    }
+
+    80% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

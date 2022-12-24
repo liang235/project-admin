@@ -1,5 +1,5 @@
 <template>
-	<page-main>多级导航1-1</page-main>
+    <page-main>多级导航1-1</page-main>
 </template>
 
 <script setup>

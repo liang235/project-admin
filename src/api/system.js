@@ -14,7 +14,7 @@ export const systemRoleList = (data) => {
     return request({
         url: '/system/role/list',
         method: 'post',
-        params: data,
+        params: data
     })
 }
 
@@ -26,6 +26,6 @@ export const systemUserList = (data) => {
     return request({
         url: '/system/user/list',
         method: 'post',
-        params: data,
+        params: data
     })
 }

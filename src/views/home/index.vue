@@ -4,15 +4,15 @@
  * @LastEditTime: 2022-12-19 23:46:45
 -->
 <template>
-	<div class="home">
-		<page-header title="欢迎使用 Project-Admin">
-			<template #content>
-				<p>哈拉少</p>
-			</template>
-		</page-header>
+    <div class="home">
+        <page-header title="欢迎使用 Project-Admin">
+            <template #content>
+                <p>哈拉少</p>
+            </template>
+        </page-header>
 
-		<page-main title="主页"></page-main>
-	</div>
+        <page-main title="主页"></page-main>
+    </div>
 </template>
 
 <script setup name="Home"></script>

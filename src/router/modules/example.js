@@ -12,7 +12,7 @@ const icons = [
         component: Layout,
         meta: {
             title: 'icons 图标',
-            icon: 'icons',
+            icon: 'icons'
         },
         children: [
             {
@@ -23,11 +23,11 @@ const icons = [
                     title: 'icons 图标',
                     breadcrumb: false,
                     sidebar: false,
-                    activeMenu: '/icons',
+                    activeMenu: '/icons'
                 }
-            },
+            }
         ]
-    },
+    }
 ]
 
 // 权限验证
@@ -37,7 +37,7 @@ const permission = [
         component: Layout,
         meta: {
             title: '权限验证',
-            icon: 'ele-key',
+            icon: 'ele-key'
         },
         children: [
             {
@@ -48,11 +48,11 @@ const permission = [
                     title: '权限验证',
                     breadcrumb: false,
                     sidebar: false,
-                    activeMenu: '/permission',
+                    activeMenu: '/permission'
                 }
-            },
+            }
         ]
-    },
+    }
 ]
 
 // 扩展组件
@@ -63,7 +63,7 @@ const components = [
         component: Layout,
         meta: {
             title: '扩展组件',
-            icon: 'component',
+            icon: 'component'
         },
         redirect: '/components/svg-icon',
         children: [
@@ -73,8 +73,8 @@ const components = [
                 component: () => import('@/views/example/components/svg-icon-demo.vue'),
                 meta: {
                     title: 'SVG Icon',
-                    icon: 'icons',
-                },
+                    icon: 'icons'
+                }
             },
             {
                 path: 'page-header',
@@ -83,7 +83,7 @@ const components = [
                 meta: {
                     title: '页头',
                     icon: 'page-header'
-                },
+                }
             },
             {
                 path: 'page-main',
@@ -92,7 +92,7 @@ const components = [
                 meta: {
                     title: '内容快',
                     icon: 'page-main'
-                },
+                }
             },
             {
                 path: 'fixed-bottom',
@@ -101,7 +101,7 @@ const components = [
                 meta: {
                     title: '固定底部操作栏',
                     icon: 'fixed-bottom'
-                },
+                }
             },
             {
                 path: 'search-bar',
@@ -110,7 +110,7 @@ const components = [
                 meta: {
                     title: '搜索面板',
                     icon: 'ele-search'
-                },
+                }
             },
             {
                 path: 'wang-editor',
@@ -119,7 +119,7 @@ const components = [
                 meta: {
                     title: '富文本编辑器',
                     icon: 'wang-editor'
-                },
+                }
             },
             {
                 path: 'image-preview',
@@ -128,7 +128,7 @@ const components = [
                 meta: {
                     title: '图片预览',
                     icon: 'ele-view'
-                },
+                }
             },
             {
                 path: 'upload',
@@ -137,7 +137,7 @@ const components = [
                 meta: {
                     title: '上传文件',
                     icon: 'ele-upload-filled'
-                },
+                }
             },
             {
                 path: 'copper',
@@ -146,7 +146,7 @@ const components = [
                 meta: {
                     title: '图片裁剪',
                     icon: 'ele-crop'
-                },
+                }
             },
             {
                 path: 'pcas-cascader',
@@ -155,7 +155,7 @@ const components = [
                 meta: {
                     title: '省市区街道联动',
                     icon: 'city'
-                },
+                }
             },
             {
                 path: 'colorful-card',
@@ -164,7 +164,7 @@ const components = [
                 meta: {
                     title: '多彩渐变卡片',
                     icon: 'colorful'
-                },
+                }
             },
             {
                 path: 'signature-pad',
@@ -173,8 +173,8 @@ const components = [
                 meta: {
                     title: '电子签名',
                     icon: 'signature'
-                },
-            },
+                }
+            }
         ]
     }
 ]
@@ -187,7 +187,7 @@ const feature = [
         component: Layout,
         meta: {
             title: '功能展示',
-            icon: 'feature',
+            icon: 'feature'
         },
         redirect: '/feature/waves',
         children: [
@@ -199,7 +199,7 @@ const feature = [
                     title: '布局容器',
                     icon: 'layout',
                     copyright: false
-                },
+                }
             },
             {
                 path: 'waves',
@@ -208,7 +208,7 @@ const feature = [
                 meta: {
                     title: '水波纹',
                     icon: 'waves'
-                },
+                }
             },
             {
                 path: 'watermark',
@@ -217,7 +217,7 @@ const feature = [
                 meta: {
                     title: '页面水印',
                     icon: 'watermark'
-                },
+                }
             },
             {
                 path: 'leavetips',
@@ -225,8 +225,8 @@ const feature = [
                 component: () => import('@/views/example/feature/leavetips/index.vue'),
                 meta: {
                     title: '页面离开提醒',
-                    icon: 'leave',
-                },
+                    icon: 'leave'
+                }
             },
             {
                 path: 'maximize',
@@ -234,8 +234,8 @@ const feature = [
                 component: () => import('@/views/example/feature/maximize/index.vue'),
                 meta: {
                     title: '主页面最大化',
-                    icon: 'maximize',
-                },
+                    icon: 'maximize'
+                }
             },
             {
                 path: 'menuswitch',
@@ -243,8 +243,8 @@ const feature = [
                 component: () => import('@/views/example/feature/menuswitch/index.vue'),
                 meta: {
                     title: '主导航切换',
-                    icon: 'nav',
-                },
+                    icon: 'nav'
+                }
             },
             {
                 path: 'reload',
@@ -254,7 +254,7 @@ const feature = [
                     title: '主页面刷新',
                     icon: 'ele-refresh',
                     cache: true
-                },
+                }
             },
             {
                 path: 'scroll',
@@ -264,8 +264,8 @@ const feature = [
                     title: '记录滚动位置',
                     icon: 'scroll',
                     cache: true
-                },
-            },
+                }
+            }
         ]
     }
 ]
@@ -278,7 +278,7 @@ const pages = [
         component: Layout,
         meta: {
             title: '页面展示',
-            icon: 'page',
+            icon: 'page'
         },
         redirect: '/pages/filtering',
         children: [
@@ -289,7 +289,7 @@ const pages = [
                 meta: {
                     title: '过滤筛选组件',
                     icon: 'ele-filter'
-                },
+                }
             },
             {
                 path: 'form',
@@ -316,9 +316,9 @@ const pages = [
                             title: '表单表格验证',
                             icon: 'dot'
                         }
-                    },
+                    }
                 ]
-            },
+            }
         ]
     }
 ]
@@ -331,7 +331,7 @@ const plugin = [
         component: Layout,
         meta: {
             title: '插件',
-            icon: 'plugin',
+            icon: 'plugin'
         },
         redirect: '/plugin/qrcode',
         children: [
@@ -342,7 +342,7 @@ const plugin = [
                 meta: {
                     title: '二维码',
                     icon: 'qrcode'
-                },
+                }
             },
             {
                 path: 'print',
@@ -351,7 +351,7 @@ const plugin = [
                 meta: {
                     title: '打印',
                     icon: 'ele-printer'
-                },
+                }
             },
             {
                 path: 'notify',
@@ -360,7 +360,7 @@ const plugin = [
                 meta: {
                     title: '通知',
                     icon: 'notify'
-                },
+                }
             },
             {
                 path: 'countup',
@@ -369,7 +369,7 @@ const plugin = [
                 meta: {
                     title: '数字滚动',
                     icon: 'ele-odometer'
-                },
+                }
             },
             {
                 path: 'splitpanes',
@@ -378,7 +378,7 @@ const plugin = [
                 meta: {
                     title: '窗格拆分器',
                     icon: 'splitpanes'
-                },
+                }
             },
             {
                 path: 'cropper',
@@ -387,7 +387,7 @@ const plugin = [
                 meta: {
                     title: '图片裁剪',
                     icon: 'ele-crop'
-                },
+                }
             },
             {
                 path: 'markdown',
@@ -396,8 +396,8 @@ const plugin = [
                 meta: {
                     title: 'Markdown',
                     icon: 'markdown'
-                },
-            },
+                }
+            }
         ]
     }
 ]
@@ -410,7 +410,7 @@ const breadcrumb = [
         component: Layout,
         meta: {
             title: '面包屑导航',
-            icon: 'breadcrumb',
+            icon: 'breadcrumb'
         },
         redirect: '/breadcrumb/list1',
         children: [
@@ -419,8 +419,8 @@ const breadcrumb = [
                 name: 'breadcrumbList1',
                 component: () => import('@/views/example/breadcrumb/list1/index.vue'),
                 meta: {
-                    title: '列表1（平级模式）',
-                },
+                    title: '列表1（平级模式）'
+                }
             },
             {
                 path: 'detail1',
@@ -429,15 +429,15 @@ const breadcrumb = [
                 meta: {
                     title: '详情1',
                     sidebar: false,
-                    activeMenu: '/breadcrumb/list1',
-                },
+                    activeMenu: '/breadcrumb/list1'
+                }
             },
             {
                 path: 'list2',
                 name: 'breadcrumbList2',
                 redirect: '/breadcrumb/list2',
                 meta: {
-                    title: '列表2（层级模式）',
+                    title: '列表2（层级模式）'
                 },
                 children: [
                     {
@@ -446,8 +446,8 @@ const breadcrumb = [
                         meta: {
                             title: '列表2（层级模式）',
                             sidebar: false,
-                            breadcrumb: false,
-                        },
+                            breadcrumb: false
+                        }
                     },
                     {
                         path: 'detail2',
@@ -456,13 +456,13 @@ const breadcrumb = [
                         meta: {
                             title: '详情2',
                             sidebar: false,
-                            activeMenu: '/breadcrumb/list2',
-                        },
-                    },
-                ],
-            },
+                            activeMenu: '/breadcrumb/list2'
+                        }
+                    }
+                ]
+            }
         ]
-    },
+    }
 ]
 
 // 页面缓存
@@ -473,7 +473,7 @@ const keepAlive = [
         component: Layout,
         meta: {
             title: '页面缓存',
-            icon: 'keep-alive',
+            icon: 'keep-alive'
         },
         redirect: '/keep-alive/page',
         children: [
@@ -483,8 +483,8 @@ const keepAlive = [
                 component: () => import('@/views/example/keep-alive/page.vue'),
                 meta: {
                     title: '页面缓存',
-                    breadcrumb: false,
-                },
+                    breadcrumb: false
+                }
             },
             {
                 path: 'detail',
@@ -492,15 +492,15 @@ const keepAlive = [
                 component: () => import('@/views/example/keep-alive/detail.vue'),
                 meta: {
                     title: 'Page 同级详情页',
-                    sidebar: false,
-                },
+                    sidebar: false
+                }
             },
             {
                 path: 'nested',
                 redirect: '/keep-alive/nested/detail',
                 meta: {
                     title: '嵌套路由',
-                    sidebar: false,
+                    sidebar: false
                 },
                 children: [
                     {
@@ -509,17 +509,17 @@ const keepAlive = [
                         component: () => import('@/views/example/keep-alive/detail.vue'),
                         meta: {
                             title: '嵌套路由',
-                            activeMenu: '/keep-alive/page',
-                        },
-                    },
-                ],
+                            activeMenu: '/keep-alive/page'
+                        }
+                    }
+                ]
             },
             {
                 path: 'nested1',
                 name: 'keepAliveNested1',
                 component: () => import('@/views/example/keep-alive/nested/nested.vue'),
                 meta: {
-                    title: '路由多级缓存1',
+                    title: '路由多级缓存1'
                 },
                 children: [
                     {
@@ -527,7 +527,7 @@ const keepAlive = [
                         name: 'keepAliveNested2',
                         component: () => import('@/views/example/keep-alive/nested/nested/nested.vue'),
                         meta: {
-                            title: '路由多级缓存1-1',
+                            title: '路由多级缓存1-1'
                         },
                         children: [
                             {
@@ -536,15 +536,15 @@ const keepAlive = [
                                 component: () => import('@/views/example/keep-alive/nested/nested/nested/index.vue'),
                                 meta: {
                                     title: '路由多级缓存1-1-1',
-                                    cache: true,
-                                },
-                            },
-                        ],
-                    },
-                ],
-            },
+                                    cache: true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
         ]
-    },
+    }
 ]
 
 // 多级导航
@@ -555,7 +555,7 @@ const multilevel = [
         component: Layout,
         meta: {
             title: '多级导航',
-            icon: 'nested',
+            icon: 'nested'
         },
         redirect: '/multilevel/menu1',
         children: [
@@ -563,7 +563,7 @@ const multilevel = [
                 path: 'menu1',
                 name: 'multilevelMenu1',
                 meta: {
-                    title: '导航1',
+                    title: '导航1'
                 },
                 children: [
                     {
@@ -571,16 +571,16 @@ const multilevel = [
                         name: 'multilevelMenu1-1',
                         component: () => import('@/views/example/multilevel/menu1/menu1-1/index.vue'),
                         meta: {
-                            title: '导航1-1',
+                            title: '导航1-1'
                         }
-                    },
+                    }
                 ]
             },
             {
                 path: 'menu2',
                 name: 'multilevelMenu2',
                 meta: {
-                    title: '导航2',
+                    title: '导航2'
                 },
                 children: [
                     {
@@ -588,13 +588,13 @@ const multilevel = [
                         name: 'multilevelMenu2-1',
                         component: () => import('@/views/example/multilevel/menu2/menu2-1/index.vue'),
                         meta: {
-                            title: '导航2-1',
+                            title: '导航2-1'
                         }
-                    },
+                    }
                 ]
-            },
+            }
         ]
-    },
+    }
 ]
 
 // 外链
@@ -606,7 +606,7 @@ const link = [
         name: 'externalLink',
         meta: {
             title: '外链',
-            icon: 'link',
+            icon: 'link'
         },
         children: [
             {
@@ -615,8 +615,8 @@ const link = [
                 name: 'externalLinkGitee',
                 meta: {
                     title: 'Gitee 仓库',
-                    link: 'https://gitee.com/hooray/fantastic-admin',
-                },
+                    link: 'https://gitee.com/hooray/fantastic-admin'
+                }
             },
             {
                 path: 'github',
@@ -624,22 +624,11 @@ const link = [
                 name: 'externalLinkGithub',
                 meta: {
                     title: 'Github 仓库',
-                    link: 'https://github.com/hooray/fantastic-admin',
-                },
-            },
-        ],
+                    link: 'https://github.com/hooray/fantastic-admin'
+                }
+            }
+        ]
     }
 ]
 
-export default [
-    ...icons,
-    ...permission,
-    ...components,
-    ...feature,
-    ...pages,
-    ...plugin,
-    ...breadcrumb,
-    ...keepAlive,
-    ...multilevel,
-    ...link,
-]
+export default [...icons, ...permission, ...components, ...feature, ...pages, ...plugin, ...breadcrumb, ...keepAlive, ...multilevel, ...link]

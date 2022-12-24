@@ -41,5 +41,5 @@ export const NextLoading = {
                 el?.parentNode?.removeChild(el)
             }, time)
         })
-    },
+    }
 }

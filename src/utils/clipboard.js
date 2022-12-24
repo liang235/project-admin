@@ -14,14 +14,14 @@ export const handleClipboard = async (text) => {
             ElMessage({
                 showClose: true,
                 message: '当前无法获取读写权限',
-                type: 'warning',
+                type: 'warning'
             })
         }
     } else {
         ElMessage({
             showClose: true,
             message: '您的浏览器不支持剪贴板 API',
-            type: 'warning',
+            type: 'warning'
         })
     }
 }
@@ -32,7 +32,7 @@ watch(copied, (val) => {
         ElMessage({
             showClose: true,
             message: '复制成功',
-            type: 'success',
+            type: 'success'
         })
     }
 })

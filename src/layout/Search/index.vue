@@ -4,78 +4,78 @@
  * @LastEditTime: 2022-12-11 20:51:20
 -->
 <template>
-	<div class="search" :class="{ searching: isShow }" @click="isShow && bus.emit('global-search-toggle')">
-		<div class="container">
-			<!-- 搜索框部分 -->
-			<div class="search-box" @click.stop>
-				<el-input
-					ref="searchInputRef"
-					v-model="searchInput"
-					placeholder="搜索页面，支持标题、URL模糊查询"
-					:clearable="true"
-					@keydown.esc="bus.emit('global-search-toggle')"
-					@keydown.up.prevent="keyUp"
-					@keydown.down.prevent="keyDown"
-					@keydown.enter.prevent="keyEnter"
-					prefix-icon="ele-search"
-				/>
+    <div class="search" :class="{ searching: isShow }" @click="isShow && bus.emit('global-search-toggle')">
+        <div class="container">
+            <!-- 搜索框部分 -->
+            <div class="search-box" @click.stop>
+                <el-input
+                    ref="searchInputRef"
+                    v-model="searchInput"
+                    placeholder="搜索页面，支持标题、URL模糊查询"
+                    :clearable="true"
+                    @keydown.esc="bus.emit('global-search-toggle')"
+                    @keydown.up.prevent="keyUp"
+                    @keydown.down.prevent="keyDown"
+                    @keydown.enter.prevent="keyEnter"
+                    prefix-icon="ele-search"
+                />
 
-				<!-- 快捷键提示 -->
-				<div class="tips">
-					<div class="tip">
-						<el-tag type="info" size="large">Alt + S</el-tag>
-						<el-tag type="info" size="large">唤醒搜索面板</el-tag>
-					</div>
-					<div class="tip">
-						<el-tag type="info" size="large">
-							<svg-icon name="search-up" />
-						</el-tag>
-						<el-tag type="info" size="large">
-							<svg-icon name="search-down" />
-						</el-tag>
-						<el-tag type="info" size="large">切换搜索结果</el-tag>
-					</div>
-					<div class="tip">
-						<el-tag type="info" size="large">
-							<svg-icon name="search-enter" />
-						</el-tag>
-						<el-tag type="info" size="large">访问页面</el-tag>
-					</div>
-					<div class="tip">
-						<el-tag type="info" size="large">ESC</el-tag>
-						<el-tag type="info" size="large">退出</el-tag>
-					</div>
-				</div>
-			</div>
+                <!-- 快捷键提示 -->
+                <div class="tips">
+                    <div class="tip">
+                        <el-tag type="info" size="large">Alt + S</el-tag>
+                        <el-tag type="info" size="large">唤醒搜索面板</el-tag>
+                    </div>
+                    <div class="tip">
+                        <el-tag type="info" size="large">
+                            <svg-icon name="search-up" />
+                        </el-tag>
+                        <el-tag type="info" size="large">
+                            <svg-icon name="search-down" />
+                        </el-tag>
+                        <el-tag type="info" size="large">切换搜索结果</el-tag>
+                    </div>
+                    <div class="tip">
+                        <el-tag type="info" size="large">
+                            <svg-icon name="search-enter" />
+                        </el-tag>
+                        <el-tag type="info" size="large">访问页面</el-tag>
+                    </div>
+                    <div class="tip">
+                        <el-tag type="info" size="large">ESC</el-tag>
+                        <el-tag type="info" size="large">退出</el-tag>
+                    </div>
+                </div>
+            </div>
 
-			<!-- 路由展示列表 -->
-			<div ref="searchResultRef" class="result">
-				<a
-					v-for="(item, index) in resultList"
-					:key="item.path"
-					:ref="setSearchResultItemRef"
-					class="item"
-					:class="{ actived: index === actived }"
-					@click="pageJump(item.path, item.link)"
-					@mouseover="actived = index"
-				>
-					<svg-icon v-if="item.icon" :name="item.icon" class="icon" />
-					<div class="info">
-						<div class="title">
-							{{ item.title ?? '[ 无标题 ]' }}
-						</div>
-						<div class="breadcrumb">
-							<span v-for="(bc, bcIndex) in item.breadcrumb" :key="bcIndex">
-								{{ bc ?? '[ 无标题 ]' }}
-								<svg-icon name="ele-arrow-right" />
-							</span>
-						</div>
-						<div class="path">{{ item.path }}</div>
-					</div>
-				</a>
-			</div>
-		</div>
-	</div>
+            <!-- 路由展示列表 -->
+            <div ref="searchResultRef" class="result">
+                <a
+                    v-for="(item, index) in resultList"
+                    :key="item.path"
+                    :ref="setSearchResultItemRef"
+                    class="item"
+                    :class="{ actived: index === actived }"
+                    @click="pageJump(item.path, item.link)"
+                    @mouseover="actived = index"
+                >
+                    <svg-icon v-if="item.icon" :name="item.icon" class="icon" />
+                    <div class="info">
+                        <div class="title">
+                            {{ item.title ?? '[ 无标题 ]' }}
+                        </div>
+                        <div class="breadcrumb">
+                            <span v-for="(bc, bcIndex) in item.breadcrumb" :key="bcIndex">
+                                {{ bc ?? '[ 无标题 ]' }}
+                                <svg-icon name="ele-arrow-right" />
+                            </span>
+                        </div>
+                        <div class="path">{{ item.path }}</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script setup name="Search">
@@ -115,11 +115,11 @@ const setSearchResultItemRef = (el) => searchResultItemRef.value.push(el)
  * @return {*}
  */
 const hasChildren = (item) => {
-	let flag = true
-	if (item.children?.every((i) => i.meta?.sidebar === false)) {
-		flag = false
-	}
-	return flag
+    let flag = true
+    if (item.children?.every((i) => i.meta?.sidebar === false)) {
+        flag = false
+    }
+    return flag
 }
 
 /**
@@ -131,24 +131,24 @@ const hasChildren = (item) => {
  * @return {*}
  */
 function getSourceList(arr, basePath, icon, breadcrumb) {
-	arr.forEach((item) => {
-		if (item.meta?.sidebar !== false) {
-			const breadcrumbTemp = cloneDeep(breadcrumb) || []
-			if (item.children && hasChildren(item)) {
-				breadcrumbTemp.push(item.meta?.title)
-				getSourceList(item.children, basePath ? [basePath, item.path].join('/') : item.path, item.meta?.icon ?? icon, breadcrumbTemp)
-			} else {
-				breadcrumbTemp.push(item.meta?.title)
-				sourceList.value.push({
-					path: basePath ? [basePath, item.path].join('/') : item.path,
-					icon: item.meta?.icon ?? icon,
-					title: item.meta?.title,
-					link: item.meta?.link,
-					breadcrumb: breadcrumbTemp,
-				})
-			}
-		}
-	})
+    arr.forEach((item) => {
+        if (item.meta?.sidebar !== false) {
+            const breadcrumbTemp = cloneDeep(breadcrumb) || []
+            if (item.children && hasChildren(item)) {
+                breadcrumbTemp.push(item.meta?.title)
+                getSourceList(item.children, basePath ? [basePath, item.path].join('/') : item.path, item.meta?.icon ?? icon, breadcrumbTemp)
+            } else {
+                breadcrumbTemp.push(item.meta?.title)
+                sourceList.value.push({
+                    path: basePath ? [basePath, item.path].join('/') : item.path,
+                    icon: item.meta?.icon ?? icon,
+                    title: item.meta?.title,
+                    link: item.meta?.link,
+                    breadcrumb: breadcrumbTemp
+                })
+            }
+        }
+    })
 }
 
 /**
@@ -157,45 +157,45 @@ function getSourceList(arr, basePath, icon, breadcrumb) {
  * @return {*}
  */
 const resultList = computed(() => {
-	let result = []
-	result = sourceList.value.filter((item) => {
-		let flag = false
-		if (item.title) {
-			if (typeof item.title === 'function') {
-				if (item.title().includes(searchInput.value)) {
-					flag = true
-				}
-			} else {
-				if (item.title.includes(searchInput.value)) {
-					flag = true
-				}
-			}
-		}
-		if (item.path.includes(searchInput.value)) {
-			flag = true
-		}
-		if (
-			item.breadcrumb.some((b) => {
-				let flag = false
-				if (b) {
-					if (typeof b === 'function') {
-						if (b().includes(searchInput.value)) {
-							flag = true
-						}
-					} else {
-						if (b.includes(searchInput.value)) {
-							flag = true
-						}
-					}
-				}
-				return flag
-			})
-		) {
-			flag = true
-		}
-		return flag
-	})
-	return result
+    let result = []
+    result = sourceList.value.filter((item) => {
+        let flag = false
+        if (item.title) {
+            if (typeof item.title === 'function') {
+                if (item.title().includes(searchInput.value)) {
+                    flag = true
+                }
+            } else {
+                if (item.title.includes(searchInput.value)) {
+                    flag = true
+                }
+            }
+        }
+        if (item.path.includes(searchInput.value)) {
+            flag = true
+        }
+        if (
+            item.breadcrumb.some((b) => {
+                let flag = false
+                if (b) {
+                    if (typeof b === 'function') {
+                        if (b().includes(searchInput.value)) {
+                            flag = true
+                        }
+                    } else {
+                        if (b.includes(searchInput.value)) {
+                            flag = true
+                        }
+                    }
+                }
+                return flag
+            })
+        ) {
+            flag = true
+        }
+        return flag
+    })
+    return result
 })
 
 /**
@@ -203,13 +203,13 @@ const resultList = computed(() => {
  * @return {*}
  */
 const keyUp = () => {
-	if (resultList.value.length) {
-		actived.value -= 1
-		if (actived.value < 0) {
-			actived.value = resultList.value.length - 1
-		}
-		handleScroll()
-	}
+    if (resultList.value.length) {
+        actived.value -= 1
+        if (actived.value < 0) {
+            actived.value = resultList.value.length - 1
+        }
+        handleScroll()
+    }
 }
 
 /**
@@ -217,13 +217,13 @@ const keyUp = () => {
  * @return {*}
  */
 const keyDown = () => {
-	if (resultList.value.length) {
-		actived.value += 1
-		if (actived.value > resultList.value.length - 1) {
-			actived.value = 0
-		}
-		handleScroll()
-	}
+    if (resultList.value.length) {
+        actived.value += 1
+        if (actived.value > resultList.value.length - 1) {
+            actived.value = 0
+        }
+        handleScroll()
+    }
 }
 
 /**
@@ -231,9 +231,9 @@ const keyDown = () => {
  * @return {*}
  */
 const keyEnter = () => {
-	if (actived.value !== -1) {
-		searchResultItemRef.value[actived.value].click()
-	}
+    if (actived.value !== -1) {
+        searchResultItemRef.value[actived.value].click()
+    }
 }
 
 /**
@@ -241,22 +241,22 @@ const keyEnter = () => {
  * @return {*}
  */
 const handleScroll = () => {
-	let scrollTo = 0
-	if (actived.value !== -1) {
-		scrollTo = searchResultRef.value.scrollTop
-		const activedOffsetTop = searchResultItemRef.value[actived.value].offsetTop
-		const activedClientHeight = searchResultItemRef.value[actived.value].clientHeight
-		const searchScrollTop = searchResultRef.value.scrollTop
-		const searchClientHeight = searchResultRef.value.clientHeight
-		if (activedOffsetTop + activedClientHeight > searchScrollTop + searchClientHeight) {
-			scrollTo = activedOffsetTop + activedClientHeight - searchClientHeight
-		} else if (activedOffsetTop <= searchScrollTop) {
-			scrollTo = activedOffsetTop
-		}
-	}
-	searchResultRef.value.scrollTo({
-		top: scrollTo,
-	})
+    let scrollTo = 0
+    if (actived.value !== -1) {
+        scrollTo = searchResultRef.value.scrollTop
+        const activedOffsetTop = searchResultItemRef.value[actived.value].offsetTop
+        const activedClientHeight = searchResultItemRef.value[actived.value].clientHeight
+        const searchScrollTop = searchResultRef.value.scrollTop
+        const searchClientHeight = searchResultRef.value.clientHeight
+        if (activedOffsetTop + activedClientHeight > searchScrollTop + searchClientHeight) {
+            scrollTo = activedOffsetTop + activedClientHeight - searchClientHeight
+        } else if (activedOffsetTop <= searchScrollTop) {
+            scrollTo = activedOffsetTop
+        }
+    }
+    searchResultRef.value.scrollTo({
+        top: scrollTo
+    })
 }
 
 /**
@@ -266,258 +266,258 @@ const handleScroll = () => {
  * @return {*}
  */
 const pageJump = (path, link) => {
-	if (link) {
-		window.open(link, '_blank')
-	} else {
-		router.push(path)
-	}
+    if (link) {
+        window.open(link, '_blank')
+    } else {
+        router.push(path)
+    }
 }
 
 // 在组件挂载完并创建 DOM 节点后运行
 onMounted(() => {
-	bus.on((event) => {
-		if (event === 'global-search-toggle') isShow.value = !isShow.value
-	})
+    bus.on((event) => {
+        if (event === 'global-search-toggle') isShow.value = !isShow.value
+    })
 
-	// 绑定键盘快捷键
-	hotkeys('alt+s', (e) => {
-		if (settingsStore.navSearch.enable && settingsStore.navSearch.enableHotkeys) {
-			e.preventDefault()
-			isShow.value = true
-		}
-	})
+    // 绑定键盘快捷键
+    hotkeys('alt+s', (e) => {
+        if (settingsStore.navSearch.enable && settingsStore.navSearch.enableHotkeys) {
+            e.preventDefault()
+            isShow.value = true
+        }
+    })
 
-	hotkeys('esc', (e) => {
-		if (settingsStore.navSearch.enable && settingsStore.navSearch.enableHotkeys) {
-			e.preventDefault()
-			isShow.value = false
-		}
-	})
+    hotkeys('esc', (e) => {
+        if (settingsStore.navSearch.enable && settingsStore.navSearch.enableHotkeys) {
+            e.preventDefault()
+            isShow.value = false
+        }
+    })
 
-	// 获取所有动态生成后的路由
-	routeStore.routes.forEach((item) => {
-		item.children && getSourceList(item.children)
-	})
+    // 获取所有动态生成后的路由
+    routeStore.routes.forEach((item) => {
+        item.children && getSourceList(item.children)
+    })
 })
 
 // 在组件即将因为响应式状态变更而更新其 DOM 树之前调用
 onBeforeUpdate(() => {
-	searchResultItemRef.value = []
+    searchResultItemRef.value = []
 })
 
 // 在一个组件实例被卸载之后调用
 onUnmounted(() => {
-	hotkeys.unbind('alt+s')
-	hotkeys.unbind('esc')
+    hotkeys.unbind('alt+s')
+    hotkeys.unbind('esc')
 })
 
 // 监听搜索查询现在有的结果列表
 watch(
-	() => resultList.value,
-	() => {
-		actived.value = -1
-		searchResultItemRef.value = []
-		handleScroll()
-	}
+    () => resultList.value,
+    () => {
+        actived.value = -1
+        searchResultItemRef.value = []
+        handleScroll()
+    }
 )
 
 // 监听搜索页面状态
 watch(
-	() => isShow.value,
-	(val) => {
-		if (val) {
-			document.body.classList.add('overflow-hidden')
-			searchResultRef.value.scrollTop = 0
-			// 当搜索页面显示的时候绑定上、下、回车快捷键，隐藏的时候再解绑。另外当 input 处于 focus 状态时，采用 vue 来绑定键盘事件
-			hotkeys('up', keyUp)
-			hotkeys('down', keyDown)
-			hotkeys('enter', keyEnter)
-			setTimeout(() => {
-				searchInputRef.value.focus()
-			}, 500)
-		} else {
-			document.body.classList.remove('overflow-hidden')
-			hotkeys.unbind('up', keyUp)
-			hotkeys.unbind('down', keyDown)
-			hotkeys.unbind('enter', keyEnter)
-			setTimeout(() => {
-				searchInput.value = ''
-				actived.value = -1
-			}, 500)
-		}
-	}
+    () => isShow.value,
+    (val) => {
+        if (val) {
+            document.body.classList.add('overflow-hidden')
+            searchResultRef.value.scrollTop = 0
+            // 当搜索页面显示的时候绑定上、下、回车快捷键，隐藏的时候再解绑。另外当 input 处于 focus 状态时，采用 vue 来绑定键盘事件
+            hotkeys('up', keyUp)
+            hotkeys('down', keyDown)
+            hotkeys('enter', keyEnter)
+            setTimeout(() => {
+                searchInputRef.value.focus()
+            }, 500)
+        } else {
+            document.body.classList.remove('overflow-hidden')
+            hotkeys.unbind('up', keyUp)
+            hotkeys.unbind('down', keyDown)
+            hotkeys.unbind('enter', keyEnter)
+            setTimeout(() => {
+                searchInput.value = ''
+                actived.value = -1
+            }, 500)
+        }
+    }
 )
 </script>
 
 <style lang="scss" scoped>
 .search {
-	position: fixed;
-	z-index: 2000;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
-	background-image: radial-gradient(transparent 1px, rgb(0 0 0 / 30%) 1px);
-	background-size: 4px 4px;
-	backdrop-filter: saturate(50%) blur(4px);
+    background-image: radial-gradient(transparent 1px, rgb(0 0 0 / 30%) 1px);
+    background-size: 4px 4px;
+    backdrop-filter: saturate(50%) blur(4px);
 
-	// background-color: var(--el-overlay-color-lighter);
-	// backdrop-filter: blur(10px);
-	// transform: translateZ(0);
+    // background-color: var(--el-overlay-color-lighter);
+    // backdrop-filter: blur(10px);
+    // transform: translateZ(0);
 
-	transition: all 0.2s;
-	opacity: 0;
-	visibility: hidden;
+    transition: all 0.2s;
+    opacity: 0;
+    visibility: hidden;
 
-	&.searching {
-		opacity: 1;
-		visibility: visible;
+    &.searching {
+        opacity: 1;
+        visibility: visible;
 
-		.container {
-			transform: initial;
-			filter: initial;
-		}
-	}
+        .container {
+            transform: initial;
+            filter: initial;
+        }
+    }
 
-	.container {
-		display: flex;
-		flex-direction: column;
-		max-width: 800px;
-		height: 100%;
-		margin: 0 auto;
-		transition: all 0.2s;
-		transform: scale(1.1);
-		filter: blur(10px);
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+        height: 100%;
+        margin: 0 auto;
+        transition: all 0.2s;
+        transform: scale(1.1);
+        filter: blur(10px);
 
-		.search-box {
-			margin: 50px 20px 20px;
+        .search-box {
+            margin: 50px 20px 20px;
 
-			:deep(.el-input__inner) {
-				height: 52px;
-				line-height: 52px;
-			}
+            :deep(.el-input__inner) {
+                height: 52px;
+                line-height: 52px;
+            }
 
-			:deep(.el-input__icon) {
-				height: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
+            :deep(.el-input__icon) {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
-			.tips {
-				display: flex;
-				justify-content: center;
-				padding-top: 20px;
-				font-weight: bold;
+            .tips {
+                display: flex;
+                justify-content: center;
+                padding-top: 20px;
+                font-weight: bold;
 
-				.tip {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					margin: 0 20px;
+                .tip {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 20px;
 
-					.el-tag {
-						margin: 0 5px;
+                    .el-tag {
+                        margin: 0 5px;
 
-						&:first-child {
-							margin-left: 0;
-						}
+                        &:first-child {
+                            margin-left: 0;
+                        }
 
-						&:last-child {
-							margin-right: 0;
-						}
-					}
-				}
-			}
-		}
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
 
-		.result {
-			position: relative;
-			margin: 0 20px 50px;
-			border-radius: 5px;
-			overflow: auto;
-			background-color: var(--el-bg-color);
-			box-shadow: 0 0 0 1px var(--el-border-color-darker);
+        .result {
+            position: relative;
+            margin: 0 20px 50px;
+            border-radius: 5px;
+            overflow: auto;
+            background-color: var(--el-bg-color);
+            box-shadow: 0 0 0 1px var(--el-border-color-darker);
 
-			.item {
-				display: flex;
-				align-items: center;
-				text-decoration: none;
-				cursor: pointer;
-				transition: all 0.3s;
+            .item {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                cursor: pointer;
+                transition: all 0.3s;
 
-				&.actived {
-					background-color: var(--el-bg-color-page);
+                &.actived {
+                    background-color: var(--el-bg-color-page);
 
-					.icon {
-						color: var(--el-color-primary);
-						transform: scale(1.2);
-					}
+                    .icon {
+                        color: var(--el-color-primary);
+                        transform: scale(1.2);
+                    }
 
-					.info {
-						border-left-color: var(--el-border-color);
+                    .info {
+                        border-left-color: var(--el-border-color);
 
-						.title {
-							color: var(--el-text-color-primary);
-						}
+                        .title {
+                            color: var(--el-text-color-primary);
+                        }
 
-						.breadcrumb,
-						.path {
-							color: var(--el-text-color-regular);
-						}
-					}
-				}
+                        .breadcrumb,
+                        .path {
+                            color: var(--el-text-color-regular);
+                        }
+                    }
+                }
 
-				.icon {
-					flex: 0 0 66px;
-					text-align: center;
-					color: var(--el-color-info);
-					font-size: 20px;
-					transition: all 0.3s;
-				}
+                .icon {
+                    flex: 0 0 66px;
+                    text-align: center;
+                    color: var(--el-color-info);
+                    font-size: 20px;
+                    transition: all 0.3s;
+                }
 
-				.info {
-					flex: 1;
-					height: 70px;
-					display: flex;
-					flex-direction: column;
-					justify-content: space-around;
-					border-left: 1px solid var(--el-border-color-lighter);
-					padding: 5px 10px 7px;
-					transition: all 0.3s;
+                .info {
+                    flex: 1;
+                    height: 70px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    border-left: 1px solid var(--el-border-color-lighter);
+                    padding: 5px 10px 7px;
+                    transition: all 0.3s;
 
-					@include text-overflow(1, true);
+                    @include text-overflow(1, true);
 
-					.title {
-						font-size: 18px;
-						font-weight: bold;
-						color: var(--el-text-color-regular);
+                    .title {
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: var(--el-text-color-regular);
 
-						@include text-overflow(1, true);
-					}
+                        @include text-overflow(1, true);
+                    }
 
-					.breadcrumb,
-					.path {
-						font-size: 12px;
-						color: var(--el-text-color-secondary);
-						transition: all 0.3s;
+                    .breadcrumb,
+                    .path {
+                        font-size: 12px;
+                        color: var(--el-text-color-secondary);
+                        transition: all 0.3s;
 
-						@include text-overflow(1, true);
-					}
+                        @include text-overflow(1, true);
+                    }
 
-					.breadcrumb {
-						span {
-							margin-right: 5px;
+                    .breadcrumb {
+                        span {
+                            margin-right: 5px;
 
-							&:last-child i {
-								display: none;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+                            &:last-child i {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 </style>

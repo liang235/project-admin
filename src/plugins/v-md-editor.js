@@ -33,7 +33,7 @@ import '@kangc/v-md-editor/lib/plugins/todo-list/todo-list.css'
 
 // 主题，按需引入语言包（推荐）
 VueMarkdownEditor.use(vuepressTheme, {
-	Prism,
+    Prism
 })
 
 // Emoji 表情

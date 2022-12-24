@@ -13,7 +13,7 @@ export default function useAuth() {
         const settingsStore = useSettingsStore()
         const userStore = useUserStore()
         if (settingsStore.app.enablePermission) {
-            return userStore.permissions.some(v => {
+            return userStore.permissions.some((v) => {
                 return v === permission
             })
         } else {
@@ -32,7 +32,7 @@ export default function useAuth() {
         if (typeof value === 'string') {
             auth = hasPermission(value)
         } else {
-            auth = value.some(item => {
+            auth = value.some((item) => {
                 return hasPermission(item)
             })
         }
@@ -44,7 +44,7 @@ export default function useAuth() {
      * @description: <button v-auth-all="['department.create', 'department.edit']">新增部门</button>
      */
     function authAll(value) {
-        const auth = value.every(item => {
+        const auth = value.every((item) => {
             return hasPermission(item)
         })
         return auth

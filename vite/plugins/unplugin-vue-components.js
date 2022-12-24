@@ -8,20 +8,20 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers' // 按�
 import IconsResolver from 'unplugin-icons/resolver'
 
 export default function createComponents() {
-	return Components({
-		// 自定义组件的解析器
-		resolvers: [
-			// 自动导入 Element Plus 组件
-			ElementPlusResolver(),
+    return Components({
+        // 自定义组件的解析器
+        resolvers: [
+            // 自动导入 Element Plus 组件
+            ElementPlusResolver(),
 
-			// 自动注册图标组件
-			IconsResolver({
-				enabledCollections: ['ep'], // element-plus 图标库
-			}),
-		],
-		// 用于搜索组件的目录的相对路径
-		dirs: ['src/components'],
-		// 变换目标的滤波器
-		include: [/\.vue$/, /\.vue\?vue/, /\.jsx$/],
-	})
+            // 自动注册图标组件
+            IconsResolver({
+                enabledCollections: ['ep'] // element-plus 图标库
+            })
+        ],
+        // 用于搜索组件的目录的相对路径
+        dirs: ['src/components'],
+        // 变换目标的滤波器
+        include: [/\.vue$/, /\.vue\?vue/, /\.jsx$/]
+    })
 }

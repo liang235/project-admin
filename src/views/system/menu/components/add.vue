@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-12-03 13:38:48
 -->
 <template>
-	<div></div>
+    <div></div>
 </template>
 
 <script setup>

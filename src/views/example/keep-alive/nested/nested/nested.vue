@@ -1,12 +1,12 @@
 <template>
-	<page-main>
-		<div>层级：1-1</div>
-		<router-view v-slot="{ Component }">
-			<keep-alive :include="keepAliveStore.list">
-				<component :is="Component" />
-			</keep-alive>
-		</router-view>
-	</page-main>
+    <page-main>
+        <div>层级：1-1</div>
+        <router-view v-slot="{ Component }">
+            <keep-alive :include="keepAliveStore.list">
+                <component :is="Component" />
+            </keep-alive>
+        </router-view>
+    </page-main>
 </template>
 
 <script setup name="TabExampleNested2">

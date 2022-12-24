@@ -4,9 +4,9 @@
  * @LastEditTime: 2022-11-27 23:00:55
 -->
 <template>
-	<page-main>
-		<el-button @click="$router.go(-1)"> 返回 </el-button>
-	</page-main>
+    <page-main>
+        <el-button @click="$router.go(-1)"> 返回 </el-button>
+    </page-main>
 </template>
 
 <script setup></script>

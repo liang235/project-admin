@@ -5,7 +5,7 @@
  */
 const useKeepAliveStore = defineStore('keepAlive', {
     state: () => ({
-        list: [], // 缓存列表
+        list: [] // 缓存列表
     }),
     actions: {
         // 添加缓存
@@ -35,9 +35,8 @@ const useKeepAliveStore = defineStore('keepAlive', {
         // 清空缓存
         clean() {
             this.list = []
-        },
-    },
-},
-)
+        }
+    }
+})
 
 export default useKeepAliveStore

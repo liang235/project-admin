@@ -3,7 +3,7 @@
  * @directive 默认方式：v-waves，如 `<div v-waves></div>`
  * @directive 参数方式：v-waves=" |light|red|orange|purple|green|teal"，如 `<div v-waves="'light'"></div>`
  * @Date: 2022-12-12 16:23:50
- * @LastEditTime: 2022-12-12 16:31:22
+ * @LastEditTime: 2022-12-24 03:50:42
  */
 export function wavesDirective(app) {
     app.directive('waves', {
@@ -27,7 +27,7 @@ export function wavesDirective(app) {
                     opacity: 1,
                     transform: `scale(${(el.clientWidth / 100) * 10})`,
                     'transition-duration': `750ms`,
-                    'transition-timing-function': `cubic-bezier(0.250, 0.460, 0.450, 0.940)`,
+                    'transition-timing-function': `cubic-bezier(0.250, 0.460, 0.450, 0.940)`
                 }
                 elDiv.setAttribute('style', setConvertStyle(styles))
                 setTimeout(() => {
@@ -37,7 +37,7 @@ export function wavesDirective(app) {
                             opacity: 0,
                             transform: styles.transform,
                             left: styles.left,
-                            top: styles.top,
+                            top: styles.top
                         })
                     )
                     setTimeout(() => {
@@ -48,7 +48,7 @@ export function wavesDirective(app) {
             el.addEventListener('mousedown', onCurrentClick, false)
         },
         unmounted(el) {
-            el.addEventListener('mousedown', () => { })
-        },
+            el.addEventListener('mousedown', () => {})
+        }
     })
 }

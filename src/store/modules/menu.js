@@ -3,7 +3,7 @@
  * @Date: 2022-11-02 10:38:13
  * @LastEditTime: 2022-12-02 15:40:08
  */
-import { resolveRoutePath, } from '@/utils/tools.js' // 自定义工具
+import { resolveRoutePath } from '@/utils/tools.js' // 自定义工具
 import useSettingsStore from '@/store/modules/settings.js' // 系统配置数据
 import useRouteStore from '@/store/modules/route.js' // 路由数据
 
@@ -16,15 +16,13 @@ import useRouteStore from '@/store/modules/route.js' // 路由数据
 function getDeepestPath(menu, rootPath = '') {
     let retnPath = ''
     if (menu.children) {
-        const item = menu.children.find(item => item.meta?.sidebar !== false)
+        const item = menu.children.find((item) => item.meta?.sidebar !== false)
         if (item) {
             retnPath = getDeepestPath(item, resolveRoutePath(rootPath, menu.path))
-        }
-        else {
+        } else {
             retnPath = getDeepestPath(menu.children[0], resolveRoutePath(rootPath, menu.path))
         }
-    }
-    else {
+    } else {
         retnPath = resolveRoutePath(rootPath, menu.path)
     }
     return retnPath
@@ -49,16 +47,18 @@ function getDefaultOpenedPaths(menus, rootPath = '') {
 const useMenuStore = defineStore('menu', {
     state: () => ({
         menus: [], // 完整导航数据
-        actived: 0, // 切换主导航
+        actived: 0 // 切换主导航
     }),
     getters: {
         // 完整导航数据
         allMenus() {
             const settingsStore = useSettingsStore()
-            let menus = [{
-                meta: {},
-                children: [],
-            }]
+            let menus = [
+                {
+                    meta: {},
+                    children: []
+                }
+            ]
             const routeStore = useRouteStore()
             if (settingsStore.menu.menuMode === 'single') {
                 menus[0].children = []
@@ -86,7 +86,7 @@ const useMenuStore = defineStore('menu', {
             let defaultOpenedPaths = []
             defaultOpenedPaths = getDefaultOpenedPaths(this.sidebarMenus)
             return defaultOpenedPaths
-        },
+        }
     },
     actions: {
         // 切换主导航
@@ -106,8 +106,8 @@ const useMenuStore = defineStore('menu', {
                     }
                 })
             }
-        },
-    },
+        }
+    }
 })
 
 export default useMenuStore

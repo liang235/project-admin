@@ -25,3 +25,5 @@ portal-production
 *.njsproj
 *.sln
 *.sw?
+
+.eslintcache

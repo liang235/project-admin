@@ -15,7 +15,7 @@ export const login = (data) => {
     return request({
         url: data.account === 'admin' ? '/login_admin' : '/login_test',
         method: 'post',
-        params: data,
+        params: data
     })
 }
 
@@ -29,7 +29,7 @@ export const getPermission = (data) => {
     return request({
         url: data.account === 'admin' ? '/permission_admin' : '/permission_test',
         method: 'post',
-        params: data,
+        params: data
     })
 }
 
@@ -42,6 +42,6 @@ export const getRouteList = (data) => {
     return request({
         url: data.account === 'admin' ? '/route/list_admin' : '/route/list_test',
         method: 'post',
-        params: data,
+        params: data
     })
 }

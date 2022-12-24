@@ -5,16 +5,16 @@
 -->
 
 <template>
-	<div class="authAll">
-		<slot v-if="check()" />
-		<slot v-else name="no-auth" />
-	</div>
+    <div class="authAll">
+        <slot v-if="check()" />
+        <slot v-else name="no-auth" />
+    </div>
 </template>
 
 <script setup name="AuthAll">
 // 定义父组件传过来的值
 const props = defineProps({
-	value: Array,
+    value: Array
 })
 
 /**
@@ -22,7 +22,7 @@ const props = defineProps({
  * @return {*}
  */
 const check = () => {
-	return useAuth().authAll(props.value)
+    return useAuth().authAll(props.value)
 }
 </script>
 
