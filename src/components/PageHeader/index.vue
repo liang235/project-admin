@@ -1,7 +1,7 @@
 <!--
  * @Description: 页面页头
  * @Date: 2022-11-17 18:20:46
- * @LastEditTime: 2022-11-19 17:51:07
+ * @LastEditTime: 2022-12-25 19:25:12
 -->
 <template>
 	<div class="header">
@@ -19,7 +19,7 @@
 
 <script setup name="PageHeader">
 // 定义父组件传过来的值
-const props = defineProps({
+defineProps({
 	// 页面标题
 	title: {
 		type: String,
@@ -36,10 +36,10 @@ const props = defineProps({
 <style lang="scss" scoped>
 .header {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 20px;
+	align-items: center;
 	padding: 16px 20px;
+	margin-bottom: 20px;
 	background-color: var(--g-app-bg);
 	transition: background-color 0.3s;
 

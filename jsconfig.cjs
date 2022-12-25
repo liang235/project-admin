@@ -1,5 +1,5 @@
 module.exports = {
-    compilerOptions: {
-        allows: true
-    }
+	compilerOptions: {
+		allows: true,
+	},
 }

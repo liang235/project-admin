@@ -1,7 +1,7 @@
 <!--
  * @Description: 角色管理
  * @Date: 2022-11-08 14:45:04
- * @LastEditTime: 2022-12-03 17:43:49
+ * @LastEditTime: 2022-12-25 19:25:47
 -->
 <template>
 	<page-main title="角色管理" v-loading="loading">
@@ -48,7 +48,7 @@
 			<el-table-column prop="describe" label="角色描述" />
 
 			<el-table-column label="操作" align="center">
-				<template #default="scope">
+				<template>
 					<el-button size="small" type="primary">编辑</el-button>
 					<el-button size="small" type="danger">删除</el-button>
 				</template>

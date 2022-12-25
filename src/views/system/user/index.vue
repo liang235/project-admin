@@ -1,7 +1,7 @@
 <!--
  * @Description: 用户管理
  * @Date: 2022-11-08 14:45:23
- * @LastEditTime: 2022-12-24 03:20:57
+ * @LastEditTime: 2022-12-25 19:25:59
 -->
 <template>
 	<page-main title="用户管理" v-loading="loading">
@@ -50,7 +50,7 @@
 			<el-table-column prop="describe" label="用户描述" />
 
 			<el-table-column label="操作" align="center">
-				<template #default="scope">
+				<template>
 					<el-button size="small" type="primary">编辑</el-button>
 					<el-button size="small" type="danger">删除</el-button>
 				</template>

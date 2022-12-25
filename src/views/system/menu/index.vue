@@ -1,7 +1,7 @@
 <!--
  * @Description: 菜单管理
  * @Date: 2022-12-02 13:03:25
- * @LastEditTime: 2022-12-18 19:09:45
+ * @LastEditTime: 2022-12-25 19:25:29
 -->
 <template>
 	<page-main title="菜单管理" v-loading="loading">
@@ -66,7 +66,7 @@
 				</el-table-column>
 
 				<el-table-column label="操作" align="center">
-					<template #default="scope">
+					<template>
 						<el-button size="small" type="primary">新增</el-button>
 						<el-button size="small" type="success">编辑</el-button>
 						<el-button size="small" type="danger">删除</el-button>
