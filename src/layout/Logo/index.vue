@@ -1,7 +1,7 @@
 <!--
  * @Description: logo/标题
  * @Date: 2022-11-09 09:46:03
- * @LastEditTime: 2022-11-28 23:54:02
+ * @LastEditTime: 2022-12-25 16:09:25
 -->
 <template>
 	<router-link :to="to" class="title" :class="{ 'is-link': settingsStore.home.enable }" :title="title">
@@ -17,7 +17,7 @@ import imgLogo from '@/assets/icons/vue.svg' // logo 图片
 const settingsStore = useSettingsStore()
 
 // 定义父组件传过来的值
-const props = defineProps({
+defineProps({
 	// 是否显示 logo 图片
 	showLogo: {
 		type: Boolean,
@@ -46,16 +46,16 @@ const to = computed(() => {
 <style lang="scss" scoped>
 .title {
 	position: fixed;
-	z-index: 1000;
 	top: 0;
-	width: inherit;
-	padding: 0 10px;
+	z-index: 1000;
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	padding: 0 10px;
+	width: inherit;
 	height: var(--g-sidebar-logo-height);
 	text-align: center;
-	overflow: hidden;
 	text-decoration: none;
 
 	&.is-link {
@@ -76,6 +76,7 @@ const to = computed(() => {
 		display: block;
 		font-weight: bold;
 		color: #fff;
+
 		@include text-overflow;
 	}
 }

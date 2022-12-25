@@ -1,7 +1,7 @@
 <!--
  * @Description: 新增用户
  * @Date: 2022-12-03 17:56:45
- * @LastEditTime: 2022-12-24 03:27:56
+ * @LastEditTime: 2022-12-25 03:10:39
 -->
 <template>
 	<el-dialog v-model="isShowDialog" :width="width" :close-on-click-modal="false" :destroy-on-close="true" :draggable="true">
@@ -92,7 +92,7 @@
 import { systemRoleList } from '@/api/system.js' // 系统 api
 
 // props
-const props = defineProps({
+defineProps({
 	// 标题
 	title: {
 		type: String,

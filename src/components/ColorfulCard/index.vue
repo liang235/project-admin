@@ -1,7 +1,7 @@
 <!--
  * @Description: 多彩渐变卡片
  * @Date: 2022-12-14 14:51:35
- * @LastEditTime: 2022-12-14 19:45:40
+ * @LastEditTime: 2022-12-25 16:08:51
 -->
 <template>
 	<el-card shadow="never" class="mini-card" :style="`background: linear-gradient(50deg, ${colorFrom}, ${colorTo});`">
@@ -14,7 +14,7 @@
 
 <script setup name="ColorfulCard">
 // 定义父组件传过来的值
-const props = defineProps({
+defineProps({
 	// 开始颜色
 	colorFrom: {
 		type: String,
@@ -56,8 +56,8 @@ const props = defineProps({
 	cursor: pointer;
 
 	&:hover .svg-icon {
-		right: 0;
 		top: 0;
+		right: 0;
 	}
 
 	:deep(.el-card__header) {
@@ -84,11 +84,11 @@ const props = defineProps({
 	}
 
 	.svg-icon {
-		transition: 0.3s;
-		font-size: 120px;
 		position: absolute;
-		right: -30px;
 		top: -10px;
+		right: -30px;
+		font-size: 120px;
+		transition: 0.3s;
 	}
 }
 </style>

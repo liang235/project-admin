@@ -1,7 +1,7 @@
 <!--
  * @Description: 多彩渐变卡片
  * @Date: 2022-12-14 14:56:44
- * @LastEditTime: 2022-12-14 19:51:29
+ * @LastEditTime: 2022-12-25 16:09:55
 -->
 <template>
 	<div>
@@ -54,19 +54,6 @@
 	</div>
 </template>
 
-<script setup name="ComponentColorfulCard">
-// 路由实例
-const route = useRoute()
-const router = useRouter()
-
-// vue 实例
-const { proxy } = getCurrentInstance()
-
-// 定义响应式数据
-const state = reactive({})
-
-// 在组件挂载完并创建 DOM 节点后运行
-onMounted(() => {})
-</script>
+<script setup name="ComponentColorfulCard"></script>
 
 <style lang="scss" scoped></style>

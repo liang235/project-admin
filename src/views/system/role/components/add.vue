@@ -1,7 +1,7 @@
 <!--
  * @Description: 新增角色
  * @Date: 2022-12-03 13:39:18
- * @LastEditTime: 2022-12-03 17:57:30
+ * @LastEditTime: 2022-12-25 03:10:52
 -->
 <template>
 	<el-dialog v-model="isShowDialog" :width="width" :close-on-click-modal="false" :destroy-on-close="true" :draggable="true">
@@ -54,7 +54,7 @@
 
 <script setup name="SystemRoleAdd">
 // props
-const props = defineProps({
+defineProps({
 	// 标题
 	title: {
 		type: String,

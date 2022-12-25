@@ -1,7 +1,7 @@
 <!--
  * @Description: 图片裁剪
  * @Date: 2022-12-10 21:04:35
- * @LastEditTime: 2022-12-12 00:18:10
+ * @LastEditTime: 2022-12-25 16:09:04
 -->
 <template>
 	<el-dialog v-model="isShowDialog" :width="width" :close-on-click-modal="false" :destroy-on-close="true" :draggable="true">
@@ -60,7 +60,7 @@ import VueCropper from 'vue-cropperjs'
 import 'cropperjs/dist/cropper.css'
 
 // 定义父组件传过来的值
-const props = defineProps({
+defineProps({
 	// 标题
 	title: {
 		type: String,
@@ -201,25 +201,25 @@ defineExpose({
 	}
 
 	.preview-wrap {
-		width: 250px;
-		padding-left: 20px;
 		display: flex;
-		flex-direction: column;
 		justify-content: space-between;
+		padding-left: 20px;
+		width: 250px;
+		flex-direction: column;
 
 		.preview-title {
+			font-size: 20px;
 			text-align: center;
 			line-height: 20px;
-			font-size: 20px;
 		}
 
 		.preview-item {
 			.preview {
+				overflow: hidden;
+				margin: auto;
 				width: 150px;
 				height: 150px;
 				border-radius: var(--el-border-radius-circle);
-				margin: auto;
-				overflow: hidden;
 
 				&.preview-size {
 					width: 100px;
@@ -228,10 +228,10 @@ defineExpose({
 			}
 
 			.preview-label {
-				text-align: center;
-				font-size: 14px;
-				color: var(--el-text-color-primary);
 				height: 30px;
+				font-size: 14px;
+				text-align: center;
+				color: var(--el-text-color-primary);
 				line-height: 30px;
 			}
 		}

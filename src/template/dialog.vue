@@ -1,7 +1,7 @@
 <!--
  * @Description: dialog 模版
  * @Date: 2022-12-03 13:44:43
- * @LastEditTime: 2022-12-24 16:32:01
+ * @LastEditTime: 2022-12-25 16:09:36
 -->
 <template>
 	<el-dialog v-model="isShowDialog" :width="width" :close-on-click-modal="false" :destroy-on-close="true" :draggable="true">
@@ -34,7 +34,7 @@
 
 <script setup>
 // props
-const props = defineProps({
+defineProps({
 	// 标题
 	title: {
 		type: String,

@@ -1,7 +1,7 @@
 <!--
  * @Description: 个人设置
  * @Date: 2022-11-21 17:25:31
- * @LastEditTime: 2022-11-23 11:11:29
+ * @LastEditTime: 2022-12-25 03:15:06
 -->
 <template>
 	<page-main title="个人设置">
@@ -73,20 +73,7 @@
 const router = useRouter() // 路由实例
 
 // 定义响应式数据
-const form = reactive({})
-
-/**
- * @description: 文件上传成功时的钩子
- * @param {*} res
- * @return {*}
- */
-const handleSuccess = (res) => {
-	if (res.error === '') {
-		form.value.headimg = res.data.path
-	} else {
-		ElMessage.warning(res.error)
-	}
-}
+const form = ref({})
 
 /**
  * @description: 编辑密码
@@ -111,8 +98,8 @@ const editPassword = () => {
 		}
 
 		.el-tabs__item {
-			text-align: left;
 			padding-right: 100px;
+			text-align: left;
 		}
 	}
 
@@ -141,11 +128,11 @@ h2 {
 	.setting-list {
 		.item {
 			display: flex;
-			align-items: center;
 			justify-content: space-between;
+			align-items: center;
 			padding: 10px 0;
-			border-bottom: 1px solid var(--el-border-color-lighter);
 			transition: var(--el-transition-border);
+			border-bottom: 1px solid var(--el-border-color-lighter);
 
 			.content {
 				.title {
