@@ -9,6 +9,10 @@
 -   🌈 重构
 -   ⚠️ 警告
 
+## Version: "1.0.9"，Date: "2022.12.26"
+
+-   🎉 新增 eslint-config-prettier 和 eslint-plugin-prettier 解决 eslint 和 prettier 冲突
+
 ## Version: "1.0.8"，Date: "2022.12.25"
 
 -   💔 移除 未使用的变量

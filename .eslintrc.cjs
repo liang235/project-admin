@@ -4,16 +4,8 @@ module.exports = {
 		es2021: true,
 		node: true,
 	},
-	extends: ['eslint:recommended', 'plugin:vue/vue3-essential'],
-	overrides: [
-		// 需要安装 vue-eslint-parser
-		// {
-		//     files: ['*.ts', '*.tsx', '*.vue'],
-		//     rules: {
-		//         'no-undef': 'off'
-		//     }
-		// }
-	],
+	extends: ['eslint:recommended', 'plugin:vue/vue3-essential', 'plugin:prettier/recommended'],
+	overrides: [],
 	parserOptions: {
 		ecmaVersion: 'latest',
 		sourceType: 'module',

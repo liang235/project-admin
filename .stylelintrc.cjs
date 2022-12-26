@@ -1,5 +1,5 @@
 module.exports = {
-	extends: ['stylelint-config-standard', 'stylelint-config-prettier', 'stylelint-config-standard-scss', 'stylelint-config-standard-vue/scss'],
+	extends: ['stylelint-config-standard', 'stylelint-config-standard-scss', 'stylelint-config-standard-vue/scss', 'stylelint-config-prettier'],
 	plugins: ['stylelint-scss', 'stylelint-order'],
 	rules: {
 		// https://stylelint.bootcss.com/user-guide/rules/list
@@ -13,7 +13,6 @@ module.exports = {
 		'max-line-length': null, // 限制一行的长度
 		'selector-class-pattern': null, // 为类选择器指定一个模式
 		'value-no-vendor-prefix': null, // 禁止在值中使用供应商前缀
-		indentation: null, // 禁止格式化缩进
 		'number-max-precision': null, // 限制数字中允许的小数点后数位
 		'keyframes-name-pattern': null, // 期望关键帧名称为串格式 .foo-bar
 		'block-no-empty': null, // 禁止使用空样式
