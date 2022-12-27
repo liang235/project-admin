@@ -9,6 +9,10 @@
 -   🌈 重构
 -   ⚠️ 警告
 
+## Version: "1.1.0"，Date: "2022.12.27"
+
+-   🎉 新增 vite-plugin-stylelint 和 vite-plugin-eslint 用来做终端报错展示
+
 ## Version: "1.0.9"，Date: "2022.12.26"
 
 -   🎉 新增 eslint-config-prettier 和 eslint-plugin-prettier 解决 eslint 和 prettier 冲突

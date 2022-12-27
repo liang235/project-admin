@@ -69,10 +69,10 @@ const calcHeight = computed(() => {
 <style lang="scss" scoped>
 .page-main {
 	position: relative;
+	display: flex;
 	margin: 20px;
 	background-color: var(--g-app-bg);
 	transition: all 0.3s;
-	display: flex;
 	flex-direction: column;
 
 	&:hover {
@@ -86,28 +86,28 @@ const calcHeight = computed(() => {
 	}
 
 	.main-container {
-		flex: 1;
+		overflow: hidden;
 		padding: 20px;
 		transition: all 0.3s;
-		overflow: hidden;
+		flex: 1;
 	}
 
 	.collaspe {
 		position: absolute;
-		left: 0;
 		bottom: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px 0;
 		width: 100%;
-		padding: 20px 0 20px;
-		text-align: center;
 		font-size: 24px;
+		text-align: center;
 		color: var(--el-text-color-primary);
-		text-shadow: 0 0 1px var(--el-text-color-primary);
 		background: linear-gradient(to bottom, transparent, var(--el-color-info));
+		text-shadow: 0 0 1px var(--el-text-color-primary);
 		transition: background 0.3s, var(--el-transition-color);
 		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 
 		&:hover {
 			color: var(--el-text-color-secondary);

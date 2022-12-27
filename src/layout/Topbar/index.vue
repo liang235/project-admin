@@ -68,11 +68,11 @@ watch(scrollTop, (val, oldVal) => {
 <style lang="scss" scoped>
 .topbar-container {
 	position: absolute;
-	z-index: 999;
 	top: 0;
+	z-index: 999;
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
+	align-items: center;
 	height: var(--g-topbar-height);
 	background-color: var(--g-toolbar-bg);
 	box-shadow: 0 0 1px 0 var(--el-border-color);
@@ -94,8 +94,8 @@ watch(scrollTop, (val, oldVal) => {
 	.left-box {
 		display: flex;
 		align-items: center;
-		padding-right: 50px;
 		overflow: hidden;
+		padding-right: 50px;
 		mask-image: linear-gradient(90deg, #000 0%, #000 calc(100% - 50px), transparent);
 
 		.sidebar-collapse {

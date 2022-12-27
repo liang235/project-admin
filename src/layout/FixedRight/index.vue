@@ -1,7 +1,7 @@
 <!--
  * @Description: 页面右侧固定
  * @Date: 2022-12-17 17:53:34
- * @LastEditTime: 2022-12-17 19:43:20
+ * @LastEditTime: 2022-12-27 10:31:02
 -->
 <template>
 	<div class="fixed-right" :class="{ actived: isActived }">
@@ -34,14 +34,14 @@ setTimeout(() => {
 <style lang="scss" scoped>
 .fixed-right {
 	position: fixed;
-	z-index: 10;
-	right: -58px;
 	top: 50%;
-	transform: translateY(-50%);
-	width: 70px;
+	right: -58px;
+	z-index: 10;
 	display: flex;
-	flex-direction: column;
+	width: 70px;
 	transition: right 0.3s;
+	transform: translateY(-50%);
+	flex-direction: column;
 
 	&.actived,
 	&:hover {
@@ -50,14 +50,14 @@ setTimeout(() => {
 
 	.item {
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		height: 70px;
 		text-align: center;
 		color: #fff;
-		border-bottom: 1px solid #fff;
-		transition: 0.3s;
 		opacity: 0.7;
+		transition: 0.3s;
+		flex-direction: column;
+		border-bottom: 1px solid #fff;
 		cursor: pointer;
 
 		&:hover {

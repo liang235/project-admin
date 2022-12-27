@@ -59,19 +59,19 @@ function onSidebarScroll(e) {
 
 <style lang="scss" scoped>
 .sub-sidebar-container {
-	overflow-x: hidden;
-	overflow-y: auto;
-	overscroll-behavior: contain;
-	// firefox 隐藏滚动条
-	scrollbar-width: none;
-	width: var(--g-sub-sidebar-width);
 	position: absolute;
-	left: 0;
 	top: 0;
 	bottom: 0;
+	left: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: var(--g-sub-sidebar-width);
 	background-color: var(--g-sub-sidebar-bg);
 	box-shadow: 10px 0 10px -10px var(--g-box-shadow-color);
 	transition: background-color 0.3s, var(--el-transition-box-shadow), left 0.3s, width 0.3s;
+	overscroll-behavior: contain;
+	// firefox 隐藏滚动条
+	scrollbar-width: none;
 
 	// chrome隐藏滚动条
 	&::-webkit-scrollbar {
@@ -93,8 +93,8 @@ function onSidebarScroll(e) {
 	}
 
 	.sidebar-logo {
-		box-shadow: 0 0 1px 0 var(--el-border-color);
 		background-color: var(--g-sub-sidebar-bg);
+		box-shadow: 0 0 1px 0 var(--el-border-color);
 		transition: background-color 0.3s, var(--el-transition-box-shadow);
 
 		&:not(.sidebar-logo-bg) {
@@ -115,11 +115,11 @@ function onSidebarScroll(e) {
 
 	// 导航栏填充风格 - 默认
 	.el-menu {
-		width: 100%;
-		border-right: 0;
 		padding-top: var(--g-sidebar-logo-height);
+		width: 100%;
 		background-color: var(--g-sub-sidebar-bg);
 		transition: background-color 0.3s, var(--el-transition-color), var(--el-transition-border), padding-top 0.3s;
+		border-right: 0;
 
 		&:not(.el-menu--collapse) {
 			width: inherit;

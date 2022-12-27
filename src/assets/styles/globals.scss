@@ -1,12 +1,12 @@
 /*
  * @Description: 全局样式
  * @Date: 2022-10-17 10:35:54
- * @LastEditTime: 2022-12-24 17:32:22
+ * @LastEditTime: 2022-12-27 10:40:41
  */
-@use "./element-plus/element.scss"; // element-plus
-@use "./waves.scss"; // 水波纹
-@use "./media/media.scss"; // 响应式
-@use "./themes.scss"; // 主题
+@use './element-plus/element.scss'; // element-plus
+@use './waves.scss'; // 水波纹
+@use './media/media.scss'; // 响应式
+@use './themes.scss'; // 主题
 
 html,
 body,
@@ -16,7 +16,7 @@ body,
 
 body {
 	margin: 0;
-	font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
+	font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
 	background-color: var(--g-app-bg);
 	transition: background-color 0.3s;
 	box-sizing: border-box;

@@ -1,7 +1,7 @@
 <!--
  * @Description: 登录页面
  * @Date: 2022-10-09 10:47:36
- * @LastEditTime: 2022-12-02 13:58:07
+ * @LastEditTime: 2022-12-27 09:25:59
 -->
 <template>
 	<div class="login-wrap">
@@ -143,24 +143,24 @@ onMounted(() => {
 	background: radial-gradient(circle at center, var(--el-fill-color-lighter), var(--el-bg-color-page));
 
 	.login-box {
-		height: 500px;
-		display: flex;
-		justify-content: space-between;
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translateX(-50%) translateY(-50%);
+		display: flex;
+		justify-content: space-between;
+		overflow: hidden;
+		height: 500px;
 		background-color: var(--el-bg-color);
 		border-radius: 10px;
-		overflow: hidden;
 		box-shadow: var(--el-box-shadow);
+		transform: translateX(-50%) translateY(-50%);
 
 		// 左侧图片
 		.login-banner {
 			position: relative;
+			overflow: hidden;
 			width: 450px;
 			background-color: var(--el-fill-color-light);
-			overflow: hidden;
 
 			.banner {
 				width: 100%;
@@ -171,24 +171,24 @@ onMounted(() => {
 		// form 表单部分
 		.login-form {
 			display: flex;
-			flex-direction: column;
 			justify-content: center;
+			overflow: hidden;
+			padding: 50px;
 			width: 500px;
 			height: 500px;
-			padding: 50px;
-			overflow: hidden;
+			flex-direction: column;
 
 			.title {
+				margin: 0 auto 30px;
 				font-size: 1.3em;
 				color: var(--el-text-color-primary);
-				margin: 0 auto 30px;
 				font-weight: bold;
 			}
 
 			.flex-bar {
 				display: flex;
-				align-items: center;
 				justify-content: space-between;
+				align-items: center;
 				margin-bottom: 20px;
 			}
 		}

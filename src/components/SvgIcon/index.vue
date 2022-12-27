@@ -1,7 +1,7 @@
 <!--
  * @Description: svg 图标使用
  * @Date: 2022-10-27 10:55:55
- * @LastEditTime: 2022-12-20 17:18:43
+ * @LastEditTime: 2022-12-27 10:31:18
 -->
 <template>
 	<component v-if="name.startsWith('ele-')" :is="name" :style="transformStyle" class="svg-icon" />
@@ -68,10 +68,10 @@ const transformStyle = computed(() => {
 <style lang="scss" scoped>
 .svg-icon {
 	display: inline-block;
+	overflow: hidden;
 	width: 1em;
 	height: 1em;
-	fill: currentColor;
+	fill: currentcolor;
 	vertical-align: -0.15em;
-	overflow: hidden;
 }
 </style>

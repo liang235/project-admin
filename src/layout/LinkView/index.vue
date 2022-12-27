@@ -35,13 +35,13 @@ function open() {
 
 <style lang="scss" scoped>
 .link-view {
-	display: flex;
-	flex-direction: column;
 	position: absolute;
 	top: 0;
 	left: 0;
+	display: flex;
 	width: 100%;
 	height: 100%;
+	flex-direction: column;
 
 	.page-main {
 		display: flex;
@@ -51,11 +51,11 @@ function open() {
 
 		.container {
 			display: flex;
-			flex-direction: column;
-			align-items: center;
 			justify-content: center;
-			height: 100%;
+			align-items: center;
 			margin: 0 50px;
+			height: 100%;
+			flex-direction: column;
 
 			.title {
 				margin: 10px 0;

@@ -442,10 +442,10 @@ watch(copied, (val) => {
 // 应用配置单行样式
 .setting-item {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
-	margin: 5px 0;
+	align-items: center;
 	padding: 5px 10px;
+	margin: 5px 0;
 	border-radius: 5px;
 	transition: all 0.3s;
 
@@ -453,21 +453,21 @@ watch(copied, (val) => {
 	.switch {
 		$width: 40px;
 
-		width: $width;
-		height: 20px;
-		border-radius: 15px;
-		cursor: pointer;
-		background-color: var(--el-fill-color-darker);
-		transition: background-color 0.3s;
 		display: flex;
 		align-items: center;
+		width: $width;
+		height: 20px;
+		background-color: var(--el-fill-color-darker);
+		border-radius: 15px;
+		transition: background-color 0.3s;
+		cursor: pointer;
 
 		.icon {
-			margin-left: 2px;
 			padding: 3px;
+			margin-left: 2px;
 			font-size: 16px;
-			border-radius: 50%;
 			background-color: var(--el-fill-color-lighter);
+			border-radius: 50%;
 			transition: margin-left 0.3s, background-color 0.3s;
 		}
 
@@ -486,10 +486,10 @@ watch(copied, (val) => {
 
 	// 左侧描述文字
 	.label {
-		font-size: 14px;
-		color: var(--el-text-color-regular);
 		display: flex;
 		align-items: center;
+		font-size: 14px;
+		color: var(--el-text-color-regular);
 
 		.svg-icon {
 			margin-left: 4px;
@@ -517,22 +517,22 @@ watch(copied, (val) => {
 // 导航栏模式
 .menu-mode {
 	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 	padding-bottom: 10px;
+	flex-wrap: wrap;
 
 	.mode {
 		position: relative;
+		overflow: hidden;
+		margin: 10px;
 		width: 80px;
 		height: 55px;
-		margin: 10px;
-		border-radius: 5px;
-		overflow: hidden;
-		cursor: pointer;
 		background-color: var(--g-app-bg);
+		border-radius: 5px;
 		box-shadow: 0 0 5px 1px var(--el-border-color-lighter);
 		transition: 0.2s;
+		cursor: pointer;
 
 		&:hover {
 			box-shadow: 0 0 5px 1px var(--el-border-color-darker);
@@ -561,79 +561,79 @@ watch(copied, (val) => {
 
 		&-side {
 			&::before {
-				content: '';
 				top: 5px;
-				left: 5px;
 				bottom: 5px;
+				left: 5px;
 				width: 10px;
 				background-color: var(--g-sub-sidebar-menu-active-bg);
+				content: '';
 			}
 
 			&::after {
-				content: '';
 				top: 5px;
-				left: 20px;
 				bottom: 5px;
+				left: 20px;
 				width: 15px;
 				background-color: var(--g-sub-sidebar-menu-active-bg);
 				opacity: 0.5;
+				content: '';
 			}
 
 			.mode-container {
 				top: 5px;
-				left: 40px;
 				right: 5px;
 				bottom: 5px;
+				left: 40px;
 				border: 1px dashed var(--g-sub-sidebar-menu-active-bg);
 			}
 		}
 
 		&-head {
 			&::before {
-				content: '';
 				top: 5px;
-				left: 5px;
 				right: 5px;
+				left: 5px;
 				height: 10px;
 				background-color: var(--g-sub-sidebar-menu-active-bg);
+				content: '';
 			}
 
 			&::after {
-				content: '';
 				top: 20px;
-				left: 5px;
 				bottom: 5px;
+				left: 5px;
 				width: 15px;
 				background-color: var(--g-sub-sidebar-menu-active-bg);
 				opacity: 0.5;
+				content: '';
 			}
 
 			.mode-container {
 				top: 20px;
-				left: 25px;
 				right: 5px;
 				bottom: 5px;
+				left: 25px;
 				border: 1px dashed var(--g-sub-sidebar-menu-active-bg);
 			}
 		}
 
 		&-single {
 			&::before {
-				content: '';
 				position: absolute;
 				top: 5px;
-				left: 5px;
 				bottom: 5px;
+				left: 5px;
 				width: 15px;
 				background-color: var(--g-sub-sidebar-menu-active-bg);
 				opacity: 0.5;
+				content: '';
 			}
 
 			.mode-container {
 				top: 5px;
-				left: 25px;
 				right: 5px;
 				bottom: 5px;
+				left: 25px;
 				border: 1px dashed var(--g-sub-sidebar-menu-active-bg);
 			}
 		}
@@ -655,21 +655,21 @@ watch(copied, (val) => {
 // 页宽模式
 .app-width-mode {
 	display: flex;
-	align-items: center;
 	justify-content: space-around;
+	align-items: center;
 	padding-bottom: 10px;
 
 	.mode {
 		position: relative;
+		overflow: hidden;
 		width: 65px;
 		height: 50px;
-		border-radius: 4px;
-		overflow: hidden;
-		cursor: pointer;
 		color: var(--el-text-color-primary);
 		background-color: var(--el-fill-color-darker);
+		border-radius: 4px;
 		box-shadow: 0 0 5px 1px var(--el-border-color-lighter);
 		transition: background-color 0.3s, var(--el-transition-color), var(--el-transition-box-shadow);
+		cursor: pointer;
 
 		&:hover {
 			box-shadow: 0 0 5px 1px var(--el-border-color-darker);
@@ -712,15 +712,15 @@ watch(copied, (val) => {
 	.mode-adaption-min-width {
 		background: var(--el-bg-color);
 
-		&:before {
-			content: '';
+		&::before {
 			position: absolute;
 			left: 50%;
 			margin-left: -15px;
-			height: 100%;
 			width: 30px;
+			height: 100%;
 			background-color: var(--el-fill-color-darker);
 			transition: background-color 0.3s;
+			content: '';
 		}
 
 		.left,
@@ -742,30 +742,30 @@ watch(copied, (val) => {
 	.mode-center {
 		background: var(--el-bg-color);
 
-		&:before {
-			content: '';
+		&::before {
 			position: absolute;
 			left: 50%;
 			margin-left: -20px;
-			height: 100%;
 			width: 40px;
+			height: 100%;
 			background-color: var(--el-fill-color-darker);
 			transition: background-color 0.3s;
+			content: '';
 		}
 	}
 
 	.mode-center-max-width {
 		background: var(--el-bg-color);
 
-		&:before {
-			content: '';
+		&::before {
 			position: absolute;
 			left: 50%;
 			margin-left: -20px;
-			height: 100%;
 			width: 40px;
+			height: 100%;
 			background-color: var(--el-fill-color-darker);
 			transition: background-color 0.3s;
+			content: '';
 		}
 
 		.left,

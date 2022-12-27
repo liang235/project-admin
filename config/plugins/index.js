@@ -1,7 +1,7 @@
 /*
  * @Description: vite 使用插件集合
  * @Date: 2022-09-23 14:25:26
- * @LastEditTime: 2022-12-22 21:54:00
+ * @LastEditTime: 2022-12-27 09:23:38
  */
 import vue from '@vitejs/plugin-vue' // 使 vite 支持 vue 开发
 import createAutoImport from './unplugin-auto-import.js' // 自动导入
@@ -12,6 +12,8 @@ import createSvgIcon from './vite-plugin-svg-icons.js' // vite 中使用 svg 图
 import createHtml from './vite-plugin-html.js' // 针对 index.html 提供压缩和基于 ejs 模板等功能
 import createInspector from './vite-plugin-vue-inspector.js' // 从浏览器跳转到代码所在的位置
 import createCompression from './vite-plugin-compression.js' // 打包压缩
+import createEslint from './vite-plugin-eslint.js' // 终端展示 eslint 报错信息
+import createStylelint from './vite-plugin-stylelint.js' // 终端展示 stylelint 报错信息
 
 // 创建 vite 插件实例化
 export default function createVitePlugins(viteEnv, isBuild = false) {
@@ -25,6 +27,8 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
 	vitePlugins.push(createHtml(viteEnv, isBuild))
 	vitePlugins.push(createInspector())
 	vitePlugins.push(createCompression())
+	vitePlugins.push(createEslint())
+	vitePlugins.push(createStylelint())
 
 	return vitePlugins
 }

@@ -45,13 +45,13 @@ const list = ref([
 <style lang="scss" scoped>
 .tools-notice {
 	.head-box {
-		height: 35px;
-		padding-bottom: 12px;
-		border-bottom: 1px solid var(--el-border-color-lighter);
-		color: var(--el-text-color-primary);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding-bottom: 12px;
+		height: 35px;
+		color: var(--el-text-color-primary);
+		border-bottom: 1px solid var(--el-border-color-lighter);
 	}
 
 	.content-box {
@@ -65,9 +65,9 @@ const list = ref([
 			}
 
 			.content-box-msg {
-				color: var(--el-text-color-secondary);
 				margin-top: 5px;
 				margin-bottom: 5px;
+				color: var(--el-text-color-secondary);
 			}
 
 			.content-box-time {
@@ -77,15 +77,15 @@ const list = ref([
 	}
 
 	.foot-box {
-		height: 35px;
-		color: var(--el-color-primary);
-		font-size: 13px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		padding-top: 12px;
+		height: 35px;
+		font-size: 13px;
+		color: var(--el-color-primary);
 		opacity: 0.8;
 		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		border-top: 1px solid var(--el-border-color-lighter);
 
 		&:hover {

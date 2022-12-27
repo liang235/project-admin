@@ -1,10 +1,10 @@
 /*
  * @Description: 项目配置文件
  * @Date: 2022-12-22 19:32:44
- * @LastEditTime: 2022-12-22 23:01:00
+ * @LastEditTime: 2022-12-27 09:24:34
  */
 import { defineConfig, loadEnv } from 'vite' // 帮手函数，这样不用 jsdoc 注解也可以获取类型提示
-import createVitePlugins from './vite/plugins/index.js' // vite 使用插件集合
+import createVitePlugins from './config/plugins/index.js' // vite 使用插件集合
 import path from 'node:path' // 主要用于 alias 文件路径别名
 import fs from 'node:fs' // node 文件模块
 import pkg from './package.json' // 依赖项
@@ -25,6 +25,8 @@ export default defineConfig(({ command, mode }) => {
 	return {
 		// 开发或生产环境服务的公共基础路径
 		base: './',
+
+		envDir: path.resolve(__dirname, 'config/env'),
 
 		// 插件
 		plugins: [...createVitePlugins(env, command === 'build')],

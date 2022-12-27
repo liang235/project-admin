@@ -45,17 +45,17 @@ const menuStore = useMenuStore()
 
 <style lang="scss" scoped>
 .main-sidebar-container {
-	overflow-x: hidden;
-	overflow-y: auto;
-	overscroll-behavior: contain;
-	// FireFox 隐藏滚动条
-	scrollbar-width: none;
 	position: relative;
 	z-index: 1;
+	overflow-x: hidden;
+	overflow-y: auto;
 	width: var(--g-main-sidebar-width);
 	color: var(--g-main-sidebar-menu-color);
 	background-color: var(--g-main-sidebar-bg);
 	transition: background-color 0.3s, var(--el-transition-color);
+	overscroll-behavior: contain;
+	// FireFox 隐藏滚动条
+	scrollbar-width: none;
 
 	// chrome隐藏滚动条
 	&::-webkit-scrollbar {
@@ -64,14 +64,14 @@ const menuStore = useMenuStore()
 
 	// logo
 	.sidebar-logo {
-		transition: 0.3s;
 		background-color: var(--g-main-sidebar-bg);
+		transition: 0.3s;
 	}
 
 	// 导航栏填充风格 - 默认
 	.nav {
-		width: inherit;
 		padding-top: var(--g-sidebar-logo-height);
+		width: inherit;
 
 		.item-container {
 			position: relative;
@@ -87,16 +87,16 @@ const menuStore = useMenuStore()
 
 			.item {
 				display: flex;
-				align-items: center;
 				justify-content: center;
-				flex-direction: column;
+				align-items: center;
+				padding: 0 5px;
 				width: 100%;
 				height: 60px;
-				padding: 0 5px;
-				cursor: pointer;
 				color: var(--g-main-sidebar-menu-color);
 				background-color: var(--g-main-sidebar-bg);
 				transition: var(--el-transition-all), background-color 0.3s, var(--el-transition-color);
+				flex-direction: column;
+				cursor: pointer;
 
 				&:hover {
 					color: var(--g-main-sidebar-menu-hover-color);
@@ -104,19 +104,19 @@ const menuStore = useMenuStore()
 				}
 
 				.svg-icon {
-					font-size: 24px;
 					margin-bottom: 5px;
+					font-size: 24px;
 				}
 
 				span {
-					font-size: 14px;
-					line-height: 1;
-					text-align: center;
-					word-break: break-all;
 					display: -webkit-box;
+					overflow: hidden;
+					font-size: 14px;
+					text-align: center;
+					line-height: 1;
+					word-break: break-all;
 					-webkit-box-orient: vertical;
 					-webkit-line-clamp: 1;
-					overflow: hidden;
 				}
 			}
 		}
@@ -132,8 +132,8 @@ const menuStore = useMenuStore()
 			}
 
 			.item {
-				border-radius: 5px;
 				margin: 0 10px;
+				border-radius: 5px;
 			}
 		}
 
@@ -145,84 +145,84 @@ const menuStore = useMenuStore()
 			}
 
 			.el-sub-menu__title .item {
-				border-radius: 5px;
 				margin: 0 10px;
+				border-radius: 5px;
 			}
 		}
 	}
 
 	// 导航栏激活风格 - 箭头
 	.nav-active-arrow {
-		.item-container:before,
-		.sidebar-item .el-sub-menu__title:before {
-			content: '';
-			opacity: 0;
+		.item-container::before,
+		.sidebar-item .el-sub-menu__title::before {
+			position: absolute;
+			top: 50%;
 			right: -5px;
 			width: 0;
 			height: 0;
+			opacity: 0;
+			transition: all 0.3s;
+			content: '';
 			border-top: 5px solid transparent;
 			border-bottom: 5px solid transparent;
 			border-right: 5px solid var(--g-sub-sidebar-bg);
-			transition: all 0.3s;
-			position: absolute;
-			top: 50%;
 			transform: translateY(-50%);
 		}
 
-		.item-container.active:before,
-		.sidebar-item .is-active .el-sub-menu__title:before {
-			opacity: 1;
+		.item-container.active::before,
+		.sidebar-item .is-active .el-sub-menu__title::before {
 			right: 0;
+			opacity: 1;
 		}
 	}
 
 	// 导航栏激活风格 - 线条
 	.nav-active-line {
-		.item-container:before,
-		.sidebar-item .el-sub-menu__title:before {
-			content: '';
-			opacity: 0;
+		.item-container::before,
+		.sidebar-item .el-sub-menu__title::before {
+			position: absolute;
+			top: 50%;
 			left: 8px;
 			width: 4px;
 			height: 0;
-			border-radius: 2px;
 			background-color: var(--g-main-sidebar-menu-active-bg);
+			border-radius: 2px;
+			opacity: 0;
 			box-shadow: 0 0 0 1px var(--g-main-sidebar-bg);
 			transition: all 0.3s;
-			position: absolute;
-			top: 50%;
+			content: '';
 			transform: translateY(-50%);
 		}
 
-		.item-container.active:before,
-		.sidebar-item .is-active .el-sub-menu__title:before {
-			opacity: 1;
+		.item-container.active::before,
+		.sidebar-item .is-active .el-sub-menu__title::before {
 			height: 20px;
+			opacity: 1;
 		}
 	}
 
 	// 导航栏激活风格 - 点
 	.nav-active-dot {
-		.item-container:before,
-		.sidebar-item .el-sub-menu__title:before {
-			content: '';
-			opacity: 0;
+		.item-container::before,
+		.sidebar-item .el-sub-menu__title::before {
+			position: absolute;
+			top: 50%;
 			left: 0;
 			width: 10px;
 			height: 10px;
-			border-radius: 50%;
 			background-color: var(--g-main-sidebar-menu-active-bg);
+			border-radius: 50%;
+			opacity: 0;
 			box-shadow: 0 0 0 1px var(--g-main-sidebar-bg);
 			transition: all 0.3s;
-			position: absolute;
-			top: 50%;
+			content: '';
 			transform: translateY(-50%);
 		}
 
-		.item-container.active:before,
-		.sidebar-item .is-active .el-sub-menu__title:before {
-			opacity: 1;
+		.item-container.active::before,
+		.sidebar-item .is-active .el-sub-menu__title::before {
 			left: 5px;
+			opacity: 1;
 		}
 	}
 }

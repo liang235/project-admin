@@ -140,10 +140,10 @@ const userCommand = (command) => {
 
 		.item {
 			display: inline-flex;
-			align-items: center;
 			justify-content: center;
-			height: 24px;
+			align-items: center;
 			width: 34px;
+			height: 24px;
 			cursor: pointer;
 			vertical-align: middle;
 
@@ -160,8 +160,8 @@ const userCommand = (command) => {
 		}
 
 		.item-pro {
-			width: auto;
 			padding: 0 10px;
+			width: auto;
 			transform-origin: right center;
 			animation: pro-text 3s ease-out infinite;
 

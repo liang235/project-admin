@@ -93,11 +93,11 @@ const hasChildren = computed(() => {
 :deep(.el-sub-menu),
 :deep(.el-menu-item) {
 	.title-icon {
+		margin-left: 2px;
 		width: 18px;
 		font-size: 18px;
-		transition: transform 0.3s;
 		color: unset;
-		margin-left: 2px;
+		transition: transform 0.3s;
 	}
 
 	.title-icon + .title {
@@ -111,9 +111,9 @@ const hasChildren = computed(() => {
 }
 
 a {
-	cursor: pointer;
-	color: inherit;
 	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
 }
 
 .el-sub-menu__title {

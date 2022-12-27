@@ -65,14 +65,14 @@ const handlerMouserScroll = (event) => {
 <style lang="scss" scoped>
 header {
 	position: fixed;
-	z-index: 1000;
 	top: 0;
-	left: 0;
 	right: 0;
+	left: 0;
+	z-index: 1000;
 	display: flex;
 	align-items: center;
-	margin: 0 auto;
 	padding: 0 20px;
+	margin: 0 auto;
 	width: 100%;
 	height: var(--g-header-height);
 	color: var(--g-header-color);
@@ -81,12 +81,12 @@ header {
 	transition: var(--el-transition-all), background-color 0.3s;
 
 	.header-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 auto;
 		width: var(--g-header-width);
 		height: 100%;
-		margin: 0 auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
 
 		.main {
 			flex: 1;
@@ -105,14 +105,13 @@ header {
 
 	// 导航栏填充风格 - 默认
 	.nav {
-		flex: 1;
 		display: flex;
-		height: 100%;
-		width: 0;
-		margin: 0 30px;
-		padding: 0 20px;
 		overflow-x: auto;
-		-webkit-mask-image: linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent);
+		padding: 0 20px;
+		margin: 0 30px;
+		width: 0;
+		height: 100%;
+		flex: 1;
 		mask-image: linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent);
 		// firefox隐藏滚动条
 		scrollbar-width: none;
@@ -137,15 +136,15 @@ header {
 
 			.item {
 				display: flex;
-				align-items: center;
 				justify-content: center;
-				flex-direction: column;
+				align-items: center;
 				padding: 0 5px;
 				width: 80px;
-				cursor: pointer;
 				color: var(--g-header-menu-color);
 				background-color: var(--g-header-bg);
 				transition: var(--el-transition-all), background-color 0.3s, var(--el-transition-color);
+				flex-direction: column;
+				cursor: pointer;
 
 				&:hover {
 					color: var(--g-header-menu-hover-color);
@@ -157,12 +156,12 @@ header {
 				}
 
 				span {
+					display: -webkit-box;
+					overflow: hidden;
 					text-align: center;
 					word-break: break-all;
-					display: -webkit-box;
 					-webkit-box-orient: vertical;
 					-webkit-line-clamp: 1;
-					overflow: hidden;
 				}
 			}
 		}
@@ -178,8 +177,8 @@ header {
 			}
 
 			.item {
-				border-radius: 5px;
 				margin: 10px 0;
+				border-radius: 5px;
 			}
 		}
 
@@ -191,94 +190,94 @@ header {
 			}
 
 			.el-sub-menu__title .item {
+				margin: 10px 0;
 				height: calc(100% - 20px);
 				border-radius: 5px;
-				margin: 10px 0;
 			}
 		}
 	}
 
 	// 导航栏激活风格 - 箭头
 	.nav-active-arrow {
-		.item-container:before,
-		.sidebar-item .el-sub-menu__title:before {
-			content: '';
-			opacity: 0;
+		.item-container::before,
+		.sidebar-item .el-sub-menu__title::before {
+			position: absolute;
 			bottom: -5px;
+			left: 50%;
 			width: 0;
 			height: 0;
+			opacity: 0;
+			transition: all 0.3s;
+			content: '';
 			border-right: 5px solid transparent;
 			border-left: 5px solid transparent;
 			border-bottom: 5px solid var(--g-sub-sidebar-bg);
-			transition: all 0.3s;
-			position: absolute;
-			left: 50%;
 			transform: translate(-50%);
 		}
 
-		.item-container.active:before,
-		.sidebar-item .is-active .el-sub-menu__title:before {
-			opacity: 1;
+		.item-container.active::before,
+		.sidebar-item .is-active .el-sub-menu__title::before {
 			bottom: 0;
+			opacity: 1;
 		}
 	}
 
 	// 导航栏激活风格 - 线条
 	.nav-active-line {
-		.item-container:before,
-		.sidebar-item .el-sub-menu__title:before {
-			content: '';
-			opacity: 0;
+		.item-container::before,
+		.sidebar-item .el-sub-menu__title::before {
+			position: absolute;
 			bottom: 8px;
+			left: 50%;
 			width: 0;
 			height: 4px;
-			border-radius: 2px;
 			background-color: var(--g-header-menu-active-bg);
+			border-radius: 2px;
+			opacity: 0;
 			box-shadow: 0 0 0 1px var(--g-header-bg);
 			transition: all 0.3s;
-			position: absolute;
-			left: 50%;
+			content: '';
 			transform: translate(-50%);
 		}
 
-		.item-container.active:before,
-		.sidebar-item .is-active .el-sub-menu__title:before {
-			opacity: 1;
+		.item-container.active::before,
+		.sidebar-item .is-active .el-sub-menu__title::before {
 			width: 20px;
+			opacity: 1;
 		}
 	}
 
 	// 导航栏激活风格 - 点
 	.nav-active-dot {
-		.item-container:before,
-		.sidebar-item .el-sub-menu__title:before {
-			content: '';
-			opacity: 0;
+		.item-container::before,
+		.sidebar-item .el-sub-menu__title::before {
+			position: absolute;
 			bottom: 0;
+			left: 50%;
 			width: 10px;
 			height: 10px;
-			border-radius: 50%;
 			background-color: var(--g-header-menu-active-bg);
+			border-radius: 50%;
+			opacity: 0;
 			box-shadow: 0 0 0 1px var(--g-main-sidebar-bg);
 			transition: all 0.3s;
-			position: absolute;
-			left: 50%;
+			content: '';
 			transform: translate(-50%);
 		}
 
-		.item-container.active:before,
-		.sidebar-item .is-active .el-sub-menu__title:before {
-			opacity: 1;
+		.item-container.active::before,
+		.sidebar-item .is-active .el-sub-menu__title::before {
 			bottom: 5px;
+			opacity: 1;
 		}
 	}
 
 	// 左侧大标题 Logo
 	:deep(a.title) {
 		position: relative;
+		padding: inherit;
 		width: inherit;
 		height: inherit;
-		padding: inherit;
 		background-color: inherit;
 
 		.logo {

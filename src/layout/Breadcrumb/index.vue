@@ -83,32 +83,28 @@ const pathCompile = (path) => {
 		&:first-child:not(:last-child) .el-breadcrumb__inner {
 			padding-left: 12px;
 			border-radius: 6px 0 0 6px;
-			-webkit-clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%);
 			clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%);
 		}
 
 		&:last-child:not(:first-child) .el-breadcrumb__inner {
-			background-color: var(--el-fill-color-darker);
 			padding-right: 12px;
+			background-color: var(--el-fill-color-darker);
 			border-radius: 0 6px 6px 0;
-			-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 8px 50%);
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 8px 50%);
 		}
 
 		&:first-child:is(:last-child) .el-breadcrumb__inner {
-			background-color: var(--el-fill-color-darker);
 			padding-left: 12px;
+			background-color: var(--el-fill-color-darker);
 			border-radius: 6px 0 0 6px;
-			-webkit-clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%);
 			clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%);
 		}
 
 		.el-breadcrumb__inner {
 			display: inline-block;
+			padding: 8px 16px;
 			background-color: var(--el-fill-color);
 			transition: background-color 0.3s, var(--el-transition-color);
-			padding: 8px 16px;
-			-webkit-clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%, 8px 50%);
 			clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%, 8px 50%);
 
 			&.is-link:hover {

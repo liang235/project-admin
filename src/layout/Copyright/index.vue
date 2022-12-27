@@ -32,11 +32,11 @@ const route = useRoute() // 路由参数
 <style lang="scss" scoped>
 footer {
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 	margin: 40px 0;
-	color: var(--el-text-color-secondary);
 	font-size: 14px;
+	color: var(--el-text-color-secondary);
 
 	span,
 	a {
