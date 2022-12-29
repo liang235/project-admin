@@ -9,8 +9,8 @@
 		"preview": "vite preview",
 		"svgo": "svgo -f src/assets/icons",
 		"lint:eslint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --cache --fix",
-		"lint:prettier": "prettier --write \"./**/*.{html,css,js,cjs,vue,.sass,json,md}\"",
 		"lint:stylelint": "stylelint src/**/*.{css,sass,scss,vue} --cache --fix",
+		"lint:prettier": "prettier --write \"./**/*.{html,css,js,cjs,vue,.sass,json,md}\"",
 		"lint:lint-staged": "lint-staged",
 		"prepare": "husky install",
 		"preinstall": "npx only-allow pnpm"

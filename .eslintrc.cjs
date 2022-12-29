@@ -5,12 +5,17 @@ module.exports = {
 		node: true,
 	},
 	extends: ['eslint:recommended', 'plugin:vue/vue3-essential', 'plugin:prettier/recommended', './.eslintrc-auto-import.json'],
-	overrides: [],
 	parserOptions: {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
 	plugins: ['vue'],
+	globals: {
+		ElMessage: true,
+		ElMessageBox: true,
+		ElNotification: true,
+		ElLoading: true,
+	},
 	rules: {
 		// http://eslint.cn/docs/rules/
 		// https://eslint.vuejs.org/rules/

@@ -382,7 +382,6 @@
 </template>
 
 <script setup name="AppSetting">
-import { ElMessage } from 'element-plus' // element 组件
 import { useEventBus, useClipboard } from '@vueuse/core' // vue 工具库
 import { cloneDeep } from 'lodash-es' // js 工具库
 import useSettingsStore from '@/store/modules/settings.js' // 系统配置数据
