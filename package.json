@@ -1,7 +1,7 @@
 {
 	"name": "project-admin",
 	"private": true,
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
@@ -9,7 +9,7 @@
 		"preview": "vite preview",
 		"svgo": "svgo -f src/assets/icons",
 		"lint:eslint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --cache --fix",
-		"format": "prettier --write \"./**/*.{html,css,js,cjs,vue,.sass,json,md}\"",
+		"lint:prettier": "prettier --write \"./**/*.{html,css,js,cjs,vue,.sass,json,md}\"",
 		"lint:stylelint": "stylelint src/**/*.{css,sass,scss,vue} --cache --fix",
 		"lint:lint-staged": "lint-staged",
 		"prepare": "husky install",
@@ -79,27 +79,10 @@
 		"vite-plugin-vue-setup-extend": "^0.4.0"
 	},
 	"lint-staged": {
-		"*.{js,jsx,ts,tsx}": [
-			"eslint --fix",
-			"prettier --write"
-		],
-		"{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
-			"prettier --write--parser json"
-		],
-		"package.json": [
-			"prettier --write"
-		],
-		"*.vue": [
-			"eslint --fix",
-			"prettier --write",
-			"stylelint --fix"
-		],
-		"*.{css,scss,less,styl,html}": [
-			"stylelint --fix",
-			"prettier --write"
-		],
-		"*.md": [
-			"prettier --write"
+		"*.{js,jsx,vue,ts,tsx}": [
+			"npm run lint:eslint",
+			"npm run lint:stylelint",
+			"npm run lint:prettier"
 		]
 	},
 	"pnpm": {
