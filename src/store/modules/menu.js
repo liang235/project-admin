@@ -1,7 +1,7 @@
 /*
  * @Description: 侧边栏数据
  * @Date: 2022-11-02 10:38:13
- * @LastEditTime: 2022-12-02 15:40:08
+ * @LastEditTime: 2022-12-29 19:38:05
  */
 import { resolveRoutePath } from '@/utils/tools.js' // 自定义工具
 import useSettingsStore from '@/store/modules/settings.js' // 系统配置数据
@@ -33,8 +33,8 @@ function getDefaultOpenedPaths(menus, rootPath = '') {
 	const defaultOpenedPaths = []
 	menus.forEach((item) => {
 		if (item.meta?.defaultOpened && item.children) {
-			defaultOpenedPaths.push(resolveRoutePathss(rootPath, item.path))
-			const childrenDefaultOpenedPaths = getDefaultOpenedPaths(item.children, resolveRoutePathss(rootPath, item.path))
+			defaultOpenedPaths.push(resolveRoutePath(rootPath, item.path))
+			const childrenDefaultOpenedPaths = getDefaultOpenedPaths(item.children, resolveRoutePath(rootPath, item.path))
 			if (childrenDefaultOpenedPaths.length > 0) {
 				defaultOpenedPaths.push(...childrenDefaultOpenedPaths)
 			}

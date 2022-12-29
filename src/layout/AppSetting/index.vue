@@ -1,7 +1,7 @@
 <!--
  * @Description: 全局应用配置
  * @Date: 2022-11-24 11:47:15
- * @LastEditTime: 2022-12-19 19:42:52
+ * @LastEditTime: 2022-12-29 19:40:17
 -->
 <template>
 	<el-drawer v-model="isShow" title="应用配置" direction="rtl" :size="400">
@@ -382,6 +382,7 @@
 </template>
 
 <script setup name="AppSetting">
+import { ElMessage } from 'element-plus' // element 组件
 import { useEventBus, useClipboard } from '@vueuse/core' // vue 工具库
 import { cloneDeep } from 'lodash-es' // js 工具库
 import useSettingsStore from '@/store/modules/settings.js' // 系统配置数据

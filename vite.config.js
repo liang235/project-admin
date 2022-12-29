@@ -1,7 +1,7 @@
 /*
  * @Description: 项目配置文件
  * @Date: 2022-12-22 19:32:44
- * @LastEditTime: 2022-12-27 09:24:34
+ * @LastEditTime: 2022-12-29 18:02:43
  */
 import { defineConfig, loadEnv } from 'vite' // 帮手函数，这样不用 jsdoc 注解也可以获取类型提示
 import createVitePlugins from './config/plugins/index.js' // vite 使用插件集合
@@ -35,7 +35,7 @@ export default defineConfig(({ command, mode }) => {
 		server: {
 			// 本地运行配置，及反向代理配置
 			host: '0.0.0.0', // 主机名， 127.0.0.1，  真机 0.0.0.0
-			port: env.VITE_PORT, // 服务器端口
+			port: 8888, // 服务器端口
 			open: true, // 在服务器启动时自动在浏览器中打开应用程序
 			https: false, // 协议
 			proxy: {

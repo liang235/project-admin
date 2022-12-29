@@ -4,7 +4,7 @@ module.exports = {
 		es2021: true,
 		node: true,
 	},
-	extends: ['eslint:recommended', 'plugin:vue/vue3-essential', 'plugin:prettier/recommended'],
+	extends: ['eslint:recommended', 'plugin:vue/vue3-essential', 'plugin:prettier/recommended', './.eslintrc-auto-import.json'],
 	overrides: [],
 	parserOptions: {
 		ecmaVersion: 'latest',
@@ -34,7 +34,7 @@ module.exports = {
 				varsIgnorePattern: '^_',
 			},
 		],
-		'no-undef': 'off', // template 中禁止使用未声明的变量，除非在/*global */ comments中提到
+		'no-undef': 'error', // template 中禁止使用未声明的变量，除非在/*global */ comments中提到
 		'no-prototype-builtins': 'off', // 禁止调用某个对象。原型方法直接在对象上
 		'no-useless-escape': 'off', // 禁止使用不必要的转义字符
 		'no-case-declarations': 'off', // 禁止在 case 子句中使用词法声明
