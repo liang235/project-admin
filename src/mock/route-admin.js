@@ -266,7 +266,7 @@ export default {
 				{
 					path: '/pages',
 					name: 'pages',
-					component: Layout,
+					component: 'Layout',
 					meta: {
 						title: '页面展示',
 						icon: 'page',

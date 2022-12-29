@@ -42,16 +42,16 @@ onMounted(() => {
 	border-radius: 4px;
 
 	.icon-item {
-		color: var(--el-text-color-regular);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		height: 100px;
 		font-size: 13px;
+		color: var(--el-text-color-regular);
+		transition: background-color var(--el-transition-duration);
 		border-right: 1px solid var(--el-border-color);
 		border-bottom: 1px solid var(--el-border-color);
-		transition: background-color var(--el-transition-duration);
-		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
 		cursor: pointer;
 
 		.svg-icon {
@@ -64,8 +64,8 @@ onMounted(() => {
 		}
 
 		&:hover {
-			background-color: var(--el-border-color-extra-light);
 			color: var(--el-color-primary);
+			background-color: var(--el-border-color-extra-light);
 		}
 	}
 }

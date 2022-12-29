@@ -1,7 +1,7 @@
 <!--
  * @Description: 页面打印
  * @Date: 2022-12-08 20:17:49
- * @LastEditTime: 2022-12-24 03:54:28
+ * @LastEditTime: 2022-12-29 21:22:39
 -->
 <template>
 	<div>
@@ -64,7 +64,7 @@ const images = ref([
 	'https://img2.baidu.com/it/u=3851318936,3356716855&fm=253&fmt=auto&app=138&f=PNG?w=500&h=582',
 ])
 const onPrintImg = () => {
-	printJS({
+	printJs({
 		printable: images.value,
 		type: 'image',
 		header: 'Multiple Images',

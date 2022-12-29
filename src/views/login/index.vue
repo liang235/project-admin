@@ -1,7 +1,7 @@
 <!--
  * @Description: 登录页面
  * @Date: 2022-10-09 10:47:36
- * @LastEditTime: 2022-12-27 09:25:59
+ * @LastEditTime: 2022-12-29 21:10:36
 -->
 <template>
 	<div class="login-wrap">
@@ -48,6 +48,7 @@
 </template>
 
 <script setup name="Login">
+import { ElMessage } from 'element-plus' // element 组件
 import { useNow } from '@vueuse/core' // vue 工具库
 import banner from '@/assets/images/qiaotun.jpeg' // 左侧图片
 import useUserStore from '@/store/modules/user.js' // 用户数据
