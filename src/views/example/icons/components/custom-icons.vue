@@ -23,7 +23,7 @@ const icons = ref(customIcons)
 
 // 复制粘贴
 const handleCopy = (name) => {
-	let text = `<svg-icon name="${name}" />`
+	const text = `<svg-icon name="${name}" />`
 	handleClipboard(text)
 }
 

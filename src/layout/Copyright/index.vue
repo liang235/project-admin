@@ -24,7 +24,8 @@
 </template>
 
 <script setup name="PageFooter">
-import useSettingsStore from '@/store/modules/settings.js' // 系统配置数据
+import useSettingsStore from '@/store/modules/settings.js'
+// 系统配置数据
 const settingsStore = useSettingsStore()
 const route = useRoute() // 路由参数
 </script>
@@ -32,11 +33,11 @@ const route = useRoute() // 路由参数
 <style lang="scss" scoped>
 footer {
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 	margin: 40px 0;
-	font-size: 14px;
 	color: var(--el-text-color-secondary);
+	font-size: 14px;
 
 	span,
 	a {
@@ -44,8 +45,8 @@ footer {
 	}
 
 	a {
-		text-decoration: none;
 		color: var(--el-text-color-secondary);
+		text-decoration: none;
 		transition: var(--el-transition-color);
 
 		&:hover {

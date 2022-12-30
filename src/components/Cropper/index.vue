@@ -1,7 +1,7 @@
 <!--
  * @Description: 图片裁剪
  * @Date: 2022-12-10 21:04:35
- * @LastEditTime: 2022-12-25 16:09:04
+ * @LastEditTime: 2022-12-30 15:59:48
 -->
 <template>
 	<el-dialog v-model="isShowDialog" :width="width" :close-on-click-modal="false" :destroy-on-close="true" :draggable="true">
@@ -57,6 +57,7 @@
 <script setup name="Cropper">
 // 图片裁剪插件
 import VueCropper from 'vue-cropperjs'
+// eslint-disable-next-line import/no-extraneous-dependencies
 import 'cropperjs/dist/cropper.css'
 
 // 定义父组件传过来的值
@@ -196,30 +197,30 @@ defineExpose({
 	display: flex;
 
 	.cropperRef {
-		flex: 1;
 		height: 350px;
+		flex: 1;
 	}
 
 	.preview-wrap {
 		display: flex;
-		justify-content: space-between;
-		padding-left: 20px;
 		width: 250px;
 		flex-direction: column;
+		justify-content: space-between;
+		padding-left: 20px;
 
 		.preview-title {
 			font-size: 20px;
-			text-align: center;
 			line-height: 20px;
+			text-align: center;
 		}
 
 		.preview-item {
 			.preview {
 				overflow: hidden;
-				margin: auto;
 				width: 150px;
 				height: 150px;
 				border-radius: var(--el-border-radius-circle);
+				margin: auto;
 
 				&.preview-size {
 					width: 100px;
@@ -229,10 +230,10 @@ defineExpose({
 
 			.preview-label {
 				height: 30px;
-				font-size: 14px;
-				text-align: center;
 				color: var(--el-text-color-primary);
+				font-size: 14px;
 				line-height: 30px;
+				text-align: center;
 			}
 		}
 	}

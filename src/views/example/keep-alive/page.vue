@@ -1,7 +1,7 @@
 <!--
  * @Description: 页面缓存
  * @Date: 2022-11-27 22:24:42
- * @LastEditTime: 2022-11-27 22:43:29
+ * @LastEditTime: 2022-12-30 17:05:41
 -->
 <template>
 	<page-main title="除了可以在路由里配置页面是否需要缓存外，你也可以不使用框架提供的方法，而是在页面里自行实现">
@@ -58,13 +58,9 @@ onBeforeRouteLeave((to, from) => {
 		// 因为并不是所有的路由跳转都需要将当前页面进行缓存，例如最常见的情况，从列表页进入详情页，则需要将列表页缓存，而从列表页跳转到其它页面，则不需要将列表页缓存
 		// 所以下面的代码意思就是，如果目标路由的 name 是 keepAlivePageDetail 或者 keepAliveNestedDetail ，则将当前页面组件的 name 添加进 keep-alive 中，否则则删除
 		if (['keepAlivePageDetail', 'keepAliveNestedDetail'].includes(to.name)) {
-			componentName && keepAliveStore.add(componentName)
-		} else {
-			componentName && keepAliveStore.remove(componentName)
-		}
-	} else {
-		componentName && keepAliveStore.remove(componentName)
-	}
+			if (componentName) keepAliveStore.add(componentName)
+		} else if (componentName) keepAliveStore.remove(componentName)
+	} else if (componentName) keepAliveStore.remove(componentName)
 })
 </script>
 

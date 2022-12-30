@@ -1,14 +1,14 @@
 /*
  * @Description: 项目配置文件
  * @Date: 2022-12-22 19:32:44
- * @LastEditTime: 2022-12-29 18:02:43
+ * @LastEditTime: 2022-12-30 15:43:09
  */
 import { defineConfig, loadEnv } from 'vite' // 帮手函数，这样不用 jsdoc 注解也可以获取类型提示
-import createVitePlugins from './config/plugins/index.js' // vite 使用插件集合
 import path from 'node:path' // 主要用于 alias 文件路径别名
 import fs from 'node:fs' // node 文件模块
-import pkg from './package.json' // 依赖项
 import dayjs from 'dayjs' // 日期格式化插件
+import pkg from './package.json' // 依赖项
+import createVitePlugins from './config/plugins/index.js' // vite 使用插件集合
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
@@ -100,6 +100,7 @@ export default defineConfig(({ command, mode }) => {
 					manualChunks: {
 						vue: ['vue', 'vue-router', 'pinia', '@vueuse/core'],
 						'element-plus': ['element-plus'],
+						echarts: ['echarts'],
 					},
 				},
 			},

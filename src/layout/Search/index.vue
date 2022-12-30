@@ -1,7 +1,7 @@
 <!--
  * @Description: 导航搜索
  * @Date: 2022-11-25 21:00:24
- * @LastEditTime: 2022-12-11 20:51:20
+ * @LastEditTime: 2022-12-30 16:58:29
 -->
 <template>
 	<div class="search" :class="{ searching: isShow }" @click="isShow && bus.emit('global-search-toggle')">
@@ -165,10 +165,8 @@ const resultList = computed(() => {
 				if (item.title().includes(searchInput.value)) {
 					flag = true
 				}
-			} else {
-				if (item.title.includes(searchInput.value)) {
-					flag = true
-				}
+			} else if (item.title.includes(searchInput.value)) {
+				flag = true
 			}
 		}
 		if (item.path.includes(searchInput.value)) {
@@ -182,10 +180,8 @@ const resultList = computed(() => {
 						if (b().includes(searchInput.value)) {
 							flag = true
 						}
-					} else {
-						if (b.includes(searchInput.value)) {
-							flag = true
-						}
+					} else if (b.includes(searchInput.value)) {
+						flag = true
 					}
 				}
 				return flag
@@ -296,7 +292,7 @@ onMounted(() => {
 
 	// 获取所有动态生成后的路由
 	routeStore.routes.forEach((item) => {
-		item.children && getSourceList(item.children)
+		if (item.children) getSourceList(item.children)
 	})
 })
 
@@ -352,42 +348,42 @@ watch(
 <style lang="scss" scoped>
 .search {
 	position: fixed;
+	z-index: 2000;
 	top: 0;
 	left: 0;
-	z-index: 2000;
 	width: 100%;
 	height: 100%;
+	backdrop-filter: saturate(50%) blur(4px);
+	background-image: radial-gradient(transparent 1px, rgb(0 0 0 / 30%) 1px);
 	background-size: 4px 4px;
 	opacity: 0;
-	visibility: hidden;
 
 	// background-color: var(--el-overlay-color-lighter);
 	// backdrop-filter: blur(10px);
 	// transform: translateZ(0);
 
 	transition: all 0.2s;
-	background-image: radial-gradient(transparent 1px, rgb(0 0 0 / 30%) 1px);
-	backdrop-filter: saturate(50%) blur(4px);
+	visibility: hidden;
 
 	&.searching {
 		opacity: 1;
 		visibility: visible;
 
 		.container {
-			transform: initial;
 			filter: initial;
+			transform: initial;
 		}
 	}
 
 	.container {
 		display: flex;
-		margin: 0 auto;
 		max-width: 800px;
 		height: 100%;
-		filter: blur(10px);
-		transition: all 0.2s;
 		flex-direction: column;
+		margin: 0 auto;
+		filter: blur(10px);
 		transform: scale(1.1);
+		transition: all 0.2s;
 
 		.search-box {
 			margin: 50px 20px 20px;
@@ -399,9 +395,9 @@ watch(
 
 			:deep(.el-input__icon) {
 				display: flex;
-				justify-content: center;
-				align-items: center;
 				height: 100%;
+				align-items: center;
+				justify-content: center;
 			}
 
 			.tips {
@@ -412,8 +408,8 @@ watch(
 
 				.tip {
 					display: flex;
-					justify-content: center;
 					align-items: center;
+					justify-content: center;
 					margin: 0 20px;
 
 					.el-tag {
@@ -434,16 +430,16 @@ watch(
 		.result {
 			position: relative;
 			overflow: auto;
+			border-radius: 5px;
 			margin: 0 20px 50px;
 			background-color: var(--el-bg-color);
-			border-radius: 5px;
 			box-shadow: 0 0 0 1px var(--el-border-color-darker);
 
 			.item {
 				display: flex;
 				align-items: center;
-				text-decoration: none;
 				cursor: pointer;
+				text-decoration: none;
 				transition: all 0.3s;
 
 				&.actived {
@@ -469,37 +465,37 @@ watch(
 				}
 
 				.icon {
+					flex: 0 0 66px;
+					color: var(--el-color-info);
 					font-size: 20px;
 					text-align: center;
-					color: var(--el-color-info);
 					transition: all 0.3s;
-					flex: 0 0 66px;
 				}
 
 				.info {
 					display: flex;
-					justify-content: space-around;
-					padding: 5px 10px 7px;
 					height: 70px;
-					transition: all 0.3s;
 					flex: 1;
 					flex-direction: column;
+					justify-content: space-around;
+					padding: 5px 10px 7px;
 					border-left: 1px solid var(--el-border-color-lighter);
+					transition: all 0.3s;
 
 					@include text-overflow(1, true);
 
 					.title {
+						color: var(--el-text-color-regular);
 						font-size: 18px;
 						font-weight: bold;
-						color: var(--el-text-color-regular);
 
 						@include text-overflow(1, true);
 					}
 
 					.breadcrumb,
 					.path {
-						font-size: 12px;
 						color: var(--el-text-color-secondary);
+						font-size: 12px;
 						transition: all 0.3s;
 
 						@include text-overflow(1, true);

@@ -1,7 +1,7 @@
 <!--
  * @Description: 多图上传
  * @Date: 2022-12-04 22:10:10
- * @LastEditTime: 2022-12-20 16:20:03
+ * @LastEditTime: 2022-12-30 16:10:41
 -->
 <template>
 	<div class="upload-container">
@@ -159,14 +159,14 @@ function previewClose() {
 
 // 移除
 function remove(index) {
-	const url = props.url
+	const { url } = props
 	url.splice(index, 1)
 	emit('update:url', url)
 }
 
 // 移动
 function move(index, type) {
-	const url = props.url
+	const { url } = props
 	if (type === 'left' && index !== 0) {
 		url[index] = url.splice(index - 1, 1, url[index])[0]
 	}
@@ -219,24 +219,24 @@ const onSuccess = (res) => {
 .images {
 	position: relative;
 	display: inline-block;
-	margin-right: 10px;
+	overflow: hidden;
 	border: 1px dashed var(--el-border-color);
 	border-radius: 6px;
-	overflow: hidden;
+	margin-right: 10px;
 
 	.mask {
-		opacity: 0;
 		position: absolute;
 		top: 0;
 		width: 100%;
 		height: 100%;
 		background-color: var(--el-overlay-color-lighter);
+		opacity: 0;
 		transition: opacity 0.3s;
 
 		.actions {
+			display: flex;
 			width: 100px;
 			height: 100px;
-			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
 			justify-content: center;
@@ -245,9 +245,9 @@ const onSuccess = (res) => {
 
 			span {
 				width: 50%;
-				text-align: center;
-				cursor: pointer;
 				color: var(--el-color-white);
+				cursor: pointer;
+				text-align: center;
 				transition: color 0.1s, transform 0.1s;
 
 				&.disabled {
@@ -287,12 +287,12 @@ const onSuccess = (res) => {
 
 		.image-slot {
 			display: flex;
-			justify-content: center;
-			align-items: center;
 			width: 100%;
 			height: 100%;
-			color: var(--el-text-color-placeholder);
+			align-items: center;
+			justify-content: center;
 			background-color: transparent;
+			color: var(--el-text-color-placeholder);
 
 			i {
 				font-size: 30px;
@@ -304,13 +304,13 @@ const onSuccess = (res) => {
 			top: 0;
 
 			&::after {
-				content: '';
 				position: absolute;
+				top: 0;
+				left: 0;
 				width: 100%;
 				height: 100%;
-				left: 0;
-				top: 0;
 				background-color: var(--el-overlay-color-lighter);
+				content: '';
 			}
 
 			.el-progress {

@@ -1,7 +1,7 @@
 <!--
  * @Description: 权限验证
  * @Date: 2022-11-29 18:39:13
- * @LastEditTime: 2022-12-07 19:18:10
+ * @LastEditTime: 2022-12-30 16:59:43
 -->
 <template>
 	<div class="permission">
@@ -290,7 +290,7 @@ const accountChange = (val) => {
 	})
 	userStore.login({ account: val, password: '123456' }).then(() => {
 		setTimeout(() => {
-			location.reload()
+			window.location.reload()
 		}, 1000)
 	})
 }

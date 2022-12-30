@@ -9,6 +9,12 @@
 -   🌈 重构
 -   ⚠️ 警告
 
+## Version: "1.1.3"，Date: "2022.12.30"
+
+-   🎉 新增 npm-run-all 运行多个 npm 命令
+-   🎉 新增 eslint-config-airbnb-base eslint-plugin-import 规则
+-   🚧 修改 使用 stylelint-config-idiomatic-order 替换 stylelint-order
+
 ## Version: "1.1.2"，Date: "2022.12.29"
 
 -   🎯 优化 lint-staged

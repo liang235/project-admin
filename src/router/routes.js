@@ -1,4 +1,7 @@
-import useSettingsStore from '@/store/modules/settings.js' // 系统配置数据
+import useSettingsStore from '@/store/modules/settings.js'
+
+import example from './modules/example.js' // 默认演示
+import systemSettings from './modules/systemSettings.js' // 系统配置数据
 
 const Layout = () => import('@/layout/index.vue') // 布局主页面
 
@@ -65,10 +68,7 @@ const systemRoutes = [
 			},
 		],
 	},
-]
-
-import example from './modules/example.js' // 默认演示
-import systemSettings from './modules/systemSettings.js' // 系统设置
+] // 系统设置
 
 // 动态路由（异步路由、导航栏路由）
 // 主导航并非路由的一部分，它只是将我们配置好的路由模块进行归类

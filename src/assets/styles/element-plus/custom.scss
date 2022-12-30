@@ -1,97 +1,97 @@
 /* ----- Drawer 抽屉 ----- */
 .el-drawer {
-  .el-drawer__header {
-    padding-bottom: 20px;
-    margin-bottom: initial;
-    color: var(--el-text-color-primary);
-    transition: var(--el-transition-border);
-    border-bottom: 1px solid var(--el-border-color);
-  }
+	.el-drawer__header {
+		padding-bottom: 20px;
+		border-bottom: 1px solid var(--el-border-color);
+		margin-bottom: initial;
+		color: var(--el-text-color-primary);
+		transition: var(--el-transition-border);
+	}
 
-  .el-drawer__footer {
-    padding: 20px;
-    border-top: 1px solid var(--el-border-color);
-    transition: var(--el-transition-border);
-  }
+	.el-drawer__footer {
+		padding: 20px;
+		border-top: 1px solid var(--el-border-color);
+		transition: var(--el-transition-border);
+	}
 }
 
 /* ----- Descriptions 描述列表 ----- */
 .el-descriptions {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 /* ----- Dialog 对话框 ----- */
 .el-dialog {
-  .el-dialog__header {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    margin-right: 0;
-    height: 60px;
-    font-size: 20px;
-    color: var(--el-text-color-primary);
-    border-bottom: 1px solid var(--g-border-color);
-    font-weight: 400;
+	.el-dialog__header {
+		position: relative;
+		display: flex;
+		height: 60px;
+		align-items: center;
+		padding: 0 20px;
+		border-bottom: 1px solid var(--g-border-color);
+		margin-right: 0;
+		color: var(--el-text-color-primary);
+		font-size: 20px;
+		font-weight: 400;
 
-    .el-dialog__headerbtn {
-      top: 0;
-      width: 60px;
-      height: 60px;
-    }
-  }
+		.el-dialog__headerbtn {
+			top: 0;
+			width: 60px;
+			height: 60px;
+		}
+	}
 
-  .el-dialog__body {
-    padding: 0;
+	.el-dialog__body {
+		padding: 0;
 
-    > .el-scrollbar {
-      > .el-scrollbar__wrap > .el-scrollbar__view {
-        padding: 20px;
-      }
-    }
-  }
+		> .el-scrollbar {
+			> .el-scrollbar__wrap > .el-scrollbar__view {
+				padding: 20px;
+			}
+		}
+	}
 
-  .el-dialog__footer {
-    padding: 15px 20px;
-    border-top: 1px solid var(--g-border-color);
-    text-align: center;
+	.el-dialog__footer {
+		padding: 15px 20px;
+		border-top: 1px solid var(--g-border-color);
+		text-align: center;
 
-    .el-button {
-      min-width: 100px;
-    }
-  }
+		.el-button {
+			min-width: 100px;
+		}
+	}
 }
 
 /* ----- Form 表单 ----- */
 .el-form {
-  .el-form-item {
-    .el-input-number {
-      width: 100%;
-    }
+	.el-form-item {
+		.el-input-number {
+			width: 100%;
+		}
 
-    .el-select {
-      width: 100%;
-    }
-  }
+		.el-select {
+			width: 100%;
+		}
+	}
 }
 
 /* ----- Table 表格 ----- */
 .el-table {
-  // th,td 文本不换行
-  &.white-space-nowrap {
-    th,
-    td {
-      .cell {
-        white-space: nowrap;
-      }
-    }
-  }
+	// th,td 文本不换行
+	&.white-space-nowrap {
+		th,
+		td {
+			.cell {
+				white-space: nowrap;
+			}
+		}
+	}
 
-  .el-form-item {
-    margin-bottom: 0;
-  }
+	.el-form-item {
+		margin-bottom: 0;
+	}
 }

@@ -122,11 +122,11 @@ const anyToCode = (value, dictionarie = pcasData.value) => {
 		const findItem = dictionarie.find((item) => {
 			if (props.format === 'code') {
 				return item.code === value[0]
-			} else if (props.format === 'name') {
-				return item.name === value[0]
-			} else {
-				return item.name === value[0].name && item.code === value[0].code
 			}
+			if (props.format === 'name') {
+				return item.name === value[0]
+			}
+			return item.name === value[0].name && item.code === value[0].code
 		})
 		input.push(findItem.code)
 		if (findItem.children) {

@@ -16,9 +16,8 @@ export default function useAuth() {
 			return userStore.permissions.some((v) => {
 				return v === permission
 			})
-		} else {
-			return true
 		}
+		return true
 	}
 
 	/**

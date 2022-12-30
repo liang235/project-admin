@@ -60,7 +60,7 @@ onUnmounted(() => {
 
 // 监听当前页面的滚动条纵坐标位置
 watch(scrollTop, (val, oldVal) => {
-	const topbarHeight = parseInt(getComputedStyle(document.documentElement || document.body).getPropertyValue('--g-topbar-height'))
+	const topbarHeight = parseInt(getComputedStyle(document.documentElement || document.body).getPropertyValue('--g-topbar-height'), 10)
 	scrollOnHide.value = settingsStore.topbar.mode === 'sticky' && val > oldVal && val > topbarHeight
 })
 </script>
@@ -68,12 +68,12 @@ watch(scrollTop, (val, oldVal) => {
 <style lang="scss" scoped>
 .topbar-container {
 	position: absolute;
-	top: 0;
 	z-index: 999;
+	top: 0;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	height: var(--g-topbar-height);
+	align-items: center;
+	justify-content: space-between;
 	background-color: var(--g-toolbar-bg);
 	box-shadow: 0 0 1px 0 var(--el-border-color);
 	transition: width 0.3s, top 0.3s, transform 0.3s, background-color 0.3s, var(--el-transition-box-shadow);
@@ -93,16 +93,16 @@ watch(scrollTop, (val, oldVal) => {
 
 	.left-box {
 		display: flex;
-		align-items: center;
 		overflow: hidden;
+		align-items: center;
 		padding-right: 50px;
 		mask-image: linear-gradient(90deg, #000 0%, #000 calc(100% - 50px), transparent);
 
 		.sidebar-collapse {
 			display: flex;
+			height: 50px;
 			align-items: center;
 			padding: 0 20px;
-			height: 50px;
 			cursor: pointer;
 
 			.svg-icon {

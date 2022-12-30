@@ -1,7 +1,7 @@
 <!--
  * @Description: 图片裁剪
  * @Date: 2022-12-10 20:47:32
- * @LastEditTime: 2022-12-11 21:23:55
+ * @LastEditTime: 2022-12-30 17:14:27
 -->
 <template>
 	<div>
@@ -73,6 +73,7 @@
 <script setup name="PluginCropper">
 // 图片裁剪插件
 import VueCropper from 'vue-cropperjs'
+// eslint-disable-next-line import/no-extraneous-dependencies
 import 'cropperjs/dist/cropper.css'
 
 // 默认裁剪的图片
@@ -116,7 +117,11 @@ const rotate = (deg) => {
 
 // 翻转
 const flip = (x, y) => {
-	x && y ? cropperRef.value.scale(x, y) : cropperRef.value.scale(x)
+	if (x && y) {
+		cropperRef.value.scale(x, y)
+	} else {
+		cropperRef.value.scale(x)
+	}
 }
 
 // 裁剪图片，获取图像数据进行后期处理，例如上传或设置图像SRC
@@ -143,9 +148,9 @@ const reset = () => {
 		width: 300px;
 
 		p {
-			font-size: 1.25rem;
 			margin: 0;
 			margin-bottom: 1rem;
+			font-size: 1.25rem;
 		}
 
 		p:last-of-type {
@@ -154,9 +159,9 @@ const reset = () => {
 
 		// 高度要对应 aspectRatio 的宽高比
 		.preview {
+			overflow: hidden;
 			width: 100%;
 			height: calc(300px * (16 / 16));
-			overflow: hidden;
 		}
 	}
 

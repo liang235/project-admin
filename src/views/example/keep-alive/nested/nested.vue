@@ -11,6 +11,7 @@
 
 <script setup name="TabExampleNested1">
 import useKeepAliveStore from '@/store/modules/keepAlive.js' // 缓存数据
+
 const keepAliveStore = useKeepAliveStore()
 </script>
 

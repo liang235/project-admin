@@ -28,6 +28,7 @@
 <script setup name="ComponentCopper">
 // 默认裁剪的图片
 import imgSrc from '@/assets/images/E0199E25.png'
+
 const src = ref(imgSrc)
 
 // 图片裁剪配置
@@ -47,10 +48,10 @@ const handleCrop = (res) => {
 	text-align: center;
 
 	.cropper-img {
-		margin: auto;
 		width: 200px;
 		height: 200px;
 		border-radius: 100%;
+		margin: auto;
 	}
 }
 </style>

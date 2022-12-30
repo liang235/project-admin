@@ -3,107 +3,107 @@
 * https://github.com/fians/Waves/blob/master/LICENSE
 */
 .waves-effect {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    overflow: hidden;
-    transition: all 0.3s ease-out;
-    cursor: pointer;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    vertical-align: middle;
-    will-change: opacity, transform;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	overflow: hidden;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	transition: all 0.3s ease-out;
+	user-select: none;
+	vertical-align: middle;
+	will-change: opacity, transform;
 }
 
 .waves-effect .waves-ripple {
-    position: absolute;
-    margin-top: -10px;
-    margin-left: -10px;
-    width: 20px;
-    height: 20px;
-    background: rgb(0 0 0 / 20%);
-    border-radius: 50%;
-    opacity: 0;
-    transition: all 0.7s ease-out;
-    transition-property: opacity, -webkit-transform;
-    transition-property: transform, opacity;
-    transition-property: transform, opacity, -webkit-transform;
-    transform: scale(0);
-    pointer-events: none;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+	background: rgb(0 0 0 / 20%);
+	opacity: 0;
+	pointer-events: none;
+	transform: scale(0);
+	transition: all 0.7s ease-out;
+	transition-property: opacity, -webkit-transform;
+	transition-property: transform, opacity;
+	transition-property: transform, opacity, -webkit-transform;
 }
 
 .waves-effect.waves-light .waves-ripple {
-    background-color: rgb(255 255 255 / 45%);
+	background-color: rgb(255 255 255 / 45%);
 }
 
 .waves-effect.waves-red .waves-ripple {
-    background-color: rgb(244 67 54 / 70%);
+	background-color: rgb(244 67 54 / 70%);
 }
 
 .waves-effect.waves-yellow .waves-ripple {
-    background-color: rgb(255 235 59 / 70%);
+	background-color: rgb(255 235 59 / 70%);
 }
 
 .waves-effect.waves-orange .waves-ripple {
-    background-color: rgb(255 152 0 / 70%);
+	background-color: rgb(255 152 0 / 70%);
 }
 
 .waves-effect.waves-purple .waves-ripple {
-    background-color: rgb(156 39 176 / 70%);
+	background-color: rgb(156 39 176 / 70%);
 }
 
 .waves-effect.waves-green .waves-ripple {
-    background-color: rgb(76 175 80 / 70%);
+	background-color: rgb(76 175 80 / 70%);
 }
 
 .waves-effect.waves-teal .waves-ripple {
-    background-color: rgb(0 150 136 / 70%);
+	background-color: rgb(0 150 136 / 70%);
 }
 
-.waves-effect input[type="button"],
-.waves-effect input[type="reset"],
-.waves-effect input[type="submit"] {
-    font-size: inherit;
-    background: none;
-    border: 0;
-    font-style: normal;
-    text-transform: inherit;
+.waves-effect input[type='button'],
+.waves-effect input[type='reset'],
+.waves-effect input[type='submit'] {
+	border: 0;
+	background: none;
+	font-size: inherit;
+	font-style: normal;
+	text-transform: inherit;
 }
 
 .waves-notransition {
-    transition: none !important;
+	transition: none !important;
 }
 
 .waves-circle {
-    transform: translateZ(0);
-    mask-image: radial-gradient(circle, #fff 100%, #000 100%);
+	mask-image: radial-gradient(circle, #fff 100%, #000 100%);
+	transform: translateZ(0);
 }
 
 .waves-input-wrapper {
-    border-radius: 0.2em;
-    vertical-align: bottom;
+	border-radius: 0.2em;
+	vertical-align: bottom;
 }
 
 .waves-input-wrapper .waves-button-input {
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1;
+	position: relative;
+	z-index: 1;
+	top: 0;
+	left: 0;
 }
 
 .waves-circle {
-    width: 2.5em;
-    height: 2.5em;
-    text-align: center;
-    border-radius: 50%;
-    line-height: 2.5em;
-    mask-image: none;
+	width: 2.5em;
+	height: 2.5em;
+	border-radius: 50%;
+	line-height: 2.5em;
+	mask-image: none;
+	text-align: center;
 }
 
 .waves-block {
-    display: block;
+	display: block;
 }
 
 a.waves-effect .waves-ripple {
-    z-index: -1;
+	z-index: -1;
 }

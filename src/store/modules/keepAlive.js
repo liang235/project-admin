@@ -1,7 +1,7 @@
 /*
  * @Description: 页面缓存
  * @Date: 2022-11-19 22:21:43
- * @LastEditTime: 2022-11-27 22:26:43
+ * @LastEditTime: 2022-12-30 16:57:32
  */
 const useKeepAliveStore = defineStore('keepAlive', {
 	state: () => ({
@@ -11,10 +11,10 @@ const useKeepAliveStore = defineStore('keepAlive', {
 		// 添加缓存
 		add(name) {
 			if (typeof name === 'string') {
-				!this.list.includes(name) && this.list.push(name)
+				if (!this.list.includes(name)) this.list.push(name)
 			} else {
 				name.forEach((v) => {
-					v && !this.list.includes(v) && this.list.push(v)
+					if (v && !this.list.includes(v)) this.list.push(v)
 				})
 			}
 		},

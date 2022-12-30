@@ -1,20 +1,20 @@
 /*
  * @Description: 路由根页面
  * @Date: 2022-09-23 17:13:01
- * @LastEditTime: 2022-12-18 05:44:56
+ * @LastEditTime: 2022-12-30 16:31:53
  */
+
 import { createRouter, createWebHashHistory } from 'vue-router' // 路由
+import { useTitle } from '@vueuse/core' // vue 工具库
+import { useNProgress } from '@vueuse/integrations/useNProgress' // 进度条相关
+import '@/assets/styles/nprogress.scss' // 进度条样式
 import { constantRoutes, asyncRoutes } from './routes.js' // 路由相关数据
 import useSettingsStore from '@/store/modules/settings.js' // 系统配置数据
 import useUserStore from '@/store/modules/user.js' // 用户数据
 import useMenuStore from '@/store/modules/menu.js' // 侧边栏数据
 import useRouteStore from '@/store/modules/route.js' // 路由数据
 import useKeepAliveStore from '@/store/modules/keepAlive.js' // 缓存数据
-import { useTitle } from '@vueuse/core' // vue 工具库
 
-// 进度条相关
-import '@/assets/styles/nprogress.scss'
-import { useNProgress } from '@vueuse/integrations/useNProgress'
 const { isLoading } = useNProgress()
 
 /**
@@ -36,21 +36,21 @@ router.beforeEach(async (to, from, next) => {
 	const routeStore = useRouteStore()
 
 	// 开启进度条
-	settingsStore.app.enableProgress && (isLoading.value = true)
+	if (settingsStore.app.enableProgress) isLoading.value = true
 
 	// 是否已登录
 	if (userStore.isLogin) {
 		// 是否已根据权限动态生成并挂载路由
 		if (routeStore.isGenerate) {
 			// 导航栏如果不是 single 模式，则需要根据 path 定位主导航的选中状态
-			settingsStore.menu.menuMode !== 'single' && menuStore.setActived(to.path)
+			if (settingsStore.menu.menuMode !== 'single') menuStore.setActived(to.path)
 
 			if (to.name) {
 				if (to.matched.length !== 0) {
 					// 如果已登录状态下，进入登录页会强制跳转到主页页面
-					if (to.name == 'login') {
+					if (to.name === 'login') {
 						next({ name: 'home', replace: true })
-					} else if (!settingsStore.home.enable && to.name == 'home') {
+					} else if (!settingsStore.home.enable && to.name === 'home') {
 						// 如果未开启主页页面，则默认进入侧边栏导航第一个模块
 						if (menuStore.sidebarMenus.length > 0) {
 							next({
@@ -84,7 +84,7 @@ router.beforeEach(async (to, from, next) => {
 			}
 
 			// 动态路由部分
-			let removeRoutes = []
+			const removeRoutes = []
 			routeStore.flatRoutes.forEach((route) => {
 				if (!/^(https?:|mailto:|tel:)/.test(route.path)) {
 					removeRoutes.push(router.addRoute(route))
@@ -104,17 +104,15 @@ router.beforeEach(async (to, from, next) => {
 				replace: true,
 			})
 		}
+	} else if (to.name !== 'login') {
+		next({
+			name: 'login',
+			query: {
+				redirect: to.fullPath,
+			},
+		})
 	} else {
-		if (to.name !== 'login') {
-			next({
-				name: 'login',
-				query: {
-					redirect: to.fullPath,
-				},
-			})
-		} else {
-			next()
-		}
+		next()
 	}
 })
 
@@ -125,7 +123,7 @@ router.afterEach((to, from) => {
 	const keepAliveStore = useKeepAliveStore()
 
 	// 关闭进度条
-	settingsStore.app.enableProgress && (isLoading.value = false)
+	if (settingsStore.app.enableProgress) isLoading.value = false
 
 	// 设置页面 title
 	if (to.meta.title && settingsStore.app.enableDynamicTitle) {

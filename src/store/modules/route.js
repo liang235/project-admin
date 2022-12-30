@@ -1,7 +1,7 @@
 /*
  * @Description: 路由数据
  * @Date: 2022-10-10 09:36:19
- * @LastEditTime: 2022-12-03 15:51:54
+ * @LastEditTime: 2022-12-30 17:00:45
  */
 import { cloneDeep } from 'lodash-es' // js 工具库
 import { getRouteList } from '@/api/user.js' // 用户 api
@@ -41,11 +41,11 @@ function hasPermission(permissions, route) {
 function filterAsyncRoutes(routes, permissions) {
 	const res = []
 	routes.forEach((route) => {
-		let tmpRoute = cloneDeep(route)
+		const tmpRoute = cloneDeep(route)
 		if (hasPermission(permissions, tmpRoute)) {
 			if (tmpRoute.children) {
 				tmpRoute.children = filterAsyncRoutes(tmpRoute.children, permissions)
-				tmpRoute.children.length && res.push(tmpRoute)
+				if (tmpRoute.children.length) res.push(tmpRoute)
 			} else {
 				res.push(tmpRoute)
 			}
@@ -162,7 +162,7 @@ const useRouteStore = defineStore('route', {
 	getters: {
 		// 扁平化路由（将三级及以上路由数据拍平成二级）
 		flatRoutes: (state) => {
-			let routes = []
+			const routes = []
 			if (state.routes) {
 				state.routes.map((item) => {
 					routes.push(...cloneDeep(item.children))
@@ -208,7 +208,7 @@ const useRouteStore = defineStore('route', {
 			await getRouteList({ account: userStore.account })
 				.then(async (res) => {
 					this.routesNo = cloneDeep(res.data)
-					let asyncRoutes = formatBackRoutes(res.data)
+					const asyncRoutes = formatBackRoutes(res.data)
 					let accessedRoutes
 
 					// 如果权限功能开启，则需要对路由数据进行筛选过滤

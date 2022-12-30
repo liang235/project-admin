@@ -15,12 +15,12 @@ body,
 }
 
 body {
-	margin: 0;
-	font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-	background-color: var(--g-app-bg);
-	transition: background-color 0.3s;
 	box-sizing: border-box;
+	margin: 0;
+	background-color: var(--g-app-bg);
+	font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
 	-webkit-tap-highlight-color: transparent;
+	transition: background-color 0.3s;
 }
 
 * {
@@ -34,10 +34,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #0006;
-	background-clip: padding-box;
 	border: 3px solid transparent;
 	border-radius: 6px;
+	background-clip: padding-box;
+	background-color: #0006;
 }
 
 ::-webkit-scrollbar-thumb:hover {

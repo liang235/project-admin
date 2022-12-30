@@ -3,25 +3,25 @@
  * @directive 默认方式：v-waves，如 `<div v-waves></div>`
  * @directive 参数方式：v-waves=" |light|red|orange|purple|green|teal"，如 `<div v-waves="'light'"></div>`
  * @Date: 2022-12-12 16:23:50
- * @LastEditTime: 2022-12-24 03:50:42
+ * @LastEditTime: 2022-12-30 16:26:43
  */
 export function wavesDirective(app) {
 	app.directive('waves', {
 		mounted(el, binding) {
 			el.classList.add('waves-effect')
-			binding.value && el.classList.add(`waves-${binding.value}`)
+			if (binding.value) el.classList.add(`waves-${binding.value}`)
 			function setConvertStyle(obj) {
 				let style = ''
-				for (let i in obj) {
+				for (const i in obj) {
 					if (obj.hasOwnProperty(i)) style += `${i}:${obj[i]};`
 				}
 				return style
 			}
 			function onCurrentClick(e) {
-				let elDiv = document.createElement('div')
+				const elDiv = document.createElement('div')
 				elDiv.classList.add('waves-ripple')
 				el.appendChild(elDiv)
-				let styles = {
+				const styles = {
 					left: `${e.layerX}px`,
 					top: `${e.layerY}px`,
 					opacity: 1,
@@ -41,7 +41,7 @@ export function wavesDirective(app) {
 						})
 					)
 					setTimeout(() => {
-						elDiv && el.removeChild(elDiv)
+						if (elDiv) el.removeChild(elDiv)
 					}, 750)
 				}, 450)
 			}

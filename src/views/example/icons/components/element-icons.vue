@@ -24,7 +24,7 @@ const icons = ref(ElementPlusIconsVue)
 
 // 复制粘贴
 const handleCopy = (name) => {
-	let text = `<svg-icon name="ele-${kebabCase(name)}" />`
+	const text = `<svg-icon name="ele-${kebabCase(name)}" />`
 	handleClipboard(text)
 }
 

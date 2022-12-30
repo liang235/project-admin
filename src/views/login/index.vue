@@ -105,8 +105,8 @@ const handleLogin = async () => {
 					router.push(redirect.value)
 
 					// 登录问候语
-					let account = localStorage.account
-					let signInText = formatAxis(useNow().value)
+					const { account } = localStorage
+					const signInText = formatAxis(useNow().value)
 					ElMessage.success(`${account}, ${signInText}`)
 				})
 				.catch(() => {
@@ -147,11 +147,11 @@ onMounted(() => {
 		top: 50%;
 		left: 50%;
 		display: flex;
-		justify-content: space-between;
 		overflow: hidden;
 		height: 500px;
-		background-color: var(--el-bg-color);
+		justify-content: space-between;
 		border-radius: 10px;
+		background-color: var(--el-bg-color);
 		box-shadow: var(--el-box-shadow);
 		transform: translateX(-50%) translateY(-50%);
 
@@ -171,24 +171,24 @@ onMounted(() => {
 		// form 表单部分
 		.login-form {
 			display: flex;
-			justify-content: center;
 			overflow: hidden;
-			padding: 50px;
 			width: 500px;
 			height: 500px;
 			flex-direction: column;
+			justify-content: center;
+			padding: 50px;
 
 			.title {
 				margin: 0 auto 30px;
-				font-size: 1.3em;
 				color: var(--el-text-color-primary);
+				font-size: 1.3em;
 				font-weight: bold;
 			}
 
 			.flex-bar {
 				display: flex;
-				justify-content: space-between;
 				align-items: center;
+				justify-content: space-between;
 				margin-bottom: 20px;
 			}
 		}

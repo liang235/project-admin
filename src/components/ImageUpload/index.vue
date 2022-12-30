@@ -1,7 +1,7 @@
 <!--
  * @Description: 单图上传
  * @Date: 2022-12-04 20:11:40
- * @LastEditTime: 2022-12-20 16:20:40
+ * @LastEditTime: 2022-12-30 16:04:22
 -->
 <template>
 	<div class="upload-container">
@@ -189,22 +189,22 @@ const onSuccess = (res) => {
 
 .image {
 	position: relative;
-	border-radius: 6px;
 	overflow: hidden;
+	border-radius: 6px;
 
 	.mask {
-		opacity: 0;
 		position: absolute;
 		top: 0;
 		width: 100%;
 		height: 100%;
 		background-color: var(--el-overlay-color-lighter);
+		opacity: 0;
 		transition: opacity 0.3s;
 
 		.actions {
+			display: flex;
 			width: 100px;
 			height: 100px;
-			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
 			justify-content: center;
@@ -213,9 +213,9 @@ const onSuccess = (res) => {
 
 			span {
 				width: 50%;
-				text-align: center;
-				cursor: pointer;
 				color: var(--el-color-white);
+				cursor: pointer;
+				text-align: center;
 				transition: color 0.1s, transform 0.1s;
 
 				&:hover {
@@ -250,12 +250,12 @@ const onSuccess = (res) => {
 
 		.image-slot {
 			display: flex;
-			justify-content: center;
-			align-items: center;
 			width: 100%;
 			height: 100%;
-			color: var(--el-text-color-placeholder);
+			align-items: center;
+			justify-content: center;
 			background-color: transparent;
+			color: var(--el-text-color-placeholder);
 
 			i {
 				font-size: 30px;
@@ -267,13 +267,13 @@ const onSuccess = (res) => {
 			top: 0;
 
 			&::after {
-				content: '';
 				position: absolute;
+				top: 0;
+				left: 0;
 				width: 100%;
 				height: 100%;
-				left: 0;
-				top: 0;
 				background-color: var(--el-overlay-color-lighter);
+				content: '';
 			}
 
 			.el-progress {

@@ -1,7 +1,7 @@
 <!--
  * @Description: 过滤筛选组件
  * @Date: 2022-12-18 18:48:57
- * @LastEditTime: 2022-12-19 14:40:41
+ * @LastEditTime: 2022-12-30 17:12:26
 -->
 <template>
 	<page-main title="过滤筛选支持单选和多选">
@@ -49,8 +49,8 @@ const mode = ref('multi') // 模式 radio/multi
 const dlRefs = ref([]) // 导航 refs
 // 数据列表
 const data = ref({
-	filtering: filtering,
-	filterList: filterList,
+	filtering,
+	filterList,
 })
 const setFiltering = ref({}) // 选中的导航数据
 
@@ -122,9 +122,13 @@ const initActive = () => {
 // 初始化 `收起、展开` 按钮
 const initBtnToggle = () => {
 	nextTick(() => {
-		let els = dlRefs.value
+		const els = dlRefs.value
 		els.map((v, k) => {
-			v.scrollHeight < v.lastChild.scrollHeight ? (data.value.filtering[k].isShowMore = true) : (data.value.filtering[k].isShowMore = false)
+			if (v.scrollHeight < v.lastChild.scrollHeight) {
+				data.value.filtering[k].isShowMore = true
+			} else {
+				data.value.filtering[k].isShowMore = false
+			}
 		})
 	})
 }
@@ -139,28 +143,28 @@ onMounted(() => {
 <style lang="scss" scoped>
 // 导航数据
 .filtering {
-	border-bottom: 1px dotted var(--el-border-color);
 	display: flex;
+	border-bottom: 1px dotted var(--el-border-color);
 
 	&:first-child {
 		border-top: 1px dotted var(--el-border-color);
 	}
 
 	.filtering-title {
-		width: 60px;
-		font-weight: 700;
 		position: relative;
-		color: var(--el-text-color-secondary);
-		margin: 15px 0;
 		display: flex;
+		width: 60px;
 		align-items: center;
 		justify-content: space-between;
+		margin: 15px 0;
+		color: var(--el-text-color-secondary);
+		font-weight: 700;
 	}
 
 	.filtering-item {
-		flex: 1;
-		overflow: hidden;
 		position: relative;
+		overflow: hidden;
+		flex: 1;
 		padding-left: 15px;
 
 		.el-tag {
@@ -168,8 +172,8 @@ onMounted(() => {
 			margin-right: 10px;
 
 			&:last-of-type {
-				margin-bottom: 15px;
 				margin-right: 0;
+				margin-bottom: 15px;
 			}
 
 			&:hover {
@@ -180,8 +184,8 @@ onMounted(() => {
 
 		.more {
 			position: absolute;
-			right: 0;
 			top: 18px;
+			right: 0;
 			font-size: 14px;
 
 			&:hover {
@@ -190,6 +194,7 @@ onMounted(() => {
 		}
 	}
 }
+
 .filtering:last-of-type {
 	border-bottom: 1px dotted var(--el-border-color);
 }

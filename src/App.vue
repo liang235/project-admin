@@ -26,7 +26,7 @@ const settingsStore = useSettingsStore()
 // 侧边栏主导航当前实际宽度
 const mainSidebarActualWidth = computed(() => {
 	let actualWidth = getComputedStyle(document.documentElement).getPropertyValue('--g-main-sidebar-width')
-	actualWidth = parseInt(actualWidth)
+	actualWidth = parseInt(actualWidth, 10)
 	if (['head', 'single'].includes(settingsStore.menu.menuMode)) {
 		actualWidth = 0
 	}
@@ -36,7 +36,7 @@ const mainSidebarActualWidth = computed(() => {
 // 侧边栏次导航当前实际宽度
 const subSidebarActualWidth = computed(() => {
 	let actualWidth = getComputedStyle(document.documentElement).getPropertyValue('--g-sub-sidebar-width')
-	actualWidth = parseInt(actualWidth)
+	actualWidth = parseInt(actualWidth, 10)
 	if (settingsStore.menu.subMenuCollapse) {
 		actualWidth = 64
 	}

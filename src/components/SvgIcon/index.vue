@@ -1,7 +1,7 @@
 <!--
  * @Description: svg 图标使用
  * @Date: 2022-10-27 10:55:55
- * @LastEditTime: 2022-12-27 10:31:18
+ * @LastEditTime: 2022-12-30 16:24:35
 -->
 <template>
 	<component v-if="name.startsWith('ele-')" :is="name" :style="transformStyle" class="svg-icon" />
@@ -43,8 +43,8 @@ const props = defineProps({
 })
 
 const transformStyle = computed(() => {
-	let style = []
-	if (props.flip != '') {
+	const style = []
+	if (props.flip !== '') {
 		switch (props.flip) {
 			case 'horizontal':
 				style.push('rotateY(180deg)')
@@ -58,7 +58,7 @@ const transformStyle = computed(() => {
 				break
 		}
 	}
-	if (props.rotate != 0) {
+	if (props.rotate !== 0) {
 		style.push(`rotate(${props.rotate}deg)`)
 	}
 	return `transform: ${style.join(' ')};`

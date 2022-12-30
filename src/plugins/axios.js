@@ -28,7 +28,7 @@ const service = axios.create({
 	 * https://www.npmjs.com/package/qs
 	 */
 	paramsSerializer: {
-		serialize: function (params) {
+		serialize(params) {
 			return qs.stringify(params, { allowDots: true })
 		},
 	},
@@ -82,7 +82,7 @@ service.interceptors.response.use(
 	},
 	(error) => {
 		// 对响应错误做点什么
-		let message = error.message
+		let { message } = error
 
 		if (message === 'Network Error') {
 			message = '后端网络故障'

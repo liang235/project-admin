@@ -58,9 +58,11 @@ const collaspeData = ref(props.collaspe)
 const calcHeight = computed(() => {
 	if (props.height && !props.collaspe) {
 		return props.height
-	} else if (!props.height && props.collaspe) {
+	}
+	if (!props.height && props.collaspe) {
 		return ''
-	} else if (props.height && props.collaspe) {
+	}
+	if (props.height && props.collaspe) {
 		return collaspeData.value ? props.height : ''
 	}
 })
@@ -70,10 +72,10 @@ const calcHeight = computed(() => {
 .page-main {
 	position: relative;
 	display: flex;
+	flex-direction: column;
 	margin: 20px;
 	background-color: var(--g-app-bg);
 	transition: all 0.3s;
-	flex-direction: column;
 
 	&:hover {
 		box-shadow: var(--el-box-shadow-light);
@@ -87,9 +89,9 @@ const calcHeight = computed(() => {
 
 	.main-container {
 		overflow: hidden;
+		flex: 1;
 		padding: 20px;
 		transition: all 0.3s;
-		flex: 1;
 	}
 
 	.collaspe {
@@ -97,17 +99,17 @@ const calcHeight = computed(() => {
 		bottom: 0;
 		left: 0;
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 20px 0;
 		width: 100%;
+		align-items: center;
+		justify-content: center;
+		padding: 20px 0;
+		background: linear-gradient(to bottom, transparent, var(--el-color-info));
+		color: var(--el-text-color-primary);
+		cursor: pointer;
 		font-size: 24px;
 		text-align: center;
-		color: var(--el-text-color-primary);
-		background: linear-gradient(to bottom, transparent, var(--el-color-info));
 		text-shadow: 0 0 1px var(--el-text-color-primary);
 		transition: background 0.3s, var(--el-transition-color);
-		cursor: pointer;
 
 		&:hover {
 			color: var(--el-text-color-secondary);

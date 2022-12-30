@@ -41,7 +41,6 @@
 </template>
 
 <script setup name="SidebarItem">
-import SidebarItem from './index.vue' // 当前自身页面，用于递归
 import { resolveRoutePath } from '@/utils/tools.js' // 自定义工具
 
 // 定义父组件传过来的值
@@ -93,10 +92,10 @@ const hasChildren = computed(() => {
 :deep(.el-sub-menu),
 :deep(.el-menu-item) {
 	.title-icon {
-		margin-left: 2px;
 		width: 18px;
-		font-size: 18px;
+		margin-left: 2px;
 		color: unset;
+		font-size: 18px;
 		transition: transform 0.3s;
 	}
 
@@ -111,9 +110,9 @@ const hasChildren = computed(() => {
 }
 
 a {
-	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
+	text-decoration: none;
 }
 
 .el-sub-menu__title {
@@ -135,32 +134,32 @@ a {
 
 	.el-menu-item,
 	.el-sub-menu > .el-sub-menu__title {
-		color: var(--g-sub-sidebar-menu-color);
 		background-color: var(--g-sub-sidebar-menu-bg) !important;
+		color: var(--g-sub-sidebar-menu-color);
 
 		&:hover {
-			color: var(--g-sub-sidebar-menu-hover-color) !important;
 			background-color: var(--g-sub-sidebar-menu-hover-bg) !important;
+			color: var(--g-sub-sidebar-menu-hover-color) !important;
 		}
 	}
 }
 
 .el-menu-item,
 .el-sub-menu__title {
-	color: var(--g-sub-sidebar-menu-color) !important;
 	background: transparent !important;
+	color: var(--g-sub-sidebar-menu-color) !important;
 
 	&:hover {
-		color: var(--g-sub-sidebar-menu-hover-color) !important;
 		background-color: var(--g-sub-sidebar-menu-hover-bg) !important;
+		color: var(--g-sub-sidebar-menu-hover-color) !important;
 	}
 }
 
 .el-menu-item.is-active,
 .el-menu--collapse .el-sub-menu.is-active > .el-sub-menu__title,
 .el-sub-menu .el-menu--inline .el-menu-item.is-active {
-	color: var(--g-sub-sidebar-menu-active-color) !important;
 	background-color: var(--g-sub-sidebar-menu-active-bg) !important;
+	color: var(--g-sub-sidebar-menu-active-color) !important;
 
 	.svg-icon,
 	.el-sub-menu__icon-arrow {

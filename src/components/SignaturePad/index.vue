@@ -134,10 +134,10 @@ const downSvgBgColor = () => {
 
 // 下载签名图片
 const download = (dataURL, filename) => {
-	let blob = dataURLToBlob(dataURL)
-	let url = window.URL.createObjectURL(blob)
+	const blob = dataURLToBlob(dataURL)
+	const url = window.URL.createObjectURL(blob)
 
-	let a = document.createElement('a')
+	const a = document.createElement('a')
 	a.style = 'display: none'
 	a.href = url
 	a.download = filename
@@ -152,11 +152,11 @@ const download = (dataURL, filename) => {
 // 可以使用SignaturePad#toDataURL的结果
 const dataURLToBlob = (dataURL) => {
 	// Code taken from https://github.com/ebidel/filer.js
-	let parts = dataURL.split(';base64,')
-	let contentType = parts[0].split(':')[1]
-	let raw = window.atob(parts[1])
-	let rawLength = raw.length
-	let uInt8Array = new Uint8Array(rawLength)
+	const parts = dataURL.split(';base64,')
+	const contentType = parts[0].split(':')[1]
+	const raw = window.atob(parts[1])
+	const rawLength = raw.length
+	const uInt8Array = new Uint8Array(rawLength)
 
 	for (let i = 0; i < rawLength; ++i) {
 		uInt8Array[i] = raw.charCodeAt(i)

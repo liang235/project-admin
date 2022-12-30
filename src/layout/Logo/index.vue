@@ -35,7 +35,7 @@ const logo = ref(imgLogo) // logo 图片
 
 // 点击跳转的路径
 const to = computed(() => {
-	let rtn = {}
+	const rtn = {}
 	if (settingsStore.home.enable) {
 		rtn.name = 'home'
 	}
@@ -46,15 +46,15 @@ const to = computed(() => {
 <style lang="scss" scoped>
 .title {
 	position: fixed;
-	top: 0;
 	z-index: 1000;
+	top: 0;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	overflow: hidden;
-	padding: 0 10px;
 	width: inherit;
 	height: var(--g-sidebar-logo-height);
+	align-items: center;
+	justify-content: center;
+	padding: 0 10px;
 	text-align: center;
 	text-decoration: none;
 
@@ -74,8 +74,8 @@ const to = computed(() => {
 
 	span {
 		display: block;
-		font-weight: bold;
 		color: #fff;
+		font-weight: bold;
 
 		@include text-overflow;
 	}
