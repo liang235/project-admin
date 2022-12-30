@@ -140,10 +140,10 @@ const userCommand = (command) => {
 
 		.item {
 			display: inline-flex;
-			justify-content: center;
-			align-items: center;
 			width: 34px;
 			height: 24px;
+			align-items: center;
+			justify-content: center;
 			cursor: pointer;
 			vertical-align: middle;
 
@@ -160,10 +160,10 @@ const userCommand = (command) => {
 		}
 
 		.item-pro {
-			padding: 0 10px;
 			width: auto;
-			transform-origin: right center;
+			padding: 0 10px;
 			animation: pro-text 3s ease-out infinite;
+			transform-origin: right center;
 
 			@keyframes pro-text {
 				0%,
@@ -187,11 +187,11 @@ const userCommand = (command) => {
 
 			.title {
 				padding-left: 5px;
-				font-weight: bold;
-				font-size: 14px;
-				background-image: linear-gradient(to right, #ffa237, #fc455d);
 				/* stylelint-disable-next-line property-no-vendor-prefix */
 				-webkit-background-clip: text;
+				background-image: linear-gradient(to right, #ffa237, #fc455d);
+				font-size: 14px;
+				font-weight: bold;
 				-webkit-text-fill-color: transparent;
 			}
 		}
@@ -207,14 +207,14 @@ const userCommand = (command) => {
 :deep(.user-container) {
 	display: inline-block;
 	height: 24px;
-	line-height: 24px;
 	cursor: pointer;
+	line-height: 24px;
 
 	.user-wrapper {
 		.el-avatar {
-			vertical-align: middle;
 			margin-top: -2px;
 			margin-right: 4px;
+			vertical-align: middle;
 		}
 	}
 }

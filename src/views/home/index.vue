@@ -17,11 +17,4 @@
 
 <script setup name="Home"></script>
 
-<style lang="scss" scoped>
-.a {
-	display: -webkit-box;
-	overflow: hidden;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: $line;
-}
-</style>
+<style lang="scss" scoped></style>

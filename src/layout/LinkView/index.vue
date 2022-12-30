@@ -45,29 +45,29 @@ function open() {
 
 	.page-main {
 		display: flex;
-		flex-direction: column;
 		height: 100%;
 		flex: 1;
+		flex-direction: column;
 
 		.container {
 			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin: 0 50px;
 			height: 100%;
 			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin: 0 50px;
 
 			.title {
 				margin: 10px 0;
-				font-size: 22px;
 				color: var(--el-text-color-primary);
+				font-size: 22px;
 			}
 
 			.link {
-				margin: 10px 0;
 				max-width: 300px;
-				font-size: 14px;
+				margin: 10px 0;
 				color: var(--el-text-color-disabled);
+				font-size: 14px;
 
 				@include text-overflow(3);
 			}

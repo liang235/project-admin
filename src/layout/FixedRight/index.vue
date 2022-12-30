@@ -34,14 +34,14 @@ setTimeout(() => {
 <style lang="scss" scoped>
 .fixed-right {
 	position: fixed;
+	z-index: 10;
 	top: 50%;
 	right: -58px;
-	z-index: 10;
 	display: flex;
 	width: 70px;
-	transition: right 0.3s;
-	transform: translateY(-50%);
 	flex-direction: column;
+	transform: translateY(-50%);
+	transition: right 0.3s;
 
 	&.actived,
 	&:hover {
@@ -50,15 +50,15 @@ setTimeout(() => {
 
 	.item {
 		display: flex;
-		justify-content: center;
 		height: 70px;
-		text-align: center;
-		color: #fff;
-		opacity: 0.7;
-		transition: 0.3s;
 		flex-direction: column;
+		justify-content: center;
 		border-bottom: 1px solid #fff;
+		color: #fff;
 		cursor: pointer;
+		opacity: 0.7;
+		text-align: center;
+		transition: 0.3s;
 
 		&:hover {
 			opacity: 1;
@@ -69,8 +69,8 @@ setTimeout(() => {
 		}
 
 		&:last-child {
-			border-bottom-left-radius: 5px;
 			border-bottom: 0;
+			border-bottom-left-radius: 5px;
 		}
 
 		&:nth-child(1) {

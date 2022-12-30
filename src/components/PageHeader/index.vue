@@ -36,8 +36,8 @@ defineProps({
 <style lang="scss" scoped>
 .header {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
 	padding: 16px 20px;
 	margin-bottom: 20px;
 	background-color: var(--g-app-bg);
@@ -48,15 +48,15 @@ defineProps({
 		margin-right: 20px;
 
 		.title {
-			font-size: 22px;
 			color: var(--el-text-color-primary);
+			font-size: 22px;
 			transition: var(--el-transition-color);
 		}
 
 		.content {
 			margin-top: 10px;
-			font-size: 14px;
 			color: var(--el-text-color-secondary);
+			font-size: 14px;
 			transition: var(--el-transition-color);
 
 			&:empty {

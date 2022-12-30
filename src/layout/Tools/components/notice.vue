@@ -46,12 +46,12 @@ const list = ref([
 .tools-notice {
 	.head-box {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding-bottom: 12px;
 		height: 35px;
-		color: var(--el-text-color-primary);
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 12px;
 		border-bottom: 1px solid var(--el-border-color-lighter);
+		color: var(--el-text-color-primary);
 	}
 
 	.content-box {
@@ -78,15 +78,15 @@ const list = ref([
 
 	.foot-box {
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding-top: 12px;
 		height: 35px;
-		font-size: 13px;
-		color: var(--el-color-primary);
-		opacity: 0.8;
-		cursor: pointer;
+		align-items: center;
+		justify-content: center;
+		padding-top: 12px;
 		border-top: 1px solid var(--el-border-color-lighter);
+		color: var(--el-color-primary);
+		cursor: pointer;
+		font-size: 13px;
+		opacity: 0.8;
 
 		&:hover {
 			opacity: 1;

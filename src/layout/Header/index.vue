@@ -65,35 +65,35 @@ const handlerMouserScroll = (event) => {
 <style lang="scss" scoped>
 header {
 	position: fixed;
+	z-index: 1000;
 	top: 0;
 	right: 0;
 	left: 0;
-	z-index: 1000;
 	display: flex;
+	width: 100%;
+	height: var(--g-header-height);
 	align-items: center;
 	padding: 0 20px;
 	margin: 0 auto;
-	width: 100%;
-	height: var(--g-header-height);
-	color: var(--g-header-color);
 	background-color: var(--g-header-bg);
 	box-shadow: -1px 0 0 0 var(--g-border-color), 1px 0 0 0 var(--g-border-color);
+	color: var(--g-header-color);
 	transition: var(--el-transition-all), background-color 0.3s;
 
 	.header-container {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin: 0 auto;
 		width: var(--g-header-width);
 		height: 100%;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0 auto;
 
 		.main {
-			flex: 1;
 			display: flex;
+			height: 100%;
+			flex: 1;
 			flex-wrap: wrap;
 			align-items: center;
-			height: 100%;
 		}
 	}
 
@@ -106,13 +106,13 @@ header {
 	// 导航栏填充风格 - 默认
 	.nav {
 		display: flex;
-		overflow-x: auto;
-		padding: 0 20px;
-		margin: 0 30px;
 		width: 0;
 		height: 100%;
 		flex: 1;
+		padding: 0 20px;
+		margin: 0 30px;
 		mask-image: linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent);
+		overflow-x: auto;
 		// firefox隐藏滚动条
 		scrollbar-width: none;
 
@@ -129,26 +129,26 @@ header {
 
 			&.active {
 				.item {
-					color: var(--g-header-menu-active-color);
 					background-color: var(--g-header-menu-active-bg);
+					color: var(--g-header-menu-active-color);
 				}
 			}
 
 			.item {
 				display: flex;
-				justify-content: center;
-				align-items: center;
-				padding: 0 5px;
 				width: 80px;
-				color: var(--g-header-menu-color);
-				background-color: var(--g-header-bg);
-				transition: var(--el-transition-all), background-color 0.3s, var(--el-transition-color);
 				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 0 5px;
+				background-color: var(--g-header-bg);
+				color: var(--g-header-menu-color);
 				cursor: pointer;
+				transition: var(--el-transition-all), background-color 0.3s, var(--el-transition-color);
 
 				&:hover {
-					color: var(--g-header-menu-hover-color);
 					background-color: var(--g-header-menu-hover-bg);
+					color: var(--g-header-menu-hover-color);
 				}
 
 				.svg-icon {
@@ -158,10 +158,10 @@ header {
 				span {
 					display: -webkit-box;
 					overflow: hidden;
-					text-align: center;
-					word-break: break-all;
 					-webkit-box-orient: vertical;
 					-webkit-line-clamp: 1;
+					text-align: center;
+					word-break: break-all;
 				}
 			}
 		}
@@ -177,8 +177,8 @@ header {
 			}
 
 			.item {
-				margin: 10px 0;
 				border-radius: 5px;
+				margin: 10px 0;
 			}
 		}
 
@@ -190,9 +190,9 @@ header {
 			}
 
 			.el-sub-menu__title .item {
-				margin: 10px 0;
 				height: calc(100% - 20px);
 				border-radius: 5px;
+				margin: 10px 0;
 			}
 		}
 	}
@@ -206,13 +206,13 @@ header {
 			left: 50%;
 			width: 0;
 			height: 0;
-			opacity: 0;
-			transition: all 0.3s;
-			content: '';
 			border-right: 5px solid transparent;
-			border-left: 5px solid transparent;
 			border-bottom: 5px solid var(--g-sub-sidebar-bg);
+			border-left: 5px solid transparent;
+			content: '';
+			opacity: 0;
 			transform: translate(-50%);
+			transition: all 0.3s;
 		}
 
 		.item-container.active::before,
@@ -231,13 +231,13 @@ header {
 			left: 50%;
 			width: 0;
 			height: 4px;
-			background-color: var(--g-header-menu-active-bg);
 			border-radius: 2px;
-			opacity: 0;
+			background-color: var(--g-header-menu-active-bg);
 			box-shadow: 0 0 0 1px var(--g-header-bg);
-			transition: all 0.3s;
 			content: '';
+			opacity: 0;
 			transform: translate(-50%);
+			transition: all 0.3s;
 		}
 
 		.item-container.active::before,
@@ -256,13 +256,13 @@ header {
 			left: 50%;
 			width: 10px;
 			height: 10px;
-			background-color: var(--g-header-menu-active-bg);
 			border-radius: 50%;
-			opacity: 0;
+			background-color: var(--g-header-menu-active-bg);
 			box-shadow: 0 0 0 1px var(--g-main-sidebar-bg);
-			transition: all 0.3s;
 			content: '';
+			opacity: 0;
 			transform: translate(-50%);
+			transition: all 0.3s;
 		}
 
 		.item-container.active::before,
@@ -275,9 +275,9 @@ header {
 	// 左侧大标题 Logo
 	:deep(a.title) {
 		position: relative;
-		padding: inherit;
 		width: inherit;
 		height: inherit;
+		padding: inherit;
 		background-color: inherit;
 
 		.logo {
@@ -286,9 +286,9 @@ header {
 		}
 
 		span {
+			color: var(--g-header-color);
 			font-size: 24px;
 			letter-spacing: 1px;
-			color: var(--g-header-color);
 		}
 	}
 
@@ -301,8 +301,8 @@ header {
 		}
 
 		.user-container {
-			font-size: 16px;
 			color: var(--g-header-color);
+			font-size: 16px;
 		}
 	}
 }

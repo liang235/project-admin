@@ -47,15 +47,15 @@ const menuStore = useMenuStore()
 .main-sidebar-container {
 	position: relative;
 	z-index: 1;
+	width: var(--g-main-sidebar-width);
+	background-color: var(--g-main-sidebar-bg);
+	color: var(--g-main-sidebar-menu-color);
 	overflow-x: hidden;
 	overflow-y: auto;
-	width: var(--g-main-sidebar-width);
-	color: var(--g-main-sidebar-menu-color);
-	background-color: var(--g-main-sidebar-bg);
-	transition: background-color 0.3s, var(--el-transition-color);
 	overscroll-behavior: contain;
 	// FireFox 隐藏滚动条
 	scrollbar-width: none;
+	transition: background-color 0.3s, var(--el-transition-color);
 
 	// chrome隐藏滚动条
 	&::-webkit-scrollbar {
@@ -70,8 +70,8 @@ const menuStore = useMenuStore()
 
 	// 导航栏填充风格 - 默认
 	.nav {
-		padding-top: var(--g-sidebar-logo-height);
 		width: inherit;
+		padding-top: var(--g-sidebar-logo-height);
 
 		.item-container {
 			position: relative;
@@ -80,27 +80,27 @@ const menuStore = useMenuStore()
 
 			&.active {
 				.item {
-					color: var(--g-main-sidebar-menu-active-color);
 					background-color: var(--g-main-sidebar-menu-active-bg);
+					color: var(--g-main-sidebar-menu-active-color);
 				}
 			}
 
 			.item {
 				display: flex;
-				justify-content: center;
-				align-items: center;
-				padding: 0 5px;
 				width: 100%;
 				height: 60px;
-				color: var(--g-main-sidebar-menu-color);
-				background-color: var(--g-main-sidebar-bg);
-				transition: var(--el-transition-all), background-color 0.3s, var(--el-transition-color);
 				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 0 5px;
+				background-color: var(--g-main-sidebar-bg);
+				color: var(--g-main-sidebar-menu-color);
 				cursor: pointer;
+				transition: var(--el-transition-all), background-color 0.3s, var(--el-transition-color);
 
 				&:hover {
-					color: var(--g-main-sidebar-menu-hover-color);
 					background-color: var(--g-main-sidebar-menu-hover-bg);
+					color: var(--g-main-sidebar-menu-hover-color);
 				}
 
 				.svg-icon {
@@ -111,12 +111,12 @@ const menuStore = useMenuStore()
 				span {
 					display: -webkit-box;
 					overflow: hidden;
-					font-size: 14px;
-					text-align: center;
-					line-height: 1;
-					word-break: break-all;
 					-webkit-box-orient: vertical;
+					font-size: 14px;
 					-webkit-line-clamp: 1;
+					line-height: 1;
+					text-align: center;
+					word-break: break-all;
 				}
 			}
 		}
@@ -132,8 +132,8 @@ const menuStore = useMenuStore()
 			}
 
 			.item {
-				margin: 0 10px;
 				border-radius: 5px;
+				margin: 0 10px;
 			}
 		}
 
@@ -145,8 +145,8 @@ const menuStore = useMenuStore()
 			}
 
 			.el-sub-menu__title .item {
-				margin: 0 10px;
 				border-radius: 5px;
+				margin: 0 10px;
 			}
 		}
 	}
@@ -160,13 +160,13 @@ const menuStore = useMenuStore()
 			right: -5px;
 			width: 0;
 			height: 0;
-			opacity: 0;
-			transition: all 0.3s;
-			content: '';
 			border-top: 5px solid transparent;
-			border-bottom: 5px solid transparent;
 			border-right: 5px solid var(--g-sub-sidebar-bg);
+			border-bottom: 5px solid transparent;
+			content: '';
+			opacity: 0;
 			transform: translateY(-50%);
+			transition: all 0.3s;
 		}
 
 		.item-container.active::before,
@@ -185,13 +185,13 @@ const menuStore = useMenuStore()
 			left: 8px;
 			width: 4px;
 			height: 0;
-			background-color: var(--g-main-sidebar-menu-active-bg);
 			border-radius: 2px;
-			opacity: 0;
+			background-color: var(--g-main-sidebar-menu-active-bg);
 			box-shadow: 0 0 0 1px var(--g-main-sidebar-bg);
-			transition: all 0.3s;
 			content: '';
+			opacity: 0;
 			transform: translateY(-50%);
+			transition: all 0.3s;
 		}
 
 		.item-container.active::before,
@@ -210,13 +210,13 @@ const menuStore = useMenuStore()
 			left: 0;
 			width: 10px;
 			height: 10px;
-			background-color: var(--g-main-sidebar-menu-active-bg);
 			border-radius: 50%;
-			opacity: 0;
+			background-color: var(--g-main-sidebar-menu-active-bg);
 			box-shadow: 0 0 0 1px var(--g-main-sidebar-bg);
-			transition: all 0.3s;
 			content: '';
+			opacity: 0;
 			transform: translateY(-50%);
+			transition: all 0.3s;
 		}
 
 		.item-container.active::before,
