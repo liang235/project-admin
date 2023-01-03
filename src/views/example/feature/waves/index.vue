@@ -33,16 +33,16 @@ import imgSrc from '@/assets/images/E0199E25.png'
 
 <style lang="scss" scoped>
 .main {
-	margin-top: 20px;
 	display: flex;
+	margin-top: 20px;
 
 	.div {
 		width: 250px;
 		height: 250px;
+		margin-right: 20px;
 		background: var(--el-color-primary);
 		color: var(--el-color-white);
 		transition: all 0.3s ease;
-		margin-right: 20px;
 	}
 
 	img {

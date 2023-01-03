@@ -64,8 +64,8 @@ const realHeight = computed(() => {
 	transition: background-color 0.3s, var(--el-transition-box-shadow);
 
 	:deep(.el-image__inner) {
-		transition: all 0.3s;
 		cursor: pointer;
+		transition: all 0.3s;
 
 		&:hover {
 			transform: scale(1.2);
@@ -74,10 +74,10 @@ const realHeight = computed(() => {
 
 	:deep(.image-slot) {
 		display: flex;
-		justify-content: center;
-		align-items: center;
 		width: 100%;
 		height: 100%;
+		align-items: center;
+		justify-content: center;
 		color: #909399;
 		font-size: 30px;
 	}

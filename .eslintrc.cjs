@@ -21,12 +21,12 @@ module.exports = {
 		sourceType: 'module',
 	},
 	plugins: ['vue'],
-	globals: {
-		ElMessage: true,
-		ElMessageBox: true,
-		ElNotification: true,
-		ElLoading: true,
-	},
+	// globals: {
+	// 	ElMessage: true,
+	// 	ElMessageBox: true,
+	// 	ElNotification: true,
+	// 	ElLoading: true,
+	// },
 	rules: {
 		// http://eslint.cn/docs/rules/
 		// https://eslint.vuejs.org/rules/

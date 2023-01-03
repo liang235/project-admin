@@ -49,13 +49,13 @@ const paneSize = ref(50)
 
 <style lang="scss" scoped>
 .splitpanes__pane {
-	justify-content: center;
-	align-items: center;
-	display: flex;
 	position: relative;
-	font-size: 70px;
-	color: var(--el-color-primary-light-5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	border: 1px solid var(--el-border-color-lighter);
 	background-color: var(--el-color-primary) !important;
+	color: var(--el-color-primary-light-5);
+	font-size: 70px;
 }
 </style>

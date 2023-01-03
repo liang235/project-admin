@@ -93,8 +93,8 @@ onBeforeRouteLeave((to, from, next) => {
 
 <style lang="scss" scoped>
 ol {
-	list-style: auto;
 	padding-left: 40px;
 	margin-bottom: 16px;
+	list-style: auto;
 }
 </style>

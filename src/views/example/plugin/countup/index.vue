@@ -110,7 +110,7 @@ const reset = useThrottleFn(() => {
 .count-to {
 	display: inline-block;
 	margin-bottom: 20px;
-	font-size: 60px;
 	color: #f6416c;
+	font-size: 60px;
 }
 </style>

@@ -93,19 +93,19 @@ onBeforeUnmount(() => {
 	z-index: 9999; // 用于 wangeditor 点击全屏时
 
 	:deep(.w-e-toolbar) {
+		z-index: 2 !important;
 		border: 1px solid var(--el-border-color-light, #ebeef5) !important;
 		border-bottom: 1px solid var(--el-border-color-light, #ebeef5) !important;
 		border-top-left-radius: 3px;
 		border-top-right-radius: 3px;
-		z-index: 2 !important;
 	}
 
 	:deep(.w-e-text-container) {
+		z-index: 1 !important;
 		border: 1px solid var(--el-border-color-light, #ebeef5) !important;
 		border-top: none !important;
 		border-bottom-left-radius: 3px;
 		border-bottom-right-radius: 3px;
-		z-index: 1 !important;
 	}
 }
 </style>

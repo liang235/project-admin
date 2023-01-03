@@ -63,8 +63,8 @@ function toggle() {
 <style lang="scss" scoped>
 .search-container {
 	position: relative;
-	margin: 20px 0;
 	padding: 20px;
+	margin: 20px 0;
 	background-color: var(--el-fill-color-lighter);
 	transition: background-color 0.3s;
 
@@ -90,9 +90,9 @@ function toggle() {
 
 	.more {
 		position: relative;
-		text-align: center;
-		margin-bottom: -10px;
 		padding: 10px 0;
+		margin-bottom: -10px;
+		text-align: center;
 	}
 }
 </style>

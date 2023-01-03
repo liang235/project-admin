@@ -37,22 +37,22 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 :deep(.svg-container) {
+	border-radius: 4px;
 	border-top: 1px solid var(--el-border-color);
 	border-left: 1px solid var(--el-border-color);
-	border-radius: 4px;
 
 	.icon-item {
 		display: flex;
-		justify-content: center;
-		align-items: center;
 		height: 100px;
-		font-size: 13px;
-		color: var(--el-text-color-regular);
-		transition: background-color var(--el-transition-duration);
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		border-right: 1px solid var(--el-border-color);
 		border-bottom: 1px solid var(--el-border-color);
-		flex-direction: column;
+		color: var(--el-text-color-regular);
 		cursor: pointer;
+		font-size: 13px;
+		transition: background-color var(--el-transition-duration);
 
 		.svg-icon {
 			margin-bottom: 5px;
@@ -64,8 +64,8 @@ onMounted(() => {
 		}
 
 		&:hover {
-			color: var(--el-color-primary);
 			background-color: var(--el-border-color-extra-light);
+			color: var(--el-color-primary);
 		}
 	}
 }

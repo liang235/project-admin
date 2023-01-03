@@ -1,7 +1,9 @@
 {
   "globals": {
     "EffectScope": true,
+    "ElLoading": true,
     "ElMessage": true,
+    "ElMessageBox": true,
     "acceptHMRUpdate": true,
     "computed": true,
     "createApp": true,

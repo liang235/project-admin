@@ -1,7 +1,7 @@
 {
 	"name": "project-admin",
 	"private": true,
-	"version": "1.1.4",
+	"version": "1.1.5",
 	"type": "module",
 	"resolutions": {
 		"bin-wrapper": "npm:bin-wrapper-china"
@@ -30,7 +30,7 @@
 		"axios": "^1.2.2",
 		"dayjs": "^1.11.7",
 		"echarts": "^5.4.1",
-		"element-plus": "^2.2.27",
+		"element-plus": "^2.2.28",
 		"hotkeys-js": "^3.10.1",
 		"lodash-es": "^4.17.21",
 		"mitt": "^3.0.0",
@@ -52,9 +52,9 @@
 	"devDependencies": {
 		"@vitejs/plugin-vue": "^4.0.0",
 		"autoprefixer": "^10.4.13",
-		"eslint": "^8.30.0",
+		"eslint": "^8.31.0",
 		"eslint-config-airbnb-base": "^15.0.0",
-		"eslint-config-prettier": "^8.5.0",
+		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-import": "^2.26.0",
 		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-vue": "^9.8.0",

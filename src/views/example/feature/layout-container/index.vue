@@ -59,9 +59,9 @@ const rightShow = ref(true) // 右侧栏状态
 <style lang="scss" scoped>
 .layout-container {
 	position: absolute;
+	display: flex;
 	width: 100%;
 	height: 100%;
-	display: flex;
 	flex-direction: column;
 
 	.page-main {
@@ -88,22 +88,23 @@ const rightShow = ref(true) // 右侧栏状态
 	}
 
 	.bottom {
-		flex: 1 1 0%;
 		position: relative;
+		flex: 1 1 0%;
 	}
 }
 
 .flex-container {
 	position: absolute;
+	display: flex;
 	width: 100%;
 	height: 100%;
-	display: flex;
 	padding: 20px;
 
 	.left-side,
 	.right-side,
 	.main {
 		--container-padding: 15px;
+
 		height: 100%;
 		padding: var(--container-padding);
 		background-color: var(--g-app-bg);
@@ -111,30 +112,30 @@ const rightShow = ref(true) // 右侧栏状态
 	}
 
 	.left-side {
-		width: 300px;
-		margin-right: 20px;
-		flex: 0 0 auto;
 		overflow: auto;
+		width: 300px;
+		flex: 0 0 auto;
+		margin-right: 20px;
 	}
 
 	.main {
-		flex: 1 1 0%;
 		position: relative;
 		width: 100%;
+		flex: 1 1 0%;
 
 		.left-side-icon,
 		.right-side-icon {
-			font-size: 18px;
-			background-color: var(--g-app-bg);
-			color: var(--el-text-color-placeholder);
-			transition: background-color 0.3s, var(--el-transition-color);
-			border-radius: 50%;
-			width: 24px;
-			height: 24px;
-			cursor: pointer;
 			position: absolute;
 			top: 50%;
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			background-color: var(--g-app-bg);
+			color: var(--el-text-color-placeholder);
+			cursor: pointer;
+			font-size: 18px;
 			transform: translateY(-50%);
+			transition: background-color 0.3s, var(--el-transition-color);
 
 			&:hover {
 				color: var(--el-text-color-regular);
@@ -151,10 +152,10 @@ const rightShow = ref(true) // 右侧栏状态
 	}
 
 	.right-side {
-		width: 300px;
-		margin-left: 20px;
-		flex: 0 0 auto;
 		overflow: auto;
+		width: 300px;
+		flex: 0 0 auto;
+		margin-left: 20px;
 	}
 }
 </style>

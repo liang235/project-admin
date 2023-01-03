@@ -8,7 +8,7 @@
 
 		<page-main>
 			<template #title>
-				<div style="display: flex; align-item: center; justify-content: space-between">
+				<div style="display: flex; justify-content: space-between; align-item: center">
 					通过 slot 设置标题
 					<el-button size="small">还可以放置自定义按钮</el-button>
 				</div>

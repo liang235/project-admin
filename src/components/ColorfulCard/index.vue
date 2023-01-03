@@ -52,8 +52,8 @@ defineProps({
 .mini-card {
 	position: relative;
 	color: #fff;
-	text-shadow: 0 0 2px #000;
 	cursor: pointer;
+	text-shadow: 0 0 2px #000;
 
 	&:hover .svg-icon {
 		top: 0;
@@ -78,8 +78,8 @@ defineProps({
 
 		.tip {
 			margin-top: 10px;
-			font-size: 14px;
 			color: #eee;
+			font-size: 14px;
 		}
 	}
 

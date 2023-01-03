@@ -28,7 +28,7 @@ module.exports = {
 						secondary: 'var(--el-text-color-secondary)',
 						placeholder: 'var(--el-text-color-placeholder)',
 						disabled: 'var(--el-text-color-disabled)',
-					}, //
+					},
 					border: {
 						darker: 'var(--el-border-color-darker)',
 						dark: 'var(--el-border-color-dark)',
