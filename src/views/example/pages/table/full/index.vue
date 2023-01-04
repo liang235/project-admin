@@ -1,7 +1,7 @@
 <!--
  * @Description: table 表格完整功能
  * @Date: 2023-01-04 10:45:54
- * @LastEditTime: 2023-01-04 17:48:34
+ * @LastEditTime: 2023-01-04 17:49:39
 -->
 <template>
 	<div class="pages-table-full-container">
@@ -114,9 +114,9 @@ const onTablePageChange = (page) => {
 }
 
 // 拖动显示列排序回调
-const onSortHeader = (data) => {
-	tableHeader.value = data
-}
+// const onSortHeader = (data) => {
+// 	tableHeader.value = data
+// }
 
 // 在组件挂载完并创建 DOM 节点后运行
 onMounted(() => {
