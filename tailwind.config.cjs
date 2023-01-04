@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+	corePlugins: {
+		preflight: false, // 这个预设类似于css样式初始化
+	},
 	theme: {
 		extend: {
 			boxShadow: {

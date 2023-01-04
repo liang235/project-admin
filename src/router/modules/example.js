@@ -1,7 +1,7 @@
 /*
  * @Description: 多级导航路由
  * @Date: 2022-11-02 15:26:28
- * @LastEditTime: 2022-12-20 17:35:44
+ * @LastEditTime: 2023-01-04 15:52:50
  */
 const Layout = () => import('@/layout/index.vue') // 布局主页面
 
@@ -295,7 +295,7 @@ const pages = [
 				path: 'form',
 				name: 'pageForm',
 				meta: {
-					title: '表单页面',
+					title: 'Form 表单',
 					icon: 'form',
 				},
 				children: [
@@ -315,6 +315,26 @@ const pages = [
 						meta: {
 							title: '表单表格验证',
 							icon: 'dot',
+						},
+					},
+				],
+			},
+			{
+				path: 'table',
+				name: 'pageTable',
+				meta: {
+					title: 'Table 表格',
+					icon: 'table',
+				},
+				children: [
+					{
+						path: 'full',
+						name: 'pagesTableFull',
+						component: () => import('@/views/example/pages/table/full/index.vue'),
+						meta: {
+							title: '完整功能',
+							icon: 'dot',
+							copyright: false,
 						},
 					},
 				],

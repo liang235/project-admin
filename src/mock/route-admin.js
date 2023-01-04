@@ -310,6 +310,25 @@ export default {
 								},
 							],
 						},
+						{
+							path: 'table',
+							name: 'pageTable',
+							meta: {
+								title: 'Table 表格',
+								icon: 'table',
+							},
+							children: [
+								{
+									path: 'full',
+									name: 'pagesTableFull',
+									component: 'example/pages/table/full/index.vue',
+									meta: {
+										title: '完整功能',
+										icon: 'dot',
+									},
+								},
+							],
+						},
 					],
 				},
 

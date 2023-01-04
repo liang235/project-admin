@@ -35,10 +35,10 @@ module.exports = {
 		'import/extensions': 0, // 确保在导入路径内一致使用文件扩展名
 		'import/no-extraneous-dependencies': [1, { devDependencies: true }], // 禁止使用多余的包
 		'import/prefer-default-export': 0, // 首选默认导出导入/首选默认导出
-		'import/no-mutable-exports': 0, // 禁止使用var或let的可变导出
+		'import/no-mutable-exports': 0, // 禁止使用 var 或 let 的可变导出
 
 		'vue/no-unused-vars': [
-			2,
+			1,
 			{
 				// 已声明 'xxx'，但从未读取其值
 				ignorePattern: '^_',
@@ -49,7 +49,7 @@ module.exports = {
 		'vue/no-mutating-props': 0, // 禁止组件道具的变异，如不准使用 form 当做对象名称
 		'no-unused-vars': [
 			// 禁止使用未使用的变量
-			2,
+			1,
 			{
 				// 变量添加一个前缀_，这样就不会再出现 eslint 错误了
 				argsIgnorePattern: '^_',
@@ -64,18 +64,20 @@ module.exports = {
 		'no-sparse-arrays': 0, // 禁止使用稀疏数组
 		'no-console': 0, // 禁用 console
 		'no-shadow': 0, // 禁止变量声明与外层作用域的变量同名
-		'consistent-return': 0, // 要求 return 语句要么总是指定返回的值，要么不指定
-		'default-case': 0, // 强制switch要有default分支
 		'no-param-reassign': 0, // 禁止对 function 的参数进行重新赋值
 		'no-plusplus': 0, // 禁用一元操作符 ++ 和 --
 		'no-bitwise': 0, // 禁止使用位运算符
-		'prefer-destructuring': 0, // 强制使用解构
 		'no-use-before-define': 0, // 禁止在变量定义之前使用它们
 		'no-restricted-syntax': 0, // 禁用特定的语法
-		'array-callback-return': 0, // 在数组方法的回调中执行 return 语句
-		'func-names': 0, // 要求或禁止指定函数表达式
 		'no-nested-ternary': 0, // 禁止嵌套三元表达式
-		'guard-for-in': 0, // 要求for-in循环包含if语句
-		'no-return-assign': 0, // 禁止在return语句中使用赋值操作符
+		'no-return-assign': 0, // 禁止在 return 语句中使用赋值操作符
+
+		'prefer-const': 0, // 对于声明后从未重赋值的变量，需要使用 const 声明
+		'guard-for-in': 0, // 要求 for-in 循环包含 if 语句
+		'consistent-return': 0, // 要求 return 语句要么总是指定返回的值，要么不指定
+		'default-case': 0, // 强制 switch 要有 default 分支
+		'func-names': 0, // 要求或禁止指定函数表达式
+		'prefer-destructuring': 0, // 强制使用解构
+		'array-callback-return': 0, // 在数组方法的回调中执行 return 语句
 	},
 }
