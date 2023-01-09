@@ -3,7 +3,7 @@
  * @Description: 该文件为系统默认配置，请勿修改！！！
  * @Description: 在 ./settings.custom.js 中修改
  * @Date: 2022-10-10 09:34:58
- * @LastEditTime: 2022-12-17 22:36:12
+ * @LastEditTime: 2023-01-09 11:26:40
  */
 const globalSettings = {
 	// 应用程序
@@ -175,7 +175,7 @@ const globalSettings = {
 		enable: true,
 
 		// 日期
-		dates: '2020-2022',
+		dates: '2020-2023',
 
 		// 公司
 		company: 'Project-Admin',
