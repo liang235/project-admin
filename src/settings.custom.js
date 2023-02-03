@@ -1,7 +1,7 @@
 /*
  * @Description: 修改全局系统配置
  * @Date: 2022-11-02 10:13:01
- * @LastEditTime: 2022-12-17 22:36:19
+ * @LastEditTime: 2023-02-03 10:35:55
  */
 const settingsCustom = {
 	app: {
@@ -46,6 +46,7 @@ const settingsCustom = {
 		enablePageReload: true,
 		enableColorScheme: true,
 		enableAppSetting: true,
+		enable: true,
 	},
 	navSearch: {
 		enable: true,
@@ -61,6 +62,13 @@ const settingsCustom = {
 		company: 'Project-Admin',
 		website: 'https://fantastic-admin.netlify.app',
 		beian: '信息备案',
+	},
+	tabbar: {
+		enable: false,
+		enableIcon: true,
+		enableMerge: '1',
+		enableHotkeys: true,
+		mode: 'fashion',
 	},
 }
 

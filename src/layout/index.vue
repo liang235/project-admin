@@ -1,6 +1,6 @@
 <template>
 	<div class="layout">
-		<div class="app-main" :class="{ 'main-page-maximize': settingsStore.mainPageMax }">
+		<div id="app-main" :class="{ 'main-page-maximize': settingsStore.mainPageMax }">
 			<!-- 顶部模式 -->
 			<Header />
 
@@ -20,8 +20,22 @@
 
 				<!-- 主体内容 -->
 				<div class="main-container">
-					<!-- 顶栏 -->
-					<Topbar />
+					<div
+						class="topbar-container"
+						:class="{
+							[`topbar-${settingsStore.topbar.mode}`]: true,
+							shadow: scrollTop,
+							hide: scrollOnHide,
+							'has-tabbar': settingsStore.tabbar.enable,
+							'has-toolbar': settingsStore.toolbar.enable,
+						}"
+						data-fixed-calc-width
+					>
+						<!-- 选项卡 -->
+						<tab-bar />
+						<!-- 工具栏 -->
+						<tool-bar />
+					</div>
 
 					<div class="main">
 						<!-- 退出最大化 -->
@@ -67,7 +81,8 @@ import MainSidebar from './MainSidebar/index.vue' // 主导航
 import SubSidebar from './SubSidebar/index.vue' // 侧边栏模式（无主导航）
 import Header from './Header/index.vue' // 顶部模式
 import CopyRight from './Copyright/index.vue' // 底部版权
-import Topbar from './Topbar/index.vue' // 顶栏
+import TabBar from './TabBar/index.vue' // 选项卡
+import ToolBar from './ToolBar/index.vue' // 工具栏
 import Search from './Search/index.vue' // 导航搜索
 import AppSetting from './AppSetting/index.vue' // 全局应用配置
 import HotkeysIntro from './HotkeysIntro/index.vue' // 快捷键介绍
@@ -89,8 +104,20 @@ const keepAliveStore = useKeepAliveStore()
 // vue 工具库
 const bus = useEventBus()
 
+// 当前页面的滚动条纵坐标位置
+const scrollTop = ref(0)
+const scrollOnHide = ref(false)
+
 // 是否为外链地址
 const isLink = computed(() => !!route.meta.link)
+
+/**
+ * @description: 获取当前页面的滚动条纵坐标位置
+ * @return {*}
+ */
+const onScroll = () => {
+	scrollTop.value = (document.documentElement || document.body).scrollTop
+}
 
 // 在组件挂载完并创建 DOM 节点后运行
 onMounted(() => {
@@ -125,6 +152,8 @@ onMounted(() => {
 			settingsStore.toggleMainPageMax(false)
 		}
 	})
+
+	window.addEventListener('scroll', onScroll)
 })
 
 // 在一个组件实例被卸载之后调用
@@ -134,6 +163,13 @@ onUnmounted(() => {
 	hotkeys.unbind('alt+i')
 	hotkeys.unbind('alt+up')
 	hotkeys.unbind('alt+down')
+	window.removeEventListener('scroll', onScroll)
+})
+
+// 监听当前页面的滚动条纵坐标位置
+watch(scrollTop, (val, oldVal) => {
+	const topbarHeight = parseInt(getComputedStyle(document.documentElement || document.body).getPropertyValue('--g-topbar-height'), 10)
+	scrollOnHide.value = settingsStore.topbar.mode === 'sticky' && val > oldVal && val > topbarHeight
 })
 </script>
 
@@ -142,7 +178,7 @@ onUnmounted(() => {
 	height: 100%;
 }
 
-.app-main {
+#app-main {
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
@@ -150,7 +186,7 @@ onUnmounted(() => {
 }
 
 // 最大化
-.app-main.main-page-maximize {
+#app-main.main-page-maximize {
 	header,
 	.sidebar-container {
 		display: none;
@@ -187,12 +223,13 @@ onUnmounted(() => {
 
 	.sidebar-container {
 		position: fixed;
-		z-index: 999;
+		z-index: 1010;
 		top: 0;
 		bottom: 0;
 		display: flex;
 		width: calc(var(--g-main-sidebar-actual-width) + var(--g-sub-sidebar-actual-width));
-		transition: transform 0.3s, top 0.3s;
+		box-shadow: -1px 0 0 0 var(--g-border-color);
+		transition: transform 0.3s, var(--el-transition-box-shadow), top 0.3s;
 	}
 
 	// 模态框样式
@@ -235,8 +272,37 @@ onUnmounted(() => {
 		transition: margin-left 0.3s, background-color 0.3s, var(--el-transition-box-shadow);
 
 		.topbar-container {
-			z-index: 997;
+			position: absolute;
+			z-index: 999;
 			top: 0;
+			display: flex;
+			flex-direction: column;
+			transition: width 0.3s, top 0.3s, transform 0.3s, var(--el-transition-box-shadow);
+
+			&.topbar-fixed,
+			&.topbar-sticky {
+				position: fixed;
+
+				&.shadow {
+					box-shadow: 0 10px 10px -10px var(--g-box-shadow-color);
+				}
+			}
+
+			&.topbar-sticky.hide {
+				top: calc((var(--g-tabbar-height) + var(--g-toolbar-height)) * -1) !important;
+			}
+
+			&.has-tabbar + .main {
+				margin: var(--g-tabbar-height) 0 0;
+			}
+
+			&.has-toolbar + .main {
+				margin: var(--g-toolbar-height) 0 0;
+			}
+
+			&.has-tabbar.has-toolbar + .main {
+				margin: calc(var(--g-tabbar-height) + var(--g-toolbar-height)) 0 0;
+			}
 		}
 
 		.main {
@@ -270,10 +336,6 @@ onUnmounted(() => {
 					left: 16px;
 				}
 			}
-		}
-
-		.topbar-container + .main {
-			margin: var(--g-topbar-height) 0 0;
 		}
 	}
 }

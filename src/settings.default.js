@@ -3,7 +3,7 @@
  * @Description: 该文件为系统默认配置，请勿修改！！！
  * @Description: 在 ./settings.custom.js 中修改
  * @Date: 2022-10-10 09:34:58
- * @LastEditTime: 2023-01-09 11:26:40
+ * @LastEditTime: 2023-02-03 10:35:47
  */
 const globalSettings = {
 	// 应用程序
@@ -117,9 +117,6 @@ const globalSettings = {
 
 	// 顶栏
 	topbar: {
-		// 是否开启
-		enable: true,
-
 		/**
 		 * 模式
 		 * @默认值 static 静止，跟随页面滚动
@@ -129,8 +126,39 @@ const globalSettings = {
 		mode: 'fixed',
 	},
 
+	// 标签栏
+	tabbar: {
+		// 是否开启标签栏
+		enable: true,
+
+		// 是否显示图标
+		enableIcon: true,
+
+		/**
+		 * 标签页合并规则
+		 * @默认值 1 不合并
+		 * @可选值 2 根据 activeMenu 合并
+		 * @可选值 3 根据路由名称合并
+		 */
+		enableMerge: '1',
+
+		// 是否启用快捷键
+		enableHotkeys: true,
+
+		/**
+		 * 模式
+		 * @默认值 static 静止，跟随页面滚动
+		 * @可选值 fixed 固定，不跟随页面滚动，始终固定在顶部
+		 * @可选值 sticky 粘性，页面往下滚动时隐藏，往上滚动时显示
+		 */
+		mode: 'fashion',
+	},
+
 	// 工具栏
 	toolbar: {
+		// 是否开启工具栏
+		enable: true,
+
 		// 是否开启消息通知
 		enableNotice: true,
 

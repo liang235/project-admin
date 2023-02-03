@@ -1,7 +1,7 @@
 <!--
  * @Description: 全局应用配置
  * @Date: 2022-11-24 11:47:15
- * @LastEditTime: 2022-12-29 19:40:17
+ * @LastEditTime: 2023-02-01 15:35:40
 -->
 <template>
 	<el-drawer v-model="isShow" title="应用配置" direction="rtl" :size="400">
@@ -257,6 +257,40 @@
 				<el-radio-button label="fixed">固定</el-radio-button>
 				<el-radio-button label="sticky">粘性</el-radio-button>
 			</el-radio-group>
+		</div>
+
+		<el-divider>标签栏</el-divider>
+		<div class="setting-item">
+			<div class="label">是否启用</div>
+			<el-switch v-model="settingsStore.tabbar.enable" />
+		</div>
+
+		<div class="setting-item">
+			<div class="label">风格</div>
+			<el-radio-group v-model="settingsStore.tabbar.mode" size="small">
+				<el-radio-button label="fashion">时尚</el-radio-button>
+				<el-radio-button label="card">卡片</el-radio-button>
+				<el-radio-button label="square">方块</el-radio-button>
+			</el-radio-group>
+		</div>
+
+		<div class="setting-item">
+			<div class="label">是否显示图标</div>
+			<el-switch v-model="settingsStore.tabbar.enableIcon" />
+		</div>
+
+		<div class="setting-item">
+			<div class="label">标签页合并规则</div>
+			<el-select v-model="settingsStore.tabbar.enableMerge" size="small">
+				<el-option label="不合并" value="1" />
+				<el-option label="根据 activeMenu 合并" value="2" />
+				<el-option label="根据路由名称合并" value="3" />
+			</el-select>
+		</div>
+
+		<div class="setting-item">
+			<div class="label">是否启用快捷键</div>
+			<el-switch v-model="settingsStore.tabbar.enableHotkeys" />
 		</div>
 
 		<el-divider>工具栏</el-divider>
