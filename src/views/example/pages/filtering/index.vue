@@ -1,7 +1,7 @@
 <!--
  * @Description: 过滤筛选组件
  * @Date: 2022-12-18 18:48:57
- * @LastEditTime: 2022-12-30 17:12:26
+ * @LastEditTime: 2023-02-09 11:27:00
 -->
 <template>
 	<page-main title="过滤筛选支持单选和多选">
@@ -114,9 +114,6 @@ const initActive = () => {
 				})
 			})
 	}
-
-	// console.log(data.value.filtering)
-	// console.log(setFiltering.value)
 }
 
 // 初始化 `收起、展开` 按钮

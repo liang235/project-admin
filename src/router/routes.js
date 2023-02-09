@@ -1,7 +1,6 @@
-import useSettingsStore from '@/store/modules/settings.js'
-
+import useSettingsStore from '@/store/modules/settings.js' // 系统配置详情
 import example from './modules/example.js' // 默认演示
-import systemSettings from './modules/systemSettings.js' // 系统配置数据
+import systemSettings from './modules/systemSettings.js' // 系统主题配置数据
 
 const Layout = () => import('@/layout/index.vue') // 布局主页面
 

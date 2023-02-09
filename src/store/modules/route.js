@@ -1,7 +1,7 @@
 /*
  * @Description: 路由数据
  * @Date: 2022-10-10 09:36:19
- * @LastEditTime: 2022-12-30 17:00:45
+ * @LastEditTime: 2023-02-07 13:54:32
  */
 import { cloneDeep } from 'lodash-es' // js 工具库
 import { getRouteList } from '@/api/user.js' // 用户 api
@@ -103,13 +103,11 @@ function flatAsyncRoutesRecursive(routes, breadcrumb = [], baseUrl = '') {
 		if (route.children) {
 			const childrenBaseUrl = resolveRoutePath(baseUrl, route.path)
 			const tmpBreadcrumb = cloneDeep(breadcrumb)
-			if (route.meta?.breadcrumb !== false) {
-				tmpBreadcrumb.push({
-					path: childrenBaseUrl,
-					title: route.meta?.title,
-					hide: !route.meta?.breadcrumb,
-				})
-			}
+			tmpBreadcrumb.push({
+				path: childrenBaseUrl,
+				title: route.meta?.title,
+				hide: !route.meta?.breadcrumb && route.meta?.breadcrumb === false,
+			})
 			const tmpRoute = cloneDeep(route)
 			tmpRoute.path = childrenBaseUrl
 			if (!tmpRoute.meta) {

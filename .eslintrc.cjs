@@ -38,7 +38,7 @@ module.exports = {
 		'import/no-mutable-exports': 0, // 禁止使用 var 或 let 的可变导出
 
 		'vue/no-unused-vars': [
-			2,
+			1,
 			{
 				// 已声明 'xxx'，但从未读取其值
 				ignorePattern: '^_',
@@ -49,7 +49,7 @@ module.exports = {
 		'vue/no-mutating-props': 0, // 禁止组件道具的变异，如不准使用 form 当做对象名称
 		'no-unused-vars': [
 			// 禁止使用未使用的变量
-			2,
+			1,
 			{
 				// 变量添加一个前缀_，这样就不会再出现 eslint 错误了
 				argsIgnorePattern: '^_',

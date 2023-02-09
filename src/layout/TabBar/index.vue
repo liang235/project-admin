@@ -35,7 +35,7 @@ const tabbarStore = useTabbarStore()
 
 // 路由更新时（组件内生命钩子）
 onBeforeRouteUpdate((to) => {
-	console.log(to)
+	// console.log(to)
 })
 
 // // 路由实例

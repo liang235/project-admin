@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import ElementPlus from 'element-plus'
 import { kebabCase } from 'lodash-es' // js 工具库
 import * as ElementPlusIconsVue from '@element-plus/icons-vue' // ElementPlus 图标
 import App from './App.vue'
@@ -12,6 +13,7 @@ import directive from '@/directive/index.js' // 自定义指令
 import plugins from '@/plugins/index.js' // plugin 插件部分
 
 const app = createApp(App)
+app.use(ElementPlus)
 app.use(router)
 app.use(pinia)
 directive(app)
