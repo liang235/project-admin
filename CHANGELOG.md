@@ -9,6 +9,11 @@
 -   🌈 重构
 -   ⚠️ 警告
 
+## Version: "1.2.3"，Date: "2023.02.21"
+
+-   🚧 修改 替换 vite 废弃的选项 brotliSize 为 reportCompressedSize
+-   🎯 优化 loadEnv 加载方式
+
 ## Version: "1.2.2"，Date: "2023.02.21"
 
 -   🌟 更新 pnpm-lock.yaml 锁定文件

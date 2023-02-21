@@ -12,7 +12,7 @@ import createVitePlugins from './config/plugins/index.js' // vite 使用插件�
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
-	const env = loadEnv(mode, __dirname)
+	const env = loadEnv(mode, process.cwd())
 
 	// 全局 scss 资源
 	const scssResources = []
@@ -26,7 +26,7 @@ export default defineConfig(({ command, mode }) => {
 		// 开发或生产环境服务的公共基础路径
 		base: './',
 
-		envDir: path.resolve(__dirname, 'config/env'),
+		envDir: path.resolve(process.cwd(), 'config/env'),
 
 		// 插件
 		plugins: [...createVitePlugins(env, command === 'build')],
@@ -104,7 +104,7 @@ export default defineConfig(({ command, mode }) => {
 					},
 				},
 			},
-			brotliSize: false, // 关闭 brotliSize 显示可以稍微减少包装时间
+			reportCompressedSize: false, // 关闭 reportCompressedSize 显示可以稍微减少包装时间
 		},
 	}
 })
