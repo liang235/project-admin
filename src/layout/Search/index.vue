@@ -1,7 +1,7 @@
 <!--
  * @Description: 导航搜索
  * @Date: 2022-11-25 21:00:24
- * @LastEditTime: 2022-12-30 16:58:29
+ * @LastEditTime: 2023-02-21 10:07:43
 -->
 <template>
 	<div class="search" :class="{ searching: isShow }" @click="isShow && bus.emit('global-search-toggle')">
@@ -23,7 +23,7 @@
 				<!-- 快捷键提示 -->
 				<div class="tips">
 					<div class="tip">
-						<el-tag type="info" size="large">Alt + S</el-tag>
+						<el-tag type="info" size="large"> {{ settingsStore.os === 'mac' ? '⌥' : 'Alt' }} + S </el-tag>
 						<el-tag type="info" size="large">唤醒搜索面板</el-tag>
 					</div>
 					<div class="tip">

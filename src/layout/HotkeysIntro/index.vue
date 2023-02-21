@@ -1,15 +1,15 @@
 <!--
  * @Description: 快捷键介绍
  * @Date: 2022-11-26 18:31:42
- * @LastEditTime: 2022-12-16 17:13:31
+ * @LastEditTime: 2023-02-21 10:26:32
 -->
 <template>
 	<el-drawer v-model="isShow" title="快捷键介绍" direction="rtl" :size="400">
 		<el-descriptions title="全局" :column="1" :border="true">
-			<el-descriptions-item label="查看系统信息"> Alt + I </el-descriptions-item>
+			<el-descriptions-item label="查看系统信息"> {{ settingsStore.os === 'mac' ? '⌥' : 'Alt' }} + I </el-descriptions-item>
 
 			<el-descriptions-item v-if="settingsStore.navSearch.enable && settingsStore.navSearch.enableHotkeys" label="唤起导航搜索">
-				Alt + S
+				{{ settingsStore.os === 'mac' ? '⌥' : 'Alt' }} + S
 			</el-descriptions-item>
 		</el-descriptions>
 
@@ -19,20 +19,20 @@
 			:column="1"
 			:border="true"
 		>
-			<el-descriptions-item label="激活下一个主导航"> Alt + ` </el-descriptions-item>
+			<el-descriptions-item label="激活下一个主导航"> {{ settingsStore.os === 'mac' ? '⌥' : 'Alt' }} + ` </el-descriptions-item>
 		</el-descriptions>
 
 		<el-descriptions title="标签栏" :column="1" :border="true">
-			<el-descriptions-item label="切换到上一个标签页"> Alt + Q </el-descriptions-item>
-			<el-descriptions-item label="切换到下一个标签页"> Alt + E </el-descriptions-item>
-			<el-descriptions-item label="关闭当前标签页"> Alt + W </el-descriptions-item>
-			<el-descriptions-item label="切换到第 1-9 个标签页"> Alt + 数字 1-9 </el-descriptions-item>
-			<el-descriptions-item label="切换到最后一个标签页"> Alt + 数字 0 </el-descriptions-item>
+			<el-descriptions-item label="切换到上一个标签页"> {{ settingsStore.os === 'mac' ? '⌥' : 'Alt' }} + Q </el-descriptions-item>
+			<el-descriptions-item label="切换到下一个标签页"> {{ settingsStore.os === 'mac' ? '⌥' : 'Alt' }} + E </el-descriptions-item>
+			<el-descriptions-item label="关闭当前标签页"> {{ settingsStore.os === 'mac' ? '⌥' : 'Alt' }} + W </el-descriptions-item>
+			<el-descriptions-item label="切换到第 1-9 个标签页"> {{ settingsStore.os === 'mac' ? '⌥' : 'Alt' }} + 数字 1-9 </el-descriptions-item>
+			<el-descriptions-item label="切换到最后一个标签页"> {{ settingsStore.os === 'mac' ? '⌥' : 'Alt' }} + 数字 0 </el-descriptions-item>
 		</el-descriptions>
 
 		<el-descriptions title="页面" :column="1" :border="true">
-			<el-descriptions-item label="开启最大化"> Alt + ↑ </el-descriptions-item>
-			<el-descriptions-item label="关闭最大化"> Alt + ↓ </el-descriptions-item>
+			<el-descriptions-item label="开启最大化"> {{ settingsStore.os === 'mac' ? '⌥' : 'Alt' }} + ↑ </el-descriptions-item>
+			<el-descriptions-item label="关闭最大化"> {{ settingsStore.os === 'mac' ? '⌥' : 'Alt' }} + ↓ </el-descriptions-item>
 		</el-descriptions>
 	</el-drawer>
 </template>
@@ -46,7 +46,7 @@ const bus = useEventBus()
 
 // 定义 pinia
 const settingsStore = useSettingsStore()
-
+console.log(settingsStore.os)
 // 是否显示快捷键介绍
 const isShow = ref(false)
 

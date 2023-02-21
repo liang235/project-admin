@@ -92,8 +92,8 @@ const editPassword = () => {
 		.el-tabs__active-bar {
 			z-index: 0;
 			width: 100%;
-			background-color: var(--el-color-primary-light-9);
 			border-right: 2px solid var(--el-color-primary);
+			background-color: var(--el-color-primary-light-9);
 			transition: transform 0.3s, background-color 0.3s, var(--el-transition-border);
 		}
 
@@ -128,11 +128,11 @@ h2 {
 	.setting-list {
 		.item {
 			display: flex;
-			justify-content: space-between;
 			align-items: center;
+			justify-content: space-between;
 			padding: 10px 0;
-			transition: var(--el-transition-border);
 			border-bottom: 1px solid var(--el-border-color-lighter);
+			transition: var(--el-transition-border);
 
 			.content {
 				.title {
@@ -142,8 +142,8 @@ h2 {
 				}
 
 				.desc {
-					font-size: 14px;
 					color: var(--el-text-color-secondary);
+					font-size: 14px;
 					transition: var(--el-transition-color);
 				}
 			}

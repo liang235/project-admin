@@ -16,7 +16,6 @@ module.exports = {
 		'declaration-block-trailing-semicolon': 'never', // 要求或禁止在声明块中使用尾随分号
 		'declaration-block-no-redundant-longhand-properties': null, // 禁止可以组合为一个简略属性的手动属性
 		'declaration-block-trailing-semicolon': null, // 要求或禁止在声明块中使用尾随分号
-		'max-line-length': null, // 限制一行的长度
 		'selector-class-pattern': null, // 为类选择器指定一个模式
 		'value-no-vendor-prefix': null, // 禁止在值中使用供应商前缀
 		'number-max-precision': null, // 限制数字中允许的小数点后数位

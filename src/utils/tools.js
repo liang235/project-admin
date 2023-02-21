@@ -1,7 +1,7 @@
 /*
  * @Description: 自定义工具
  * @Date: 2022-11-01 22:10:33
- * @LastEditTime: 2022-12-16 19:41:38
+ * @LastEditTime: 2023-02-21 10:01:11
  */
 import path from 'path-browserify' // 来自 Node.js 的浏览器路径模块
 
@@ -72,4 +72,22 @@ export function isStrEmpty(val) {
 		return true
 	}
 	return false
+}
+
+// 操作系统
+export function operatingSystem() {
+	let os = 'other'
+	const agent = navigator.userAgent.toLowerCase()
+	switch (true) {
+		case agent.includes('mac os'):
+			os = 'mac'
+			break
+		case agent.includes('windows'):
+			os = 'windows'
+			break
+		case agent.includes('linux'):
+			os = 'linux'
+			break
+	}
+	return os
 }

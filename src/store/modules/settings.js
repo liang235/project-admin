@@ -1,4 +1,5 @@
 import { defaultsDeep } from 'lodash-es' // js 工具库
+import { operatingSystem } from '@/utils/tools.js' // 自定义工具
 import settingsDefault from '@/settings.default.js' // 系统默认配置
 import settingsCustom from '@/settings.custom.js' // 修改系统默认配置
 
@@ -15,6 +16,9 @@ const useSettingsStore = defineStore('settings', {
 
 		// 最大化状态
 		mainPageMax: false,
+
+		// 操作系统
+		os: operatingSystem(),
 	}),
 	actions: {
 		// 设置访问模式
