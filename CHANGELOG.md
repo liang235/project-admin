@@ -9,6 +9,10 @@
 -   🌈 重构
 -   ⚠️ 警告
 
+## Version: "1.2.4"，Date: "2023.02.23"
+
+-   🎯 优化 index.html 加载状态
+
 ## Version: "1.2.3"，Date: "2023.02.21"
 
 -   🚧 修改 替换 vite 废弃的选项 brotliSize 为 reportCompressedSize

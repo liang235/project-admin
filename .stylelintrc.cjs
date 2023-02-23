@@ -6,6 +6,7 @@ module.exports = {
 		'stylelint-config-idiomatic-order',
 		'stylelint-config-prettier',
 	],
+	customSyntax: 'postcss-html',
 	plugins: ['stylelint-scss'],
 	rules: {
 		// https://stylelint.bootcss.com/user-guide/rules/list
