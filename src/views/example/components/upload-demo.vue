@@ -42,6 +42,8 @@
 </template>
 
 <script setup name="ComponentUpload">
+import { ElMessage } from 'element-plus'
+
 // 单图上传
 const image = ref('https://img2.baidu.com/it/u=3851318936,3356716855&fm=253&fmt=auto&app=138&f=PNG?w=500&h=582')
 

@@ -1,7 +1,7 @@
 <!--
  * @Description: 电子签名
  * @Date: 2022-12-14 21:21:00
- * @LastEditTime: 2022-12-15 22:24:00
+ * @LastEditTime: 2023-02-24 15:26:14
 -->
 <template>
 	<div class="signature-pad-wrap">
@@ -20,6 +20,7 @@
 </template>
 
 <script setup name="SignaturePad">
+import { ElMessage } from 'element-plus'
 import SignaturePad from 'signature_pad' // 画板插件
 
 // 定义父组件传过来的值

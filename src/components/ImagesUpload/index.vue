@@ -70,6 +70,8 @@
 </template>
 
 <script setup name="ImagesUpload">
+import { ElMessage } from 'element-plus'
+
 // 定义父组件传过来的值
 const props = defineProps({
 	// 必选参数，上传的地址

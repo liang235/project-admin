@@ -1,7 +1,7 @@
 <!--
  * @Description: 权限验证
  * @Date: 2022-11-29 18:39:13
- * @LastEditTime: 2022-12-30 16:59:43
+ * @LastEditTime: 2023-02-24 16:07:18
 -->
 <template>
 	<div class="permission">
@@ -271,6 +271,7 @@
 </template>
 
 <script setup name="PermissionPage">
+import { ElMessage, ElLoading } from 'element-plus'
 import useSettingsStore from '@/store/modules/settings.js' // 系统配置数据
 import useUserStore from '@/store/modules/user.js' // 用户数据
 

@@ -10,6 +10,7 @@
 </template>
 
 <script setup name="App">
+import { ElMessage } from 'element-plus'
 import zhCn from 'element-plus/es/locale/lang/zh-cn' // element 语言/中文
 import useSettingsStore from '@/store/modules/settings.js' // 系统配置数据
 import { getLightColor, getDarkColor } from '@/utils/primaryColor.js' // 改变主题色方法

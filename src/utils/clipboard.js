@@ -1,4 +1,5 @@
 import { useClipboard, usePermission } from '@vueuse/core' // vue 工具库
+import { ElMessage } from 'element-plus'
 
 // 获取读写权限，导出复制粘贴方法
 const { copied, isSupported, copy } = useClipboard()

@@ -1,7 +1,7 @@
 <!--
  * @Description: 页面离开提醒
  * @Date: 2022-12-18 00:35:23
- * @LastEditTime: 2022-12-18 00:46:45
+ * @LastEditTime: 2023-02-24 15:27:11
 -->
 <template>
 	<div>
@@ -18,6 +18,8 @@
 </template>
 
 <script setup name="FeatureLeavetips">
+import { ElMessageBox } from 'element-plus'
+
 // 是否开启提醒
 const isLeave = ref(true)
 

@@ -1,7 +1,7 @@
 /*
  * @Description: vite 使用插件集合
  * @Date: 2022-09-23 14:25:26
- * @LastEditTime: 2023-02-23 10:43:30
+ * @LastEditTime: 2023-02-24 16:08:36
  */
 import vue from '@vitejs/plugin-vue' // 使 vite 支持 vue 开发
 import createAutoImport from './unplugin-auto-import.js' // 自动导入

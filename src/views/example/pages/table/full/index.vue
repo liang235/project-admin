@@ -21,6 +21,7 @@
 </template>
 
 <script setup name="PagesTableFull">
+import { ElMessage } from 'element-plus'
 import SearchList from './search.vue' // 查询部分
 
 // 搜索表单，动态生成（传空数组时，将不显示搜索，注意格式）

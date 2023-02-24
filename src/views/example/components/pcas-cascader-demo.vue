@@ -39,6 +39,8 @@
 </template>
 
 <script setup name="ComponentPcasCascader">
+import { ElMessage } from 'element-plus'
+
 const pcas1 = ref([]) // 省份/城市联动
 const pcas2 = ref([]) // 省份/城市/区县联动
 const pcas3 = ref([]) // 省份/城市/区县/街道联动

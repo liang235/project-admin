@@ -57,6 +57,8 @@
 </template>
 
 <script setup name="PagesFormTableRules">
+import { ElMessage } from 'element-plus'
+
 const tableRulesRef = ref()
 const tableData = ref({
 	data: [],

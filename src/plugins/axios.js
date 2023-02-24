@@ -1,5 +1,6 @@
 import axios from 'axios' // ajax 请求
 import qs from 'qs'
+import { ElMessage } from 'element-plus'
 import router from '@/router/index.js' // 路由
 import useUserStore from '@/store/modules/user.js' // 用户数据
 
