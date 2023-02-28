@@ -65,6 +65,7 @@ module.exports = {
 		'no-restricted-syntax': 0, // 禁用特定的语法
 		'no-nested-ternary': 0, // 禁止嵌套三元表达式
 		'no-return-assign': 0, // 禁止在 return 语句中使用赋值操作符
+		'no-unused-expressions': 0, // 禁止使用未使用的表达式
 
 		'prefer-const': 0, // 对于声明后从未重赋值的变量，需要使用 const 声明
 		'guard-for-in': 0, // 要求 for-in 循环包含 if 语句
