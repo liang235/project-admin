@@ -1,6 +1,7 @@
 import useSettingsStore from '@/store/modules/settings.js' // 系统配置详情
 import example from './modules/example.js' // 默认演示
 import systemSettings from './modules/systemSettings.js' // 系统主题配置数据
+import elementPlus from './modules/elementPlus.js' // ElementPlus 配置数据
 
 const Layout = () => import('@/layout/index.vue') // 布局主页面
 
@@ -67,7 +68,7 @@ const systemRoutes = [
 			},
 		],
 	},
-] // 系统设置
+]
 
 // 动态路由（异步路由、导航栏路由）
 // 主导航并非路由的一部分，它只是将我们配置好的路由模块进行归类
@@ -84,6 +85,14 @@ const asyncRoutes = [
 	},
 	{
 		path: 2,
+		meta: {
+			title: 'Element',
+			icon: 'ele-element-plus',
+		},
+		children: [...elementPlus],
+	},
+	{
+		path: 3,
 		meta: {
 			title: '系统',
 			icon: 'system',

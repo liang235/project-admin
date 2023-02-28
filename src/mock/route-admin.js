@@ -630,6 +630,37 @@ export default {
 		{
 			path: 2,
 			meta: {
+				title: 'Element',
+				icon: 'ele-element-plus',
+			},
+			children: [
+				{
+					path: '/skeleton',
+					component: 'Layout',
+					meta: {
+						title: 'Skeleton 骨架屏',
+						icon: '',
+					},
+					children: [
+						{
+							path: '',
+							name: 'skeleton',
+							component: 'element-plus/skeleton.vue',
+							meta: {
+								title: 'Skeleton 骨架屏',
+								breadcrumb: false,
+								sidebar: false,
+								activeMenu: '/skeleton',
+							},
+						},
+					],
+				},
+			],
+		},
+
+		{
+			path: 3,
+			meta: {
 				title: '系统',
 				icon: 'system',
 			},

@@ -8,7 +8,7 @@
 		<el-col :xs="24" :sm="8" :md="6" :lg="3" :xl="2" v-for="(icon, index) in icons" :key="index">
 			<div class="icon-item" @click="handleCopy(icon.name)">
 				<svg-icon :name="`ele-${kebabCase(icon.name)}`" />
-				<span class="mt-5px">{{ kebabCase(icon.name) }}</span>
+				<span class="mt-5px">ele-{{ kebabCase(icon.name) }}</span>
 			</div>
 		</el-col>
 	</el-row>

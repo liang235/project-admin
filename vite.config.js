@@ -1,7 +1,7 @@
 /*
  * @Description: 项目配置文件
  * @Date: 2022-12-22 19:32:44
- * @LastEditTime: 2023-02-24 15:19:51
+ * @LastEditTime: 2023-02-28 15:44:35
  */
 import { defineConfig, loadEnv } from 'vite' // 帮手函数，这样不用 jsdoc 注解也可以获取类型提示
 import path from 'node:path' // 主要用于 alias 文件路径别名
@@ -33,6 +33,7 @@ export default defineConfig(({ command, mode }) => {
 
 		// 开发服务器选项 https://cn.vitejs.dev/config/#server-options
 		server: {
+			host: '0.0.0.0', // 主机名， 127.0.0.1，  真机 0.0.0.0
 			port: 2352, // 服务器端口
 			open: true, // 在服务器启动时自动在浏览器中打开应用程序
 			https: false, // 协议
