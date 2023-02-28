@@ -1,0 +1,1 @@
+import{_ as t}from"./index-d93f8fd7.js";import{_ as e}from"./_plugin-vue_export-helper-c27b6911.js";import{o as n,U as _,V as r,Z as a}from"./vue-6bb6f056.js";import"./index-1681e275.js";const c={};function s(m,p){const o=t;return n(),_(o,null,{default:r(()=>[a("注意看面包屑导航的变化")]),_:1})}const d=e(c,[["render",s]]);export{d as default};
