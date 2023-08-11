@@ -503,7 +503,9 @@ watch(copied, (val) => {
 			margin-left: 2px;
 			background-color: var(--el-fill-color-lighter);
 			font-size: 16px;
-			transition: margin-left 0.3s, background-color 0.3s;
+			transition:
+				margin-left 0.3s,
+				background-color 0.3s;
 		}
 
 		&.dark {
@@ -704,7 +706,10 @@ watch(copied, (val) => {
 		box-shadow: 0 0 5px 1px var(--el-border-color-lighter);
 		color: var(--el-text-color-primary);
 		cursor: pointer;
-		transition: background-color 0.3s, var(--el-transition-color), var(--el-transition-box-shadow);
+		transition:
+			background-color 0.3s,
+			var(--el-transition-color),
+			var(--el-transition-box-shadow);
 
 		&:hover {
 			box-shadow: 0 0 5px 1px var(--el-border-color-darker);

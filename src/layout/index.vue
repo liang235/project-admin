@@ -229,7 +229,10 @@ watch(scrollTop, (val, oldVal) => {
 		display: flex;
 		width: calc(var(--g-main-sidebar-actual-width) + var(--g-sub-sidebar-actual-width));
 		box-shadow: -1px 0 0 0 var(--g-border-color);
-		transition: transform 0.3s, var(--el-transition-box-shadow), top 0.3s;
+		transition:
+			transform 0.3s,
+			var(--el-transition-box-shadow),
+			top 0.3s;
 	}
 
 	// 模态框样式
@@ -268,8 +271,13 @@ watch(scrollTop, (val, oldVal) => {
 		flex-direction: column;
 		margin-left: calc(var(--g-main-sidebar-actual-width) + var(--g-sub-sidebar-actual-width));
 		background-color: var(--g-main-bg);
-		box-shadow: -1px 0 0 0 var(--g-border-color), 1px 0 0 0 var(--g-border-color);
-		transition: margin-left 0.3s, background-color 0.3s, var(--el-transition-box-shadow);
+		box-shadow:
+			-1px 0 0 0 var(--g-border-color),
+			1px 0 0 0 var(--g-border-color);
+		transition:
+			margin-left 0.3s,
+			background-color 0.3s,
+			var(--el-transition-box-shadow);
 
 		.topbar-container {
 			position: absolute;
@@ -277,7 +285,11 @@ watch(scrollTop, (val, oldVal) => {
 			top: 0;
 			display: flex;
 			flex-direction: column;
-			transition: width 0.3s, top 0.3s, transform 0.3s, var(--el-transition-box-shadow);
+			transition:
+				width 0.3s,
+				top 0.3s,
+				transform 0.3s,
+				var(--el-transition-box-shadow);
 
 			&.topbar-fixed,
 			&.topbar-sticky {
@@ -323,7 +335,9 @@ watch(scrollTop, (val, oldVal) => {
 				background-color: var(--el-overlay-color-lighter);
 				color: #eee;
 				cursor: pointer;
-				transition: background-color 0.3s, var(--el-transition-color);
+				transition:
+					background-color 0.3s,
+					var(--el-transition-color);
 
 				&:hover {
 					background-color: var(--el-overlay-color-light);

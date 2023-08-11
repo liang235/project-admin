@@ -71,7 +71,11 @@ function onSidebarScroll(e) {
 	overscroll-behavior: contain;
 	// firefox 隐藏滚动条
 	scrollbar-width: none;
-	transition: background-color 0.3s, var(--el-transition-box-shadow), left 0.3s, width 0.3s;
+	transition:
+		background-color 0.3s,
+		var(--el-transition-box-shadow),
+		left 0.3s,
+		width 0.3s;
 
 	// chrome隐藏滚动条
 	&::-webkit-scrollbar {
@@ -95,7 +99,9 @@ function onSidebarScroll(e) {
 	.sidebar-logo {
 		background-color: var(--g-sub-sidebar-bg);
 		box-shadow: 0 0 1px 0 var(--el-border-color);
-		transition: background-color 0.3s, var(--el-transition-box-shadow);
+		transition:
+			background-color 0.3s,
+			var(--el-transition-box-shadow);
 
 		&:not(.sidebar-logo-bg) {
 			:deep(span) {
@@ -119,7 +125,11 @@ function onSidebarScroll(e) {
 		padding-top: var(--g-sidebar-logo-height);
 		border-right: 0;
 		background-color: var(--g-sub-sidebar-bg);
-		transition: background-color 0.3s, var(--el-transition-color), var(--el-transition-border), padding-top 0.3s;
+		transition:
+			background-color 0.3s,
+			var(--el-transition-color),
+			var(--el-transition-border),
+			padding-top 0.3s;
 
 		&:not(.el-menu--collapse) {
 			width: inherit;
@@ -168,7 +178,9 @@ function onSidebarScroll(e) {
 
 // 次侧边栏动画
 .sub-sidebar-enter-active {
-	transition: opacity 0.3s, transform 0.3s;
+	transition:
+		opacity 0.3s,
+		transform 0.3s;
 }
 
 .sub-sidebar-enter-from,

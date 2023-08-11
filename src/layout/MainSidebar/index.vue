@@ -55,7 +55,9 @@ const menuStore = useMenuStore()
 	overscroll-behavior: contain;
 	// FireFox 隐藏滚动条
 	scrollbar-width: none;
-	transition: background-color 0.3s, var(--el-transition-color);
+	transition:
+		background-color 0.3s,
+		var(--el-transition-color);
 
 	// chrome隐藏滚动条
 	&::-webkit-scrollbar {
@@ -96,7 +98,10 @@ const menuStore = useMenuStore()
 				background-color: var(--g-main-sidebar-bg);
 				color: var(--g-main-sidebar-menu-color);
 				cursor: pointer;
-				transition: var(--el-transition-all), background-color 0.3s, var(--el-transition-color);
+				transition:
+					var(--el-transition-all),
+					background-color 0.3s,
+					var(--el-transition-color);
 
 				&:hover {
 					background-color: var(--g-main-sidebar-menu-hover-bg);

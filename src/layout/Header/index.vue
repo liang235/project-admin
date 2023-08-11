@@ -1,7 +1,5 @@
 <!--
  * @Description: 顶部模式(menuMode:head)
- * @Date: 2022-11-20 16:20:58
- * @LastEditTime: 2022-12-08 22:25:14
 -->
 <template>
 	<transition name="header">
@@ -76,9 +74,13 @@ header {
 	padding: 0 20px;
 	margin: 0 auto;
 	background-color: var(--g-header-bg);
-	box-shadow: -1px 0 0 0 var(--g-border-color), 1px 0 0 0 var(--g-border-color);
+	box-shadow:
+		-1px 0 0 0 var(--g-border-color),
+		1px 0 0 0 var(--g-border-color);
 	color: var(--g-header-color);
-	transition: var(--el-transition-all), background-color 0.3s;
+	transition:
+		var(--el-transition-all),
+		background-color 0.3s;
 
 	.header-container {
 		display: flex;
@@ -97,6 +99,7 @@ header {
 		}
 	}
 
+	/* stylelint-disable media-query-no-invalid */
 	@media screen and (max-width: var(--g-header-width)) {
 		.header-container {
 			width: 100%;
@@ -144,7 +147,10 @@ header {
 				background-color: var(--g-header-bg);
 				color: var(--g-header-menu-color);
 				cursor: pointer;
-				transition: var(--el-transition-all), background-color 0.3s, var(--el-transition-color);
+				transition:
+					var(--el-transition-all),
+					background-color 0.3s,
+					var(--el-transition-color);
 
 				&:hover {
 					background-color: var(--g-header-menu-hover-bg);

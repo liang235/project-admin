@@ -137,7 +137,9 @@ const tabbarStore = useTabbarStore()
 						background-color: var(--g-tabbar-dividers-bg);
 						content: '';
 						opacity: 1;
-						transition: opacity 0.2s ease, background-color 0.3s;
+						transition:
+							opacity 0.2s ease,
+							background-color 0.3s;
 					}
 				}
 
@@ -171,7 +173,9 @@ const tabbarStore = useTabbarStore()
 						margin-right: 10px;
 						color: var(--g-tabbar-tab-color);
 						mask-image: linear-gradient(to right, #000 calc(100% - 20px), transparent);
-						transition: margin-right 0.3s, var(--el-transition-color);
+						transition:
+							margin-right 0.3s,
+							var(--el-transition-color);
 						white-space: nowrap;
 
 						&:has(+ .action-icon) {
@@ -253,7 +257,9 @@ const tabbarStore = useTabbarStore()
 				.tab-background {
 					border-radius: 10px 10px 0 0;
 					background-color: var(--g-tabbar-tab-hover-bg);
-					transition: opacity 0.3s, background-color 0.3s;
+					transition:
+						opacity 0.3s,
+						background-color 0.3s;
 
 					&::before,
 					&::after {

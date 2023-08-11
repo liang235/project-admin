@@ -41,7 +41,12 @@ const settingsStore = useSettingsStore()
 	justify-content: space-between;
 	background-color: var(--g-toolbar-bg);
 	box-shadow: 0 0 1px 0 var(--el-border-color);
-	transition: width 0.3s, top 0.3s, transform 0.3s, background-color 0.3s, var(--el-transition-box-shadow);
+	transition:
+		width 0.3s,
+		top 0.3s,
+		transform 0.3s,
+		background-color 0.3s,
+		var(--el-transition-box-shadow);
 
 	.left-box {
 		display: flex;

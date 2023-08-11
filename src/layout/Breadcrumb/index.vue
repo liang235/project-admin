@@ -105,7 +105,9 @@ const pathCompile = (path) => {
 			padding: 8px 16px;
 			background-color: var(--el-fill-color);
 			clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%, 8px 50%);
-			transition: background-color 0.3s, var(--el-transition-color);
+			transition:
+				background-color 0.3s,
+				var(--el-transition-color);
 
 			&.is-link:hover {
 				background-color: var(--el-fill-color-darker);
@@ -116,7 +118,9 @@ const pathCompile = (path) => {
 
 // 面包屑动画
 .breadcrumb-enter-active {
-	transition: transform 0.3s, opacity 0.3s;
+	transition:
+		transform 0.3s,
+		opacity 0.3s;
 }
 
 .breadcrumb-enter-from,
