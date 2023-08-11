@@ -16,7 +16,7 @@
 		"lint:stylelint": "stylelint src/**/*.{css,sass,scss,vue} --cache --fix",
 		"lint:prettier": "prettier --write \"./**/*.{html,css,js,cjs,vue,.sass,json,md}\"",
 		"lint:lint-staged": "lint-staged",
-		"prepare": "husky install",
+		"postinstall": "simple-git-hooks",
 		"preinstall": "npx only-allow pnpm"
 	},
 	"dependencies": {
@@ -64,6 +64,7 @@
 		"postcss-html": "^1.5.0",
 		"prettier": "^3.0.0",
 		"sass": "^1.64.2",
+		"simple-git-hooks": "^2.9.0",
 		"stylelint": "^15.10.2",
 		"stylelint-config-idiomatic-order": "^9.0.0",
 		"stylelint-config-prettier": "^9.0.5",
@@ -108,6 +109,10 @@
 		"*.md": [
 			"prettier --write"
 		]
+	},
+	"simple-git-hooks": {
+		"pre-commit": "pnpm lint-staged",
+		"preserveUnused": true
 	},
 	"pnpm": {
 		"peerDependencyRules": {

@@ -38,6 +38,7 @@ module.exports = {
 				ignorePattern: '^_',
 			},
 		],
+		'vue/no-setup-props-destructure': 0, // 禁止那些失去传递给setup的props的响应性的用法
 		'vue/require-prop-type-constructor': 0, // 要求道具类型为构造函数
 		'vue/multi-word-component-names': 0, // 要求组件名称总是多字的
 		'vue/no-mutating-props': 0, // 禁止组件道具的变异，如不准使用 form 当做对象名称

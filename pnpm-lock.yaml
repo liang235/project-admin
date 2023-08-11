@@ -136,6 +136,9 @@ devDependencies:
   sass:
     specifier: ^1.64.2
     version: registry.npmmirror.com/sass@1.64.2
+  simple-git-hooks:
+    specifier: ^2.9.0
+    version: registry.npmmirror.com/simple-git-hooks@2.9.0
   stylelint:
     specifier: ^15.10.2
     version: registry.npmmirror.com/stylelint@15.10.2
@@ -8462,6 +8465,14 @@ packages:
     name: signature_pad
     version: 4.1.6
     dev: false
+
+  registry.npmmirror.com/simple-git-hooks@2.9.0:
+    resolution: {integrity: sha512-waSQ5paUQtyGC0ZxlHmcMmD9I1rRXauikBwX31bX58l5vTOhCEcBC5Bi+ZDkPXTjDnZAF8TbCqKBY+9+sVPScw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/simple-git-hooks/-/simple-git-hooks-2.9.0.tgz}
+    name: simple-git-hooks
+    version: 2.9.0
+    hasBin: true
+    requiresBuild: true
+    dev: true
 
   registry.npmmirror.com/slash@2.0.0:
     resolution: {integrity: sha512-ZYKh3Wh2z1PpEXWr0MpSBZ0V6mZHAQfYevttO11c51CaWjGTaadiKZ+wVt1PbMlDV5qhMFslpZCemhwOK7C89A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/slash/-/slash-2.0.0.tgz}

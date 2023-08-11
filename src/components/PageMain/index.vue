@@ -1,7 +1,5 @@
 <!--
  * @Description: 页面内容块
- * @Date: 2022-11-03 14:06:33
- * @LastEditTime: 2023-08-11 16:54:56
 -->
 <template>
 	<div class="page-main" :class="{ 'is-collaspe': collaspe }" :style="{ height: calcHeight }">
@@ -52,7 +50,7 @@ const props = defineProps({
 const titleSlot = !!useSlots().title
 
 // 展开收起功能
-const collaspeData = ref(toRefs(props).collaspe)
+const collaspeData = ref(props.collaspe)
 
 // 计算高度
 const calcHeight = computed(() => {
