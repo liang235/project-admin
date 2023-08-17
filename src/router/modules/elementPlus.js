@@ -1,30 +1,37 @@
 /*
  * @Description: ElementPlus UI 组件
- * @Date: 2023-02-28 15:46:02
- * @LastEditTime: 2023-02-28 16:01:40
  */
 const Layout = () => import('@/layout/index.vue') // 布局主页面
 
-export default [
+const formComponent = [
 	{
-		path: '/skeleton',
+		path: '/form-component',
+		name: 'form-component',
 		component: Layout,
 		meta: {
-			title: 'Skeleton 骨架屏',
-			icon: '',
+			title: 'Form 表单组件',
+			icon: 'form',
 		},
+		redirect: '/form-component/input',
 		children: [
 			{
-				path: '',
-				name: 'skeleton',
-				component: () => import('@/views/element-plus/skeleton.vue'),
+				path: '/form-component/input',
+				name: 'formComponentInput',
+				component: () => import('@/views/element-plus/input.vue'),
 				meta: {
-					title: 'Skeleton 骨架屏',
-					breadcrumb: false,
-					sidebar: false,
-					activeMenu: '/skeleton',
+					title: 'Input 输入框',
+				},
+			},
+			{
+				path: '/form-component/select',
+				name: 'formComponentSelect',
+				component: () => import('@/views/element-plus/select.vue'),
+				meta: {
+					title: 'Select 选择器',
 				},
 			},
 		],
 	},
 ]
+
+export default [...formComponent]
