@@ -19,6 +19,13 @@ import pkg from '../package.json'
 
 console.log(`I'm --------- v${pkg.version} -------- ^_^`)
 
+console.log(`I'm --------- v${pkg.version} -------- ^_^`)
+
+console.log(`I'm --------- v${pkg.version} -------- ^_^`)
+console.log(`I'm --------- v${pkg.version} -------- ^_^`)
+console.log(`I'm --------- v${pkg.version} -------- ^_^`)
+console.log(1,2)
+
 // 对按钮进行配置
 const buttonConfig = ref({
 	autoInsertSpace: true, // 自动在两个中文字符之间插入空格
