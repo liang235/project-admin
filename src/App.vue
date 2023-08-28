@@ -24,7 +24,9 @@ console.log(`I'm --------- v${pkg.version} -------- ^_^`)
 console.log(`I'm --------- v${pkg.version} -------- ^_^`)
 console.log(`I'm --------- v${pkg.version} -------- ^_^`)
 console.log(`I'm --------- v${pkg.version} -------- ^_^`)
-console.log(1,2)
+console.log(1, 2)
+console.log(`I'm --------- v${pkg.version} -------- ^_^`)
+console.log(1, 2)
 
 // 对按钮进行配置
 const buttonConfig = ref({
