@@ -94,7 +94,10 @@ const editPassword = () => {
 			width: 100%;
 			border-right: 2px solid var(--el-color-primary);
 			background-color: var(--el-color-primary-light-9);
-			transition: transform 0.3s, background-color 0.3s, var(--el-transition-border);
+			transition:
+				transform 0.3s,
+				background-color 0.3s,
+				var(--el-transition-border);
 		}
 
 		.el-tabs__item {

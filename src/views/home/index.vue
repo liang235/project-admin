@@ -1,7 +1,5 @@
 <!--
  * @Description: 主页
- * @Date: 2022-10-09 11:01:43
- * @LastEditTime: 2023-02-24 15:23:09
 -->
 <template>
 	<div class="home">

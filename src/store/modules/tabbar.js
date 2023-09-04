@@ -1,7 +1,5 @@
 /*
  * @Description: 标签栏数据
- * @Date: 2023-02-01 16:14:03
- * @LastEditTime: 2023-02-01 17:17:15
  */
 
 // 唯一ID tabbar

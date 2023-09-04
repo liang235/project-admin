@@ -48,7 +48,9 @@ onUnmounted(() => {
 	background-color: var(--g-app-bg);
 	box-shadow: 0 0 1px 0 var(--g-box-shadow-color);
 	text-align: center;
-	transition: all 0.3s, var(--el-transition-box-shadow);
+	transition:
+		all 0.3s,
+		var(--el-transition-box-shadow);
 
 	&.shadow {
 		box-shadow: 0 -10px 10px -10px var(--g-box-shadow-color);

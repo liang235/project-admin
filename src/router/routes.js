@@ -2,6 +2,8 @@ import useSettingsStore from '@/store/modules/settings.js' // 系统配置详情
 import example from './modules/example.js' // 默认演示
 import systemSettings from './modules/systemSettings.js' // 系统主题配置数据
 import elementPlus from './modules/elementPlus.js' // ElementPlus 配置数据
+import javascript from './modules/javascript.js' // JS 案例
+import css from './modules/css.js' // CSS 案例
 
 const Layout = () => import('@/layout/index.vue') // 布局主页面
 
@@ -93,6 +95,22 @@ const asyncRoutes = [
 	},
 	{
 		path: 3,
+		meta: {
+			title: 'JS',
+			icon: 'js',
+		},
+		children: [...javascript],
+	},
+	{
+		path: 4,
+		meta: {
+			title: 'CSS',
+			icon: 'css',
+		},
+		children: [...css],
+	},
+	{
+		path: 10,
 		meta: {
 			title: '系统',
 			icon: 'system',

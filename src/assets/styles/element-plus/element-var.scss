@@ -1,9 +1,8 @@
 /*
  * @Description: 修改 element-plus css 变量
- * @Date: 2022-12-09 21:28:14
- * @LastEditTime: 2022-12-09 21:52:25
  */
 
 // 不加 html 增加权限层级的话，会被默认的覆盖
 html:root {
+	--el-menu-item-height: 50px;
 }
