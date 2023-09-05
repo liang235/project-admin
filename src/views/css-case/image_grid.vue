@@ -1,6 +1,3 @@
-<!--
- * @Description: 图片九宫格
--->
 <template>
 	<page-main title="图片九宫格">
 		<div class="img-container">

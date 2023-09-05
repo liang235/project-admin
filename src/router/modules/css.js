@@ -5,6 +5,27 @@ const Layout = () => import('@/layout/index.vue') // 布局主页面
 
 const formComponent = [
 	{
+		path: '/repeated_gradient_border',
+		component: Layout,
+		meta: {
+			title: '重复渐变的边框',
+			icon: 'repeated_gradient_border',
+		},
+		children: [
+			{
+				path: '',
+				name: 'repeated_gradient_border',
+				component: () => import('@/views/css-case/repeated_gradient_border.vue'),
+				meta: {
+					title: '重复渐变的边框',
+					breadcrumb: false,
+					sidebar: false,
+					activeMenu: '/repeated_gradient_border',
+				},
+			},
+		],
+	},
+	{
 		path: '/image_grid',
 		component: Layout,
 		meta: {

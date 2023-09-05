@@ -1,6 +1,3 @@
-<!--
- * @Description: 立体文字
--->
 <template>
 	<page-main title="立体文字">
 		<h1>立体文字</h1>
