@@ -1,7 +1,5 @@
 <!--
  * @Description: svg/element 图标展示
- * @Date: 2022-11-17 14:32:24
- * @LastEditTime: 2022-12-10 15:32:29
 -->
 <template>
 	<page-main title="Icons 图标">

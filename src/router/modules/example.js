@@ -3,7 +3,6 @@
  */
 const Layout = () => import('@/layout/index.vue') // 布局主页面
 
-// icons 图标
 const icons = [
 	{
 		path: '/icons',
@@ -28,7 +27,6 @@ const icons = [
 	},
 ]
 
-// 权限验证
 const permission = [
 	{
 		path: '/permission',
@@ -53,7 +51,6 @@ const permission = [
 	},
 ]
 
-// 扩展组件
 const components = [
 	{
 		path: '/components',
@@ -177,7 +174,6 @@ const components = [
 	},
 ]
 
-// 功能展示
 const feature = [
 	{
 		path: '/feature',
@@ -268,7 +264,6 @@ const feature = [
 	},
 ]
 
-// 页面展示
 const pages = [
 	{
 		path: '/pages',
@@ -341,7 +336,6 @@ const pages = [
 	},
 ]
 
-// 插件部分
 const plugin = [
 	{
 		path: '/plugin',
@@ -420,7 +414,6 @@ const plugin = [
 	},
 ]
 
-// 面包屑导航
 const breadcrumb = [
 	{
 		path: '/breadcrumb',
@@ -483,7 +476,6 @@ const breadcrumb = [
 	},
 ]
 
-// 页面缓存
 const keepAlive = [
 	{
 		path: '/keep-alive',
@@ -565,7 +557,6 @@ const keepAlive = [
 	},
 ]
 
-// 多级导航
 const multilevel = [
 	{
 		path: '/multilevel',
@@ -615,7 +606,6 @@ const multilevel = [
 	},
 ]
 
-// 外链
 const link = [
 	{
 		path: '/link',

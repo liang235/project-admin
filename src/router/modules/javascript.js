@@ -5,21 +5,22 @@ const Layout = () => import('@/layout/index.vue') // 布局主页面
 
 const formComponent = [
 	{
-		path: '/js-case',
+		path: '/infinite_scroll',
 		component: Layout,
 		meta: {
-			title: 'JS 案例',
-			icon: 'js',
-			defaultOpened: true,
+			title: '无限滚动',
+			icon: 'infinite_scroll',
 		},
 		children: [
 			{
-				path: '/js-case/infinite-scroll',
-				name: 'infinite-scroll',
-				component: () => import('@/views/js-case/infinite-scroll.vue'),
+				path: '',
+				name: 'infinite_scroll',
+				component: () => import('@/views/js-case/infinite_scroll.vue'),
 				meta: {
 					title: '无限滚动',
-					icon: 'dot',
+					breadcrumb: false,
+					sidebar: false,
+					activeMenu: '/infinite_scroll',
 				},
 			},
 		],

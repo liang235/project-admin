@@ -1,7 +1,5 @@
 <!--
  * @Description: 自定义 svg 图标
- * @Date: 2022-06-10 16:12:28
- * @LastEditTime: 2022-12-10 15:33:54
 -->
 <template>
 	<el-row class="svg-container">

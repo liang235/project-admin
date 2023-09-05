@@ -1,7 +1,5 @@
 <!--
  * @Description: ElementPlus 图标
- * @Date: 2022-11-18 15:21:03
- * @LastEditTime: 2022-12-10 15:34:04
 -->
 <template>
 	<el-row class="svg-container">
