@@ -1,7 +1,5 @@
 /*
  * @Description: 进度条样式
- * @Date: 2022-11-09 17:48:22
- * @LastEditTime: 2022-11-09 17:48:26
  */
 #nprogress {
 	pointer-events: none;
@@ -22,7 +20,9 @@
 		display: block;
 		width: 100px;
 		height: 100%;
-		box-shadow: 0 0 10px var(--g-nprogress-color), 0 0 5px var(--g-nprogress-color);
+		box-shadow:
+			0 0 10px var(--g-nprogress-color),
+			0 0 5px var(--g-nprogress-color);
 		opacity: 1;
 		transform: rotate(3deg) translate(0, -4px);
 	}

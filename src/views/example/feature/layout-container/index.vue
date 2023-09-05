@@ -1,7 +1,5 @@
 <!--
  * @Description: 布局容器
- * @Date: 2022-12-15 18:51:00
- * @LastEditTime: 2022-12-16 02:18:41
 -->
 <template>
 	<div class="layout-container">
@@ -135,7 +133,9 @@ const rightShow = ref(true) // 右侧栏状态
 			cursor: pointer;
 			font-size: 18px;
 			transform: translateY(-50%);
-			transition: background-color 0.3s, var(--el-transition-color);
+			transition:
+				background-color 0.3s,
+				var(--el-transition-color);
 
 			&:hover {
 				color: var(--el-text-color-regular);

@@ -1,9 +1,6 @@
 /*
  * @Description: 路由根页面
- * @Date: 2022-09-23 17:13:01
- * @LastEditTime: 2022-12-30 16:31:53
  */
-
 import { createRouter, createWebHashHistory } from 'vue-router' // 路由
 import { useTitle } from '@vueuse/core' // vue 工具库
 import { useNProgress } from '@vueuse/integrations/useNProgress' // 进度条相关

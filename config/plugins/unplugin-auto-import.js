@@ -1,7 +1,5 @@
 /*
  * @Description: 自动导入 composition api
- * @Date: 2022-09-23 14:45:38
- * @LastEditTime: 2023-02-09 11:33:28
  */
 import AutoImport from 'unplugin-auto-import/vite' // 自动导入 composition api
 // import { ElementPlusResolver } from 'unplugin-vue-components/resolvers' // 自动导入 ElementPlus

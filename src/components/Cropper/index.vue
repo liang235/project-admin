@@ -1,7 +1,5 @@
 <!--
  * @Description: 图片裁剪
- * @Date: 2022-12-10 21:04:35
- * @LastEditTime: 2022-12-30 15:59:48
 -->
 <template>
 	<el-dialog v-model="isShowDialog" :width="width" :close-on-click-modal="false" :destroy-on-close="true" :draggable="true">

@@ -1,7 +1,5 @@
 <!--
  * @Description: 系统信息
- * @Date: 2022-11-26 19:04:50
- * @LastEditTime: 2022-12-29 20:42:13
 -->
 <template>
 	<el-drawer v-model="isShow" title="系统信息" direction="rtl" :size="400">

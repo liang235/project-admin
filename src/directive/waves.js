@@ -2,8 +2,6 @@
  * @Description: 水波纹指令
  * @directive 默认方式：v-waves，如 `<div v-waves></div>`
  * @directive 参数方式：v-waves=" |light|red|orange|purple|green|teal"，如 `<div v-waves="'light'"></div>`
- * @Date: 2022-12-12 16:23:50
- * @LastEditTime: 2022-12-30 16:26:43
  */
 export function wavesDirective(app) {
 	app.directive('waves', {

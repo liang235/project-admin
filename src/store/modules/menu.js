@@ -1,7 +1,5 @@
 /*
  * @Description: 侧边栏数据
- * @Date: 2022-11-02 10:38:13
- * @LastEditTime: 2022-12-30 16:38:25
  */
 import { resolveRoutePath } from '@/utils/tools.js' // 自定义工具
 import useSettingsStore from '@/store/modules/settings.js' // 系统配置数据

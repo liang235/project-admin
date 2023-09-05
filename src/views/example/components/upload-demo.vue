@@ -1,7 +1,5 @@
 <!--
  * @Description: 上传案例演示
- * @Date: 2022-12-04 17:40:33
- * @LastEditTime: 2022-12-14 15:00:06
 -->
 <template>
 	<div class="components">

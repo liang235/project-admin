@@ -1,7 +1,5 @@
 <!--
  * @Description: 外链提醒
- * @Date: 2022-12-02 14:57:08
- * @LastEditTime: 2022-12-02 15:22:52
 -->
 <template>
 	<div class="link-view">

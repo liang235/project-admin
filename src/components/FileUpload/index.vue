@@ -1,7 +1,5 @@
 <!--
  * @Description: 文件上传
- * @Date: 2022-12-04 22:19:35
- * @LastEditTime: 2022-12-04 23:26:37
 -->
 <template>
 	<el-upload

@@ -1,7 +1,5 @@
 <!--
  * @Description: 快捷键介绍
- * @Date: 2022-11-26 18:31:42
- * @LastEditTime: 2023-02-24 16:21:32
 -->
 <template>
 	<el-drawer v-model="isShow" title="快捷键介绍" direction="rtl" :size="400">

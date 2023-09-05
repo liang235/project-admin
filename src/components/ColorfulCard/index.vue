@@ -1,7 +1,5 @@
 <!--
  * @Description: 多彩渐变卡片
- * @Date: 2022-12-14 14:51:35
- * @LastEditTime: 2022-12-25 16:08:51
 -->
 <template>
 	<el-card shadow="never" class="mini-card" :style="`background: linear-gradient(50deg, ${colorFrom}, ${colorTo});`">

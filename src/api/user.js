@@ -1,7 +1,5 @@
 /*
  * @Description: 用户部分接口文档
- * @Date: 2022-10-28 17:01:08
- * @LastEditTime: 2022-12-19 21:14:35
  */
 import request from '@/plugins/axios.js' // axios
 

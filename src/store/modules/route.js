@@ -1,7 +1,5 @@
 /*
  * @Description: 路由数据
- * @Date: 2022-10-10 09:36:19
- * @LastEditTime: 2023-02-07 13:54:32
  */
 import { cloneDeep } from 'lodash-es' // js 工具库
 import { getRouteList } from '@/api/user.js' // 用户 api

@@ -61,7 +61,9 @@ const realHeight = computed(() => {
 	border-radius: 5px;
 	background-color: var(--el-fill-color);
 	box-shadow: var(--el-box-shadow-light);
-	transition: background-color 0.3s, var(--el-transition-box-shadow);
+	transition:
+		background-color 0.3s,
+		var(--el-transition-box-shadow);
 
 	:deep(.el-image__inner) {
 		cursor: pointer;

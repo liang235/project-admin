@@ -1,7 +1,5 @@
 <!--
  * @Description: 面包屑导航
- * @Date: 2022-11-27 00:39:50
- * @LastEditTime: 2022-12-10 16:10:45
 -->
 <template>
 	<el-breadcrumb v-if="settingsStore.breadcrumb.enable && settingsStore.mode === 'pc'" :class="[settingsStore.breadcrumb.mode]">

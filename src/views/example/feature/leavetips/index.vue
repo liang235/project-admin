@@ -1,7 +1,5 @@
 <!--
  * @Description: 页面离开提醒
- * @Date: 2022-12-18 00:35:23
- * @LastEditTime: 2023-02-24 15:27:11
 -->
 <template>
 	<div>

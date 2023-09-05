@@ -1,7 +1,5 @@
 <!--
  * @Description: table 表格完整功能
- * @Date: 2023-01-04 10:45:54
- * @LastEditTime: 2023-01-04 17:49:39
 -->
 <template>
 	<div class="pages-table-full-container">

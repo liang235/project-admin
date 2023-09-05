@@ -1,7 +1,5 @@
 <!--
  * @Description: 工具栏
- * @Date: 2022-12-30 21:05:40
- * @LastEditTime: 2023-02-01 12:25:30
 -->
 <template>
 	<div v-if="settingsStore.toolbar.enable" class="toolbar-container">

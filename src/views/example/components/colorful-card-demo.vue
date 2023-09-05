@@ -1,7 +1,5 @@
 <!--
  * @Description: 多彩渐变卡片
- * @Date: 2022-12-14 14:56:44
- * @LastEditTime: 2022-12-25 16:09:55
 -->
 <template>
 	<div>

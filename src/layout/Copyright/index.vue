@@ -1,7 +1,5 @@
 <!--
  * @Description: 页面底部版权
- * @Date: 2022-11-19 17:48:30
- * @LastEditTime: 2022-11-28 21:04:45
 -->
 <template>
 	<footer v-if="route.meta.copyright ?? settingsStore.copyright.enable" class="copyright">

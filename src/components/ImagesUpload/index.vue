@@ -1,7 +1,5 @@
 <!--
  * @Description: 多图上传
- * @Date: 2022-12-04 22:10:10
- * @LastEditTime: 2022-12-30 16:10:41
 -->
 <template>
 	<div class="upload-container">
@@ -250,7 +248,9 @@ const onSuccess = (res) => {
 				color: var(--el-color-white);
 				cursor: pointer;
 				text-align: center;
-				transition: color 0.1s, transform 0.1s;
+				transition:
+					color 0.1s,
+					transform 0.1s;
 
 				&.disabled {
 					color: var(--el-text-color-disabled);

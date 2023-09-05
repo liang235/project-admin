@@ -1,8 +1,6 @@
 /*
  * @Description: 侧边栏操作
  * 依靠 unplugin-auto-import 自动导出
- * @Date: 2022-11-08 16:03:23
- * @LastEditTime: 2022-12-04 16:50:07
  */
 import router from '@/router/index.js' // 路由
 import useSettingsStore from '@/store/modules/settings.js' // 系统配置数据

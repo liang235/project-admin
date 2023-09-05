@@ -1,9 +1,6 @@
 <!--
  * @Description: 多权限验证，用户必须具备全部权限，才验证通过
- * @Date: 2022-11-30 14:29:56
- * @LastEditTime: 2022-11-30 16:09:42
 -->
-
 <template>
 	<div class="authAll">
 		<slot v-if="check()" />

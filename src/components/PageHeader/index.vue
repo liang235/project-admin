@@ -1,7 +1,5 @@
 <!--
  * @Description: 页面页头
- * @Date: 2022-11-17 18:20:46
- * @LastEditTime: 2022-12-25 19:25:12
 -->
 <template>
 	<div class="header">

@@ -1,7 +1,5 @@
 <!--
  * @Description: 单图上传
- * @Date: 2022-12-04 20:11:40
- * @LastEditTime: 2022-12-30 16:04:22
 -->
 <template>
 	<div class="upload-container">
@@ -218,7 +216,9 @@ const onSuccess = (res) => {
 				color: var(--el-color-white);
 				cursor: pointer;
 				text-align: center;
-				transition: color 0.1s, transform 0.1s;
+				transition:
+					color 0.1s,
+					transform 0.1s;
 
 				&:hover {
 					transform: scale(1.5);

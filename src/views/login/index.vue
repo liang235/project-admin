@@ -1,7 +1,5 @@
 <!--
  * @Description: 登录页面
- * @Date: 2022-10-09 10:47:36
- * @LastEditTime: 2023-02-24 15:28:12
 -->
 <template>
 	<div class="login-wrap">

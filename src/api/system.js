@@ -1,7 +1,5 @@
 /*
  * @Description: 系统管理接口文档
- * @Date: 2022-12-03 15:48:45
- * @LastEditTime: 2022-12-19 21:14:27
  */
 
 import request from '@/plugins/axios.js' // axios

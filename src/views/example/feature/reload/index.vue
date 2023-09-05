@@ -1,7 +1,5 @@
 <!--
  * @Description: 主页面刷新
- * @Date: 2022-12-18 01:07:11
- * @LastEditTime: 2022-12-18 01:11:58
 -->
 <template>
 	<div>

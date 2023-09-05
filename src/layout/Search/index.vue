@@ -1,7 +1,5 @@
 <!--
  * @Description: 导航搜索
- * @Date: 2022-11-25 21:00:24
- * @LastEditTime: 2023-02-21 10:07:43
 -->
 <template>
 	<div class="search" :class="{ searching: isShow }" @click="isShow && bus.emit('global-search-toggle')">

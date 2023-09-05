@@ -1,7 +1,5 @@
 /*
  * @Description: 页面缓存
- * @Date: 2022-11-19 22:21:43
- * @LastEditTime: 2022-12-30 16:57:32
  */
 const useKeepAliveStore = defineStore('keepAlive', {
 	state: () => ({

@@ -1,7 +1,5 @@
 /*
  * @Description: 用户权限指令
- * @Date: 2022-12-12 16:22:19
- * @LastEditTime: 2022-12-12 16:22:24
  */
 export function authDirective(app) {
 	/**

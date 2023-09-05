@@ -1,7 +1,5 @@
 <!--
  * @Description: 数字滚动
- * @Date: 2022-12-09 21:56:10
- * @LastEditTime: 2022-12-10 20:48:46
 -->
 <template>
 	<div>

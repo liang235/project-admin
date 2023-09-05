@@ -1,7 +1,5 @@
 <!--
  * @Description: 个人设置
- * @Date: 2022-11-21 17:25:31
- * @LastEditTime: 2022-12-25 03:15:06
 -->
 <template>
 	<page-main title="个人设置">

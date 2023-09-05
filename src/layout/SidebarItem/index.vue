@@ -1,7 +1,5 @@
 <!--
  * @Description: 次导航
- * @Date: 2022-11-04 10:47:31
- * @LastEditTime: 2022-12-24 14:25:57
 -->
 <template>
 	<div class="sidebar-item">

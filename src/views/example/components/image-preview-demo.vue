@@ -1,7 +1,5 @@
 <!--
  * @Description: 图片预览
- * @Date: 2022-12-04 17:34:43
- * @LastEditTime: 2022-12-20 16:26:27
 -->
 <template>
 	<div class="components">

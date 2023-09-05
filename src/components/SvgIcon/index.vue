@@ -1,7 +1,5 @@
 <!--
  * @Description: svg 图标使用
- * @Date: 2022-10-27 10:55:55
- * @LastEditTime: 2022-12-30 16:24:35
 -->
 <template>
 	<component v-if="name.startsWith('ele-')" :is="name" :style="transformStyle" class="svg-icon" />

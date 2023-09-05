@@ -1,7 +1,5 @@
 /*
  * @Description: pinia 数据共享
- * @Date: 2022-09-23 15:51:15
- * @LastEditTime: 2022-09-23 15:58:15
  */
 // https://pinia.vuejs.org/
 import { createPinia } from 'pinia' // pinia

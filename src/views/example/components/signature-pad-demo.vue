@@ -1,7 +1,5 @@
 <!--
  * @Description: 电子签名
- * @Date: 2022-12-14 20:02:28
- * @LastEditTime: 2022-12-15 18:44:57
 -->
 <template>
 	<div class="components">

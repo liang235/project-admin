@@ -1,7 +1,5 @@
 <!--
  * @Description: 二维码
- * @Date: 2022-12-08 14:56:45
- * @LastEditTime: 2022-12-09 17:13:34
 -->
 <template>
 	<div>

@@ -1,7 +1,5 @@
 <!--
  * @Description: 水波纹
- * @Date: 2022-12-12 15:16:22
- * @LastEditTime: 2022-12-12 20:11:35
 -->
 <template>
 	<div>

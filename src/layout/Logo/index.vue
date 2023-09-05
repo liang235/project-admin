@@ -1,7 +1,5 @@
 <!--
  * @Description: logo/标题
- * @Date: 2022-11-09 09:46:03
- * @LastEditTime: 2022-12-25 16:09:25
 -->
 <template>
 	<router-link :to="to" class="title" :class="{ 'is-link': settingsStore.home.enable }" :title="title">

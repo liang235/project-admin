@@ -1,7 +1,5 @@
 <!--
  * @Description: 富文本编辑器
- * @Date: 2022-12-04 13:14:14
- * @LastEditTime: 2022-12-04 23:43:10
 -->
 <template>
 	<div class="editor-container">

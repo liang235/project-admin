@@ -1,7 +1,5 @@
 <!--
  * @Description: 固定底部操作栏
- * @Date: 2022-11-28 17:03:15
- * @LastEditTime: 2022-11-28 21:02:36
 -->
 <template>
 	<div class="fixed-bottom" :class="{ shadow: !isBottom }" data-fixed-calc-width>

@@ -1,7 +1,5 @@
 <!--
  * @Description: table 表格功能
- * @Date: 2023-01-04 14:05:22
- * @LastEditTime: 2023-01-04 17:41:13
 -->
 <template>
 	<el-table :data="data" :border="setBorder" row-key="id" v-loading="config.loading" @selection-change="onSelectionChange" height="100%">

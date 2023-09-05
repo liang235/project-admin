@@ -1,8 +1,6 @@
 /*
  * @Description: 权限验证
  * 依靠 unplugin-auto-import 自动导出
- * @Date: 2022-11-08 16:03:40
- * @LastEditTime: 2022-11-30 20:36:55
  */
 import useSettingsStore from '@/store/modules/settings.js' // 系统配置数据
 import useUserStore from '@/store/modules/user.js' // 用户数据'

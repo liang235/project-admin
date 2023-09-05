@@ -1,7 +1,5 @@
 /*
  * @Description: 系统设置导航路由
- * @Date: 2022-11-08 12:26:24
- * @LastEditTime: 2022-12-02 13:06:17
  */
 const Layout = () => import('@/layout/index.vue') // 布局主页面
 

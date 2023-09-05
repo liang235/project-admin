@@ -1,7 +1,5 @@
 <!--
  * @Description: 侧边栏模式（无主导航）
- * @Date: 2022-11-07 11:28:45
- * @LastEditTime: 2022-12-24 14:02:21
 -->
 <template>
 	<div

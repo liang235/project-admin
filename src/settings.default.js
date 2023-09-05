@@ -2,8 +2,6 @@
  * @Description: 全局系统配置
  * @Description: 该文件为系统默认配置，请勿修改！！！
  * @Description: 在 ./settings.custom.js 中修改
- * @Date: 2022-10-10 09:34:58
- * @LastEditTime: 2023-02-03 10:35:47
  */
 const globalSettings = {
 	// 应用程序

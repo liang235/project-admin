@@ -1,7 +1,5 @@
 <!--
  * @Description: 主页面最大化
- * @Date: 2022-12-18 00:48:49
- * @LastEditTime: 2022-12-18 01:02:44
 -->
 <template>
 	<div>

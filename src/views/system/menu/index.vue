@@ -1,7 +1,5 @@
 <!--
  * @Description: 菜单管理
- * @Date: 2022-12-02 13:03:25
- * @LastEditTime: 2022-12-25 19:25:29
 -->
 <template>
 	<page-main title="菜单管理" v-loading="loading">

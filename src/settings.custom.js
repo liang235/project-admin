@@ -1,7 +1,5 @@
 /*
  * @Description: 修改全局系统配置
- * @Date: 2022-11-02 10:13:01
- * @LastEditTime: 2023-02-03 10:35:55
  */
 const settingsCustom = {
 	app: {

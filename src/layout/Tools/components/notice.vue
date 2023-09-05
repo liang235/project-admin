@@ -1,7 +1,5 @@
 <!--
  * @Description: 消息通知
- * @Date: 2022-12-17 17:34:13
- * @LastEditTime: 2022-12-19 23:30:57
 -->
 <template>
 	<div class="tools-notice">

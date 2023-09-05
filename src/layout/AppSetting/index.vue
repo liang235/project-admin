@@ -1,7 +1,5 @@
 <!--
  * @Description: 全局应用配置
- * @Date: 2022-11-24 11:47:15
- * @LastEditTime: 2023-02-01 15:35:40
 -->
 <template>
 	<el-drawer v-model="isShow" title="应用配置" direction="rtl" :size="400">

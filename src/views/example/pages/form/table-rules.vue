@@ -1,7 +1,5 @@
 <!--
  * @Description: 表单表格验证
- * @Date: 2022-12-20 17:01:38
- * @LastEditTime: 2022-12-20 17:30:56
 -->
 <template>
 	<page-main tilte="表单表格验证">

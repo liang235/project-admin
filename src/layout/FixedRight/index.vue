@@ -1,7 +1,5 @@
 <!--
  * @Description: 页面右侧固定
- * @Date: 2022-12-17 17:53:34
- * @LastEditTime: 2022-12-27 10:31:02
 -->
 <template>
 	<div class="fixed-right" :class="{ actived: isActived }">

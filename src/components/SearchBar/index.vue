@@ -1,8 +1,6 @@
 <!--
  * @Description: 搜索面板
  * 配合 <el-collapse-transition /> 组件可以实现展开收起动画效果
- * @Date: 2022-11-28 23:49:10
- * @LastEditTime: 2022-12-08 22:02:27
 -->
 <template>
 	<div class="search-container">

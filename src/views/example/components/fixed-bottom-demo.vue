@@ -1,7 +1,5 @@
 <!--
  * @Description: 固定底部操作栏
- * @Date: 2022-11-28 20:48:07
- * @LastEditTime: 2022-11-28 23:57:03
 -->
 <template>
 	<div class="components">

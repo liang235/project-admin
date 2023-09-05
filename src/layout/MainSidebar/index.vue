@@ -1,7 +1,5 @@
 <!--
  * @Description: 主导航
- * @Date: 2022-11-04 10:51:58
- * @LastEditTime: 2022-12-09 21:49:00
 -->
 <template>
 	<transition name="main-sidebar">

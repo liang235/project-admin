@@ -1,7 +1,5 @@
 <!--
  * @Description: 权限验证
- * @Date: 2022-11-29 18:39:13
- * @LastEditTime: 2023-02-24 16:07:18
 -->
 <template>
 	<div class="permission">

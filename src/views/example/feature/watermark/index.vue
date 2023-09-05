@@ -1,7 +1,5 @@
 <!--
  * @Description: 页面水印
- * @Date: 2022-12-18 14:48:14
- * @LastEditTime: 2022-12-18 15:10:19
 -->
 <template>
 	<div>

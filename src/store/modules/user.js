@@ -1,7 +1,5 @@
 /*
  * @Description: 用户数据
- * @Date: 2022-10-10 09:36:12
- * @LastEditTime: 2022-12-03 15:52:02
  */
 import { login, getPermission } from '@/api/user.js' // 用户 api
 import useMenuStore from '@/store/modules/menu.js' // 侧边栏数据

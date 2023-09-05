@@ -1,7 +1,5 @@
 /*
  * @Description: 封装接口
- * @Date: 2023-02-28 16:07:28
- * @LastEditTime: 2023-02-28 16:16:40
  */
 import axios from 'axios'
 

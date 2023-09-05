@@ -1,7 +1,5 @@
 <!--
  * @Description: 表单自适应
- * @Date: 2022-12-19 23:17:03
- * @LastEditTime: 2022-12-19 23:28:29
 -->
 <template>
 	<page-main title="表单自适应(改变窗口查看效果)">
