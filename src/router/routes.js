@@ -18,6 +18,14 @@ const constantRoutes = [
 		},
 	},
 	{
+		path: '/ceshi',
+		name: 'ceshi',
+		component: () => import('@/views/test.vue'),
+		meta: {
+			title: '测试页面',
+		},
+	},
+	{
 		path: '/:all(.*)*',
 		name: 'notFound',
 		component: () => import('@/views/error/404.vue'),
