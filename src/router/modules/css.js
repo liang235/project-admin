@@ -67,6 +67,48 @@ const formComponent = [
 			},
 		],
 	},
+	{
+		path: '/continuous_text_shadow',
+		component: Layout,
+		meta: {
+			title: '文字连续光影',
+			icon: 'continuous_text_shadow',
+		},
+		children: [
+			{
+				path: '',
+				name: 'continuous_text_shadow',
+				component: () => import('@/views/css-case/continuous_text_shadow.vue'),
+				meta: {
+					title: '文字连续光影',
+					breadcrumb: false,
+					sidebar: false,
+					activeMenu: '/continuous_text_shadow',
+				},
+			},
+		],
+	},
+	{
+		path: '/olympic_rings',
+		component: Layout,
+		meta: {
+			title: '奥运五环',
+			icon: 'olympic_rings',
+		},
+		children: [
+			{
+				path: '',
+				name: 'olympic_rings',
+				component: () => import('@/views/css-case/olympic_rings.vue'),
+				meta: {
+					title: '奥运五环',
+					breadcrumb: false,
+					sidebar: false,
+					activeMenu: '/olympic_rings',
+				},
+			},
+		],
+	},
 ]
 
 export default [...formComponent]
