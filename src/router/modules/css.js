@@ -9,7 +9,7 @@ const formComponent = [
 		component: Layout,
 		meta: {
 			title: '重复渐变的边框',
-			icon: 'repeated_gradient_border',
+			icon: 'css',
 		},
 		children: [
 			{
@@ -30,7 +30,7 @@ const formComponent = [
 		component: Layout,
 		meta: {
 			title: '图片九宫格',
-			icon: 'image_grid',
+			icon: 'css',
 		},
 		children: [
 			{
@@ -51,7 +51,7 @@ const formComponent = [
 		component: Layout,
 		meta: {
 			title: '立体文字',
-			icon: '3d_text',
+			icon: 'css',
 		},
 		children: [
 			{
@@ -72,7 +72,7 @@ const formComponent = [
 		component: Layout,
 		meta: {
 			title: '文字连续光影',
-			icon: 'continuous_text_shadow',
+			icon: 'css',
 		},
 		children: [
 			{
@@ -93,7 +93,7 @@ const formComponent = [
 		component: Layout,
 		meta: {
 			title: '奥运五环',
-			icon: 'olympic_rings',
+			icon: 'css',
 		},
 		children: [
 			{

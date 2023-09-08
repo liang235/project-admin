@@ -9,7 +9,7 @@ const formComponent = [
 		component: Layout,
 		meta: {
 			title: '无限滚动',
-			icon: 'infinite_scroll',
+			icon: 'js',
 		},
 		children: [
 			{
