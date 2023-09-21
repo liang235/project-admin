@@ -4,6 +4,7 @@ import systemSettings from './modules/systemSettings.js' // 系统主题配置�
 import elementPlus from './modules/elementPlus.js' // ElementPlus 配置数据
 import javascript from './modules/javascript.js' // JS 案例
 import css from './modules/css.js' // CSS 案例
+import vueuse from './modules/vueuse.js' // vueuse 案例
 
 const Layout = () => import('@/layout/index.vue') // 布局主页面
 
@@ -15,14 +16,6 @@ const constantRoutes = [
 		component: () => import('@/views/login/index.vue'),
 		meta: {
 			title: '登录',
-		},
-	},
-	{
-		path: '/ceshi',
-		name: 'ceshi',
-		component: () => import('@/views/test.vue'),
-		meta: {
-			title: '测试页面',
 		},
 	},
 	{
@@ -94,6 +87,14 @@ const asyncRoutes = [
 		children: [...example],
 	},
 	{
+		path: 3,
+		meta: {
+			title: 'VueUse',
+			icon: 'vueuse',
+		},
+		children: [...vueuse],
+	},
+	{
 		path: 2,
 		meta: {
 			title: 'Element',
@@ -102,7 +103,7 @@ const asyncRoutes = [
 		children: [...elementPlus],
 	},
 	{
-		path: 3,
+		path: 4,
 		meta: {
 			title: 'JS',
 			icon: 'js',
@@ -110,7 +111,7 @@ const asyncRoutes = [
 		children: [...javascript],
 	},
 	{
-		path: 4,
+		path: 5,
 		meta: {
 			title: 'CSS',
 			icon: 'css',
