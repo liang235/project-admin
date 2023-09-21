@@ -20,6 +20,14 @@ const formComponent = [
 					title: 'useVModel',
 				},
 			},
+			{
+				path: 'useVModels',
+				name: 'useVModels',
+				component: () => import('@/views/vueuse/useVModels.vue'),
+				meta: {
+					title: 'useVModels',
+				},
+			},
 		],
 	},
 ]

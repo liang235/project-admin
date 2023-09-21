@@ -75,5 +75,6 @@ module.exports = {
 		'func-names': 0, // 要求或禁止指定函数表达式
 		'prefer-destructuring': 0, // 强制使用解构
 		'array-callback-return': 0, // 在数组方法的回调中执行 return 语句
+		camelcase: 0, // 强制骆驼箱命名约定
 	},
 }
