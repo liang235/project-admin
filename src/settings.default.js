@@ -198,7 +198,7 @@ const globalSettings = {
 	// 底部版权
 	copyright: {
 		// 是否开启，同时在路由 meta 对象里可以单独设置某个路由是否显示底部版权信息
-		enable: true,
+		enable: false,
 
 		// 日期
 		dates: '2020-2023',

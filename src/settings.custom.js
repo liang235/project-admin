@@ -55,7 +55,7 @@ const settingsCustom = {
 		mode: 'default',
 	},
 	copyright: {
-		enable: true,
+		enable: false,
 		dates: '2020-2022',
 		company: 'Project-Admin',
 		website: 'https://fantastic-admin.netlify.app',
@@ -68,6 +68,7 @@ const settingsCustom = {
 		enableHotkeys: true,
 		mode: 'fashion',
 	},
+	os: 'mac',
 }
 
 export default settingsCustom
