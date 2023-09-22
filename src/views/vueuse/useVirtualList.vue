@@ -1,17 +1,17 @@
 <template>
 	<div v-bind="containerProps" class="useVirtualList">
 		<div v-bind="wrapperProps">
-			<page-header title="欢迎使用 useVirtualList">
+			<page-header title="欢迎使用 useInfiniteScroll">
 				<template #content>
 					<p>
-						当有大量数据生成DOM并渲染时，界面会非常耗时且卡顿。通常会使用virtual list来解决问题，virtual
-						list原理是只渲染可见区域，非可见区域不渲染
+						当有大量数据生成DOM并渲染时，界面会非常耗时且卡顿。通常会使用 virtual list 来解决问题，virtual list
+						原理是只渲染可见区域，非可见区域不渲染
 					</p>
 				</template>
 			</page-header>
 
-			<page-main title="虚拟加载">
-				<el-table ref="el" :data="list" border>
+			<page-main title="无限滚动">
+				<el-table :data="list" border>
 					<el-table-column prop="id" label="id">
 						<template #default="scope">
 							{{ scope.row.data.id }}
@@ -23,7 +23,8 @@
 						</template>
 					</el-table-column>
 				</el-table>
-				<div class="loading"><svg-icon v-if="fetchingData" name="ele-loading" />请求更多数据操作中</div>
+				<div v-if="fetchingData" class="loading"><svg-icon name="ele-loading" />请求更多数据操作中</div>
+				<div v-else class="loading">暂无更多数据</div>
 			</page-main>
 		</div>
 	</div>
@@ -34,14 +35,14 @@ import { useInfiniteScroll, useVirtualList } from '@vueuse/core'
 import axios from 'axios'
 
 const page = ref(1) // 当前页
-const limit = ref(10) // 每页条数
+const limit = ref(20) // 每页条数
 const photosList = ref([]) // 数据列表
 const fetchingData = ref(false) // 是否正在加载数据的标志
 const canLoadData = ref(true) // 是否还能加载更多数据的标志
 
 // 虚拟加载数据
 const { list, containerProps, wrapperProps } = useVirtualList(photosList, {
-	itemHeight: 22,
+	itemHeight: 40,
 })
 
 const getPhotosList = async () => {
@@ -54,7 +55,7 @@ const getPhotosList = async () => {
 	})
 
 	// 发起请求获取数据
-	const { data } = await axios(`http://jsonplaceholder.typicode.com/photos?_page=${page.value}&_limit=${limit.value}`)
+	const { data } = await axios(`http://jsonplaceholder.typicode.com/posts?_page=${page.value}&_limit=${limit.value}`)
 
 	// 如果返回的数据长度小于每页条数，说明已经没有更多数据可加载了
 	if (data.length < limit.value) {
@@ -90,6 +91,6 @@ useInfiniteScroll(
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 20px;
+	padding: 20px;
 }
 </style>

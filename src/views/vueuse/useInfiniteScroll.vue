@@ -11,7 +11,8 @@
 				<el-table-column prop="id" label="id" />
 				<el-table-column prop="title" label="title" />
 			</el-table>
-			<div class="loading"><svg-icon v-if="fetchingData" name="ele-loading" />请求更多数据操作中</div>
+			<div v-if="fetchingData" class="loading"><svg-icon name="ele-loading" />请求更多数据操作中</div>
+			<div v-else class="loading">暂无更多数据</div>
 		</page-main>
 	</div>
 </template>
@@ -37,7 +38,7 @@ const getPhotosList = async () => {
 	})
 
 	// 发起请求获取数据
-	const { data } = await axios(`http://jsonplaceholder.typicode.com/photos?_page=${page.value}&_limit=${limit.value}`)
+	const { data } = await axios(`http://jsonplaceholder.typicode.com/posts?_page=${page.value}&_limit=${limit.value}`)
 
 	// 如果返回的数据长度小于每页条数，说明已经没有更多数据可加载了
 	if (data.length < limit.value) {
@@ -72,6 +73,6 @@ useInfiniteScroll(
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 20px;
+	padding: 20px;
 }
 </style>
