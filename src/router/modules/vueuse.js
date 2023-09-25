@@ -9,6 +9,7 @@ const formComponent = [
 		component: Layout,
 		meta: {
 			title: 'State',
+			icon: 'vueuse',
 		},
 		children: [
 			{
@@ -26,6 +27,7 @@ const formComponent = [
 		component: Layout,
 		meta: {
 			title: 'Elements',
+			icon: 'vueuse',
 		},
 		children: [
 			{
@@ -51,6 +53,7 @@ const formComponent = [
 		component: Layout,
 		meta: {
 			title: 'Sensors',
+			icon: 'vueuse',
 		},
 		children: [
 			{
@@ -76,6 +79,7 @@ const formComponent = [
 		component: Layout,
 		meta: {
 			title: 'Component',
+			icon: 'vueuse',
 		},
 		children: [
 			{
