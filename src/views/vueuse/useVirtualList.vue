@@ -10,7 +10,7 @@
 				</template>
 			</page-header>
 
-			<page-main title="无限滚动">
+			<page-main title="虚拟加载">
 				<el-table :data="list" border>
 					<el-table-column prop="id" label="id">
 						<template #default="scope">

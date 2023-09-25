@@ -5,10 +5,27 @@ const Layout = () => import('@/layout/index.vue') // 布局主页面
 
 const formComponent = [
 	{
-		path: '/sensors',
+		path: '/Elements',
 		component: Layout,
 		meta: {
-			title: '传感器',
+			title: 'Elements',
+		},
+		children: [
+			{
+				path: 'useElementVisibility',
+				name: 'useElementVisibility',
+				component: () => import('@/views/vueuse/useElementVisibility.vue'),
+				meta: {
+					title: 'useElementVisibility',
+				},
+			},
+		],
+	},
+	{
+		path: '/Sensors',
+		component: Layout,
+		meta: {
+			title: 'Sensors',
 		},
 		children: [
 			{
@@ -22,10 +39,10 @@ const formComponent = [
 		],
 	},
 	{
-		path: '/component',
+		path: '/Component',
 		component: Layout,
 		meta: {
-			title: '组件',
+			title: 'Component',
 		},
 		children: [
 			{
