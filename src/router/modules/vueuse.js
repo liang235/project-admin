@@ -5,6 +5,23 @@ const Layout = () => import('@/layout/index.vue') // 布局主页面
 
 const formComponent = [
 	{
+		path: '/State',
+		component: Layout,
+		meta: {
+			title: 'State',
+		},
+		children: [
+			{
+				path: 'useRefHistory',
+				name: 'useRefHistory',
+				component: () => import('@/views/vueuse/useRefHistory.vue'),
+				meta: {
+					title: 'useRefHistory',
+				},
+			},
+		],
+	},
+	{
 		path: '/Elements',
 		component: Layout,
 		meta: {
@@ -19,6 +36,14 @@ const formComponent = [
 					title: 'useElementVisibility',
 				},
 			},
+			{
+				path: 'useIntersectionObserver',
+				name: 'useIntersectionObserver',
+				component: () => import('@/views/vueuse/useIntersectionObserver.vue'),
+				meta: {
+					title: 'useIntersectionObserver',
+				},
+			},
 		],
 	},
 	{
@@ -28,6 +53,14 @@ const formComponent = [
 			title: 'Sensors',
 		},
 		children: [
+			{
+				path: 'onClickOutside',
+				name: 'onClickOutside',
+				component: () => import('@/views/vueuse/onClickOutside.vue'),
+				meta: {
+					title: 'onClickOutside',
+				},
+			},
 			{
 				path: 'useInfiniteScroll',
 				name: 'useInfiniteScroll',

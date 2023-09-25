@@ -4,7 +4,6 @@ import { kebabCase } from 'lodash-es' // js 工具库
 import * as ElementPlusIconsVue from '@element-plus/icons-vue' // ElementPlus 图标
 import App from './App.vue'
 
-import '@/assets/styles/tailwind.scss' // tailwindcss 组件应用样式
 import '@/assets/styles/globals.scss' // 全局样式
 import 'virtual:svg-icons-register' // 引入 svg 图标注册脚本
 import router from '@/router/index.js' // 引入路由

@@ -2,7 +2,12 @@
 	<div class="useElementVisibility">
 		<page-header title="欢迎使用 useElementVisibility">
 			<template #content>
-				<p>跟踪元素在视口中的可见性</p>
+				<p>useElementVisibility 函数用于检测元素是否在视口中可见</p>
+				<p>
+					当您使用 useElementVisibility 时，它会跟踪指定元素的可见性状态，并提供一个 ref，该 ref 的值会根据元素的可见性变化而更新，通常是
+					true（可见）或 false（不可见）
+				</p>
+				<p>这个函数通常用于检测特定元素的可见性，以便在元素进入或离开视口时触发一些操作</p>
 			</template>
 		</page-header>
 
