@@ -8,6 +8,7 @@
 					true（可见）或 false（不可见）
 				</p>
 				<p>这个函数通常用于检测特定元素的可见性，以便在元素进入或离开视口时触发一些操作</p>
+				<p class="font20">useElementVisibility 每次出现在可视窗口都会触发</p>
 			</template>
 		</page-header>
 

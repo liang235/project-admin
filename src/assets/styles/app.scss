@@ -1,0 +1,79 @@
+/* 字体大小全局样式
+------------------------------- */
+@for $i from 12 through 100 {
+	.font#{$i} {
+		font-size: #{$i}px !important;
+	}
+}
+
+/* 外边距、内边距全局样式
+------------------------------- */
+@for $i from 0 through 1000 {
+	.margin#{$i} {
+		margin: #{$i}px !important;
+	}
+
+	.mt#{$i} {
+		margin-top: #{$i}px !important;
+	}
+
+	.mr#{$i} {
+		margin-right: #{$i}px !important;
+	}
+
+	.mb#{$i} {
+		margin-bottom: #{$i}px !important;
+	}
+
+	.ml#{$i} {
+		margin-left: #{$i}px !important;
+	}
+
+	.mlr#{$i} {
+		margin-right: #{$i}px !important;
+		margin-left: #{$i}px !important;
+	}
+
+	.mtb#{$i} {
+		margin-top: #{$i}px !important;
+		margin-bottom: #{$i}px !important;
+	}
+
+	.padding#{$i} {
+		padding: #{$i}px !important;
+	}
+
+	.pt#{$i} {
+		padding-top: #{$i}px !important;
+	}
+
+	.pr#{$i} {
+		padding-right: #{$i}px !important;
+	}
+
+	.pb#{$i} {
+		padding-bottom: #{$i}px !important;
+	}
+
+	.pl#{$i} {
+		padding-left: #{$i}px !important;
+	}
+
+	.plr#{$i} {
+		padding-right: #{$i}px !important;
+		padding-left: #{$i}px !important;
+	}
+
+	.ptb#{$i} {
+		padding-top: #{$i}px !important;
+		padding-bottom: #{$i}px !important;
+	}
+
+	.width#{$i} {
+		width: #{$i}px !important;
+	}
+
+	.height#{$i} {
+		height: #{$i}px !important;
+	}
+}
