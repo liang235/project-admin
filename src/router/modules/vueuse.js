@@ -8,7 +8,7 @@ const formComponent = [
 		path: '/State',
 		component: Layout,
 		meta: {
-			title: 'State',
+			title: 'State 状态',
 			icon: 'vueuse',
 		},
 		children: [
@@ -26,7 +26,7 @@ const formComponent = [
 		path: '/Elements',
 		component: Layout,
 		meta: {
-			title: 'Elements',
+			title: 'Elements 元素',
 			icon: 'vueuse',
 		},
 		children: [
@@ -52,7 +52,7 @@ const formComponent = [
 		path: '/Sensors',
 		component: Layout,
 		meta: {
-			title: 'Sensors',
+			title: 'Sensors 传感器',
 			icon: 'vueuse',
 		},
 		children: [
@@ -75,10 +75,28 @@ const formComponent = [
 		],
 	},
 	{
+		path: '/Animation',
+		component: Layout,
+		meta: {
+			title: 'Animation 动画',
+			icon: 'vueuse',
+		},
+		children: [
+			{
+				path: 'useTransition',
+				name: 'useTransition',
+				component: () => import('@/views/vueuse/useTransition.vue'),
+				meta: {
+					title: 'useTransition',
+				},
+			},
+		],
+	},
+	{
 		path: '/Component',
 		component: Layout,
 		meta: {
-			title: 'Component',
+			title: 'Component 组件',
 			icon: 'vueuse',
 		},
 		children: [
@@ -104,6 +122,24 @@ const formComponent = [
 				component: () => import('@/views/vueuse/useVModels.vue'),
 				meta: {
 					title: 'useVModels',
+				},
+			},
+		],
+	},
+	{
+		path: '/Integrations',
+		component: Layout,
+		meta: {
+			title: '@Integrations 集成',
+			icon: 'vueuse',
+		},
+		children: [
+			{
+				path: 'useFocusTrap',
+				name: 'useFocusTrap',
+				component: () => import('@/views/vueuse/useFocusTrap.vue'),
+				meta: {
+					title: 'useFocusTrap',
 				},
 			},
 		],
