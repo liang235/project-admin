@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import ElementPlus from 'element-plus'
 import { kebabCase } from 'lodash-es' // js 工具库
 import * as ElementPlusIconsVue from '@element-plus/icons-vue' // ElementPlus 图标
+import { GcSpreadSheets, GcWorksheet, GcColumn } from '@grapecity/spread-sheets-vue' // SpreadJS
 import App from './App.vue'
 
 import '@/assets/styles/globals.scss' // 全局样式
@@ -15,6 +16,9 @@ const app = createApp(App)
 app.use(ElementPlus)
 app.use(router)
 app.use(pinia)
+app.component('gc-spread-sheets', GcSpreadSheets)
+app.component('gc-worksheet', GcWorksheet)
+app.component('gc-column', GcColumn)
 directive(app)
 plugins(app)
 
