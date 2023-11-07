@@ -30,6 +30,14 @@ const formComponent = [
 					title: 'Select 选择器',
 				},
 			},
+			{
+				path: '/form-component/upload',
+				name: 'formComponentUpload',
+				component: () => import('@/views/element-plus/upload.vue'),
+				meta: {
+					title: 'Upload 上传',
+				},
+			},
 		],
 	},
 ]

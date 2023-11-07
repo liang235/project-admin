@@ -80,6 +80,9 @@
     "watchPostEffect": true,
     "watchSyncEffect": true,
     "toValue": true,
-    "WritableComputedRef": true
+    "WritableComputedRef": true,
+    "ExtractDefaultPropTypes": true,
+    "ExtractPropTypes": true,
+    "ExtractPublicPropTypes": true
   }
 }

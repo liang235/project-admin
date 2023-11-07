@@ -5,7 +5,6 @@ import elementPlus from './modules/elementPlus.js' // ElementPlus 配置数据
 import javascript from './modules/javascript.js' // JS 案例
 import css from './modules/css.js' // CSS 案例
 import vueuse from './modules/vueuse.js' // vueuse 案例
-import spreadJs from './modules/spreadJs.js' // SpreadJS 案例
 
 const Layout = () => import('@/layout/index.vue') // 布局主页面
 
@@ -118,14 +117,6 @@ const asyncRoutes = [
 			icon: 'css',
 		},
 		children: [...css],
-	},
-	{
-		path: 6,
-		meta: {
-			title: 'spreadJs',
-			icon: 'spreadJs',
-		},
-		children: [...spreadJs],
 	},
 	{
 		path: 10,

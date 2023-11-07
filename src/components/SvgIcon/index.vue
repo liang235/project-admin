@@ -65,7 +65,6 @@ const transformStyle = computed(() => {
 
 <style lang="scss" scoped>
 .svg-icon {
-	display: inline-block;
 	overflow: hidden;
 	width: 1em;
 	height: 1em;
