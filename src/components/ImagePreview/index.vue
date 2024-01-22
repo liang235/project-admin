@@ -58,8 +58,8 @@ const realHeight = computed(() => {
 
 <style lang="scss" scoped>
 .el-image {
-	border-radius: 5px;
 	background-color: var(--el-fill-color);
+	border-radius: 5px;
 	box-shadow: var(--el-box-shadow-light);
 	transition:
 		background-color 0.3s,
@@ -76,12 +76,12 @@ const realHeight = computed(() => {
 
 	:deep(.image-slot) {
 		display: flex;
-		width: 100%;
-		height: 100%;
 		align-items: center;
 		justify-content: center;
-		color: #909399;
+		width: 100%;
+		height: 100%;
 		font-size: 30px;
+		color: #909399;
 	}
 }
 </style>

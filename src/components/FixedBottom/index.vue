@@ -40,12 +40,12 @@ onUnmounted(() => {
 
 <style lang="scss" scoped>
 .fixed-bottom {
-	z-index: 4;
 	bottom: 0;
+	z-index: 4;
 	padding: 20px;
+	text-align: center;
 	background-color: var(--g-app-bg);
 	box-shadow: 0 0 1px 0 var(--g-box-shadow-color);
-	text-align: center;
 	transition:
 		all 0.3s,
 		var(--el-transition-box-shadow);

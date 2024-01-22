@@ -15,18 +15,18 @@
 <style lang="scss" scoped>
 .olympic_rings {
 	display: flex;
-	width: 400px;
 	flex-wrap: wrap;
 	justify-content: center;
+	width: 400px;
 	transform-style: preserve-3d;
 }
 
 .item {
 	width: 100px;
 	height: 100px;
+	margin: 0 5px;
 	border: 10px solid #3884c2;
 	border-radius: 50%;
-	margin: 0 5px;
 
 	&:nth-child(2) {
 		border-color: #000;
@@ -38,15 +38,15 @@
 	}
 
 	&:nth-child(4) {
-		border-color: #f9d549;
 		margin-top: -50px;
+		border-color: #f9d549;
 		transform: rotateX(1deg);
 		transform-origin: center 25%;
 	}
 
 	&:nth-child(5) {
-		border-color: #55ac58;
 		margin-top: -50px;
+		border-color: #55ac58;
 		transform: translateZ(-1px) rotateX(-2deg);
 	}
 }

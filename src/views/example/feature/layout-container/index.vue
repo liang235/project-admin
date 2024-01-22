@@ -58,9 +58,9 @@ const rightShow = ref(true) // 右侧栏状态
 .layout-container {
 	position: absolute;
 	display: flex;
+	flex-direction: column;
 	width: 100%;
 	height: 100%;
-	flex-direction: column;
 
 	.page-main {
 		margin-top: 0;
@@ -110,16 +110,16 @@ const rightShow = ref(true) // 右侧栏状态
 	}
 
 	.left-side {
-		overflow: auto;
-		width: 300px;
 		flex: 0 0 auto;
+		width: 300px;
 		margin-right: 20px;
+		overflow: auto;
 	}
 
 	.main {
 		position: relative;
-		width: 100%;
 		flex: 1 1 0%;
+		width: 100%;
 
 		.left-side-icon,
 		.right-side-icon {
@@ -127,15 +127,15 @@ const rightShow = ref(true) // 右侧栏状态
 			top: 50%;
 			width: 24px;
 			height: 24px;
-			border-radius: 50%;
-			background-color: var(--g-app-bg);
+			font-size: 18px;
 			color: var(--el-text-color-placeholder);
 			cursor: pointer;
-			font-size: 18px;
-			transform: translateY(-50%);
+			background-color: var(--g-app-bg);
+			border-radius: 50%;
 			transition:
 				background-color 0.3s,
 				var(--el-transition-color);
+			transform: translateY(-50%);
 
 			&:hover {
 				color: var(--el-text-color-regular);
@@ -152,10 +152,10 @@ const rightShow = ref(true) // 右侧栏状态
 	}
 
 	.right-side {
-		overflow: auto;
-		width: 300px;
 		flex: 0 0 auto;
+		width: 300px;
 		margin-left: 20px;
+		overflow: auto;
 	}
 }
 </style>

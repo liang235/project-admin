@@ -101,8 +101,8 @@ onMounted(() => {
 	display: flex;
 	align-items: center;
 	color: var(--el-color-primary);
+	white-space: nowrap;
 	cursor: pointer;
 	user-select: none;
-	white-space: nowrap;
 }
 </style>

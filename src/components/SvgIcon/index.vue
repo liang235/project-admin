@@ -65,10 +65,10 @@ const transformStyle = computed(() => {
 
 <style lang="scss" scoped>
 .svg-icon {
-	overflow: hidden;
 	width: 1em;
 	height: 1em;
-	fill: currentcolor;
+	overflow: hidden;
 	vertical-align: -0.15em;
+	fill: currentcolor;
 }
 </style>

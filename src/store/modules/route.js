@@ -21,8 +21,8 @@ function hasPermission(permissions, route) {
 			return typeof route.meta?.auth === 'string'
 				? route.meta.auth === auth
 				: typeof route.meta?.auth === 'object'
-				? route.meta.auth.includes(auth)
-				: false
+					? route.meta.auth.includes(auth)
+					: false
 		})
 	} else {
 		isAuth = true

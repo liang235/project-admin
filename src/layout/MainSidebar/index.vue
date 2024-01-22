@@ -46,16 +46,16 @@ const menuStore = useMenuStore()
 	position: relative;
 	z-index: 1;
 	width: var(--g-main-sidebar-width);
-	background-color: var(--g-main-sidebar-bg);
-	color: var(--g-main-sidebar-menu-color);
 	overflow-x: hidden;
 	overflow-y: auto;
 	overscroll-behavior: contain;
-	// FireFox 隐藏滚动条
-	scrollbar-width: none;
+	color: var(--g-main-sidebar-menu-color);
+	background-color: var(--g-main-sidebar-bg);
 	transition:
 		background-color 0.3s,
 		var(--el-transition-color);
+	// FireFox 隐藏滚动条
+	scrollbar-width: none;
 
 	// chrome隐藏滚动条
 	&::-webkit-scrollbar {
@@ -80,30 +80,30 @@ const menuStore = useMenuStore()
 
 			&.active {
 				.item {
-					background-color: var(--g-main-sidebar-menu-active-bg);
 					color: var(--g-main-sidebar-menu-active-color);
+					background-color: var(--g-main-sidebar-menu-active-bg);
 				}
 			}
 
 			.item {
 				display: flex;
-				width: 100%;
-				height: 60px;
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
+				width: 100%;
+				height: 60px;
 				padding: 0 5px;
-				background-color: var(--g-main-sidebar-bg);
 				color: var(--g-main-sidebar-menu-color);
 				cursor: pointer;
+				background-color: var(--g-main-sidebar-bg);
 				transition:
 					var(--el-transition-all),
 					background-color 0.3s,
 					var(--el-transition-color);
 
 				&:hover {
-					background-color: var(--g-main-sidebar-menu-hover-bg);
 					color: var(--g-main-sidebar-menu-hover-color);
+					background-color: var(--g-main-sidebar-menu-hover-bg);
 				}
 
 				.svg-icon {
@@ -135,8 +135,8 @@ const menuStore = useMenuStore()
 			}
 
 			.item {
-				border-radius: 5px;
 				margin: 0 10px;
+				border-radius: 5px;
 			}
 		}
 
@@ -148,8 +148,8 @@ const menuStore = useMenuStore()
 			}
 
 			.el-sub-menu__title .item {
-				border-radius: 5px;
 				margin: 0 10px;
+				border-radius: 5px;
 			}
 		}
 	}
@@ -163,13 +163,13 @@ const menuStore = useMenuStore()
 			right: -5px;
 			width: 0;
 			height: 0;
+			content: '';
 			border-top: 5px solid transparent;
 			border-right: 5px solid var(--g-sub-sidebar-bg);
 			border-bottom: 5px solid transparent;
-			content: '';
 			opacity: 0;
-			transform: translateY(-50%);
 			transition: all 0.3s;
+			transform: translateY(-50%);
 		}
 
 		.item-container.active::before,
@@ -188,13 +188,13 @@ const menuStore = useMenuStore()
 			left: 8px;
 			width: 4px;
 			height: 0;
-			border-radius: 2px;
-			background-color: var(--g-main-sidebar-menu-active-bg);
-			box-shadow: 0 0 0 1px var(--g-main-sidebar-bg);
 			content: '';
+			background-color: var(--g-main-sidebar-menu-active-bg);
+			border-radius: 2px;
+			box-shadow: 0 0 0 1px var(--g-main-sidebar-bg);
 			opacity: 0;
-			transform: translateY(-50%);
 			transition: all 0.3s;
+			transform: translateY(-50%);
 		}
 
 		.item-container.active::before,
@@ -213,13 +213,13 @@ const menuStore = useMenuStore()
 			left: 0;
 			width: 10px;
 			height: 10px;
-			border-radius: 50%;
-			background-color: var(--g-main-sidebar-menu-active-bg);
-			box-shadow: 0 0 0 1px var(--g-main-sidebar-bg);
 			content: '';
+			background-color: var(--g-main-sidebar-menu-active-bg);
+			border-radius: 50%;
+			box-shadow: 0 0 0 1px var(--g-main-sidebar-bg);
 			opacity: 0;
-			transform: translateY(-50%);
 			transition: all 0.3s;
+			transform: translateY(-50%);
 		}
 
 		.item-container.active::before,

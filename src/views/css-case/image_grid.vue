@@ -17,10 +17,10 @@
 <style lang="scss" scoped>
 .img-container {
 	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 	width: 300px;
 	height: 300px;
 	margin: 100px;
-	grid-template-columns: repeat(3, 1fr);
 
 	.img-item {
 		position: relative;

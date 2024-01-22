@@ -37,35 +37,35 @@ function open() {
 	top: 0;
 	left: 0;
 	display: flex;
+	flex-direction: column;
 	width: 100%;
 	height: 100%;
-	flex-direction: column;
 
 	.page-main {
 		display: flex;
-		height: 100%;
 		flex: 1;
 		flex-direction: column;
+		height: 100%;
 
 		.container {
 			display: flex;
-			height: 100%;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			height: 100%;
 			margin: 0 50px;
 
 			.title {
 				margin: 10px 0;
-				color: var(--el-text-color-primary);
 				font-size: 22px;
+				color: var(--el-text-color-primary);
 			}
 
 			.link {
 				max-width: 300px;
 				margin: 10px 0;
-				color: var(--el-text-color-disabled);
 				font-size: 14px;
+				color: var(--el-text-color-disabled);
 
 				@include text-overflow(3);
 			}

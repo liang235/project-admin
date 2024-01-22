@@ -223,9 +223,9 @@ watch(scrollTop, (val, oldVal) => {
 
 	.sidebar-container {
 		position: fixed;
-		z-index: 1010;
 		top: 0;
 		bottom: 0;
+		z-index: 1010;
 		display: flex;
 		width: calc(var(--g-main-sidebar-actual-width) + var(--g-sub-sidebar-actual-width));
 		box-shadow: -1px 0 0 0 var(--g-border-color);
@@ -238,14 +238,15 @@ watch(scrollTop, (val, oldVal) => {
 	// 模态框样式
 	.sidebar-mask {
 		position: fixed;
-		z-index: 998;
 		top: 0;
 		left: 0;
+		z-index: 998;
 		width: 100%;
 		height: 100%;
-		backdrop-filter: saturate(50%) blur(4px);
+		visibility: hidden;
 		background-image: radial-gradient(transparent 1px, rgb(0 0 0 / 30%) 1px);
 		background-size: 4px 4px;
+		backdrop-filter: saturate(50%) blur(4px);
 		opacity: 0;
 
 		// background-color: rgb(0 0 0 / 50%);
@@ -253,11 +254,10 @@ watch(scrollTop, (val, oldVal) => {
 		// transform: translateZ(0);
 
 		transition: all 0.2s;
-		visibility: hidden;
 
 		&.show {
-			opacity: 1;
 			visibility: visible;
+			opacity: 1;
 		}
 	}
 
@@ -267,8 +267,8 @@ watch(scrollTop, (val, oldVal) => {
 
 	.main-container {
 		display: flex;
-		min-height: 100%;
 		flex-direction: column;
+		min-height: 100%;
 		margin-left: calc(var(--g-main-sidebar-actual-width) + var(--g-sub-sidebar-actual-width));
 		background-color: var(--g-main-bg);
 		box-shadow:
@@ -281,8 +281,8 @@ watch(scrollTop, (val, oldVal) => {
 
 		.topbar-container {
 			position: absolute;
-			z-index: 999;
 			top: 0;
+			z-index: 999;
 			display: flex;
 			flex-direction: column;
 			transition:
@@ -319,29 +319,29 @@ watch(scrollTop, (val, oldVal) => {
 
 		.main {
 			position: relative;
-			overflow: hidden;
-			height: 100%;
 			flex: auto;
+			height: 100%;
+			overflow: hidden;
 			transition: 0.3s;
 
 			.exit-main-page-maximize {
 				position: fixed;
-				z-index: 1000;
 				top: -40px;
 				right: -40px;
+				z-index: 1000;
 				width: 80px;
 				height: 80px;
-				border-radius: 50%;
-				background-color: var(--el-overlay-color-lighter);
 				color: #eee;
 				cursor: pointer;
+				background-color: var(--el-overlay-color-lighter);
+				border-radius: 50%;
 				transition:
 					background-color 0.3s,
 					var(--el-transition-color);
 
 				&:hover {
-					background-color: var(--el-overlay-color-light);
 					color: #fff;
+					background-color: var(--el-overlay-color-light);
 				}
 
 				.svg-icon {

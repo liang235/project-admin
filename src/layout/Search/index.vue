@@ -346,14 +346,15 @@ watch(
 <style lang="scss" scoped>
 .search {
 	position: fixed;
-	z-index: 2000;
 	top: 0;
 	left: 0;
+	z-index: 2000;
 	width: 100%;
 	height: 100%;
-	backdrop-filter: saturate(50%) blur(4px);
+	visibility: hidden;
 	background-image: radial-gradient(transparent 1px, rgb(0 0 0 / 30%) 1px);
 	background-size: 4px 4px;
+	backdrop-filter: saturate(50%) blur(4px);
 	opacity: 0;
 
 	// background-color: var(--el-overlay-color-lighter);
@@ -361,11 +362,10 @@ watch(
 	// transform: translateZ(0);
 
 	transition: all 0.2s;
-	visibility: hidden;
 
 	&.searching {
-		opacity: 1;
 		visibility: visible;
+		opacity: 1;
 
 		.container {
 			filter: initial;
@@ -375,13 +375,13 @@ watch(
 
 	.container {
 		display: flex;
+		flex-direction: column;
 		max-width: 800px;
 		height: 100%;
-		flex-direction: column;
 		margin: 0 auto;
 		filter: blur(10px);
-		transform: scale(1.1);
 		transition: all 0.2s;
+		transform: scale(1.1);
 
 		.search-box {
 			margin: 50px 20px 20px;
@@ -393,9 +393,9 @@ watch(
 
 			:deep(.el-input__icon) {
 				display: flex;
-				height: 100%;
 				align-items: center;
 				justify-content: center;
+				height: 100%;
 			}
 
 			.tips {
@@ -427,17 +427,17 @@ watch(
 
 		.result {
 			position: relative;
-			overflow: auto;
-			border-radius: 5px;
 			margin: 0 20px 50px;
+			overflow: auto;
 			background-color: var(--el-bg-color);
+			border-radius: 5px;
 			box-shadow: 0 0 0 1px var(--el-border-color-darker);
 
 			.item {
 				display: flex;
 				align-items: center;
-				cursor: pointer;
 				text-decoration: none;
+				cursor: pointer;
 				transition: all 0.3s;
 
 				&.actived {
@@ -464,18 +464,18 @@ watch(
 
 				.icon {
 					flex: 0 0 66px;
-					color: var(--el-color-info);
 					font-size: 20px;
+					color: var(--el-color-info);
 					text-align: center;
 					transition: all 0.3s;
 				}
 
 				.info {
 					display: flex;
-					height: 70px;
 					flex: 1;
 					flex-direction: column;
 					justify-content: space-around;
+					height: 70px;
 					padding: 5px 10px 7px;
 					border-left: 1px solid var(--el-border-color-lighter);
 					transition: all 0.3s;
@@ -483,17 +483,17 @@ watch(
 					@include text-overflow(1, true);
 
 					.title {
-						color: var(--el-text-color-regular);
 						font-size: 18px;
 						font-weight: bold;
+						color: var(--el-text-color-regular);
 
 						@include text-overflow(1, true);
 					}
 
 					.breadcrumb,
 					.path {
-						color: var(--el-text-color-secondary);
 						font-size: 12px;
+						color: var(--el-text-color-secondary);
 						transition: all 0.3s;
 
 						@include text-overflow(1, true);

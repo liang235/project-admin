@@ -90,8 +90,8 @@ const editPassword = () => {
 		.el-tabs__active-bar {
 			z-index: 0;
 			width: 100%;
-			border-right: 2px solid var(--el-color-primary);
 			background-color: var(--el-color-primary-light-9);
+			border-right: 2px solid var(--el-color-primary);
 			transition:
 				transform 0.3s,
 				background-color 0.3s,
@@ -143,8 +143,8 @@ h2 {
 				}
 
 				.desc {
-					color: var(--el-text-color-secondary);
 					font-size: 14px;
+					color: var(--el-text-color-secondary);
 					transition: var(--el-transition-color);
 				}
 			}

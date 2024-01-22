@@ -478,8 +478,8 @@ watch(copied, (val) => {
 	align-items: center;
 	justify-content: space-between;
 	padding: 5px 10px;
-	border-radius: 5px;
 	margin: 5px 0;
+	border-radius: 5px;
 	transition: all 0.3s;
 
 	// 高亮/暗黑
@@ -487,20 +487,20 @@ watch(copied, (val) => {
 		$width: 40px;
 
 		display: flex;
+		align-items: center;
 		width: $width;
 		height: 20px;
-		align-items: center;
-		border-radius: 15px;
-		background-color: var(--el-fill-color-darker);
 		cursor: pointer;
+		background-color: var(--el-fill-color-darker);
+		border-radius: 15px;
 		transition: background-color 0.3s;
 
 		.icon {
 			padding: 3px;
-			border-radius: 50%;
 			margin-left: 2px;
-			background-color: var(--el-fill-color-lighter);
 			font-size: 16px;
+			background-color: var(--el-fill-color-lighter);
+			border-radius: 50%;
 			transition:
 				margin-left 0.3s,
 				background-color 0.3s;
@@ -523,14 +523,14 @@ watch(copied, (val) => {
 	.label {
 		display: flex;
 		align-items: center;
-		color: var(--el-text-color-regular);
 		font-size: 14px;
+		color: var(--el-text-color-regular);
 
 		.svg-icon {
 			margin-left: 4px;
+			font-size: 17px;
 			color: var(--el-color-warning);
 			cursor: help;
-			font-size: 17px;
 		}
 	}
 
@@ -559,14 +559,14 @@ watch(copied, (val) => {
 
 	.mode {
 		position: relative;
-		overflow: hidden;
 		width: 80px;
 		height: 55px;
-		border-radius: 5px;
 		margin: 10px;
-		background-color: var(--g-app-bg);
-		box-shadow: 0 0 5px 1px var(--el-border-color-lighter);
+		overflow: hidden;
 		cursor: pointer;
+		background-color: var(--g-app-bg);
+		border-radius: 5px;
+		box-shadow: 0 0 5px 1px var(--el-border-color-lighter);
 		transition: 0.2s;
 
 		&:hover {
@@ -581,16 +581,16 @@ watch(copied, (val) => {
 		&::after,
 		.mode-container {
 			position: absolute;
-			border-radius: 3px;
 			pointer-events: none;
+			border-radius: 3px;
 		}
 
 		.mode-container::before {
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			background-color: var(--g-sub-sidebar-menu-active-bg);
 			content: '';
+			background-color: var(--g-sub-sidebar-menu-active-bg);
 			opacity: 0.2;
 		}
 
@@ -600,8 +600,8 @@ watch(copied, (val) => {
 				bottom: 5px;
 				left: 5px;
 				width: 10px;
-				background-color: var(--g-sub-sidebar-menu-active-bg);
 				content: '';
+				background-color: var(--g-sub-sidebar-menu-active-bg);
 			}
 
 			&::after {
@@ -609,8 +609,8 @@ watch(copied, (val) => {
 				bottom: 5px;
 				left: 20px;
 				width: 15px;
-				background-color: var(--g-sub-sidebar-menu-active-bg);
 				content: '';
+				background-color: var(--g-sub-sidebar-menu-active-bg);
 				opacity: 0.5;
 			}
 
@@ -629,8 +629,8 @@ watch(copied, (val) => {
 				right: 5px;
 				left: 5px;
 				height: 10px;
-				background-color: var(--g-sub-sidebar-menu-active-bg);
 				content: '';
+				background-color: var(--g-sub-sidebar-menu-active-bg);
 			}
 
 			&::after {
@@ -638,8 +638,8 @@ watch(copied, (val) => {
 				bottom: 5px;
 				left: 5px;
 				width: 15px;
-				background-color: var(--g-sub-sidebar-menu-active-bg);
 				content: '';
+				background-color: var(--g-sub-sidebar-menu-active-bg);
 				opacity: 0.5;
 			}
 
@@ -659,8 +659,8 @@ watch(copied, (val) => {
 				bottom: 5px;
 				left: 5px;
 				width: 15px;
-				background-color: var(--g-sub-sidebar-menu-active-bg);
 				content: '';
+				background-color: var(--g-sub-sidebar-menu-active-bg);
 				opacity: 0.5;
 			}
 
@@ -696,14 +696,14 @@ watch(copied, (val) => {
 
 	.mode {
 		position: relative;
-		overflow: hidden;
 		width: 65px;
 		height: 50px;
-		border-radius: 4px;
-		background-color: var(--el-fill-color-darker);
-		box-shadow: 0 0 5px 1px var(--el-border-color-lighter);
+		overflow: hidden;
 		color: var(--el-text-color-primary);
 		cursor: pointer;
+		background-color: var(--el-fill-color-darker);
+		border-radius: 4px;
+		box-shadow: 0 0 5px 1px var(--el-border-color-lighter);
 		transition:
 			background-color 0.3s,
 			var(--el-transition-color),
@@ -756,8 +756,8 @@ watch(copied, (val) => {
 			width: 30px;
 			height: 100%;
 			margin-left: -15px;
-			background-color: var(--el-fill-color-darker);
 			content: '';
+			background-color: var(--el-fill-color-darker);
 			transition: background-color 0.3s;
 		}
 
@@ -786,8 +786,8 @@ watch(copied, (val) => {
 			width: 40px;
 			height: 100%;
 			margin-left: -20px;
-			background-color: var(--el-fill-color-darker);
 			content: '';
+			background-color: var(--el-fill-color-darker);
 			transition: background-color 0.3s;
 		}
 	}
@@ -801,8 +801,8 @@ watch(copied, (val) => {
 			width: 40px;
 			height: 100%;
 			margin-left: -20px;
-			background-color: var(--el-fill-color-darker);
 			content: '';
+			background-color: var(--el-fill-color-darker);
 			transition: background-color 0.3s;
 		}
 

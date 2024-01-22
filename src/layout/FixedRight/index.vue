@@ -32,14 +32,14 @@ setTimeout(() => {
 <style lang="scss" scoped>
 .fixed-right {
 	position: fixed;
-	z-index: 10;
 	top: 50%;
 	right: -58px;
+	z-index: 10;
 	display: flex;
-	width: 70px;
 	flex-direction: column;
-	transform: translateY(-50%);
+	width: 70px;
 	transition: right 0.3s;
+	transform: translateY(-50%);
 
 	&.actived,
 	&:hover {
@@ -48,14 +48,14 @@ setTimeout(() => {
 
 	.item {
 		display: flex;
-		height: 70px;
 		flex-direction: column;
 		justify-content: center;
-		border-bottom: 1px solid #fff;
+		height: 70px;
 		color: #fff;
-		cursor: pointer;
-		opacity: 0.7;
 		text-align: center;
+		cursor: pointer;
+		border-bottom: 1px solid #fff;
+		opacity: 0.7;
 		transition: 0.3s;
 
 		&:hover {

@@ -42,9 +42,9 @@ function goBack() {
 <style lang="scss" scoped>
 .notfound {
 	display: flex;
-	width: 700px;
 	align-items: center;
 	justify-content: space-between;
+	width: 700px;
 
 	@include position-center(xy);
 
@@ -55,14 +55,14 @@ function goBack() {
 	.content {
 		h1 {
 			margin: 0;
-			color: var(--el-text-color-primary);
 			font-size: 72px;
+			color: var(--el-text-color-primary);
 		}
 
 		.desc {
 			margin: 20px 0 30px;
-			color: var(--el-text-color-secondary);
 			font-size: 20px;
+			color: var(--el-text-color-secondary);
 		}
 	}
 }

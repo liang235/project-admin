@@ -7,11 +7,11 @@
 	z-index: 1;
 	display: inline-block;
 	overflow: hidden;
-	cursor: pointer;
-	-webkit-tap-highlight-color: transparent;
-	transition: all 0.3s ease-out;
-	user-select: none;
 	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.3s ease-out;
+	-webkit-tap-highlight-color: transparent;
 	will-change: opacity, transform;
 }
 
@@ -19,17 +19,22 @@
 	position: absolute;
 	width: 20px;
 	height: 20px;
-	border-radius: 50%;
 	margin-top: -10px;
 	margin-left: -10px;
-	background: rgb(0 0 0 / 20%);
-	opacity: 0;
 	pointer-events: none;
-	transform: scale(0);
+	background: rgb(0 0 0 / 20%);
+	border-radius: 50%;
+	opacity: 0;
 	transition: all 0.7s ease-out;
-	transition-property: opacity, -webkit-transform;
+	transition-property:
+		opacity,
+		-webkit-transform;
 	transition-property: transform, opacity;
-	transition-property: transform, opacity, -webkit-transform;
+	transition-property:
+		transform,
+		opacity,
+		-webkit-transform;
+	transform: scale(0);
 }
 
 .waves-effect.waves-light .waves-ripple {
@@ -63,11 +68,11 @@
 .waves-effect input[type='button'],
 .waves-effect input[type='reset'],
 .waves-effect input[type='submit'] {
-	border: 0;
-	background: none;
 	font-size: inherit;
 	font-style: normal;
 	text-transform: inherit;
+	background: none;
+	border: 0;
 }
 
 .waves-notransition {
@@ -80,24 +85,24 @@
 }
 
 .waves-input-wrapper {
-	border-radius: 0.2em;
 	vertical-align: bottom;
+	border-radius: 0.2em;
 }
 
 .waves-input-wrapper .waves-button-input {
 	position: relative;
-	z-index: 1;
 	top: 0;
 	left: 0;
+	z-index: 1;
 }
 
 .waves-circle {
 	width: 2.5em;
 	height: 2.5em;
-	border-radius: 50%;
 	line-height: 2.5em;
-	mask-image: none;
 	text-align: center;
+	border-radius: 50%;
+	mask-image: none;
 }
 
 .waves-block {

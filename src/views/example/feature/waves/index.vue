@@ -38,8 +38,8 @@ import imgSrc from '@/assets/images/E0199E25.png'
 		width: 250px;
 		height: 250px;
 		margin-right: 20px;
-		background: var(--el-color-primary);
 		color: var(--el-color-white);
+		background: var(--el-color-primary);
 		transition: all 0.3s ease;
 	}
 

@@ -46,15 +46,15 @@ defineProps({
 		margin-right: 20px;
 
 		.title {
-			color: var(--el-text-color-primary);
 			font-size: 22px;
+			color: var(--el-text-color-primary);
 			transition: var(--el-transition-color);
 		}
 
 		.content {
 			margin-top: 10px;
-			color: var(--el-text-color-secondary);
 			font-size: 14px;
+			color: var(--el-text-color-secondary);
 			transition: var(--el-transition-color);
 
 			&:empty {

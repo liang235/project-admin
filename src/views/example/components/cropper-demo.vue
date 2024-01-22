@@ -48,8 +48,8 @@ const handleCrop = (res) => {
 	.cropper-img {
 		width: 200px;
 		height: 200px;
-		border-radius: 100%;
 		margin: auto;
+		border-radius: 100%;
 	}
 }
 </style>

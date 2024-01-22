@@ -22,9 +22,9 @@
 }
 
 span {
-	animation: spread 1s ease-in-out infinite alternate;
 	color: #faebd7;
 	letter-spacing: 10px;
+	animation: spread 1s ease-in-out infinite alternate;
 }
 
 @keyframes spread {

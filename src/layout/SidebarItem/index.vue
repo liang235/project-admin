@@ -78,6 +78,7 @@ const hasChildren = computed(() => {
 :deep(.el-sub-menu__title span.title) {
 	flex: 1;
 	vertical-align: inherit;
+
 	@include text-overflow;
 }
 
@@ -92,8 +93,8 @@ const hasChildren = computed(() => {
 	.title-icon {
 		width: 18px;
 		margin-left: 2px;
-		color: unset;
 		font-size: 18px;
+		color: unset;
 		transition: transform 0.3s;
 	}
 
@@ -109,8 +110,8 @@ const hasChildren = computed(() => {
 
 a {
 	color: inherit;
-	cursor: pointer;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 .el-sub-menu__title {
@@ -132,32 +133,32 @@ a {
 
 	.el-menu-item,
 	.el-sub-menu > .el-sub-menu__title {
-		background-color: var(--g-sub-sidebar-menu-bg) !important;
 		color: var(--g-sub-sidebar-menu-color);
+		background-color: var(--g-sub-sidebar-menu-bg) !important;
 
 		&:hover {
-			background-color: var(--g-sub-sidebar-menu-hover-bg) !important;
 			color: var(--g-sub-sidebar-menu-hover-color) !important;
+			background-color: var(--g-sub-sidebar-menu-hover-bg) !important;
 		}
 	}
 }
 
 .el-menu-item,
 .el-sub-menu__title {
-	background: transparent !important;
 	color: var(--g-sub-sidebar-menu-color) !important;
+	background: transparent !important;
 
 	&:hover {
-		background-color: var(--g-sub-sidebar-menu-hover-bg) !important;
 		color: var(--g-sub-sidebar-menu-hover-color) !important;
+		background-color: var(--g-sub-sidebar-menu-hover-bg) !important;
 	}
 }
 
 .el-menu-item.is-active,
 .el-menu--collapse .el-sub-menu.is-active > .el-sub-menu__title,
 .el-sub-menu .el-menu--inline .el-menu-item.is-active {
-	background-color: var(--g-sub-sidebar-menu-active-bg) !important;
 	color: var(--g-sub-sidebar-menu-active-color) !important;
+	background-color: var(--g-sub-sidebar-menu-active-bg) !important;
 
 	.svg-icon,
 	.el-sub-menu__icon-arrow {

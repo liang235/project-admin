@@ -86,9 +86,9 @@ const calcHeight = computed(() => {
 	}
 
 	.main-container {
-		overflow: hidden;
 		flex: 1;
 		padding: 20px;
+		overflow: hidden;
 		transition: all 0.3s;
 	}
 
@@ -97,16 +97,16 @@ const calcHeight = computed(() => {
 		bottom: 0;
 		left: 0;
 		display: flex;
-		width: 100%;
 		align-items: center;
 		justify-content: center;
+		width: 100%;
 		padding: 20px 0;
-		background: linear-gradient(to bottom, transparent, var(--el-color-info));
-		color: var(--el-text-color-primary);
-		cursor: pointer;
 		font-size: 24px;
+		color: var(--el-text-color-primary);
 		text-align: center;
 		text-shadow: 0 0 1px var(--el-text-color-primary);
+		cursor: pointer;
+		background: linear-gradient(to bottom, transparent, var(--el-color-info));
 		transition:
 			background 0.3s,
 			var(--el-transition-color);

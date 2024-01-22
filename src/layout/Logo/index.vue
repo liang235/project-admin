@@ -44,15 +44,15 @@ const to = computed(() => {
 <style lang="scss" scoped>
 .title {
 	position: fixed;
-	z-index: 1000;
 	top: 0;
+	z-index: 1000;
 	display: flex;
-	overflow: hidden;
-	width: inherit;
-	height: var(--g-sidebar-logo-height);
 	align-items: center;
 	justify-content: center;
+	width: inherit;
+	height: var(--g-sidebar-logo-height);
 	padding: 0 10px;
+	overflow: hidden;
 	text-align: center;
 	text-decoration: none;
 
@@ -72,8 +72,8 @@ const to = computed(() => {
 
 	span {
 		display: block;
-		color: #fff;
 		font-weight: bold;
+		color: #fff;
 
 		@include text-overflow;
 	}

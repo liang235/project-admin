@@ -6,9 +6,9 @@
 
 	.bar {
 		position: fixed;
-		z-index: 1031;
 		top: 0;
 		left: 0;
+		z-index: 1031;
 		width: 100%;
 		height: 2px;
 		background: var(--g-nprogress-color);
@@ -29,19 +29,19 @@
 
 	.spinner {
 		position: fixed;
-		z-index: 1031;
 		top: 11px;
 		right: 14px;
+		z-index: 1031;
 		display: block;
 
 		.spinner-icon {
+			box-sizing: border-box;
 			width: 18px;
 			height: 18px;
-			box-sizing: border-box;
 			border: solid 2px transparent;
-			border-radius: 50%;
 			border-top-color: var(--g-nprogress-color);
 			border-left-color: var(--g-nprogress-color);
+			border-radius: 50%;
 			animation: nprogress-spinner 400ms linear infinite;
 		}
 	}

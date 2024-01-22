@@ -203,19 +203,19 @@ const onSuccess = (res) => {
 
 		.actions {
 			display: flex;
-			width: 100px;
-			height: 100px;
 			flex-wrap: wrap;
 			align-items: center;
 			justify-content: center;
+			width: 100px;
+			height: 100px;
 
 			@include position-center(xy);
 
 			span {
 				width: 50%;
 				color: var(--el-color-white);
-				cursor: pointer;
 				text-align: center;
+				cursor: pointer;
 				transition:
 					color 0.1s,
 					transform 0.1s;
@@ -252,12 +252,12 @@ const onSuccess = (res) => {
 
 		.image-slot {
 			display: flex;
-			width: 100%;
-			height: 100%;
 			align-items: center;
 			justify-content: center;
-			background-color: transparent;
+			width: 100%;
+			height: 100%;
 			color: var(--el-text-color-placeholder);
+			background-color: transparent;
 
 			i {
 				font-size: 30px;
@@ -274,8 +274,8 @@ const onSuccess = (res) => {
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background-color: var(--el-overlay-color-lighter);
 				content: '';
+				background-color: var(--el-overlay-color-lighter);
 			}
 
 			.el-progress {

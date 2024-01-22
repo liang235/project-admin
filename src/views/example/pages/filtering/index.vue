@@ -148,19 +148,19 @@ onMounted(() => {
 	.filtering-title {
 		position: relative;
 		display: flex;
-		width: 60px;
 		align-items: center;
 		justify-content: space-between;
+		width: 60px;
 		margin: 15px 0;
-		color: var(--el-text-color-secondary);
 		font-weight: 700;
+		color: var(--el-text-color-secondary);
 	}
 
 	.filtering-item {
 		position: relative;
-		overflow: hidden;
 		flex: 1;
 		padding-left: 15px;
+		overflow: hidden;
 
 		.el-tag {
 			margin-top: 15px;

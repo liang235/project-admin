@@ -23,7 +23,7 @@
 	transform: translate(-50%) translate(calc(var(--g-main-sidebar-actual-width) / 2)) translate(calc(var(--g-sub-sidebar-actual-width) / 2));
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (width <= 1400px) {
 	[data-app-width-mode='center'] [data-fixed-calc-width],
 	[data-app-width-mode='center-max-width'] [data-fixed-calc-width] {
 		width: calc(100% - var(--g-main-sidebar-actual-width) - var(--g-sub-sidebar-actual-width));

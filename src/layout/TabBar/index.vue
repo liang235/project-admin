@@ -90,11 +90,11 @@ const tabbarStore = useTabbarStore()
 				min-width: var(--g-tabbar-tab-min-width);
 				max-width: var(--g-tabbar-tab-max-width);
 				height: var(--g-tabbar-height);
-				cursor: pointer;
 				font-size: 14px;
 				line-height: calc(var(--g-tabbar-height) - 2px);
-				pointer-events: none;
 				vertical-align: bottom;
+				pointer-events: none;
+				cursor: pointer;
 
 				* {
 					user-select: none;
@@ -120,10 +120,10 @@ const tabbarStore = useTabbarStore()
 
 				.tab-dividers {
 					position: absolute;
-					z-index: 0;
 					top: 50%;
 					right: 0;
 					left: 0;
+					z-index: 0;
 					height: 14px;
 					margin-top: -7px;
 
@@ -134,8 +134,8 @@ const tabbarStore = useTabbarStore()
 						left: 1px;
 						display: block;
 						width: 1px;
-						background-color: var(--g-tabbar-dividers-bg);
 						content: '';
+						background-color: var(--g-tabbar-dividers-bg);
 						opacity: 1;
 						transition:
 							opacity 0.2s ease,
@@ -149,9 +149,9 @@ const tabbarStore = useTabbarStore()
 
 				.tab-background {
 					position: absolute;
-					z-index: 0;
 					top: 0;
 					left: 0;
+					z-index: 0;
 					width: 100%;
 					height: 100%;
 					pointer-events: none;
@@ -165,18 +165,18 @@ const tabbarStore = useTabbarStore()
 
 					.title {
 						display: flex;
-						overflow: hidden;
-						height: 100%;
 						flex: 1;
 						align-items: center;
+						height: 100%;
 						padding: 0 10px;
 						margin-right: 10px;
+						overflow: hidden;
 						color: var(--g-tabbar-tab-color);
+						white-space: nowrap;
 						mask-image: linear-gradient(to right, #000 calc(100% - 20px), transparent);
 						transition:
 							margin-right 0.3s,
 							var(--el-transition-color);
-						white-space: nowrap;
 
 						&:has(+ .action-icon) {
 							margin-right: 28px;
@@ -189,15 +189,15 @@ const tabbarStore = useTabbarStore()
 
 					.action-icon {
 						position: absolute;
-						z-index: 10;
 						top: 50%;
 						right: 6px;
+						z-index: 10;
 						width: 1.5em;
 						height: 1.5em;
-						border-radius: 50%;
 						margin-top: -9px;
-						color: var(--g-tabbar-tab-color);
 						font-size: 10px;
+						color: var(--g-tabbar-tab-color);
+						border-radius: 50%;
 						transition: var(--el-transition-color);
 
 						&:hover {
@@ -207,11 +207,11 @@ const tabbarStore = useTabbarStore()
 
 					.drag-handle {
 						position: absolute;
-						z-index: 9;
 						top: 0;
 						right: 0;
 						bottom: 0;
 						left: 0;
+						z-index: 9;
 					}
 				}
 			}
@@ -255,8 +255,8 @@ const tabbarStore = useTabbarStore()
 				}
 
 				.tab-background {
-					border-radius: 10px 10px 0 0;
 					background-color: var(--g-tabbar-tab-hover-bg);
+					border-radius: 10px 10px 0 0;
 					transition:
 						opacity 0.3s,
 						background-color 0.3s;
@@ -267,9 +267,9 @@ const tabbarStore = useTabbarStore()
 						bottom: 0;
 						width: 20px;
 						height: 20px;
+						content: '';
 						border-radius: 100%;
 						box-shadow: 0 0 0 20px transparent;
-						content: '';
 						transition: box-shadow 0.3s;
 					}
 

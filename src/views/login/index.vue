@@ -146,19 +146,19 @@ onMounted(() => {
 		top: 50%;
 		left: 50%;
 		display: flex;
-		overflow: hidden;
-		height: 500px;
 		justify-content: space-between;
-		border-radius: 10px;
+		height: 500px;
+		overflow: hidden;
 		background-color: var(--el-bg-color);
+		border-radius: 10px;
 		box-shadow: var(--el-box-shadow);
 		transform: translateX(-50%) translateY(-50%);
 
 		// 左侧图片
 		.login-banner {
 			position: relative;
-			overflow: hidden;
 			width: 450px;
+			overflow: hidden;
 			background-color: var(--el-fill-color-light);
 
 			.banner {
@@ -170,18 +170,18 @@ onMounted(() => {
 		// form 表单部分
 		.login-form {
 			display: flex;
-			overflow: hidden;
-			width: 500px;
-			height: 500px;
 			flex-direction: column;
 			justify-content: center;
+			width: 500px;
+			height: 500px;
 			padding: 50px;
+			overflow: hidden;
 
 			.title {
 				margin: 0 auto 30px;
-				color: var(--el-text-color-primary);
 				font-size: 1.3em;
 				font-weight: bold;
+				color: var(--el-text-color-primary);
 			}
 
 			.flex-bar {

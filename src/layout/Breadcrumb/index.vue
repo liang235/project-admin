@@ -80,29 +80,29 @@ const pathCompile = (path) => {
 
 		&:first-child:not(:last-child) .el-breadcrumb__inner {
 			padding-left: 12px;
-			border-radius: 6px 0 0 6px;
 			clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%);
+			border-radius: 6px 0 0 6px;
 		}
 
 		&:last-child:not(:first-child) .el-breadcrumb__inner {
 			padding-right: 12px;
-			border-radius: 0 6px 6px 0;
-			background-color: var(--el-fill-color-darker);
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 8px 50%);
+			background-color: var(--el-fill-color-darker);
+			border-radius: 0 6px 6px 0;
 		}
 
 		&:first-child:is(:last-child) .el-breadcrumb__inner {
 			padding-left: 12px;
-			border-radius: 6px 0 0 6px;
-			background-color: var(--el-fill-color-darker);
 			clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%);
+			background-color: var(--el-fill-color-darker);
+			border-radius: 6px 0 0 6px;
 		}
 
 		.el-breadcrumb__inner {
 			display: inline-block;
 			padding: 8px 16px;
-			background-color: var(--el-fill-color);
 			clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%, 8px 50%);
+			background-color: var(--el-fill-color);
 			transition:
 				background-color 0.3s,
 				var(--el-transition-color);

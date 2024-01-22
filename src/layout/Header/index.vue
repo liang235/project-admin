@@ -63,39 +63,39 @@ const handlerMouserScroll = (event) => {
 <style lang="scss" scoped>
 header {
 	position: fixed;
-	z-index: 1000;
 	top: 0;
 	right: 0;
 	left: 0;
+	z-index: 1000;
 	display: flex;
+	align-items: center;
 	width: 100%;
 	height: var(--g-header-height);
-	align-items: center;
 	padding: 0 20px;
 	margin: 0 auto;
+	color: var(--g-header-color);
 	background-color: var(--g-header-bg);
 	box-shadow:
 		-1px 0 0 0 var(--g-border-color),
 		1px 0 0 0 var(--g-border-color);
-	color: var(--g-header-color);
 	transition:
 		var(--el-transition-all),
 		background-color 0.3s;
 
 	.header-container {
 		display: flex;
-		width: var(--g-header-width);
-		height: 100%;
 		align-items: center;
 		justify-content: space-between;
+		width: var(--g-header-width);
+		height: 100%;
 		margin: 0 auto;
 
 		.main {
 			display: flex;
-			height: 100%;
 			flex: 1;
 			flex-wrap: wrap;
 			align-items: center;
+			height: 100%;
 		}
 	}
 
@@ -109,13 +109,13 @@ header {
 	// 导航栏填充风格 - 默认
 	.nav {
 		display: flex;
+		flex: 1;
 		width: 0;
 		height: 100%;
-		flex: 1;
 		padding: 0 20px;
 		margin: 0 30px;
-		mask-image: linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent);
 		overflow-x: auto;
+		mask-image: linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent);
 		// firefox隐藏滚动条
 		scrollbar-width: none;
 
@@ -132,29 +132,29 @@ header {
 
 			&.active {
 				.item {
-					background-color: var(--g-header-menu-active-bg);
 					color: var(--g-header-menu-active-color);
+					background-color: var(--g-header-menu-active-bg);
 				}
 			}
 
 			.item {
 				display: flex;
-				width: 80px;
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
+				width: 80px;
 				padding: 0 5px;
-				background-color: var(--g-header-bg);
 				color: var(--g-header-menu-color);
 				cursor: pointer;
+				background-color: var(--g-header-bg);
 				transition:
 					var(--el-transition-all),
 					background-color 0.3s,
 					var(--el-transition-color);
 
 				&:hover {
-					background-color: var(--g-header-menu-hover-bg);
 					color: var(--g-header-menu-hover-color);
+					background-color: var(--g-header-menu-hover-bg);
 				}
 
 				.svg-icon {
@@ -183,8 +183,8 @@ header {
 			}
 
 			.item {
-				border-radius: 5px;
 				margin: 10px 0;
+				border-radius: 5px;
 			}
 		}
 
@@ -197,8 +197,8 @@ header {
 
 			.el-sub-menu__title .item {
 				height: calc(100% - 20px);
-				border-radius: 5px;
 				margin: 10px 0;
+				border-radius: 5px;
 			}
 		}
 	}
@@ -212,13 +212,13 @@ header {
 			left: 50%;
 			width: 0;
 			height: 0;
+			content: '';
 			border-right: 5px solid transparent;
 			border-bottom: 5px solid var(--g-sub-sidebar-bg);
 			border-left: 5px solid transparent;
-			content: '';
 			opacity: 0;
-			transform: translate(-50%);
 			transition: all 0.3s;
+			transform: translate(-50%);
 		}
 
 		.item-container.active::before,
@@ -237,13 +237,13 @@ header {
 			left: 50%;
 			width: 0;
 			height: 4px;
-			border-radius: 2px;
-			background-color: var(--g-header-menu-active-bg);
-			box-shadow: 0 0 0 1px var(--g-header-bg);
 			content: '';
+			background-color: var(--g-header-menu-active-bg);
+			border-radius: 2px;
+			box-shadow: 0 0 0 1px var(--g-header-bg);
 			opacity: 0;
-			transform: translate(-50%);
 			transition: all 0.3s;
+			transform: translate(-50%);
 		}
 
 		.item-container.active::before,
@@ -262,13 +262,13 @@ header {
 			left: 50%;
 			width: 10px;
 			height: 10px;
-			border-radius: 50%;
-			background-color: var(--g-header-menu-active-bg);
-			box-shadow: 0 0 0 1px var(--g-main-sidebar-bg);
 			content: '';
+			background-color: var(--g-header-menu-active-bg);
+			border-radius: 50%;
+			box-shadow: 0 0 0 1px var(--g-main-sidebar-bg);
 			opacity: 0;
-			transform: translate(-50%);
 			transition: all 0.3s;
+			transform: translate(-50%);
 		}
 
 		.item-container.active::before,
@@ -292,8 +292,8 @@ header {
 		}
 
 		span {
-			color: var(--g-header-color);
 			font-size: 24px;
+			color: var(--g-header-color);
 			letter-spacing: 1px;
 		}
 	}
@@ -307,8 +307,8 @@ header {
 		}
 
 		.user-container {
-			color: var(--g-header-color);
 			font-size: 16px;
+			color: var(--g-header-color);
 		}
 	}
 }

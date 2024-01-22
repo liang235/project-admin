@@ -102,8 +102,8 @@ onBeforeUnmount(() => {
 		z-index: 1 !important;
 		border: 1px solid var(--el-border-color-light, #ebeef5) !important;
 		border-top: none !important;
-		border-bottom-left-radius: 3px;
 		border-bottom-right-radius: 3px;
+		border-bottom-left-radius: 3px;
 	}
 }
 </style>

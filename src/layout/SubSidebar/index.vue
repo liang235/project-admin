@@ -62,18 +62,18 @@ function onSidebarScroll(e) {
 	bottom: 0;
 	left: 0;
 	width: var(--g-sub-sidebar-width);
-	background-color: var(--g-sub-sidebar-bg);
-	box-shadow: 10px 0 10px -10px var(--g-box-shadow-color);
 	overflow-x: hidden;
 	overflow-y: auto;
 	overscroll-behavior: contain;
-	// firefox 隐藏滚动条
-	scrollbar-width: none;
+	background-color: var(--g-sub-sidebar-bg);
+	box-shadow: 10px 0 10px -10px var(--g-box-shadow-color);
 	transition:
 		background-color 0.3s,
 		var(--el-transition-box-shadow),
 		left 0.3s,
 		width 0.3s;
+	// firefox 隐藏滚动条
+	scrollbar-width: none;
 
 	// chrome隐藏滚动条
 	&::-webkit-scrollbar {
@@ -121,8 +121,8 @@ function onSidebarScroll(e) {
 	.el-menu {
 		width: 100%;
 		padding-top: var(--g-sidebar-logo-height);
-		border-right: 0;
 		background-color: var(--g-sub-sidebar-bg);
+		border-right: 0;
 		transition:
 			background-color 0.3s,
 			var(--el-transition-color),

@@ -157,9 +157,9 @@ const reset = () => {
 
 		// 高度要对应 aspectRatio 的宽高比
 		.preview {
-			overflow: hidden;
 			width: 100%;
 			height: calc(300px * (16 / 16));
+			overflow: hidden;
 		}
 	}
 

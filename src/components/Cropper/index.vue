@@ -195,15 +195,15 @@ defineExpose({
 	display: flex;
 
 	.cropperRef {
-		height: 350px;
 		flex: 1;
+		height: 350px;
 	}
 
 	.preview-wrap {
 		display: flex;
-		width: 250px;
 		flex-direction: column;
 		justify-content: space-between;
+		width: 250px;
 		padding-left: 20px;
 
 		.preview-title {
@@ -214,11 +214,11 @@ defineExpose({
 
 		.preview-item {
 			.preview {
-				overflow: hidden;
 				width: 150px;
 				height: 150px;
-				border-radius: var(--el-border-radius-circle);
 				margin: auto;
+				overflow: hidden;
+				border-radius: var(--el-border-radius-circle);
 
 				&.preview-size {
 					width: 100px;
@@ -228,9 +228,9 @@ defineExpose({
 
 			.preview-label {
 				height: 30px;
-				color: var(--el-text-color-primary);
 				font-size: 14px;
 				line-height: 30px;
+				color: var(--el-text-color-primary);
 				text-align: center;
 			}
 		}

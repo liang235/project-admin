@@ -34,8 +34,8 @@ footer {
 	align-items: center;
 	justify-content: center;
 	margin: 40px 0;
-	color: var(--el-text-color-secondary);
 	font-size: 14px;
+	color: var(--el-text-color-secondary);
 
 	span,
 	a {

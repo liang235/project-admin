@@ -50,8 +50,8 @@ defineProps({
 .mini-card {
 	position: relative;
 	color: #fff;
-	cursor: pointer;
 	text-shadow: 0 0 2px #000;
+	cursor: pointer;
 
 	&:hover .svg-icon {
 		top: 0;
@@ -61,8 +61,8 @@ defineProps({
 	:deep(.el-card__header) {
 		position: relative;
 		z-index: 1;
-		border-bottom: 0;
 		font-size: 18px;
+		border-bottom: 0;
 	}
 
 	.el-card__body {
@@ -76,8 +76,8 @@ defineProps({
 
 		.tip {
 			margin-top: 10px;
-			color: #eee;
 			font-size: 14px;
+			color: #eee;
 		}
 	}
 

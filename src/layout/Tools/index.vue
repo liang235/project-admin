@@ -138,12 +138,12 @@ const userCommand = (command) => {
 
 		.item {
 			display: inline-flex;
-			width: 34px;
-			height: 24px;
 			align-items: center;
 			justify-content: center;
-			cursor: pointer;
+			width: 34px;
+			height: 24px;
 			vertical-align: middle;
+			cursor: pointer;
 
 			.svg-icon {
 				color: var(--el-text-color-primary);
@@ -160,8 +160,8 @@ const userCommand = (command) => {
 		.item-pro {
 			width: auto;
 			padding: 0 10px;
-			animation: pro-text 3s ease-out infinite;
 			transform-origin: right center;
+			animation: pro-text 3s ease-out infinite;
 
 			@keyframes pro-text {
 				0%,
@@ -185,11 +185,11 @@ const userCommand = (command) => {
 
 			.title {
 				padding-left: 5px;
-				/* stylelint-disable-next-line property-no-vendor-prefix */
-				-webkit-background-clip: text;
-				background-image: linear-gradient(to right, #ffa237, #fc455d);
 				font-size: 14px;
 				font-weight: bold;
+				background-image: linear-gradient(to right, #ffa237, #fc455d);
+				/* stylelint-disable-next-line property-no-vendor-prefix */
+				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 			}
 		}
@@ -205,8 +205,8 @@ const userCommand = (command) => {
 :deep(.user-container) {
 	display: inline-block;
 	height: 24px;
-	cursor: pointer;
 	line-height: 24px;
+	cursor: pointer;
 
 	.user-wrapper {
 		.el-avatar {

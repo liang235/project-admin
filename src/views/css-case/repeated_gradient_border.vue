@@ -14,14 +14,14 @@
 .card {
 	width: 300px;
 	padding: 5px;
-	border-radius: 10px;
 	margin: 50px auto;
-	/* stylelint-disable-next-line scss/operator-no-unspaced */
-	background: repeating-linear-gradient(-45deg, #e8544d 0 10px, #fff 10px 20px, #75adf8 20px 30px, #fff 30px 40px) -20px -20px/200% 200%;
-	color: #333;
 	font-family: 'Courier New', Courier, monospace;
 	font-style: italic;
 	line-height: 1.8;
+	color: #333;
+	/* stylelint-disable-next-line scss/operator-no-unspaced */
+	background: repeating-linear-gradient(-45deg, #e8544d 0 10px, #fff 10px 20px, #75adf8 20px 30px, #fff 30px 40px) -20px -20px/200% 200%;
+	border-radius: 10px;
 	transition: 0.5s;
 
 	&:hover {
@@ -31,7 +31,7 @@
 
 .container {
 	padding: 10px;
-	background-color: #fff;
 	text-align: center;
+	background-color: #fff;
 }
 </style>

@@ -34,9 +34,9 @@ const settingsStore = useSettingsStore()
 <style lang="scss" scoped>
 .toolbar-container {
 	display: flex;
-	height: var(--g-toolbar-height);
 	align-items: center;
 	justify-content: space-between;
+	height: var(--g-toolbar-height);
 	background-color: var(--g-toolbar-bg);
 	box-shadow: 0 0 1px 0 var(--el-border-color);
 	transition:
@@ -48,15 +48,15 @@ const settingsStore = useSettingsStore()
 
 	.left-box {
 		display: flex;
-		overflow: hidden;
 		align-items: center;
 		padding-right: 50px;
+		overflow: hidden;
 		mask-image: linear-gradient(90deg, #000 0%, #000 calc(100% - 50px), transparent);
 
 		.sidebar-collapse {
 			display: flex;
-			height: 50px;
 			align-items: center;
+			height: 50px;
 			padding: 0 20px;
 			cursor: pointer;
 
