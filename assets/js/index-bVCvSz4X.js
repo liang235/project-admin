@@ -1,0 +1,1 @@
+import{_ as o}from"./index-1Ua9kxnu.js";import{_ as t}from"./_plugin-vue_export-helper-x3n3nnut.js";import{m as n,M as _,O as r,S as c}from"./vue-h9sDKyYF.js";import"./index-Z3UP6e3S.js";const a={};function s(m,p){const e=o;return n(),_(e,null,{default:r(()=>[c(" 部门管理 ")]),_:1})}const d=t(a,[["render",s]]);export{d as default};

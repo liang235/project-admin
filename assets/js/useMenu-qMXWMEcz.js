@@ -1,0 +1,1 @@
+import{u,a as o,e as r}from"./index-A34AqnW-.js";function a(){const t=u(),e=o();function s(n){e.setActived(n),t.menu.switchMainMenuAndPageJump&&r.push(e.sidebarMenusFirstDeepestPath)}return{switchTo:s}}export{a as u};

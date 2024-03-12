@@ -1,0 +1,1 @@
+import{aF as o,d as t,m as a,p as n,l as s}from"./vue-h9sDKyYF.js";const r=s({name:"Reload"}),d=Object.assign(r,{setup(c){const e=o();return t(()=>{e.go(-1)}),(_,u)=>(a(),n("div"))}});export{d as default};

@@ -1,0 +1,1 @@
+import{_ as o}from"./_plugin-vue_export-helper-x3n3nnut.js";import{ag as r,m as c,M as t}from"./vue-h9sDKyYF.js";const n={};function a(s,_){const e=r("el-card");return c(),t(e,{header:"测试页面"})}const p=o(n,[["render",a]]);export{p as default};
