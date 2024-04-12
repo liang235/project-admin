@@ -4,7 +4,7 @@
 			<el-button type="primary">上传</el-button>
 		</el-upload>
 		<ul class="el-upload-list el-upload-list--text">
-			<li class="el-upload-list__item is-success" v-for="item in fileList" :key="item.name">
+			<li v-for="item in fileList" :key="item.name" class="el-upload-list__item is-success">
 				<div class="el-upload-list__item-info">
 					<a class="el-upload-list__item-name">
 						<svg-icon name="ele-document" />

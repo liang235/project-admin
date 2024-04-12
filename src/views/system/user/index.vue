@@ -2,7 +2,7 @@
  * @Description: 用户管理
 -->
 <template>
-	<page-main title="用户管理" v-loading="loading">
+	<page-main v-loading="loading" title="用户管理">
 		<search-bar>
 			<el-row :gutter="20">
 				<el-col :span="6">
@@ -40,8 +40,8 @@
 
 			<el-table-column prop="status" label="用户状态" align="center">
 				<template #default="scope">
-					<el-tag type="success" v-if="scope.row.status">启用</el-tag>
-					<el-tag type="info" v-else>禁用</el-tag>
+					<el-tag v-if="scope.row.status" type="success">启用</el-tag>
+					<el-tag v-else type="info">禁用</el-tag>
 				</template>
 			</el-table-column>
 

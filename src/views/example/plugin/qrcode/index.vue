@@ -18,7 +18,7 @@
 		<el-row :gutter="20" style="margin: 0 10px">
 			<el-col :xs="24" :lg="8">
 				<page-main title="渲染成 img 标签">
-					<img src="" id="image1" />
+					<img id="image1" src="" />
 				</page-main>
 			</el-col>
 			<el-col :xs="24" :lg="8">
@@ -28,7 +28,7 @@
 			</el-col>
 			<el-col :xs="24" :lg="8">
 				<page-main title="自定义颜色">
-					<img src="" id="image2" />
+					<img id="image2" src="" />
 				</page-main>
 			</el-col>
 		</el-row>

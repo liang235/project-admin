@@ -11,11 +11,11 @@
 					v-model="searchInput"
 					placeholder="搜索页面，支持标题、URL模糊查询"
 					:clearable="true"
+					prefix-icon="ele-search"
 					@keydown.esc="bus.emit('global-search-toggle')"
 					@keydown.up.prevent="keyUp"
 					@keydown.down.prevent="keyDown"
 					@keydown.enter.prevent="keyEnter"
-					prefix-icon="ele-search"
 				/>
 
 				<!-- 快捷键提示 -->

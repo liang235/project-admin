@@ -7,15 +7,15 @@
 
 		<page-main title="指令效果（v-waves）">
 			<el-button v-waves>默认效果</el-button>
-			<el-button type="primary" v-waves="'light'">light 效果</el-button>
-			<el-button type="success" v-waves="'red'">red 效果</el-button>
-			<el-button type="info" v-waves="'orange'">orange 效果</el-button>
-			<el-button type="warning" v-waves="'purple'">purple 效果</el-button>
-			<el-button type="danger" v-waves="'green'">green 效果</el-button>
-			<el-button type="primary" v-waves="'teal'">teal 效果</el-button>
+			<el-button v-waves="'light'" type="primary">light 效果</el-button>
+			<el-button v-waves="'red'" type="success">red 效果</el-button>
+			<el-button v-waves="'orange'" type="info">orange 效果</el-button>
+			<el-button v-waves="'purple'" type="warning">purple 效果</el-button>
+			<el-button v-waves="'green'" type="danger">green 效果</el-button>
+			<el-button v-waves="'teal'" type="primary">teal 效果</el-button>
 
 			<div class="main">
-				<div class="div flex-center" v-waves>作用于 div</div>
+				<div v-waves class="div flex-center">作用于 div</div>
 
 				<i v-waves>
 					<img :src="imgSrc" />

@@ -96,7 +96,7 @@
 		</div>
 
 		<el-divider v-if="settingsStore.mode === 'pc'">导航栏模式</el-divider>
-		<div class="menu-mode" v-if="settingsStore.mode === 'pc'">
+		<div v-if="settingsStore.mode === 'pc'" class="menu-mode">
 			<el-tooltip content="侧边栏模式（含主导航）" placement="top" :show-after="500">
 				<div class="mode mode-side" :class="{ active: settingsStore.menu.menuMode === 'side' }" @click="settingsStore.menu.menuMode = 'side'">
 					<div class="mode-container" />
@@ -403,7 +403,7 @@
 		</div>
 
 		<template v-if="isSupported" #footer>
-			<el-button type="primary" @click="handleCopy" class="w-full">
+			<el-button type="primary" class="w-full" @click="handleCopy">
 				<template #icon>
 					<svg-icon name="ele-document-copy" />
 				</template>

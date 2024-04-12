@@ -3,7 +3,7 @@
 -->
 <template>
 	<el-row class="svg-container">
-		<el-col :xs="24" :sm="8" :md="6" :lg="3" :xl="2" v-for="(icon, index) in icons" :key="index">
+		<el-col v-for="(icon, index) in icons" :key="index" :xs="24" :sm="8" :md="6" :lg="3" :xl="2">
 			<div class="icon-item" @click="handleCopy(icon)">
 				<svg-icon :name="icon" />
 				<span class="icon-name">{{ icon }}</span>

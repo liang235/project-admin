@@ -12,7 +12,7 @@
 
 			<div v-else>
 				<h3>切换帐号 - 注意左侧菜单列表显示效果</h3>
-				<el-radio-group v-model="userStore.account" @change="accountChange" class="my-10">
+				<el-radio-group v-model="userStore.account" class="my-10" @change="accountChange">
 					<el-radio-button label="admin"></el-radio-button>
 					<el-radio-button label="test"></el-radio-button>
 				</el-radio-group>
@@ -145,28 +145,28 @@
 		>
 			<div class="my-10">单个权限验证 v-auth="xxx"</div>
 			<div class="flex">
-				<el-button type="primary" v-auth="'btn.add'">
+				<el-button v-auth="'btn.add'" type="primary">
 					<template #icon>
 						<svg-icon name="ele-document-add" />
 					</template>
 					新增
 				</el-button>
 
-				<el-button type="success" v-auth="'btn.edit'">
+				<el-button v-auth="'btn.edit'" type="success">
 					<template #icon>
 						<svg-icon name="ele-edit" />
 					</template>
 					编辑
 				</el-button>
 
-				<el-button type="danger" v-auth="'btn.delete'">
+				<el-button v-auth="'btn.delete'" type="danger">
 					<template #icon>
 						<svg-icon name="ele-delete" />
 					</template>
 					删除
 				</el-button>
 
-				<el-button type="info" v-auth="'btn.link'">
+				<el-button v-auth="'btn.link'" type="info">
 					<template #icon>
 						<svg-icon name="ele-link" />
 					</template>
@@ -176,28 +176,28 @@
 
 			<div class="my-10">多个权限验证，满足一个则显示 v-auth="[xxx, xxx]"</div>
 			<div class="flex">
-				<el-button type="primary" v-auth="['btn.add', 'btn.edit', 'btn.delete', 'btn.link']">
+				<el-button v-auth="['btn.add', 'btn.edit', 'btn.delete', 'btn.link']" type="primary">
 					<template #icon>
 						<svg-icon name="ele-document-add" />
 					</template>
 					新增
 				</el-button>
 
-				<el-button type="success" v-auth="['btn.add', 'btn.edit', 'btn.delete', 'btn.link']">
+				<el-button v-auth="['btn.add', 'btn.edit', 'btn.delete', 'btn.link']" type="success">
 					<template #icon>
 						<svg-icon name="ele-edit" />
 					</template>
 					编辑
 				</el-button>
 
-				<el-button type="danger" v-auth="['btn.delete', 'btn.link']">
+				<el-button v-auth="['btn.delete', 'btn.link']" type="danger">
 					<template #icon>
 						<svg-icon name="ele-delete" />
 					</template>
 					删除
 				</el-button>
 
-				<el-button type="info" v-auth="['btn.delete', 'btn.link']">
+				<el-button v-auth="['btn.delete', 'btn.link']" type="info">
 					<template #icon>
 						<svg-icon name="ele-link" />
 					</template>
@@ -207,28 +207,28 @@
 
 			<div class="my-10">多个权限验证，全部满足则显示 v-auth-all="[xxx, xxx]"</div>
 			<div class="flex">
-				<el-button type="primary" v-auth-all="['btn.add', 'btn.edit', 'btn.delete', 'btn.link']">
+				<el-button v-auth-all="['btn.add', 'btn.edit', 'btn.delete', 'btn.link']" type="primary">
 					<template #icon>
 						<svg-icon name="ele-document-add" />
 					</template>
 					新增
 				</el-button>
 
-				<el-button type="success" v-auth-all="['btn.add', 'btn.edit', 'btn.delete', 'btn.link']">
+				<el-button v-auth-all="['btn.add', 'btn.edit', 'btn.delete', 'btn.link']" type="success">
 					<template #icon>
 						<svg-icon name="ele-edit" />
 					</template>
 					编辑
 				</el-button>
 
-				<el-button type="danger" v-auth-all="['btn.delete', 'btn.link']">
+				<el-button v-auth-all="['btn.delete', 'btn.link']" type="danger">
 					<template #icon>
 						<svg-icon name="ele-delete" />
 					</template>
 					删除
 				</el-button>
 
-				<el-button type="info" v-auth-all="['btn.delete', 'btn.link']">
+				<el-button v-auth-all="['btn.delete', 'btn.link']" type="info">
 					<template #icon>
 						<svg-icon name="ele-link" />
 					</template>

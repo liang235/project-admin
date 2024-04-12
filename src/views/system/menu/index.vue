@@ -2,7 +2,7 @@
  * @Description: 菜单管理
 -->
 <template>
-	<page-main title="菜单管理" v-loading="loading">
+	<page-main v-loading="loading" title="菜单管理">
 		<template v-if="settingsStore.app.routeBaseOn === 'backend'">
 			<search-bar>
 				<el-row :gutter="20">

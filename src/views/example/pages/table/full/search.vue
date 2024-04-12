@@ -2,10 +2,10 @@
  * @Description: 查询部分
 -->
 <template>
-	<div class="table-search-container" v-if="search.length > 0">
+	<div v-if="search.length > 0" class="table-search-container">
 		<el-form ref="formRef" :model="form" label-width="100px">
 			<el-row :gutter="20">
-				<el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="4" v-for="(val, key) in search" :key="key" v-show="key === 0 || isToggle">
+				<el-col v-for="(val, key) in search" v-show="key === 0 || isToggle" :key="key" :xs="24" :sm="12" :md="8" :lg="6" :xl="4">
 					<template v-if="val.type !== ''">
 						<el-form-item
 							:label="val.label"
@@ -13,16 +13,16 @@
 							:rules="[{ required: val.required, message: `${val.label}不能为空`, trigger: val.type === 'input' ? 'blur' : 'change' }]"
 						>
 							<el-input
+								v-if="val.type === 'input'"
 								v-model="form[val.prop]"
 								:placeholder="val.placeholder"
 								:clearable="true"
-								v-if="val.type === 'input'"
 								style="width: 100%"
 							/>
 
-							<el-date-picker v-model="form[val.prop]" type="date" :placeholder="val.placeholder" v-else-if="val.type === 'date'" />
+							<el-date-picker v-else-if="val.type === 'date'" v-model="form[val.prop]" type="date" :placeholder="val.placeholder" />
 
-							<el-select v-model="form[val.prop]" :placeholder="val.placeholder" v-else-if="val.type === 'select'">
+							<el-select v-else-if="val.type === 'select'" v-model="form[val.prop]" :placeholder="val.placeholder">
 								<el-option v-for="item in val.options" :key="item.value" :label="item.label" :value="item.value" />
 							</el-select>
 						</el-form-item>
@@ -31,7 +31,7 @@
 
 				<el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="4">
 					<el-form-item :label-width="!isToggle ? '65px' : '100px'">
-						<template #label v-if="search.length > 1">
+						<template v-if="search.length > 1" #label>
 							<div class="toggle" @click="isToggle = !isToggle">
 								<span>{{ isToggle ? '收筛选' : '展筛选' }}</span>
 								<SvgIcon :name="isToggle ? 'ele-arrow-up' : 'ele-arrow-down'" />

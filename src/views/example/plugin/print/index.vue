@@ -29,7 +29,7 @@
 		<page-main title="打印图片">
 			<el-button icon="ele-printer" type="primary" class="mb-2.5" @click="onPrintImg">打印</el-button>
 			<br />
-			<img class="w-60 mr-5 inline-block" :src="item" v-for="item in images" :key="item" />
+			<img v-for="item in images" :key="item" class="w-60 mr-5 inline-block" :src="item" />
 		</page-main>
 	</div>
 </template>

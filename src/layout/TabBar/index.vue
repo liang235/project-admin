@@ -1,8 +1,8 @@
 <template>
-	<div class="tabbar-container" v-if="settingsStore.tabbar.enable">
+	<div v-if="settingsStore.tabbar.enable" class="tabbar-container">
 		<div class="tabs" :class="{ [`tabs-${settingsStore.tabbar.mode}`]: true }">
 			<div class="tab-container">
-				<div class="tab actived" v-for="(item, index) in tabbarStore.tabbar" :key="index">
+				<div v-for="(item, index) in tabbarStore.tabbar" :key="index" class="tab actived">
 					<div class="tab-dividers"></div>
 					<div class="tab-background"></div>
 					<div class="tab-content">

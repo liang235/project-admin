@@ -9,7 +9,7 @@
 
 		<div class="content-box">
 			<template v-if="list.length > 0">
-				<div class="content-box-item" v-for="(v, k) in list" :key="k">
+				<div v-for="(v, k) in list" :key="k" class="content-box-item">
 					<div>{{ v.label }}</div>
 					<div class="content-box-msg">
 						{{ v.value }}
@@ -17,10 +17,10 @@
 					<div class="content-box-time">{{ v.time }}</div>
 				</div>
 			</template>
-			<el-empty description="暂无通知" v-else></el-empty>
+			<el-empty v-else description="暂无通知"></el-empty>
 		</div>
 
-		<div class="foot-box" v-if="list.length > 0">前往通知中心</div>
+		<div v-if="list.length > 0" class="foot-box">前往通知中心</div>
 	</div>
 </template>
 

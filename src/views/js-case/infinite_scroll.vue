@@ -5,7 +5,7 @@
 	<page-main title="无限滚动">
 		<h1>无限滚动</h1>
 		<!-- 用于观察的加载元素 -->
-		<span class="loading" ref="loadingElement"></span>
+		<span ref="loadingElement" class="loading"></span>
 	</page-main>
 </template>
 

@@ -1,9 +1,3 @@
 {
-	"recommendations": [
-		"EditorConfig.EditorConfig",
-		"mikestead.dotenv",
-		"dbaeumer.vscode-eslint",
-		"stylelint.vscode-stylelint",
-		"Vue.vscode-typescript-vue-plugin"
-	]
+	"recommendations": ["EditorConfig.EditorConfig", "mikestead.dotenv", "dbaeumer.vscode-eslint", "stylelint.vscode-stylelint"]
 }

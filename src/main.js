@@ -4,6 +4,8 @@ import { kebabCase } from 'lodash-es' // js 工具库
 import * as ElementPlusIconsVue from '@element-plus/icons-vue' // ElementPlus 图标
 import App from './App.vue'
 
+// 一定要在main.js中导入tailwind.css，防止vite每次hmr都会请求src/style/index.scss整体css文件导致热更新慢的问题
+import '@/assets/styles/tailwindcss.scss'
 import '@/assets/styles/globals.scss' // 全局样式
 import 'virtual:svg-icons-register' // 引入 svg 图标注册脚本
 import router from '@/router/index.js' // 引入路由

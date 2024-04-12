@@ -2,7 +2,7 @@
  * @Description: table 表格功能
 -->
 <template>
-	<el-table :data="data" :border="setBorder" row-key="id" v-loading="config.loading" @selection-change="onSelectionChange" height="100%">
+	<el-table v-loading="config.loading" :data="data" :border="setBorder" row-key="id" height="100%" @selection-change="onSelectionChange">
 		<el-table-column v-if="config.isSelection" type="selection" :reserve-selection="true" width="50" align="center" />
 		<el-table-column v-if="config.isSerialNo" type="index" label="序号" width="60" align="center" />
 
@@ -25,7 +25,7 @@
 			</template>
 		</el-table-column>
 
-		<el-table-column label="操作" width="100" v-if="config.isOperate" align="center">
+		<el-table-column v-if="config.isOperate" label="操作" width="100" align="center">
 			<template v-slot="scope">
 				<el-popconfirm title="确定删除吗？" @confirm="onDelRow(scope.row)">
 					<template #reference>

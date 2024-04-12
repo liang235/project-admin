@@ -4,7 +4,6 @@
 <template>
 	<page-main title="过滤筛选支持单选和多选">
 		<div
-			class="filtering"
 			v-for="(val, key) in data.filtering"
 			:key="key"
 			:ref="
@@ -12,19 +11,20 @@
 					if (el) dlRefs[key] = el
 				}
 			"
+			class="filtering"
 		>
 			<div class="filtering-title">{{ val.title }}<svg-icon name="ele-arrow-right" /></div>
 			<div class="filtering-item" :style="{ height: val.isMore ? 'auto' : '54px' }">
 				<el-tag
-					:effect="v.active ? 'dark' : 'plain'"
-					:type="v.active ? '' : 'info'"
 					v-for="(v, k) in val.children"
 					:key="k"
+					:effect="v.active ? 'dark' : 'plain'"
+					:type="v.active ? '' : 'info'"
 					@click="onSelItem(val, v)"
 					>{{ v.label }}</el-tag
 				>
 
-				<div class="more" v-if="val.isShowMore" @click="val.isMore = !val.isMore">
+				<div v-if="val.isShowMore" class="more" @click="val.isMore = !val.isMore">
 					<span>{{ val.isMore ? '收起' : '展开' }}</span>
 					<svg-icon :name="!val.isMore ? 'ele-caret-bottom' : 'ele-caret-top'" />
 				</div>

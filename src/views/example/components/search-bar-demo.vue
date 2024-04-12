@@ -22,7 +22,7 @@
 					</el-row>
 
 					<el-collapse-transition>
-						<el-row :gutter="20" v-show="searchMore">
+						<el-row v-show="searchMore" :gutter="20">
 							<el-col :span="8">
 								<el-form-item label="部门">
 									<el-select v-model="search.department_id" clearable placeholder="请选择部门">

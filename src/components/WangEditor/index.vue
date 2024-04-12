@@ -5,10 +5,10 @@
 	<div class="editor-container">
 		<Toolbar :editor="editorRef" :mode="mode" />
 		<Editor
+			v-model="editorVal"
 			:mode="mode"
 			:defaultConfig="editorConfig"
 			:style="{ height }"
-			v-model="editorVal"
 			@onCreated="handleCreated"
 			@onChange="handleChange"
 		/>

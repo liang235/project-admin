@@ -2,7 +2,7 @@
  * @Description: svg 图标使用
 -->
 <template>
-	<component v-if="name.startsWith('ele-')" :is="name" :style="transformStyle" class="svg-icon" />
+	<component :is="name" v-if="name.startsWith('ele-')" :style="transformStyle" class="svg-icon" />
 
 	<svg v-else :style="transformStyle" aria-hidden="true" class="svg-icon">
 		<use :xlink:href="`#icon-${name}`" />

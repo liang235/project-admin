@@ -16,7 +16,7 @@
 		</page-header>
 
 		<page-main>
-			<splitpanes class="default-theme" @resize="paneSize = $event[0].size" style="height: 400px">
+			<splitpanes class="default-theme" style="height: 400px" @resize="paneSize = $event[0].size">
 				<pane :size="30" min-size="10">1</pane>
 				<pane :size="40">
 					<splitpanes class="default-theme" :horizontal="true">
