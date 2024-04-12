@@ -36,7 +36,7 @@ const bus = useEventBus()
 const isShow = ref(false)
 
 // 系统信息
-// eslint-disable-next-line no-undef
+
 const { pkg, lastBuildTime } = __SYSTEM_INFO__
 
 // 在组件挂载完并创建 DOM 节点后运行

@@ -71,7 +71,6 @@
 <script setup name="PluginCropper">
 // 图片裁剪插件
 import VueCropper from 'vue-cropperjs'
-// eslint-disable-next-line import/no-extraneous-dependencies
 import 'cropperjs/dist/cropper.css'
 
 // 默认裁剪的图片

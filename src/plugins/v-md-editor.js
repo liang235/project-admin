@@ -6,7 +6,6 @@ import vuepressTheme from '@kangc/v-md-editor/lib/theme/vuepress.js'
 import '@kangc/v-md-editor/lib/theme/style/vuepress.css'
 
 // 按需引入语言包（推荐）
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Prism from 'prismjs' // 代码高亮
 
 // Emoji 表情

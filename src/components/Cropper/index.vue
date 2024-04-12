@@ -55,7 +55,6 @@
 <script setup name="Cropper">
 // 图片裁剪插件
 import VueCropper from 'vue-cropperjs'
-// eslint-disable-next-line import/no-extraneous-dependencies
 import 'cropperjs/dist/cropper.css'
 
 // 定义父组件传过来的值
