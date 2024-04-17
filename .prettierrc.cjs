@@ -21,7 +21,18 @@ module.exports = {
 	 * false: {foo: bar}
 	 */
 	bracketSpacing: true,
-	// 标签的反尖括号需要换行
+	/**
+	 * 标签的反尖括号需要换行 默认false
+	 * false
+		<div
+			className=""
+			style={{}}
+		>
+	 * true
+		<div
+			className=""
+			style={{}} >
+	 */
 	bracketSameLine: false,
 	// 在单独的箭头函数参数周围包括括号 always：(x) => x \ avoid：x => x
 	arrowParens: 'always',
@@ -45,17 +56,4 @@ module.exports = {
 	vueIndentScriptAndStyle: false,
 	// 换行符使用 lf 结尾是 可选值"<auto|lf|crlf|cr>"
 	endOfLine: 'lf',
-	/**
-	 * JSX标签闭合位置 默认false
-	 * false
-		<div
-			className=""
-			style={{}}
-		>
-	 * true
-		<div
-			className=""
-			style={{}} >
-	 */
-	jsxBracketSameLine: false,
 }
