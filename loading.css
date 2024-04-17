@@ -1,0 +1,92 @@
+#app {
+	height: 100%;
+}
+
+.fantastic-admin-home {
+	position: absolute;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: snow;
+	color: #736477;
+	user-select: none;
+}
+
+.fantastic-admin-home .loading {
+	display: flex;
+	width: 40px;
+	height: 40px;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.fantastic-admin-home .loading .square {
+	display: flex;
+	width: 20px;
+	height: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.fantastic-admin-home .loading .square::before {
+	width: 10px;
+	height: 10px;
+	border: 3px solid #8c858f;
+	border-radius: 15%;
+	animation: square-to-dot-animation 2s linear infinite;
+	content: '';
+}
+
+.fantastic-admin-home .loading .square:nth-child(1)::before {
+	animation-delay: calc(150ms * 1);
+}
+
+.fantastic-admin-home .loading .square:nth-child(2)::before {
+	animation-delay: calc(150ms * 2);
+}
+
+.fantastic-admin-home .loading .square:nth-child(3)::before {
+	animation-delay: calc(150ms * 3);
+}
+
+.fantastic-admin-home .loading .square:nth-child(4)::before {
+	animation-delay: calc(150ms * 4);
+}
+
+@keyframes square-to-dot-animation {
+	15%,
+	25% {
+		width: 0;
+		height: 0;
+		border-width: 5px;
+		border-radius: 100%;
+		margin: 5px;
+	}
+
+	40% {
+		width: 10px;
+		height: 10px;
+		border-width: 3px;
+		border-radius: 15%;
+		margin: initial;
+	}
+}
+
+.fantastic-admin-home .text {
+	position: relative;
+	margin-top: 20px;
+	font-size: 24px;
+}
+
+.fantastic-admin-home .text::after {
+	position: absolute;
+	padding-left: 5px;
+	content: '…';
+}

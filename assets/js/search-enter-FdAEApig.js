@@ -1,0 +1,1 @@
+const e="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%20class='icon'%20viewBox='0%200%201024%201024'%3e%3cpath%20d='M916.21%20242.526v215.58H204.8l194.021-194.022-75.453-75.452L0%20512l323.368%20323.368%2075.453-75.452L204.8%20565.895H1024V242.526z'/%3e%3c/svg%3e";export{e as default};
