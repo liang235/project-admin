@@ -19,7 +19,7 @@ module.exports = {
 	/**
 	 * true: { foo: bar }
 	 * false: {foo: bar}
-	*/
+	 */
 	bracketSpacing: true,
 	// 标签的反尖括号需要换行
 	bracketSameLine: false,
@@ -35,7 +35,7 @@ module.exports = {
 	// 使用默认的折行标准 always\never\preserve
 	proseWrap: 'preserve',
 	/**
-	 * 指定在格式化 HTML 和 Vue 文件时如何处理空白符 
+	 * 指定在格式化 HTML 和 Vue 文件时如何处理空白符
 	 * css：这意味着 Prettier 将尝试根据 CSS 规范解析和格式化 HTML 和 Vue 文件中的样式部分。这包括在选择器之间添加空行等。
 	 * strict：这表示 Prettier 将尊重您在代码中使用的空格。它不会对空格进行任何更改。
 	 * ignore：这将忽略 HTML 和 Vue 文件中的空白符，Prettier 不会尝试格式化它们
@@ -56,6 +56,6 @@ module.exports = {
 		<div
 			className=""
 			style={{}} >
-	 * 
-    "jsxBracketSameLine": false,
+	 */
+	jsxBracketSameLine: false,
 }

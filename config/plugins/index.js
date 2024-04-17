@@ -12,8 +12,6 @@ import createSetupExtend from './vite-plugin-vue-setup-extend.js'
 import createSvgIcon from './vite-plugin-svg-icons.js'
 import createInspector from './vite-plugin-vue-inspector.js'
 import createCompression from './vite-plugin-compression.js'
-import createEslint from './vite-plugin-eslint.js'
-import createStylelint from './vite-plugin-stylelint.js'
 
 // 创建 vite 插件实例化
 export default function createVitePlugins(viteEnv, isBuild = false) {
@@ -29,8 +27,6 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
 	vitePlugins.push(createSvgIcon())
 	vitePlugins.push(createInspector())
 	vitePlugins.push(createCompression())
-	vitePlugins.push(createEslint())
-	vitePlugins.push(createStylelint())
 
 	return vitePlugins
 }
