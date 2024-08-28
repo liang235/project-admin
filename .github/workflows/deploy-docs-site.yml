@@ -18,18 +18,18 @@ jobs:
                   fetch-depth: 0
 
             - name: Setup Node.js
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
-                  # 选择要使用的 node 版本
-                  node-version: 18
-                  # registry-url: https://registry.npmmirror.com/
+                # 选择要使用的 node 版本
+                node-version: 20
+                # registry-url: https://registry.npmmirror.com/
 
-            - uses: pnpm/action-setup@v2.2.4
+            - uses: pnpm/action-setup@v3
               name: Install pnpm
               id: pnpm-install
               with:
-                  version: 8
-                  run_install: false
+                version: 9
+                run_install: false
 
             - name: Get pnpm store directory
               id: pnpm-cache
