@@ -2,7 +2,6 @@
 	"name": "project-admin",
 	"private": true,
 	"version": "1.0.0",
-	"homepage": "./",
 	"type": "module",
 	"resolutions": {
 		"bin-wrapper": "npm:bin-wrapper-china"
