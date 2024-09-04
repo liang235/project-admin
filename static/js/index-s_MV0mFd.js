@@ -1,0 +1,1 @@
+import{v as o,G as t,o as n,d as s,g as a}from"./index-20rDjvHc.js";const r=a({name:"Reload"}),p=Object.assign(r,{setup(c){const e=o();return t(()=>{e.go(-1)}),(_,u)=>(n(),s("div"))}});export{p as default};
