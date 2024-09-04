@@ -89,6 +89,7 @@ export default defineConfig(({ command, mode }) => {
 			rollupOptions: {
 				// 自定义底层的 Rollup 打包配置
 				output: {
+					publicPath: '/project-admin/',
 					// 所以我们要对静态资源打包做处理,拆分不同种类文件文件夹
 					chunkFileNames: 'assets/js/[name]-[hash].js',
 					entryFileNames: 'assets/js/[name]-[hash].js',
