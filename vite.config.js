@@ -3,6 +3,7 @@
  */
 import { defineConfig, loadEnv } from 'vite' // 帮手函数，这样不用 jsdoc 注解也可以获取类型提示
 import path from 'node:path' // 主要用于 alias 文件路径别名
+import { fileURLToPath } from 'node:url'
 import fs from 'node:fs' // node 文件模块
 import dayjs from 'dayjs' // 日期格式化插件
 import pkg from './package.json' // 依赖项
@@ -22,7 +23,7 @@ export default defineConfig(({ command, mode }) => {
 
 	return {
 		// 开发或生产环境服务的公共基础路径
-		base: '',
+		base: './',
 
 		envDir: path.resolve(process.cwd(), 'config/env'),
 
@@ -87,6 +88,9 @@ export default defineConfig(({ command, mode }) => {
 			sourcemap: false, // 构建后是否生成 source map 文件
 			chunkSizeWarningLimit: 1500, // chunk 大小警告的限制（以 kbs 为单位）
 			rollupOptions: {
+				input: {
+					index: path.dirname(fileURLToPath(import.meta.url)),
+				},
 				// 自定义底层的 Rollup 打包配置
 				output: {
 					// 所以我们要对静态资源打包做处理,拆分不同种类文件文件夹
