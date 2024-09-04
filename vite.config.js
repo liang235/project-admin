@@ -79,33 +79,30 @@ export default defineConfig(({ command, mode }) => {
 		},
 
 		// 构建选项 https://cn.vitejs.dev/config/#server-fsserve-root
-		build: {
-			target: 'modules', // 浏览器兼容性 "esnext"|"modules"
-			outDir: mode === 'production' ? 'dist' : `dist-${mode}`,
-			assetsDir: 'assets', // 指定生成静态资源的存放路径
-			minify: 'esbuild', //  默认为 esbuild 比 terser 快 20-40 倍，压缩率只差 1%-2%
-			manifest: true, // 构建后将会生成 manifest.json 文件
-			sourcemap: false, // 构建后是否生成 source map 文件
-			chunkSizeWarningLimit: 1500, // chunk 大小警告的限制（以 kbs 为单位）
-			rollupOptions: {
-				input: {
-					index: path.dirname(fileURLToPath(import.meta.url)),
-				},
-				// 自定义底层的 Rollup 打包配置
-				output: {
-					// 所以我们要对静态资源打包做处理,拆分不同种类文件文件夹
-					chunkFileNames: 'assets/js/[name]-[hash].js',
-					entryFileNames: 'assets/js/[name]-[hash].js',
-					assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
-					compact: true,
-					manualChunks: {
-						vue: ['vue', 'vue-router', 'pinia', '@vueuse/core'],
-						'element-plus': ['element-plus'],
-						echarts: ['echarts'],
-					},
-				},
-			},
-			reportCompressedSize: false, // 关闭 reportCompressedSize 显示可以稍微减少包装时间
-		},
+		// build: {
+		// 	target: 'modules', // 浏览器兼容性 "esnext"|"modules"
+		// 	outDir: mode === 'production' ? 'dist' : `dist-${mode}`,
+		// 	assetsDir: 'assets', // 指定生成静态资源的存放路径
+		// 	minify: 'esbuild', //  默认为 esbuild 比 terser 快 20-40 倍，压缩率只差 1%-2%
+		// 	manifest: true, // 构建后将会生成 manifest.json 文件
+		// 	sourcemap: false, // 构建后是否生成 source map 文件
+		// 	chunkSizeWarningLimit: 1500, // chunk 大小警告的限制（以 kbs 为单位）
+		// 	rollupOptions: {
+		// 		// 自定义底层的 Rollup 打包配置
+		// 		output: {
+		// 			// 所以我们要对静态资源打包做处理,拆分不同种类文件文件夹
+		// 			chunkFileNames: 'assets/js/[name]-[hash].js',
+		// 			entryFileNames: 'assets/js/[name]-[hash].js',
+		// 			assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+		// 			compact: true,
+		// 			manualChunks: {
+		// 				vue: ['vue', 'vue-router', 'pinia', '@vueuse/core'],
+		// 				'element-plus': ['element-plus'],
+		// 				echarts: ['echarts'],
+		// 			},
+		// 		},
+		// 	},
+		// 	reportCompressedSize: false, // 关闭 reportCompressedSize 显示可以稍微减少包装时间
+		// },
 	}
 })
