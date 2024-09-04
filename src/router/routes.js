@@ -5,6 +5,7 @@ import elementPlus from './modules/elementPlus.js' // ElementPlus 配置数据
 import javascript from './modules/javascript.js' // JS 案例
 import css from './modules/css.js' // CSS 案例
 import vueuse from './modules/vueuse.js' // vueuse 案例
+import hooks from './modules/hooks.js' // hooks 案例
 
 const Layout = () => import('@/layout/index.vue') // 布局主页面
 
@@ -87,6 +88,15 @@ const asyncRoutes = [
 		children: [...example],
 	},
 	{
+		path: 2,
+		meta: {
+			title: 'hooks',
+			icon: 'hooks',
+			auth: ['admin'],
+		},
+		children: [...hooks],
+	},
+	{
 		path: 3,
 		meta: {
 			title: 'VueUse',
@@ -95,7 +105,7 @@ const asyncRoutes = [
 		children: [...vueuse],
 	},
 	{
-		path: 2,
+		path: 4,
 		meta: {
 			title: 'Element',
 			icon: 'ele-element-plus',
@@ -103,7 +113,7 @@ const asyncRoutes = [
 		children: [...elementPlus],
 	},
 	{
-		path: 4,
+		path: 5,
 		meta: {
 			title: 'JS',
 			icon: 'js',
@@ -111,7 +121,7 @@ const asyncRoutes = [
 		children: [...javascript],
 	},
 	{
-		path: 5,
+		path: 6,
 		meta: {
 			title: 'CSS',
 			icon: 'css',
@@ -119,7 +129,7 @@ const asyncRoutes = [
 		children: [...css],
 	},
 	{
-		path: 10,
+		path: 7,
 		meta: {
 			title: '系统',
 			icon: 'system',

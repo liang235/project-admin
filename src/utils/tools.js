@@ -48,7 +48,7 @@ export function deepClone(target) {
  * @return {*}
  */
 export function resolveRoutePath(basePath, routePath) {
-	return basePath ? path.resolve(basePath, routePath ?? '') : routePath ?? ''
+	return basePath ? path.resolve(basePath, routePath ?? '') : (routePath ?? '')
 }
 
 /**

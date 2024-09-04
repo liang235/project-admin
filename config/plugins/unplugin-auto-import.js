@@ -19,7 +19,7 @@ export default function createAutoImport() {
 		 * 自动导入目录下的模块导出
 		 * 默认情况下，它只扫描目录下的一层模块
 		 */
-		dirs: ['./src/utils/composables/**'],
+		dirs: ['./src/utils/composables/**', './src/hooks/**'],
 		eslintrc: {
 			// 默认false, true启用。false生成一次就可以，避免每次工程启动都生成
 			enabled: false,
