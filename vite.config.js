@@ -3,7 +3,6 @@
  */
 import { defineConfig, loadEnv } from 'vite' // 帮手函数，这样不用 jsdoc 注解也可以获取类型提示
 import path from 'node:path' // 主要用于 alias 文件路径别名
-import { fileURLToPath } from 'node:url'
 import fs from 'node:fs' // node 文件模块
 import dayjs from 'dayjs' // 日期格式化插件
 import pkg from './package.json' // 依赖项
@@ -47,6 +46,10 @@ export default defineConfig(({ command, mode }) => {
 			},
 			watch: {
 				usePolling: true,
+			},
+			// 预热文件以提前转换和缓存结果，降低启动期间的初始页面加载时长并防止转换瀑布
+			warmup: {
+				clientFiles: ['./index.html', './src/{views,components}/*'],
 			},
 		},
 
@@ -104,5 +107,19 @@ export default defineConfig(({ command, mode }) => {
 		// 	},
 		// 	reportCompressedSize: false, // 关闭 reportCompressedSize 显示可以稍微减少包装时间
 		// },
+		build: {
+			outDir: mode === 'production' ? 'dist' : `dist-${mode}`,
+			sourcemap: false,
+			// 消除打包大小超过500kb警告
+			chunkSizeWarningLimit: 4000,
+			rollupOptions: {
+				// 静态资源分类打包
+				output: {
+					chunkFileNames: 'static/js/[name]-[hash].js',
+					entryFileNames: 'static/js/[name]-[hash].js',
+					assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
+				},
+			},
+		},
 	}
 })
