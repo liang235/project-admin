@@ -78,6 +78,24 @@ export default defineConfig(({ command, mode }) => {
 		},
 
 		// 构建选项 https://cn.vitejs.dev/config/#server-fsserve-root
+		build: {
+			// https://cn.vitejs.dev/guide/build.html#browser-compatibility
+			target: 'es2015',
+			sourcemap: false,
+			// 消除打包大小超过500kb警告
+			chunkSizeWarningLimit: 4000,
+			rollupOptions: {
+				input: {
+					index: pathResolve('./index.html', import.meta.url),
+				},
+				// 静态资源分类打包
+				output: {
+					chunkFileNames: 'static/js/[name]-[hash].js',
+					entryFileNames: 'static/js/[name]-[hash].js',
+					assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
+				},
+			},
+		},
 		// build: {
 		// 	target: 'modules', // 浏览器兼容性 "esnext"|"modules"
 		// 	outDir: mode === 'production' ? 'dist' : `dist-${mode}`,
