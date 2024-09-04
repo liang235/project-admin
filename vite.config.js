@@ -22,7 +22,7 @@ export default defineConfig(({ command, mode }) => {
 
 	return {
 		// 开发或生产环境服务的公共基础路径
-		// base: '/project-admin/',
+		base: '/project-admin/',
 
 		envDir: path.resolve(process.cwd(), 'config/env'),
 
