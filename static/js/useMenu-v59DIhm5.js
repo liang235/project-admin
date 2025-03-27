@@ -1,0 +1,1 @@
+import{u,h as o,Y as r}from"./index-H_c7H9_6.js";function a(){const t=u(),e=o();function s(n){e.setActived(n),t.menu.switchMainMenuAndPageJump&&r.push(e.sidebarMenusFirstDeepestPath)}return{switchTo:s}}export{a as u};

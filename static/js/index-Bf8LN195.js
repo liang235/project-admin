@@ -1,0 +1,1 @@
+import{d as o,q as t,D as n,e as s,o as a}from"./index-H_c7H9_6.js";const r=o({name:"Reload"}),p=Object.assign(r,{setup(c){const e=t();return n(()=>{e.go(-1)}),(_,u)=>(a(),s("div"))}});export{p as default};

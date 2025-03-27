@@ -1,0 +1,1 @@
+import{_ as e}from"./index-BqNn1QRp.js";import{_ as n}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{b as r,o as _,w as s,y as a}from"./index-H_c7H9_6.js";import"./index-m1hp8roE.js";const c={};function m(p,o){const t=e;return _(),r(t,null,{default:s(()=>o[0]||(o[0]=[a("多级导航2")])),_:1})}const d=n(c,[["render",m]]);export{d as default};
